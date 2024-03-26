@@ -1,10 +1,10 @@
 # Install graph-tool
 conda config --set auto_activate_base false
-conda create --name wug -c conda-forge graph-tool # this should work only linux
+# conda create --name wug -c conda-forge graph-tool # this should work only linux
 
 # Install remaining main packages
-conda create --name wug
-conda activate wug
+# conda create --name wug
+# conda activate wug
 conda install scikit-learn
 conda install requests
 conda install pandas
