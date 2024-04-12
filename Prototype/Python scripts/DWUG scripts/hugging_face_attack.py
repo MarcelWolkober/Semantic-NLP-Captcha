@@ -4,20 +4,17 @@ from pathlib import Path
 from WordTransformer import WordTransformer, InputExample
 from sentence_transformers import util
 
+print('loading model...')
 model = WordTransformer('pierluigic/xl-lexeme')
 
 print('model loaded')
-use_pairs_input_path = 'data_output/dwug_en/data/attack_nn/pairs.csv'
-output_path_pairs = 'data_output/attack_pairs'
+use_pairs_input_path = 'data_output/dwug_en/data/attack_nn/pairs_challenge.csv'
+output_path_pairs = 'data_output/attacked_pairs'
 Path(output_path_pairs).mkdir(parents=True, exist_ok=True)
 
-output_path_list_challenge = 'data_output/attack_list_challenge'
+output_path_list_challenge = 'data_output/attacked_list_challenge'
 Path(output_path_pairs).mkdir(parents=True, exist_ok=True)
 
-
-def load_model():
-    print('loading model...')
-    model
 
 def load_csv_file(file_path):
     data = []
@@ -34,33 +31,18 @@ def analyse_pair(pair):
     context1 = pair['context1']
     context2 = pair['context2']
 
-    #print('lemma:', lemma)
-
-    #print('context:', context1)
-
     start_index1 = context1.find(lemma)
     start_index2 = context2.find(lemma)
 
     # Get the target word and its position
     target_position1 = [int(pair['indexes_target_token1'].split(':')[0]),
                         int(pair['indexes_target_token1'].split(':')[1])]
-    derived_indexes1_given = pair['derived_indexes1']
-    derived_indexes1 = [start_index1, start_index1 + len(lemma)]
-    derived_indexes2 = [start_index2, start_index2 + len(lemma)]
-
-    print('target_position:', target_position1)
-    print('derived_position_given:', derived_indexes1_given)
-    print('derived_position:', derived_indexes1)
-
-    print('derived word1: ', context1[derived_indexes1[0]:derived_indexes1[1]])
-    print('target context1: ',context1)
-    print('target word1: ', context1[target_position1[0]: target_position1[1]])
+    target_position2 = [int(pair['indexes_target_token2'].split(':')[0]),
+                        int(pair['indexes_target_token2'].split(':')[1])]
 
     # Create an InputExample
-    input_example1 = InputExample(texts=context1, positions=derived_indexes1)
-    input_example2 = InputExample(texts=context2, positions=derived_indexes2)
-
-    print('example:', input_example1)
+    input_example1 = InputExample(texts=context1, positions=target_position1)
+    input_example2 = InputExample(texts=context2, positions=target_position2)
 
     # Get the embedding of the target word
     target_embedding1 = model.encode(input_example1, convert_to_tensor=True)
@@ -71,30 +53,41 @@ def analyse_pair(pair):
     return cosine_similarity
 
 
-def output_pairs(file_path, data, keys):
-    with open(file_path, 'w', newline='') as f:
-        w = csv.DictWriter(f, keys, delimiter='\t', quoting=csv.QUOTE_NONE, escapechar=' ', extrasaction='ignore',
-                           lineterminator='\n')
-        w.writeheader()
-        w.writerows(data)
+def write_file(file_path, data, keys):
+    with open(file_path, 'w') as f:
+        header = '\t'.join(keys)
+        f.write(header)
+        f.write('\n')
+        for row in data:
+            line = '\t'.join(row.values())
+            f.write(line)
+            f.write('\n')
 
 
-def generate_and_write_cosine_similarity(pairs):
-    print('Generating cosine similarity...')
-    keys = ['lemma', 'identifier1', 'identifier2', 'context1', 'context2', 'indexes_target_token1',
-            'derived_indexes1', 'indexes_target_token2', 'derived_indexes2', 'judgment', 'cosine_similarity']
+def analyze_and_write_pairs_challenges(pairs):
+    print('Generating cosine similarity for ',  len(pairs), ' pairs ...')
+    keys = ['lemma', 'identifier1', 'identifier2', 'judgment', 'cosine_similarity']
     data = []
     count = 1
     lemma = pairs[0]['lemma']
-    for pair in pairs[:10]:
-        print('for pair ', count, ' of ', len(pairs))
+
+    for pair in pairs:
+        print('blabla')
+        print('for pair ', count, ' of ', len(pairs), end='\r')
         count += 1
         cosine_similarity = analyse_pair(pair)
+        output_file = {
+            'lemma': lemma,
+            'identifier1': pair['identifier1'],
+            'identifier2': pair['identifier2'],
+            'judgment': pair['judgment'],
+            'cosine_similarity': str(cosine_similarity.item())
+        }
 
-        pair['cosine_similarity'] = cosine_similarity.item()
-        data.append(pair)
-    output_pairs(os.path.join(output_path_pairs, 'pairs_attack_' + lemma + '_.csv'), data, keys)
-    print('Cosine similarity generated. Save to:', output_path_pairs + '/pairs_attack_' + lemma + '_.csv')
+        data.append(output_file)
+
+    write_file(os.path.join(output_path_pairs, 'attacked_pairs_' + lemma + '.csv'), data, keys)
+    print('Cosine similarity generated. Save to:', output_path_pairs + '/attacked_pairs_' + lemma + '.csv')
 
 
 def analyze_list_challenge(list_challenge, uses):
@@ -104,7 +97,7 @@ def analyze_list_challenge(list_challenge, uses):
     return 0
 
 
-def generate_and_write_list_challenge(challenges, uses, judgments):
+def analyze_and_write_list_challenges(challenges, uses, judgments):
     print('Analysing list challenges...')
     keys = ['lemma', 'reference_usage', 'reference_usage_context', 'reference_usage_indexes_target_token',
             'reference_usage_derived_indexes', 'cosine_similarity']
@@ -116,15 +109,15 @@ def generate_and_write_list_challenge(challenges, uses, judgments):
         cosine_similarity = analyze_list_challenge(list_challenge, uses)
         list_challenge['cosine_similarity'] = cosine_similarity.item()
         data.append(list_challenge)
-    output_pairs(os.path.join(output_path_list_challenge, 'list_challenge_attack.csv'), data, keys)
+    write_file(os.path.join(output_path_list_challenge, 'list_challenge_attack.csv'), data, keys)
     print('List challenge generated. Save to:', output_path_list_challenge + '/list_challenge.csv')
 
 
-uses = load_csv_file('data_output/dwug_en/data/attack_nn/uses.csv')
-judgments = load_csv_file('data_output/dwug_en/data/attack_nn/judgments.csv')
-list_challenges = load_csv_file('data_output/dwug_en/data/attack_nn/list_challenge.csv')
+# uses = load_csv_file('data_output/dwug_en/data/attack_nn/uses.csv')
+# judgments = load_csv_file('data_output/dwug_en/data/attack_nn/judgments.csv')
+# list_challenges = load_csv_file('data_output/dwug_en/data/attack_nn/list_challenge.csv')
 
-#analyze_list_challenge(list_challenges[0], uses)
+# analyze_list_challenge(list_challenges[0], uses)
 
 pairs = load_csv_file(use_pairs_input_path)
-generate_and_write_cosine_similarity(pairs)
+analyze_and_write_pairs_challenges(pairs)
