@@ -6,8 +6,11 @@ from sentence_transformers import util
 
 print('loading model...')
 model = WordTransformer('pierluigic/xl-lexeme')
-
 print('model loaded')
+
+datasets = ['dwug_en']
+input_path = 'data_output'
+aggregated_judgments_path = 'data_output/dwug_en/data/attack_nn/judgments.csv'
 use_pairs_input_path = 'data_output/dwug_en/data/attack_nn/pairs_challenge.csv'
 output_path_pairs = 'data_output/attacked_pairs'
 Path(output_path_pairs).mkdir(parents=True, exist_ok=True)
@@ -37,7 +40,7 @@ def write_file(file_path, data, keys):
             f.write('\n')
 
 
-def analyse_pair(pair):
+def attack_pair(pair):
     # Get the context
     context1 = pair['context1']
     context2 = pair['context2']
@@ -61,7 +64,7 @@ def analyse_pair(pair):
     return cosine_similarity
 
 
-def analyze_and_write_pairs_challenges(pairs):
+def attack_and_write_pairs_challenges(pairs):
     print('Generating cosine similarity for ', len(pairs), ' pairs ...')
     keys = ['lemma', 'identifier1', 'identifier2', 'judgment', 'cosine_similarity']
     data = []
@@ -69,10 +72,9 @@ def analyze_and_write_pairs_challenges(pairs):
     lemma = pairs[0]['lemma']
 
     for pair in pairs:
-        print('blabla')
         print('for pair ', count, ' of ', len(pairs), end='\r')
         count += 1
-        cosine_similarity = analyse_pair(pair)
+        cosine_similarity = attack_pair(pair)
         output_file = {
             'lemma': lemma,
             'identifier1': pair['identifier1'],
@@ -87,7 +89,7 @@ def analyze_and_write_pairs_challenges(pairs):
     print('Cosine similarity generated. Save to:', output_path_pairs + '/attacked_pairs_' + lemma + '.csv')
 
 
-def analyze_list_challenge(list_challenge, uses):
+def attack_list_challenge(list_challenge, uses):
     lemma = list_challenge['lemma']
     usage_missing_usage = {
         'lemma': lemma,
@@ -108,13 +110,18 @@ def analyze_list_challenge(list_challenge, uses):
     usages = [usage1, usage2, usage3, usage4]
     ranking = {
         'reference_usage': reference_usage['identifier'],
-        usage1['identifier']: None,
-        usage2['identifier']: None,
-        usage3['identifier']: None,
-        usage4['identifier']: None,
-        'order': None
+        'usage1': usage1['identifier'],
+        'cosine_similarity1': 0.0,
+        'usage2': usage2['identifier'],
+        'cosine_similarity2': 0.0,
+        'usage3': usage3['identifier'],
+        'cosine_similarity3': 0.0,
+        'usage4': usage4['identifier'],
+        'cosine_similarity4': 0.0,
+        'order': None,
+        'given_order': list_challenge['order']
     }
-
+    count = 1
     for usage in usages:
         if usage in [None, usage_missing_usage]:
             continue
@@ -130,41 +137,64 @@ def analyze_list_challenge(list_challenge, uses):
             'judgment': '0.0',
         }
         # print(pair)
-        pair_cosine_similarity = analyse_pair(pair)
-        ranking[usage['identifier']] = pair_cosine_similarity.item()
+        pair_cosine_similarity = attack_pair(pair)
+        ranking['cosine_similarity' + str(count)] = pair_cosine_similarity.item()
+        count += 1
+        if count >= 5:
+            break
 
-    ranking['order'] = sorted(ranking, reverse=True)
-    for usage in usages:
-        ranking[usage['identifier']] = str(ranking[usage['identifier']])
-    # print(ranking)
+    # Create a list of tuples (usage, cosine_similarity)
+    usage_cosine_list = [(ranking[f'usage{i}'], ranking[f'cosine_similarity{i}']) for i in range(1, 5)]
+
+    # Remove key-value pairs where the value is 'missing_usage'
+    usage_cosine_list_new = [t for t in usage_cosine_list if t.__str__().find('missing_usage') == -1]
+    # usage_cosine_list_new = [ v for t in usage_cosine_list if t[1] != '\'missing_usage\'']
+
+    # Sort the list based on cosine similarity in descending order
+    sorted_list = sorted(usage_cosine_list_new, key=lambda x: x[1], reverse=True)
+
+    # Extract the ordered usage keys
+    ordered_usages = [item[0] for item in sorted_list]
+
+    ranking['order'] = ordered_usages
 
     return ranking
 
 
-def analyze_and_write_list_challenges(challenges, uses):
-    print('Analysing list challenges...')
+def attack_and_write_list_challenges(challenges, uses):
     lemma = challenges[0]['lemma']
+    print('Analysing list challenges for lemma ', lemma, ' ...')
     data = []
     count = 1
     for list_challenge in challenges:
         print('for list_challenge ', count, ' of ', len(challenges))
         count += 1
-        ranking = analyze_list_challenge(list_challenge, uses)
+        ranking = attack_list_challenge(list_challenge, uses)
         data.append(ranking)
-        if count == 3:
-            break
 
     write_file(os.path.join(output_path_list_challenge, 'attacked_list_challenge_' + lemma + '.csv'),
                data, data[0].keys() if data else [])
-    print('List challenge generated. Save to:',
+    print('Attacked list challenge generated. Save to:',
           output_path_list_challenge + '/attacked_list_challenge_' + lemma + '.csv')
 
 
-uses = load_csv_file('data_output/dwug_en/data/attack_nn/uses.csv')
-judgments = load_csv_file('data_output/dwug_en/data/attack_nn/judgments.csv')
-list_challenges = load_csv_file('data_output/dwug_en/data/attack_nn/list_challenges_filtered.csv')
+def write_list_challenges_for_Datasets():
+    for dataset in datasets:
+        dataset_path = os.path.join(input_path, dataset, 'data')
+        for p in Path(dataset_path).glob('*/'):
+            lemma_path = str(p).split('/')[-1].replace('-', '_')
+            uses_file_path = os.path.join(str(p), 'uses.csv')
+            list_challenges_file_path = os.path.join(str(p), 'list_challenges_filtered.csv')
 
-analyze_and_write_list_challenges(list_challenges, uses)
+            lemma = os.path.basename(lemma_path)
+
+            uses = load_csv_file(uses_file_path)
+            list_challenges = load_csv_file(list_challenges_file_path)
+
+            attack_and_write_list_challenges(list_challenges, uses)
+
+
+write_list_challenges_for_Datasets()
 
 # pairs = load_csv_file(use_pairs_input_path)
 # analyze_and_write_pairs_challenges(pairs)

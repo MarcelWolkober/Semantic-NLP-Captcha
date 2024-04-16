@@ -1,0 +1,2 @@
+reference_usage	usage1	cosine_similarity1	usage2	cosine_similarity2	usage3	cosine_similarity3	usage4	cosine_similarity4	order	given_order
+mag_1855_556005.txt-194-2	fic_1835_7353.txt-1190-8	0.9700150489807129	fic_1847_1094.txt-4528-4	0.9678523540496826	mag_1845_587596.txt-153-9	0.9446276426315308	missing_usage	0.0	['fic_1835_7353.txt-1190-8', 'fic_1847_1094.txt-4528-4', 'mag_1845_587596.txt-153-9']	['fic_1835_7353.txt-1190-8', 'fic_1847_1094.txt-4528-4', 'mag_1845_587596.txt-153-9']
