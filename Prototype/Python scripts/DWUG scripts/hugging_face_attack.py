@@ -178,7 +178,7 @@ def attack_and_write_list_challenges(challenges, uses):
           output_path_list_challenge + '/attacked_list_challenge_' + lemma + '.csv')
 
 
-def write_list_challenges_for_Datasets():
+def write_list_challenges_for_datasets():
     for dataset in datasets:
         dataset_path = os.path.join(input_path, dataset, 'data')
         for p in Path(dataset_path).glob('*/'):
@@ -194,7 +194,7 @@ def write_list_challenges_for_Datasets():
             attack_and_write_list_challenges(list_challenges, uses)
 
 
-write_list_challenges_for_Datasets()
+write_list_challenges_for_datasets()
 
 # pairs = load_csv_file(use_pairs_input_path)
 # analyze_and_write_pairs_challenges(pairs)

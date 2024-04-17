@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from scipy import stats
 import re
-from IPython.display import display
+import random
 
 datasets = ['dwug_en']
 input_path = '../../../DWUG/'
@@ -104,8 +104,8 @@ def generate_and_write_pairs_challenge():
             write_csv(os.path.join(output_path_lemma, 'pairs_challenge.csv'), pairs, pairs[0].keys() if pairs else [])
 
 
-def generate_and_write_list_challenge():
-    print('Generating and writing lists for challenge ...')
+def generate_and_write_list_challenge(strict=True):
+    print('Generating and writing lists for challenge, strict =', strict, ' ...')
 
     judgments_aggregated = aggregate_judgments_df(load_judgments_df_from_source_datasets())
     judgments = filter_aggregated_judgments(judgments_aggregated)
@@ -125,7 +125,7 @@ def generate_and_write_list_challenge():
             local_challenges = []
 
             for usage in uses:
-                local_list_challenge = find_practical_reference_usages(usage, judgments)
+                local_list_challenge = find_practical_reference_usages(usage, judgments, strict)
                 if local_list_challenge['identifier3'] is not None:
                     local_challenges.append(local_list_challenge)
 
@@ -135,13 +135,16 @@ def generate_and_write_list_challenge():
 
             list_challenge_header = local_challenges[0].keys() if local_challenges else []
             output_path_lemma = os.path.join(output_path, dataset, 'data', lemma)
+            file_name = 'list_challenges_filtered.csv'
+            if not strict:
+                file_name = 'random_challenges_filtered.csv'
+
             Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
 
-            write_csv(os.path.join(output_path_lemma, 'list_challenges_filtered.csv'), local_challenges,
-                      list_challenge_header)
+            write_csv(os.path.join(output_path_lemma, file_name), local_challenges, list_challenge_header)
 
-
-def find_practical_reference_usages(usage, judgments_df):
+#Get one usage with 4 and 1 judgment for random challenge
+def find_practical_reference_usages(usage, judgments_df, strict=True):
     judgment_to_have = [1.0, 2.0, 3.0, 4.0]
     list_challenge = {
         'lemma': usage['lemma'],
@@ -161,16 +164,20 @@ def find_practical_reference_usages(usage, judgments_df):
 
     lemma = usage['lemma']
     df = judgments_df.groupby(['lemma']).get_group((lemma + '_nn',))
+
+    df_indexes_random = list(df.index)
+    random.shuffle(df_indexes_random)
     index = 1
 
     # For each judgment, check if usage is fitting
-    for i in df.index:
+    for i in df_indexes_random:
         judgment = df.loc[i]
         # print('Processing judgment', judgment)
 
         judgment_mean = judgment[4:13].mean()
-        if judgment_mean not in judgment_to_have:
+        if strict and judgment_mean not in judgment_to_have:
             continue
+
         # print('Mean judgment:', judgment_mean)
 
         if usage['identifier'] in [judgment['identifier1'], judgment['identifier2']]:
@@ -180,14 +187,27 @@ def find_practical_reference_usages(usage, judgments_df):
             list_challenge['identifier' + str(index)] = referenced_usage
             list_challenge['judgment' + str(index)] = str(judgment_mean)
             local_order[referenced_usage] = judgment_mean
-            judgment_to_have.remove(judgment_mean)
             index += 1
+
+            if strict:
+                judgment_to_have.remove(judgment_mean)
+            elif index > 4:
+                break
+
             if len(judgment_to_have) == 0:
                 break
 
     list_challenge['order'] = [k for k, v in sorted(local_order.items(), key=lambda item: item[1], reverse=True)]
 
     return list_challenge
+
+
+def generate_and_write_random_challenge():
+    generate_and_write_list_challenge(False)
+
+
+def find_random_reference_usages(usage, judgments_df):
+    return find_practical_reference_usages(usage, judgments_df, False)
 
 
 def remove_judgments_from_pairs(pairs):
@@ -289,7 +309,8 @@ def analyse_judgment_cosine_correlation_spearman(path):
 
     # Calculate spearman correlation
     spearman_correlation = stats.spearmanr(judgments, cosine_similarities, nan_policy='omit')
-    print('Spearman correlation:', spearman_correlation)
+    data[0]['spearman_correlation'] = spearman_correlation.statistic
+    # print('Spearman correlation:', spearman_correlation)
 
     file_name = lemma + '_' + str(spearman_correlation.statistic) + '_PC_Spearman.csv'
     output_path_file = os.path.join(output_path_folder, file_name)
@@ -299,8 +320,8 @@ def analyse_judgment_cosine_correlation_spearman(path):
 def analyse_list_challenge_ranking_spearman(filepath):
     list_challenges = read_csv(filepath)
     data = []
-    order_set = []
-    given_order_set = []
+    order_set = np.array([], dtype=int)
+    given_order_set = np.array([], dtype=int)
 
     filename = os.path.basename(filepath).split('_')
     lemma = filename[filename.__len__() - 1].split('.')[0]
@@ -311,20 +332,37 @@ def analyse_list_challenge_ranking_spearman(filepath):
     Path(output_path_folder).mkdir(parents=True, exist_ok=True)
 
     for list_challenge in list_challenges:
+        # noinspection RegExpRedundantEscape
         regex_order = re.sub(r' |\'|\s|\[|\]', '', list_challenge['order'])
+        # noinspection RegExpRedundantEscape
         regex_order_given = re.sub(r' |\'|\s|\[|\]', '', list_challenge['given_order'])
 
-        order_list = regex_order.split(',')
         given_order_list = regex_order_given.split(',')
-        print(order_list)
+        order_list = regex_order.split(',')
 
-        order_set.append(order_list)
-        given_order_set.append(given_order_list)
+        given_order_list_numbers = list(range(1, given_order_list.__len__() + 1))
+        order_list_numbers = []
+        for id in order_list:
+            derived_index = given_order_list.index(id)
+            order_list_numbers.append(derived_index + 1)
+        # print(order_list)
+
+        if order_list_numbers.__len__() != given_order_list_numbers.__len__():
+            print('Error in list challenge:', list_challenge)
+            continue
+
+        error_distance = np.sum(np.abs(np.subtract(given_order_list_numbers, order_list_numbers)))
+
+        # add reverse order to Set
+        order_set = np.append(order_set, order_list_numbers[::-1])
+        given_order_set = np.append(given_order_set, given_order_list_numbers[::-1])
 
         data.append(
-            {'lemma': lemma, 'real_order': list_challenge['given_order'], 'attacker_order': list_challenge['order']})
+            {'lemma': lemma, 'attacker_indexes': order_list_numbers, 'error_distance': error_distance,
+             'real_order': list_challenge['given_order'], 'attacker_order': list_challenge['order']})
 
-    spearman_correlation = stats.spearmanr(order_set, given_order_set, nan_policy='omit')
+    spearman_correlation = stats.spearmanr(order_set, given_order_set)
+    data[0]['spearman_correlation'] = spearman_correlation.statistic
     file_name = lemma + '_' + str(spearman_correlation.statistic) + '_LC_Spearman.csv'
     output_path_file = os.path.join(output_path_folder, file_name)
     write_csv(output_path_file, data, data[0].keys())
@@ -332,9 +370,11 @@ def analyse_list_challenge_ranking_spearman(filepath):
 
 
 # generate_and_write_list_challenge()
+generate_and_write_random_challenge()
 # generate_and_write_pairs_challenge()
 
-analyse_list_challenge_ranking_spearman('data_output/attacked_list_challenge/attacked_list_challenge_attack.csv')
+
+# analyse_list_challenge_ranking_spearman(    'data_output/attacked_list_challenge/attacked_list_challenge_attack.csv')
 
 # generate_and_print_list_challenge()
 
