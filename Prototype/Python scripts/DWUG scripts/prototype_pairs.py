@@ -104,7 +104,7 @@ def generate_and_write_pairs_challenge():
             write_csv(os.path.join(output_path_lemma, 'pairs_challenge.csv'), pairs, pairs[0].keys() if pairs else [])
 
 
-def generate_and_write_list_challenge(strict=True):
+def generate_and_write_list_challenge(strict=True, to_find=4.0):
     print('Generating and writing lists for challenge, strict =', strict, ' ...')
 
     judgments_aggregated = aggregate_judgments_df(load_judgments_df_from_source_datasets())
@@ -125,8 +125,8 @@ def generate_and_write_list_challenge(strict=True):
             local_challenges = []
 
             for usage in uses:
-                local_list_challenge = find_practical_reference_usages(usage, judgments, strict)
-                if local_list_challenge['identifier3'] is not None:
+                local_list_challenge = find_practical_reference_usages(usage, judgments, strict, to_find)
+                if local_list_challenge['count'] >= 3:
                     local_challenges.append(local_list_challenge)
 
             if local_challenges.__len__() == 0:
@@ -143,9 +143,10 @@ def generate_and_write_list_challenge(strict=True):
 
             write_csv(os.path.join(output_path_lemma, file_name), local_challenges, list_challenge_header)
 
-#Get one usage with 4 and 1 judgment for random challenge
-def find_practical_reference_usages(usage, judgments_df, strict=True):
-    judgment_to_have = [1.0, 2.0, 3.0, 4.0]
+
+# Get one usage with 4 and 1 judgment for random challenge
+def find_practical_reference_usages(usage, judgments_df, strict=True, to_find=4.0):
+    judgment_to_have = [1.0, 2.0, 3.0, 4.0] if strict else [to_find]
     list_challenge = {
         'lemma': usage['lemma'],
         'identifier_ref': usage['identifier'],
@@ -157,18 +158,23 @@ def find_practical_reference_usages(usage, judgments_df, strict=True):
         'judgment3': None,
         'identifier4': None,
         'judgment4': None,
-        'order': None
+        'order': None,
+        'to_find': None,
+        'count': 0
     }
 
     local_order = {}
 
     lemma = usage['lemma']
-    df = judgments_df.groupby(['lemma']).get_group((lemma + '_nn',))
+    df_grouped = judgments_df.groupby(['lemma']).get_group((lemma + '_nn',))
+    df = df_grouped[
+        (df_grouped["identifier1"] == usage['identifier']) | (df_grouped["identifier2"] == usage['identifier'])]
 
     df_indexes_random = list(df.index)
     random.shuffle(df_indexes_random)
     index = 1
-
+    random_order = [1, 2, 3, 4]
+    random.shuffle(random_order)
     # For each judgment, check if usage is fitting
     for i in df_indexes_random:
         judgment = df.loc[i]
@@ -177,33 +183,38 @@ def find_practical_reference_usages(usage, judgments_df, strict=True):
         judgment_mean = judgment[4:13].mean()
         if strict and judgment_mean not in judgment_to_have:
             continue
+        elif not strict and judgment_mean not in judgment_to_have:
+            continue
 
-        # print('Mean judgment:', judgment_mean)
+            # print('Mean judgment:', judgment_mean)
 
-        if usage['identifier'] in [judgment['identifier1'], judgment['identifier2']]:
-            referenced_usage = judgment['identifier2'] if usage['identifier'] == judgment['identifier1'] else \
-                judgment['identifier1']
+        referenced_usage = judgment['identifier2'] if usage['identifier'] == judgment['identifier1'] else \
+            judgment['identifier1']
 
-            list_challenge['identifier' + str(index)] = referenced_usage
-            list_challenge['judgment' + str(index)] = str(judgment_mean)
-            local_order[referenced_usage] = judgment_mean
-            index += 1
+        list_challenge['identifier' + str(random_order[index - 1])] = referenced_usage
+        list_challenge['judgment' + str(random_order[index - 1])] = str(judgment_mean)
+        local_order[referenced_usage] = judgment_mean
+        list_challenge['count'] += 1
 
-            if strict:
-                judgment_to_have.remove(judgment_mean)
-            elif index > 4:
-                break
+        if strict:
+            judgment_to_have.remove(judgment_mean)
+        elif index == 1:
+            list_challenge['to_find'] = referenced_usage
+            judgment_to_have = [1.0, 2.0, 3.0, 4.0]
+            judgment_to_have.remove(to_find)
 
-            if len(judgment_to_have) == 0:
-                break
+        index += 1
+        if len(judgment_to_have) == 0 or index > 4:
+            break
 
-    list_challenge['order'] = [k for k, v in sorted(local_order.items(), key=lambda item: item[1], reverse=True)]
+    if strict:
+        list_challenge['order'] = [k for k, v in sorted(local_order.items(), key=lambda item: item[1], reverse=True)]
 
     return list_challenge
 
 
 def generate_and_write_random_challenge():
-    generate_and_write_list_challenge(False)
+    generate_and_write_list_challenge(strict=False, to_find=4.0)
 
 
 def find_random_reference_usages(usage, judgments_df):
@@ -369,7 +380,7 @@ def analyse_list_challenge_ranking_spearman(filepath):
     print('Attacked list challenge generated. Save to:', output_path_file)
 
 
-# generate_and_write_list_challenge()
+generate_and_write_list_challenge()
 generate_and_write_random_challenge()
 # generate_and_write_pairs_challenge()
 

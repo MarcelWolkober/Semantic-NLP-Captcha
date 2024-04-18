@@ -89,6 +89,12 @@ def attack_and_write_pairs_challenges(pairs):
     print('Cosine similarity generated. Save to:', output_path_pairs + '/attacked_pairs_' + lemma + '.csv')
 
 
+def attack_random_challenge(challenge, uses, value):
+    list_challenge = attack_list_challenge(challenge, uses)
+    usage_to_return = list_challenge['order'][4 - int(value) - 1]
+    print(usage_to_return)
+
+
 def attack_list_challenge(list_challenge, uses):
     lemma = list_challenge['lemma']
     usage_missing_usage = {
@@ -140,7 +146,7 @@ def attack_list_challenge(list_challenge, uses):
         pair_cosine_similarity = attack_pair(pair)
         ranking['cosine_similarity' + str(count)] = pair_cosine_similarity.item()
         count += 1
-        if count >= 5:
+        if count > 4:
             break
 
     # Create a list of tuples (usage, cosine_similarity)
@@ -169,6 +175,7 @@ def attack_and_write_list_challenges(challenges, uses):
     for list_challenge in challenges:
         print('for list_challenge ', count, ' of ', len(challenges))
         count += 1
+        attack_random_challenge(list_challenge, uses, 4.0)
         ranking = attack_list_challenge(list_challenge, uses)
         data.append(ranking)
 
