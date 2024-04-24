@@ -1,0 +1,311 @@
+	identifier1	identifier2	lemma	dataset	annotator2	annotator5	annotator4	annotator0	annotator1	annotator3	annotator6	annotator8	annotator9	median_label	non_nan_count
+2	fic_1824_7211.txt-3045-8	fic_1856_2470.txt-7252-13	attack	dwug_en			4.0	4.0						4.0	2
+3	fic_1824_7211.txt-3045-8	mag_1828_553929.txt-364-34	attack	dwug_en	3.0		3.0							3.0	2
+4	fic_1824_7211.txt-3045-8	mag_1854_555935.txt-131-30	attack	dwug_en	4.0		4.0							4.0	2
+6	fic_1824_7212.txt-597-16	mag_1828_553929.txt-364-34	attack	dwug_en		3.0	3.0	2.0						3.0	3
+27	fic_1827_9759.txt-3739-20	fic_1838_7086.txt-2732-33	attack	dwug_en			3.0	4.0						3.5	2
+28	fic_1827_9759.txt-3739-20	fic_1982_780070.txt-3698-5	attack	dwug_en				2.0				3.0		2.5	2
+32	fic_1831_7210.txt-1507-8	mag_1828_553929.txt-364-34	attack	dwug_en	4.0	3.0								3.5	2
+36	fic_1833_7239.txt-1694-15	fic_1838_7086.txt-2732-33	attack	dwug_en	4.0			4.0						4.0	2
+38	fic_1833_7239.txt-1694-15	news_1991_612479.txt-40-20	attack	dwug_en			3.0	3.0						3.0	2
+41	fic_1833_7239.txt-1694-15	nf_1845_747928.txt-826-66	attack	dwug_en		2.0					2.0			2.0	2
+43	fic_1834_2652.txt-2410-34	mag_1828_553929.txt-364-34	attack	dwug_en			3.0	2.0						2.5	2
+45	fic_1834_2652.txt-5065-36	mag_1828_553929.txt-364-34	attack	dwug_en	4.0	3.0		2.0			2.0			2.5	4
+50	fic_1835_7016.txt-2023-9	fic_1838_7086.txt-2732-33	attack	dwug_en	4.0	3.0	4.0	4.0						4.0	4
+51	fic_1835_7016.txt-2023-9	mag_1846_555400.txt-243-7	attack	dwug_en	3.0			3.0						3.0	2
+52	fic_1835_7016.txt-2023-9	news_1991_612479.txt-40-20	attack	dwug_en	3.0		3.0	3.0						3.0	3
+53	fic_1835_7134.txt-2235-79	mag_1828_553929.txt-364-34	attack	dwug_en	3.0	2.0		2.0			2.0	4.0		2.0	5
+54	fic_1835_7134.txt-2235-79	mag_1845_555245.txt-299-1	attack	dwug_en	4.0		3.0					3.0		3.0	3
+55	fic_1835_7142.txt-807-41	mag_1828_553929.txt-364-34	attack	dwug_en	4.0	2.0	3.0							3.0	3
+56	fic_1835_7142.txt-807-41	mag_1845_555245.txt-299-1	attack	dwug_en		4.0		3.0						3.5	2
+57	fic_1835_7172.txt-6030-11	fic_1856_2470.txt-7252-13	attack	dwug_en	4.0		4.0							4.0	2
+63	fic_1835_7309.txt-3267-10	fic_1845_7170.txt-4861-9	attack	dwug_en								3.0	3.0	3.0	2
+65	fic_1835_7309.txt-3267-10	news_1991_612479.txt-40-20	attack	dwug_en	3.0	3.0								3.0	2
+69	fic_1838_7085.txt-2157-17	fic_2009_36778.txt-461-18	attack	dwug_en	4.0		2.0	3.0						3.0	3
+74	fic_1838_7086.txt-2732-33	fic_1858_1282.txt-1444-24	attack	dwug_en	4.0	2.0					2.0			2.0	3
+77	fic_1838_7086.txt-2732-33	mag_1828_553929.txt-364-34	attack	dwug_en	3.0	3.0		2.0		2.0	3.0			3.0	5
+79	fic_1838_7086.txt-2732-33	mag_1858_506134.txt-148-19	attack	dwug_en	4.0		4.0							4.0	2
+82	fic_1838_7086.txt-2732-33	news_1967_726451.txt-39-2	attack	dwug_en	3.0				4.0					3.5	2
+83	fic_1838_7086.txt-2732-33	news_1989_669714.txt-32-21	attack	dwug_en	4.0	4.0	4.0	4.0						4.0	4
+85	fic_1838_7086.txt-2732-33	nf_1829_747740.txt-792-23	attack	dwug_en	4.0		4.0	4.0						4.0	3
+87	fic_1838_7086.txt-2732-33	nf_1975_773861.txt-1436-17	attack	dwug_en		2.0	3.0	3.0						3.0	3
+91	fic_1838_7250.txt-1095-10	fic_1839_7024.txt-2377-9	attack	dwug_en	4.0		4.0							4.0	2
+95	fic_1839_7024.txt-2377-9	fic_1859_9037.txt-2260-41	attack	dwug_en						2.0	2.0	3.0		2.0	3
+97	fic_1839_7024.txt-2377-9	mag_1828_553929.txt-364-34	attack	dwug_en	3.0			2.0			2.0			2.0	3
+98	fic_1839_7024.txt-2377-9	mag_1962_492071.txt-8-21	attack	dwug_en			4.0	4.0						4.0	2
+99	fic_1839_7024.txt-2377-9	mag_1970_315464.txt-8-1	attack	dwug_en			4.0	4.0						4.0	2
+100	fic_1839_7024.txt-2377-9	mag_1980_296744.txt-5-30	attack	dwug_en	3.0	3.0	4.0							3.0	3
+101	fic_1839_7024.txt-2377-9	mag_2005_379087.txt-0-11	attack	dwug_en	4.0		4.0							4.0	2
+102	fic_1839_7024.txt-2377-9	news_1966_725841.txt-34-33	attack	dwug_en	3.0					3.0				3.0	2
+104	fic_1839_7024.txt-2377-9	news_1998_626765.txt-4-8	attack	dwug_en				4.0		3.0				3.5	2
+105	fic_1839_7024.txt-2377-9	nf_1845_748321.txt-2041-23	attack	dwug_en		4.0	3.0							3.5	2
+106	fic_1839_7024.txt-2377-9	nf_1847_754437.txt-1509-47	attack	dwug_en	3.0		3.0	3.0						3.0	3
+114	fic_1843_7166.txt-1590-9	mag_1845_555245.txt-299-1	attack	dwug_en			3.0	4.0						3.5	2
+115	fic_1843_7166.txt-1590-9	news_1991_612479.txt-40-20	attack	dwug_en			3.0	3.0						3.0	2
+119	fic_1844_3928.txt-3118-8	fic_1968_781997.txt-4233-2	attack	dwug_en				4.0		3.0				3.5	2
+122	fic_1844_3928.txt-3118-8	mag_1828_553929.txt-364-34	attack	dwug_en	3.0			2.0						2.5	2
+124	fic_1844_3928.txt-3118-8	mag_1850_589167.txt-126-1	attack	dwug_en	4.0		4.0	3.0						4.0	3
+125	fic_1844_3928.txt-3118-8	mag_1986_432304.txt-168-36	attack	dwug_en	4.0		3.0	4.0						4.0	3
+126	fic_1844_3928.txt-3118-8	mag_1990_342663.txt-0-16	attack	dwug_en				4.0					4.0	4.0	2
+127	fic_1844_3928.txt-3118-8	mag_1992_396000.txt-164-14	attack	dwug_en	3.0	4.0								3.5	2
+129	fic_1844_3928.txt-3118-8	news_1991_612479.txt-40-20	attack	dwug_en	3.0			2.0		2.0				2.0	3
+130	fic_1844_3928.txt-3118-8	news_1998_626765.txt-4-8	attack	dwug_en	3.0			4.0		2.0				3.0	3
+131	fic_1844_3928.txt-3118-8	nf_1824_747448.txt-3506-12	attack	dwug_en	4.0		3.0							3.5	2
+132	fic_1844_3928.txt-3118-8	nf_1841_762742.txt-2458-9	attack	dwug_en	4.0	3.0		4.0						4.0	3
+133	fic_1844_3928.txt-3498-7	fic_1856_2470.txt-7252-13	attack	dwug_en			4.0	4.0						4.0	2
+134	fic_1844_3928.txt-3498-7	mag_1828_553929.txt-364-34	attack	dwug_en		2.0		2.0						2.0	2
+137	fic_1844_800.txt-2479-17	mag_1828_553929.txt-364-34	attack	dwug_en	4.0	3.0								3.5	2
+138	fic_1844_800.txt-2479-17	mag_1854_555935.txt-131-30	attack	dwug_en	3.0	2.0		3.0						3.0	3
+139	fic_1845_622.txt-11178-62	mag_1828_553929.txt-364-34	attack	dwug_en		3.0	3.0	2.0						3.0	3
+141	fic_1845_622.txt-11187-51	fic_2002_30623.txt-303-9	attack	dwug_en				2.0					1.0	1.5	2
+142	fic_1845_622.txt-11187-51	mag_1828_553929.txt-364-34	attack	dwug_en	4.0			2.0			2.0			2.0	3
+143	fic_1845_622.txt-11187-51	news_1994_606745.txt-26-26	attack	dwug_en	4.0	3.0		4.0						4.0	3
+146	fic_1845_7162.txt-3298-53	mag_1854_555935.txt-131-30	attack	dwug_en		3.0	2.0							2.5	2
+149	fic_1845_7170.txt-10436-6	news_1991_612479.txt-40-20	attack	dwug_en	4.0		3.0							3.5	2
+150	fic_1845_7170.txt-4861-9	fic_1993_25035.txt-820-7	attack	dwug_en		3.0	1.0				2.0			2.0	3
+156	fic_1846_544.txt-3481-11	mag_1828_553929.txt-364-34	attack	dwug_en	4.0			2.0			2.0			2.0	3
+157	fic_1846_544.txt-3481-11	news_1994_606745.txt-26-26	attack	dwug_en		3.0		4.0						3.5	2
+168	fic_1846_7121.txt-2894-16	fic_1856_2470.txt-7252-13	attack	dwug_en		3.0	4.0							3.5	2
+169	fic_1846_7121.txt-2894-16	mag_1828_553929.txt-364-34	attack	dwug_en	4.0	3.0		2.0						3.0	3
+170	fic_1846_7679.txt-262-9	fic_1854_9193.txt-8301-13	attack	dwug_en	4.0	3.0		2.0						3.0	3
+172	fic_1846_7679.txt-262-9	mag_1828_553929.txt-364-34	attack	dwug_en		2.0		2.0						2.0	2
+177	fic_1848_1279.txt-1511-47	fic_1854_9193.txt-8301-13	attack	dwug_en	3.0	3.0		4.0						3.0	3
+178	fic_1848_1279.txt-1511-47	fic_1858_1282.txt-1444-24	attack	dwug_en				2.0				3.0		2.5	2
+179	fic_1848_1279.txt-1511-47	fic_2009_36778.txt-461-18	attack	dwug_en				4.0					4.0	4.0	2
+181	fic_1848_1279.txt-1511-47	mag_1840_586558.txt-356-49	attack	dwug_en				2.0				3.0		2.5	2
+182	fic_1848_1279.txt-1511-47	mag_1972_278489.txt-11-19	attack	dwug_en	2.0			2.0			2.0		2.0	2.0	4
+184	fic_1848_1279.txt-1511-47	mag_2007_387325.txt-12-20	attack	dwug_en	3.0								2.0	2.5	2
+185	fic_1848_1279.txt-1511-47	news_1991_612479.txt-40-20	attack	dwug_en			2.0	2.0						2.0	2
+186	fic_1848_1279.txt-1511-47	news_1997_611600.txt-65-2	attack	dwug_en				2.0				3.0		2.5	2
+187	fic_1848_1279.txt-1511-47	nf_1975_773861.txt-1436-17	attack	dwug_en				2.0				3.0		2.5	2
+188	fic_1848_7009.txt-1181-32	fic_1854_9193.txt-8301-13	attack	dwug_en	4.0	4.0	3.0	2.0	4.0					4.0	5
+190	fic_1848_7009.txt-1181-32	fic_2009_36778.txt-461-18	attack	dwug_en	3.0					3.0				3.0	2
+191	fic_1848_7009.txt-1181-32	mag_1828_553929.txt-364-34	attack	dwug_en		3.0		2.0						2.5	2
+192	fic_1848_7009.txt-1181-32	mag_1834_554263.txt-306-48	attack	dwug_en	3.0	3.0	4.0	4.0						3.5	4
+193	fic_1848_7009.txt-1181-32	mag_1838_586203.txt-253-10	attack	dwug_en	4.0		4.0							4.0	2
+195	fic_1848_7009.txt-1181-32	mag_1984_299534.txt-14-19	attack	dwug_en	4.0	3.0		4.0						4.0	3
+197	fic_1848_7009.txt-1181-32	mag_2007_387325.txt-12-20	attack	dwug_en		2.0					2.0			2.0	2
+198	fic_1848_7009.txt-1181-32	nf_1836_749613.txt-2695-7	attack	dwug_en	4.0			4.0						4.0	2
+199	fic_1848_7009.txt-1181-32	nf_2008_774816.txt-78-20	attack	dwug_en	4.0	3.0		4.0						4.0	3
+267	fic_1853_1170.txt-2289-22	news_1982_671107.txt-19-96	attack	dwug_en		4.0	1.0				3.0			3.0	3
+268	fic_1853_1170.txt-2289-22	news_1991_612479.txt-40-20	attack	dwug_en	4.0	2.0		4.0			2.0	3.0		3.0	5
+269	fic_1853_2486.txt-330-33	fic_1968_781997.txt-4233-2	attack	dwug_en		4.0	4.0	4.0						4.0	3
+270	fic_1853_2486.txt-330-33	mag_1828_553929.txt-364-34	attack	dwug_en			3.0	2.0			2.0			2.0	3
+274	fic_1853_9142.txt-2686-17	fic_1854_9193.txt-8301-13	attack	dwug_en		3.0		2.0		3.0				3.0	3
+277	fic_1853_9142.txt-2686-17	fic_1994_54174.txt-61-23	attack	dwug_en				4.0				3.0		3.5	2
+278	fic_1853_9142.txt-2686-17	fic_2002_30623.txt-303-9	attack	dwug_en			4.0	4.0						4.0	2
+279	fic_1853_9142.txt-2686-17	fic_2009_36778.txt-461-18	attack	dwug_en				3.0		3.0				3.0	2
+280	fic_1853_9142.txt-2686-17	mag_1830_554067.txt-275-32	attack	dwug_en	3.0	3.0		2.0						3.0	3
+282	fic_1853_9142.txt-2686-17	mag_1972_278489.txt-11-19	attack	dwug_en			1.0	4.0						2.5	2
+283	fic_1853_9142.txt-2686-17	mag_1990_342663.txt-0-16	attack	dwug_en	4.0	2.0		3.0			2.0			2.5	4
+286	fic_1853_9142.txt-2686-17	mag_2002_398773.txt-149-9	attack	dwug_en	3.0			3.0						3.0	2
+287	fic_1853_9142.txt-2686-17	news_1967_726451.txt-39-2	attack	dwug_en	4.0	3.0		2.0						3.0	3
+288	fic_1853_9142.txt-2686-17	news_1982_671107.txt-19-96	attack	dwug_en	2.0	2.0	2.0	2.0						2.0	4
+290	fic_1853_9142.txt-2686-17	news_1994_606745.txt-26-26	attack	dwug_en	2.0	2.0		2.0						2.0	3
+291	fic_1853_9142.txt-2686-17	news_1997_611600.txt-65-2	attack	dwug_en	2.0							3.0		2.5	2
+306	fic_1854_9193.txt-8301-13	mag_1822_553405.txt-345-25	attack	dwug_en	4.0	3.0		2.0						3.0	3
+307	fic_1854_9193.txt-8301-13	mag_1822_553405.txt-347-16	attack	dwug_en		4.0		2.0						3.0	2
+308	fic_1854_9193.txt-8301-13	mag_1838_554586.txt-186-30	attack	dwug_en		4.0	3.0							3.5	2
+310	fic_1854_9193.txt-8301-13	mag_1846_524014.txt-303-22	attack	dwug_en		3.0		2.0			2.0			2.0	3
+312	fic_1854_9193.txt-8301-13	mag_1968_212735.txt-7-17	attack	dwug_en	4.0	3.0	4.0							4.0	3
+314	fic_1854_9193.txt-8301-13	news_1965_724715.txt-15-7	attack	dwug_en		3.0	3.0	2.0						3.0	3
+319	fic_1854_9193.txt-8301-13	news_2005_650884.txt-75-29	attack	dwug_en		3.0	3.0	2.0						3.0	3
+320	fic_1854_9193.txt-8301-13	nf_1859_747415.txt-25-18	attack	dwug_en		4.0	4.0							4.0	2
+321	fic_1854_9193.txt-8301-13	nf_2004_775803.txt-29-4	attack	dwug_en		4.0	4.0							4.0	2
+323	fic_1855_1209.txt-770-29	mag_1828_553929.txt-364-34	attack	dwug_en		3.0		2.0			2.0			2.0	3
+328	fic_1855_2965.txt-376-3	news_1982_671107.txt-19-96	attack	dwug_en			4.0	4.0						4.0	2
+336	fic_1856_2470.txt-7252-13	mag_1846_524014.txt-277-34	attack	dwug_en		3.0		4.0						3.5	2
+337	fic_1856_2470.txt-7252-13	mag_1854_555935.txt-131-30	attack	dwug_en	2.0	2.0	3.0	2.0		2.0	2.0			2.0	6
+341	fic_1856_2470.txt-7252-13	news_1972_730368.txt-11-20	attack	dwug_en	4.0			4.0						4.0	2
+342	fic_1856_2470.txt-7252-13	news_1992_605779.txt-127-14	attack	dwug_en	4.0		3.0							3.5	2
+344	fic_1856_2655.txt-4746-13	mag_1828_553929.txt-364-34	attack	dwug_en				2.0			2.0			2.0	2
+345	fic_1856_2655.txt-4746-13	news_1966_725841.txt-34-33	attack	dwug_en	4.0	3.0		4.0						4.0	3
+346	fic_1856_2655.txt-4746-13	news_1982_671107.txt-19-96	attack	dwug_en		3.0		4.0						3.5	2
+347	fic_1856_9779.txt-7124-6	news_1991_612479.txt-40-20	attack	dwug_en	4.0	2.0	3.0							3.0	3
+348	fic_1856_9779.txt-7124-6	news_1998_626765.txt-4-8	attack	dwug_en	3.0		4.0							3.5	2
+351	fic_1857_9075.txt-4573-21	mag_1828_553929.txt-364-34	attack	dwug_en	3.0	3.0								3.0	2
+352	fic_1858_1282.txt-1444-24	fic_1982_780051.txt-4396-7	attack	dwug_en		2.0		4.0						3.0	2
+355	fic_1858_1282.txt-1444-24	mag_1828_553929.txt-364-34	attack	dwug_en	3.0		2.0	2.0						2.0	3
+361	fic_1858_1282.txt-1444-24	news_1984_670941.txt-14-43	attack	dwug_en				2.0				3.0	1.0	2.0	3
+362	fic_1858_1282.txt-1444-24	news_1997_611600.txt-65-2	attack	dwug_en								3.0	2.0	2.5	2
+366	fic_1859_9037.txt-2260-41	mag_1840_586558.txt-356-49	attack	dwug_en								4.0	2.0	3.0	2
+368	fic_1859_9037.txt-2260-41	news_1994_606745.txt-26-26	attack	dwug_en	2.0					2.0	2.0			2.0	3
+373	fic_1860_8118.txt-4037-43	mag_1828_553929.txt-364-34	attack	dwug_en	3.0			2.0			2.0			2.0	3
+374	fic_1860_8118.txt-4037-43	mag_1840_586497.txt-150-6	attack	dwug_en			4.0	4.0						4.0	2
+377	fic_1860_9817.txt-2290-22	news_1998_626765.txt-4-8	attack	dwug_en	4.0			4.0						4.0	2
+380	fic_1962_10417.txt-9433-20	news_1966_725841.txt-34-33	attack	dwug_en	4.0	3.0								3.5	2
+384	fic_1962_781986.txt-3553-2	news_1991_612479.txt-40-20	attack	dwug_en	3.0		2.0							2.5	2
+392	fic_1968_781997.txt-4233-2	fic_2001_13289.txt-335-18	attack	dwug_en		2.0		3.0						2.5	2
+393	fic_1968_781997.txt-4233-2	mag_1832_564345.txt-180-28	attack	dwug_en	4.0	4.0								4.0	2
+400	fic_1968_781997.txt-4233-2	news_1972_729986.txt-6-2	attack	dwug_en	3.0			3.0						3.0	2
+401	fic_1968_781997.txt-4233-2	news_1991_612479.txt-40-20	attack	dwug_en	3.0		3.0	3.0	4.0	3.0				3.0	5
+403	fic_1968_781997.txt-4233-2	nf_1836_747718.txt-1726-17	attack	dwug_en	4.0	3.0	4.0							4.0	3
+404	fic_1968_781997.txt-4233-2	nf_1840_768793.txt-1045-33	attack	dwug_en		4.0	4.0							4.0	2
+405	fic_1968_781997.txt-4233-2	nf_1844_749098.txt-1617-40	attack	dwug_en		4.0	4.0							4.0	2
+419	fic_1976_10617.txt-1529-5	news_1991_612479.txt-40-20	attack	dwug_en	4.0	2.0		3.0						3.0	3
+421	fic_1977_10624.txt-816-11	mag_1828_553929.txt-364-34	attack	dwug_en	3.0		4.0							3.5	2
+424	fic_1982_780051.txt-4396-7	mag_1828_553929.txt-364-34	attack	dwug_en			1.0	2.0						1.5	2
+425	fic_1982_780051.txt-4396-7	mag_1845_555245.txt-299-1	attack	dwug_en		2.0	1.0	3.0						2.0	3
+430	fic_1982_780070.txt-3698-5	mag_1828_553929.txt-364-34	attack	dwug_en	3.0	2.0		3.0			2.0			2.5	4
+435	fic_1985_780062.txt-118-13	mag_1828_553929.txt-364-34	attack	dwug_en	3.0	2.0	3.0							3.0	3
+437	fic_1986_782032.txt-5195-1	mag_1828_553929.txt-364-34	attack	dwug_en	4.0			2.0			3.0			3.0	3
+450	fic_1987_782033.txt-287-7	mag_1854_555935.txt-131-30	attack	dwug_en	4.0		3.0	3.0						3.0	3
+451	fic_1987_782033.txt-287-7	news_1991_612479.txt-40-20	attack	dwug_en	3.0		3.0							3.0	2
+459	fic_1988_780054.txt-2791-11	mag_1828_553929.txt-364-34	attack	dwug_en	3.0		2.0	2.0			2.0			2.0	4
+460	fic_1988_780054.txt-2791-11	mag_1854_555935.txt-131-30	attack	dwug_en		3.0	3.0							3.0	2
+468	fic_1993_25026.txt-440-9	news_1991_612479.txt-40-20	attack	dwug_en		4.0	2.0							3.0	2
+473	fic_1993_25035.txt-820-7	mag_2005_379002.txt-22-10	attack	dwug_en	3.0	2.0		3.0						3.0	3
+474	fic_1993_25035.txt-820-7	news_1965_724563.txt-1-1	attack	dwug_en	3.0	3.0		2.0						3.0	3
+476	fic_1993_25035.txt-820-7	news_1998_626765.txt-4-8	attack	dwug_en	3.0	2.0	2.0	2.0	4.0					2.0	5
+477	fic_1993_25035.txt-820-7	nf_1964_773930.txt-468-27	attack	dwug_en			1.0	3.0						2.0	2
+482	fic_1994_54174.txt-61-23	news_1982_671107.txt-19-96	attack	dwug_en		2.0	2.0				2.0			2.0	3
+492	fic_1998_43533.txt-4-2	news_1991_612479.txt-40-20	attack	dwug_en	4.0	2.0					2.0			2.0	3
+493	fic_2000_29245.txt-31-12	mag_1828_553929.txt-364-34	attack	dwug_en	3.0	3.0								3.0	2
+497	fic_2001_13289.txt-335-18	news_1991_612479.txt-40-20	attack	dwug_en	3.0	3.0		4.0						3.0	3
+499	fic_2001_13566.txt-158-6	mag_1828_553929.txt-364-34	attack	dwug_en	4.0		3.0	2.0						3.0	3
+500	fic_2002_30623.txt-303-9	mag_1828_553929.txt-364-34	attack	dwug_en			2.0	2.0						2.0	2
+502	fic_2002_30623.txt-303-9	mag_1972_278489.txt-11-19	attack	dwug_en	4.0	4.0					4.0			4.0	3
+508	fic_2004_49050.txt-745-14	news_1991_612479.txt-40-20	attack	dwug_en	3.0	3.0		3.0						3.0	3
+520	fic_2009_36778.txt-461-18	mag_1834_554263.txt-216-17	attack	dwug_en	3.0	3.0	2.0							3.0	3
+522	fic_2009_36778.txt-461-18	mag_1854_555935.txt-131-30	attack	dwug_en	2.0	2.0		2.0		3.0	2.0			2.0	5
+523	fic_2009_36778.txt-461-18	mag_1856_590811.txt-90-38	attack	dwug_en	3.0		2.0	3.0						3.0	3
+525	fic_2009_36778.txt-461-18	mag_2004_365334.txt-2-9	attack	dwug_en	3.0	3.0								3.0	2
+526	fic_2009_36778.txt-461-18	news_1964_724184.txt-2-34	attack	dwug_en	4.0			3.0						3.5	2
+527	fic_2009_36778.txt-461-18	news_1966_725841.txt-34-33	attack	dwug_en	4.0			3.0	4.0	2.0				3.5	4
+529	fic_2009_36778.txt-461-18	news_1994_606745.txt-26-26	attack	dwug_en	3.0					4.0				3.5	2
+530	fic_2009_36778.txt-461-18	nf_1829_751465.txt-2786-42	attack	dwug_en	4.0	3.0	2.0	3.0						3.0	4
+532	fic_2009_36778.txt-461-18	nf_1847_754437.txt-3107-5	attack	dwug_en	3.0		2.0	4.0						3.0	3
+534	mag_1822_553405.txt-347-16	news_1991_612479.txt-40-20	attack	dwug_en	3.0	3.0								3.0	2
+535	mag_1823_553456.txt-249-22	news_1966_725841.txt-34-33	attack	dwug_en	4.0		2.0	3.0			2.0			2.5	4
+536	mag_1823_553456.txt-249-22	news_1991_612479.txt-40-20	attack	dwug_en	3.0			4.0						3.5	2
+538	mag_1825_553609.txt-140-54	news_1967_726451.txt-39-2	attack	dwug_en		4.0	4.0	4.0						4.0	3
+539	mag_1825_553609.txt-140-54	news_1991_612479.txt-40-20	attack	dwug_en	3.0			3.0						3.0	2
+540	mag_1828_553929.txt-364-34	mag_1830_554067.txt-275-32	attack	dwug_en		3.0		4.0						3.5	2
+542	mag_1828_553929.txt-364-34	mag_1832_564345.txt-180-28	attack	dwug_en				2.0			2.0			2.0	2
+544	mag_1828_553929.txt-364-34	mag_1838_554586.txt-186-30	attack	dwug_en		3.0		2.0						2.5	2
+549	mag_1828_553929.txt-364-34	mag_1840_586558.txt-81-14	attack	dwug_en	3.0			3.0						3.0	2
+550	mag_1828_553929.txt-364-34	mag_1845_555245.txt-102-19	attack	dwug_en	4.0			3.0						3.5	2
+552	mag_1828_553929.txt-364-34	mag_1846_524014.txt-303-22	attack	dwug_en	3.0	3.0		2.0			2.0			2.5	4
+553	mag_1828_553929.txt-364-34	mag_1849_525337.txt-118-18	attack	dwug_en		2.0	4.0				4.0			4.0	3
+554	mag_1828_553929.txt-364-34	mag_1853_590234.txt-200-60	attack	dwug_en		3.0		2.0						2.5	2
+555	mag_1828_553929.txt-364-34	mag_1854_555935.txt-131-30	attack	dwug_en	2.0	4.0		2.0			2.0			2.0	4
+556	mag_1828_553929.txt-364-34	mag_1856_566684.txt-393-12	attack	dwug_en	3.0	3.0								3.0	2
+558	mag_1828_553929.txt-364-34	mag_1858_506134.txt-148-19	attack	dwug_en	3.0	3.0		2.0						3.0	3
+560	mag_1828_553929.txt-364-34	mag_1962_492071.txt-8-21	attack	dwug_en	3.0	2.0	3.0	2.0						2.5	4
+562	mag_1828_553929.txt-364-34	mag_1970_282294.txt-7-3	attack	dwug_en	3.0		2.0							2.5	2
+563	mag_1828_553929.txt-364-34	mag_1970_315464.txt-8-1	attack	dwug_en		3.0		2.0			3.0			3.0	3
+565	mag_1828_553929.txt-364-34	mag_1978_318618.txt-11-36	attack	dwug_en		3.0	4.0	2.0						3.0	3
+566	mag_1828_553929.txt-364-34	mag_1980_296744.txt-5-30	attack	dwug_en		3.0	3.0							3.0	2
+567	mag_1828_553929.txt-364-34	mag_1981_295135.txt-17-16	attack	dwug_en	4.0		4.0							4.0	2
+568	mag_1828_553929.txt-364-34	mag_1981_322209.txt-3-7	attack	dwug_en				4.0					3.0	3.5	2
+569	mag_1828_553929.txt-364-34	mag_1984_299534.txt-14-19	attack	dwug_en	3.0		3.0	2.0						3.0	3
+570	mag_1828_553929.txt-364-34	mag_1990_342663.txt-0-16	attack	dwug_en	4.0	3.0	3.0	2.0						3.0	4
+571	mag_1828_553929.txt-364-34	mag_1990_397100.txt-83-6	attack	dwug_en	4.0		3.0							3.5	2
+576	mag_1828_553929.txt-364-34	mag_2002_397275.txt-24-3	attack	dwug_en		3.0	3.0							3.0	2
+577	mag_1828_553929.txt-364-34	mag_2004_365334.txt-2-9	attack	dwug_en		2.0		2.0			2.0			2.0	3
+578	mag_1828_553929.txt-364-34	mag_2005_379002.txt-22-10	attack	dwug_en		2.0					2.0			2.0	2
+579	mag_1828_553929.txt-364-34	mag_2005_379087.txt-0-11	attack	dwug_en	4.0		3.0	2.0						3.0	3
+580	mag_1828_553929.txt-364-34	news_1960_721229.txt-32-12	attack	dwug_en	4.0			4.0						4.0	2
+584	mag_1828_553929.txt-364-34	news_1967_726451.txt-39-2	attack	dwug_en				2.0			2.0			2.0	2
+585	mag_1828_553929.txt-364-34	news_1972_729986.txt-6-2	attack	dwug_en		4.0	4.0	4.0						4.0	3
+586	mag_1828_553929.txt-364-34	news_1972_730368.txt-11-20	attack	dwug_en		3.0	2.0							2.5	2
+589	mag_1828_553929.txt-364-34	news_1991_612479.txt-40-20	attack	dwug_en	3.0	3.0	3.0	2.0						3.0	4
+590	mag_1828_553929.txt-364-34	news_1992_605779.txt-41-29	attack	dwug_en	3.0	3.0		2.0						3.0	3
+591	mag_1828_553929.txt-364-34	news_1997_611600.txt-65-2	attack	dwug_en			3.0	2.0			2.0			2.0	3
+593	mag_1828_553929.txt-364-34	news_2004_640221.txt-13-20	attack	dwug_en	3.0	2.0	3.0							3.0	3
+595	mag_1828_553929.txt-364-34	nf_1824_747448.txt-3506-12	attack	dwug_en		3.0	3.0							3.0	2
+598	mag_1828_553929.txt-364-34	nf_1832_758144.txt-1353-3	attack	dwug_en	3.0			2.0			2.0			2.0	3
+600	mag_1828_553929.txt-364-34	nf_1840_768793.txt-1045-33	attack	dwug_en		3.0	4.0							3.5	2
+601	mag_1828_553929.txt-364-34	nf_1841_762742.txt-1051-5	attack	dwug_en	3.0	2.0		2.0				4.0		2.5	4
+603	mag_1828_553929.txt-364-34	nf_1844_749098.txt-536-37	attack	dwug_en	4.0			2.0			2.0			2.0	3
+604	mag_1828_553929.txt-364-34	nf_1845_747928.txt-826-66	attack	dwug_en	3.0		4.0	2.0						3.0	3
+606	mag_1828_553929.txt-364-34	nf_1849_772497.txt-842-8	attack	dwug_en	3.0			2.0						2.5	2
+607	mag_1828_553929.txt-364-34	nf_1859_747415.txt-25-18	attack	dwug_en	4.0	2.0	4.0	2.0			4.0			4.0	5
+608	mag_1828_553929.txt-364-34	nf_1975_773861.txt-1436-17	attack	dwug_en	3.0	3.0								3.0	2
+609	mag_1828_553929.txt-364-34	nf_2001_746295.txt-103-27	attack	dwug_en		3.0		2.0						2.5	2
+610	mag_1828_553929.txt-364-34	nf_2004_775819.txt-7-21	attack	dwug_en		2.0		2.0						2.0	2
+611	mag_1828_553929.txt-364-34	nf_2008_774816.txt-78-20	attack	dwug_en	4.0		3.0							3.5	2
+613	mag_1832_564239.txt-203-30	news_1998_626765.txt-4-8	attack	dwug_en	4.0			4.0						4.0	2
+614	mag_1832_564307.txt-140-16	news_1982_671107.txt-19-96	attack	dwug_en	4.0	4.0								4.0	2
+615	mag_1832_564307.txt-140-16	news_1991_612479.txt-40-20	attack	dwug_en	3.0	3.0								3.0	2
+616	mag_1832_564345.txt-180-28	mag_1990_342663.txt-0-16	attack	dwug_en				4.0				4.0		4.0	2
+620	mag_1838_554638.txt-13-21	news_1991_612479.txt-40-20	attack	dwug_en	3.0	3.0								3.0	2
+622	mag_1838_586203.txt-253-10	mag_2002_398773.txt-149-9	attack	dwug_en				2.0					3.0	2.5	2
+624	mag_1840_586558.txt-356-49	news_1998_626765.txt-4-8	attack	dwug_en	4.0	4.0								4.0	2
+625	mag_1840_586558.txt-81-14	mag_1845_555245.txt-299-1	attack	dwug_en	3.0	3.0								3.0	2
+626	mag_1845_555245.txt-102-19	mag_1845_555245.txt-299-1	attack	dwug_en		3.0	4.0							3.5	2
+627	mag_1845_555245.txt-299-1	mag_1999_397639.txt-186-35	attack	dwug_en		3.0	2.0	3.0						3.0	3
+628	mag_1845_555245.txt-299-1	mag_2000_368897.txt-14-26	attack	dwug_en	3.0	2.0	2.0	2.0			2.0			2.0	5
+630	mag_1845_555245.txt-299-1	mag_2001_416183.txt-158-8	attack	dwug_en	2.0	2.0		3.0						2.0	3
+631	mag_1845_555245.txt-299-1	news_1967_726451.txt-39-2	attack	dwug_en	3.0			2.0		4.0				3.0	3
+633	mag_1845_555245.txt-299-1	news_1991_612479.txt-40-20	attack	dwug_en	2.0	3.0			4.0					3.0	3
+634	mag_1845_555245.txt-299-1	news_1994_606745.txt-26-26	attack	dwug_en	3.0			3.0						3.0	2
+636	mag_1846_524014.txt-26-2	mag_1854_555935.txt-131-30	attack	dwug_en		3.0		3.0						3.0	2
+638	mag_1846_524014.txt-26-2	news_1991_612479.txt-40-20	attack	dwug_en	3.0		4.0							3.5	2
+639	mag_1846_524014.txt-26-2	nf_1829_751465.txt-2786-42	attack	dwug_en				4.0				3.0		3.5	2
+644	mag_1849_525337.txt-118-18	mag_1854_555935.txt-131-30	attack	dwug_en	4.0	2.0	3.0	2.0						2.5	4
+647	mag_1850_589167.txt-126-1	news_1991_612479.txt-40-20	attack	dwug_en	3.0	3.0	3.0							3.0	3
+648	mag_1850_589167.txt-126-1	nf_1982_774241.txt-1410-26	attack	dwug_en								3.0	1.0	2.0	2
+649	mag_1853_590163.txt-199-32	mag_2005_379002.txt-22-10	attack	dwug_en	3.0						4.0			3.5	2
+650	mag_1853_590163.txt-199-32	news_1991_612479.txt-40-20	attack	dwug_en		3.0	3.0							3.0	2
+653	mag_1853_590234.txt-200-60	news_1982_671107.txt-19-96	attack	dwug_en		3.0	4.0							3.5	2
+654	mag_1854_555935.txt-131-30	news_1961_722130.txt-4-23	attack	dwug_en	4.0		2.0	3.0						3.0	3
+655	mag_1854_555935.txt-131-30	news_1982_671107.txt-19-96	attack	dwug_en	2.0		3.0	3.0						3.0	3
+657	mag_1854_555935.txt-131-30	nf_1962_773607.txt-311-2	attack	dwug_en	3.0	2.0		3.0						3.0	3
+659	mag_1854_555935.txt-131-30	nf_1994_773891.txt-987-21	attack	dwug_en		3.0	4.0							3.5	2
+666	mag_1856_566684.txt-393-12	news_1967_726451.txt-39-2	attack	dwug_en		3.0	4.0							3.5	2
+669	mag_1968_212735.txt-7-17	news_1991_612479.txt-40-20	attack	dwug_en	4.0	2.0		3.0			2.0			2.5	4
+671	mag_1970_282294.txt-7-3	news_1967_726451.txt-39-2	attack	dwug_en	4.0		1.0	3.0						3.0	3
+673	mag_1972_278489.txt-11-19	mag_2005_379095.txt-6-29	attack	dwug_en								3.0	1.0	2.0	2
+675	mag_1972_278489.txt-11-19	nf_1841_762742.txt-1051-5	attack	dwug_en				2.0					2.0	2.0	2
+676	mag_1980_296543.txt-17-11	news_1991_612479.txt-40-20	attack	dwug_en	4.0			3.0						3.5	2
+680	mag_1981_322209.txt-3-7	mag_2002_371999.txt-12-46	attack	dwug_en	4.0	3.0	4.0							4.0	3
+681	mag_1981_322209.txt-3-7	news_1967_726451.txt-39-2	attack	dwug_en	4.0		4.0							4.0	2
+682	mag_1981_322209.txt-3-7	news_1991_612479.txt-40-20	attack	dwug_en	3.0			2.0						2.5	2
+683	mag_1982_490856.txt-85-5	news_1966_725841.txt-34-33	attack	dwug_en		2.0	2.0	3.0			2.0			2.0	4
+684	mag_1982_490856.txt-85-5	news_1991_612479.txt-40-20	attack	dwug_en			3.0	4.0						3.5	2
+686	mag_1986_432304.txt-168-36	news_1991_612479.txt-40-20	attack	dwug_en			3.0	3.0						3.0	2
+693	mag_2001_412321.txt-16-4	news_1991_612479.txt-40-20	attack	dwug_en			3.0	3.0						3.0	2
+695	mag_2002_371999.txt-12-46	news_1991_612479.txt-40-20	attack	dwug_en		4.0		3.0						3.5	2
+696	mag_2002_371999.txt-12-46	nf_1844_749098.txt-1617-40	attack	dwug_en	4.0	4.0	4.0							4.0	3
+699	mag_2002_387140.txt-2-2	news_1991_612479.txt-40-20	attack	dwug_en	3.0			3.0						3.0	2
+701	mag_2002_398773.txt-149-9	news_1991_612479.txt-40-20	attack	dwug_en	3.0			3.0				4.0		3.0	3
+704	mag_2005_379095.txt-6-29	news_1991_612479.txt-40-20	attack	dwug_en		3.0		3.0						3.0	2
+705	mag_2005_379095.txt-6-29	news_1994_606745.txt-26-26	attack	dwug_en		4.0	4.0							4.0	2
+706	mag_2005_397463.txt-63-5	news_1967_726451.txt-39-2	attack	dwug_en		4.0		4.0						4.0	2
+707	mag_2005_397463.txt-63-5	news_1991_612479.txt-40-20	attack	dwug_en	4.0	3.0								3.5	2
+709	mag_2005_417079.txt-188-8	news_1991_612479.txt-40-20	attack	dwug_en	3.0	3.0								3.0	2
+714	mag_2007_387325.txt-12-20	news_1991_612479.txt-40-20	attack	dwug_en		2.0	3.0	3.0						3.0	3
+720	news_1961_722130.txt-4-23	nf_1844_749098.txt-1617-40	attack	dwug_en								3.0	2.0	2.5	2
+722	news_1965_724563.txt-1-1	news_1991_612479.txt-40-20	attack	dwug_en		3.0					2.0			2.5	2
+725	news_1966_725841.txt-34-33	news_1982_671107.txt-19-96	attack	dwug_en				4.0	4.0					4.0	2
+727	news_1966_725841.txt-34-33	nf_2001_746295.txt-103-27	attack	dwug_en	3.0		4.0							3.5	2
+728	news_1966_725841.txt-34-33	nf_2001_746877.txt-82-18	attack	dwug_en		2.0		3.0			2.0			2.0	3
+729	news_1967_726451.txt-39-2	news_1998_626765.txt-4-8	attack	dwug_en					4.0	4.0				4.0	2
+730	news_1967_726451.txt-39-2	nf_1832_758144.txt-1353-3	attack	dwug_en	4.0	3.0								3.5	2
+732	news_1967_726451.txt-39-2	nf_1977_773747.txt-57-27	attack	dwug_en	4.0	4.0	2.0							4.0	3
+733	news_1967_726451.txt-39-2	nf_2004_775819.txt-7-21	attack	dwug_en		4.0	4.0							4.0	2
+734	news_1968_727226.txt-22-9	news_1991_612479.txt-40-20	attack	dwug_en	3.0		4.0	2.0						3.0	3
+735	news_1968_727226.txt-22-9	news_1994_606745.txt-26-26	attack	dwug_en		3.0		3.0						3.0	2
+739	news_1977_733365.txt-24-10	news_1991_612479.txt-40-20	attack	dwug_en	3.0			3.0						3.0	2
+740	news_1984_670941.txt-14-43	news_1997_611600.txt-65-2	attack	dwug_en				4.0				3.0		3.5	2
+741	news_1986_670444.txt-28-17	news_1991_612479.txt-40-20	attack	dwug_en	3.0		3.0							3.0	2
+743	news_1987_669591.txt-19-7	news_1994_606745.txt-26-26	attack	dwug_en	4.0	3.0	4.0							4.0	3
+744	news_1987_670531.txt-11-7	news_1991_612479.txt-40-20	attack	dwug_en		3.0		3.0						3.0	2
+746	news_1989_669714.txt-32-21	news_1991_612479.txt-40-20	attack	dwug_en		3.0	2.0				3.0			3.0	3
+748	news_1991_612479.txt-40-20	news_2001_661977.txt-17-13	attack	dwug_en	3.0	4.0								3.5	2
+750	news_1991_612479.txt-40-20	nf_1836_747718.txt-1726-17	attack	dwug_en		3.0		3.0						3.0	2
+751	news_1991_612479.txt-40-20	nf_1836_747779.txt-1982-14	attack	dwug_en		3.0	3.0							3.0	2
+754	news_1991_612479.txt-40-20	nf_1845_748321.txt-2041-23	attack	dwug_en	3.0			3.0						3.0	2
+755	news_1991_612479.txt-40-20	nf_1847_754437.txt-1509-47	attack	dwug_en	3.0		4.0	3.0						3.0	3
+756	news_1991_612479.txt-40-20	nf_1962_773607.txt-311-2	attack	dwug_en	3.0			3.0						3.0	2
+758	news_1991_612479.txt-40-20	nf_1966_773935.txt-336-23	attack	dwug_en	3.0	3.0	4.0							3.0	3
+760	news_1991_612479.txt-40-20	nf_1977_773747.txt-57-27	attack	dwug_en		3.0	3.0							3.0	2
+762	news_1991_612479.txt-40-20	nf_1994_773891.txt-987-21	attack	dwug_en	3.0			4.0						3.5	2
+763	news_1991_612479.txt-40-20	nf_2001_746877.txt-82-18	attack	dwug_en	3.0		3.0							3.0	2
+766	news_1994_606745.txt-26-26	nf_1821_749178.txt-186-12	attack	dwug_en	4.0	3.0	3.0	4.0						3.5	4
+767	news_1994_606745.txt-26-26	nf_1841_762742.txt-1051-5	attack	dwug_en			4.0	4.0						4.0	2
+769	news_1998_626765.txt-4-8	news_2001_661977.txt-17-13	attack	dwug_en	3.0		4.0	3.0						3.0	3
+770	news_1998_626765.txt-4-8	news_2001_661984.txt-79-12	attack	dwug_en	4.0		4.0							4.0	2
+772	news_2001_661977.txt-17-13	news_2004_640221.txt-13-20	attack	dwug_en				3.0			2.0	4.0		3.0	3
+776	nf_1844_749098.txt-536-37	nf_2001_746295.txt-103-27	attack	dwug_en								4.0	4.0	4.0	2

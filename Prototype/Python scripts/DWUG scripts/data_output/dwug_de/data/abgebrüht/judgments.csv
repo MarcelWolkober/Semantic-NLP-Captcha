@@ -1,0 +1,275 @@
+	identifier1	identifier2	lemma	dataset	annotator2	annotator5	annotator4	annotator0	annotator1	annotator3	annotator6	annotator8	annotator9	annotator7	median_label	non_nan_count
+0	2532889X_1947-04-18_01_029.tcf.xml-13-1	26120215_1951_07_14_01_162.tcf.xml-27-5	abgebrüht	dwug_de				3.0	4.0	4.0					4.0	3
+3	2532889X_1947-04-18_01_029.tcf.xml-13-1	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de					1.0	2.0					1.5	2
+4	2532889X_1947-04-18_01_029.tcf.xml-13-1	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de				1.0		2.0					1.5	2
+24	2532889X_1947-07-06_01_083.tcf.xml-23-39	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de	2.0		1.0		3.0	2.0	2.0				2.0	5
+25	2532889X_1947-07-06_01_083.tcf.xml-23-39	26120215_1977_04_09_01_064.tcf.xml-25-31	abgebrüht	dwug_de	4.0				4.0	4.0					4.0	3
+26	2532889X_1947-07-06_01_083.tcf.xml-23-39	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de	2.0				1.0						1.5	2
+27	2532889X_1947-07-13_02_047.tcf.xml-10-21	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de	2.0		1.0	4.0	2.0	2.0	2.0				2.0	6
+32	2532889X_1947-10-04_01_046.tcf.xml-35-9	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de	2.0			1.0							1.5	2
+37	2532889X_1948-05-06_01_089.tcf.xml-53-11	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de				1.0	1.0						1.0	2
+39	2532889X_1948-12-23_01_078.tcf.xml-2-92	2532889X_1960-06-24_01_050.tcf.xml-54-5	abgebrüht	dwug_de		3.0	4.0								3.5	2
+44	2532889X_1948-12-23_01_078.tcf.xml-2-92	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de	2.0	2.0			3.0	2.0					2.0	4
+45	2532889X_1948-12-23_01_078.tcf.xml-2-92	26120215_1971_11_02_01_173.tcf.xml-30-9	abgebrüht	dwug_de	4.0			4.0		4.0					4.0	3
+50	2532889X_1949-02-24_01_063.tcf.xml-21-11	davidis_kochbuch_1849-4797-34	abgebrüht	dwug_de				1.0		2.0					1.5	2
+73	2532889X_1951-06-24_01_118.tcf.xml-11-23	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de	2.0		1.0		3.0		2.0				2.0	4
+74	2532889X_1951-06-24_01_118.tcf.xml-11-23	26120215_1966_05_25_01_169.tcf.xml-16-4	abgebrüht	dwug_de	4.0				4.0	4.0					4.0	3
+78	2532889X_1952-11-23_01_046.tcf.xml-15-17	2532889X_1963-03-21_01_008.tcf.xml-8-12	abgebrüht	dwug_de					4.0	4.0					4.0	2
+79	2532889X_1952-11-23_01_046.tcf.xml-15-17	2532889X_1965-06-16_01_189.tcf.xml-9-11	abgebrüht	dwug_de				4.0	4.0	4.0					4.0	3
+80	2532889X_1952-11-23_01_046.tcf.xml-15-17	26120215_1956_05_16_01_186.tcf.xml-64-5	abgebrüht	dwug_de				4.0		4.0					4.0	2
+81	2532889X_1952-11-23_01_046.tcf.xml-15-17	26120215_1958_12_24_01_169.tcf.xml-28-12	abgebrüht	dwug_de	4.0			3.0	4.0						4.0	3
+82	2532889X_1952-11-23_01_046.tcf.xml-15-17	26120215_1959_09_03_01_190.tcf.xml-12-7	abgebrüht	dwug_de				3.0	4.0						3.5	2
+84	2532889X_1952-11-23_01_046.tcf.xml-15-17	26120215_1962_06_09_01_398.tcf.xml-98-13	abgebrüht	dwug_de				3.0	4.0	4.0					4.0	3
+85	2532889X_1952-11-23_01_046.tcf.xml-15-17	26120215_1965_02_07_01_482.tcf.xml-57-7	abgebrüht	dwug_de	4.0			4.0							4.0	2
+87	2532889X_1952-11-23_01_046.tcf.xml-15-17	26120215_1966_11_11_01_073.tcf.xml-81-3	abgebrüht	dwug_de				4.0		4.0					4.0	2
+89	2532889X_1952-11-23_01_046.tcf.xml-15-17	26120215_1977_08_16_01_150.tcf.xml-28-11	abgebrüht	dwug_de	2.0			1.0	1.0	2.0					1.5	4
+92	2532889X_1952-11-23_01_046.tcf.xml-15-17	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de	2.0				1.0	2.0					2.0	3
+94	2532889X_1952-11-23_01_046.tcf.xml-15-17	davidis_kochbuch_1879-3696-8	abgebrüht	dwug_de				1.0	1.0	1.0					1.0	3
+95	2532889X_1952-11-23_01_046.tcf.xml-15-17	davidis_kochbuch_1879-3789-9	abgebrüht	dwug_de				1.0	1.0						1.0	2
+96	2532889X_1952-11-23_01_046.tcf.xml-15-17	davidis_kochbuch_1879-902-7	abgebrüht	dwug_de	2.0					2.0					2.0	2
+113	2532889X_1953-08-15_01_095.tcf.xml-101-3	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de				1.0	1.0	2.0					1.0	3
+116	2532889X_1954-06-06_01_019.tcf.xml-3-20	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de				1.0	1.0						1.0	2
+118	2532889X_1954-06-06_01_019.tcf.xml-3-20	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de	2.0			1.0		2.0					2.0	3
+119	2532889X_1954-06-06_01_019.tcf.xml-3-20	silberer_traber_1883-605-60	abgebrüht	dwug_de	2.0			1.0		2.0					2.0	3
+129	2532889X_1955-12-25_01_118.tcf.xml-118-18	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de				1.0	1.0						1.0	2
+131	2532889X_1956-02-05_01_105.tcf.xml-67-9	2532889X_1963-12-14_01_038.tcf.xml-22-3	abgebrüht	dwug_de				4.0		4.0					4.0	2
+132	2532889X_1956-02-05_01_105.tcf.xml-67-9	davidis_kochbuch_1849-2062-61	abgebrüht	dwug_de				1.0	1.0						1.0	2
+134	2532889X_1956-02-18_01_107.tcf.xml-10-5	2532889X_1963-03-21_01_008.tcf.xml-8-12	abgebrüht	dwug_de					4.0	4.0					4.0	2
+135	2532889X_1956-02-18_01_107.tcf.xml-10-5	26120215_1972_05_07_01_184.tcf.xml-27-21	abgebrüht	dwug_de			4.0				4.0				4.0	2
+136	2532889X_1956-02-18_01_107.tcf.xml-10-5	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de				1.0		2.0					1.5	2
+138	2532889X_1956-06-24_01_051.tcf.xml-2-21	2532889X_1957-02-17_01_113.tcf.xml-35-17	abgebrüht	dwug_de				1.0	1.0	2.0					1.0	3
+142	2532889X_1956-06-24_01_161.tcf.xml-4-14	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de		2.0			3.0	4.0	4.0				3.5	4
+143	2532889X_1956-06-24_01_161.tcf.xml-4-14	davidis_kochbuch_1849-2062-61	abgebrüht	dwug_de				4.0	4.0						4.0	2
+144	2532889X_1956-11-11_01_073.tcf.xml-9-11	2532889X_1957-02-17_01_113.tcf.xml-35-17	abgebrüht	dwug_de					1.0	2.0					1.5	2
+150	2532889X_1956-12-01_01_149.tcf.xml-5-71	davidis_kochbuch_1849-2062-61	abgebrüht	dwug_de	2.0			1.0							1.5	2
+151	2532889X_1957-02-17_01_113.tcf.xml-35-17	2532889X_1959-04-28_01_013.tcf.xml-1-26	abgebrüht	dwug_de				1.0		2.0					1.5	2
+152	2532889X_1957-02-17_01_113.tcf.xml-35-17	2532889X_1960-06-24_01_050.tcf.xml-54-5	abgebrüht	dwug_de				1.0	1.0						1.0	2
+155	2532889X_1957-02-17_01_113.tcf.xml-35-17	26120215_1950_04_07_01_018.tcf.xml-3-23	abgebrüht	dwug_de	2.0					2.0					2.0	2
+156	2532889X_1957-02-17_01_113.tcf.xml-35-17	26120215_1951_11_24_01_007.tcf.xml-16-13	abgebrüht	dwug_de				1.0		2.0					1.5	2
+157	2532889X_1957-02-17_01_113.tcf.xml-35-17	26120215_1953_06_10_01_018.tcf.xml-131-19	abgebrüht	dwug_de	2.0					2.0					2.0	2
+162	2532889X_1957-02-17_01_113.tcf.xml-35-17	26120215_1962_06_09_01_398.tcf.xml-98-13	abgebrüht	dwug_de				1.0		2.0					1.5	2
+163	2532889X_1957-02-17_01_113.tcf.xml-35-17	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de				1.0		2.0					1.5	2
+164	2532889X_1957-02-17_01_113.tcf.xml-35-17	26120215_1972_12_10_01_152.tcf.xml-7-22	abgebrüht	dwug_de	2.0			1.0							1.5	2
+165	2532889X_1957-02-17_01_113.tcf.xml-35-17	26120215_1975_02_01_01_413.tcf.xml-54-22	abgebrüht	dwug_de				1.0		2.0					1.5	2
+166	2532889X_1957-02-17_01_113.tcf.xml-35-17	26120215_1977_10_20_01_265.tcf.xml-13-7	abgebrüht	dwug_de	4.0			4.0		4.0					4.0	3
+168	2532889X_1957-02-17_01_113.tcf.xml-35-17	davidis_kochbuch_1849-2062-61	abgebrüht	dwug_de					4.0	4.0					4.0	2
+170	2532889X_1957-02-17_01_113.tcf.xml-35-17	davidis_kochbuch_1849-2082-9	abgebrüht	dwug_de					4.0	4.0					4.0	2
+173	2532889X_1957-02-17_01_113.tcf.xml-35-17	davidis_kochbuch_1849-5613-22	abgebrüht	dwug_de	4.0			4.0		4.0					4.0	3
+174	2532889X_1957-02-17_01_113.tcf.xml-35-17	davidis_kochbuch_1849-6071-10	abgebrüht	dwug_de					4.0	4.0					4.0	2
+178	2532889X_1957-02-17_01_113.tcf.xml-35-17	davidis_kochbuch_1879-3868-23	abgebrüht	dwug_de				3.0	4.0						3.5	2
+179	2532889X_1957-02-17_01_113.tcf.xml-35-17	davidis_kochbuch_1879-4195-4	abgebrüht	dwug_de				3.0		4.0					3.5	2
+180	2532889X_1957-02-17_01_113.tcf.xml-35-17	davidis_kochbuch_1879-597-37	abgebrüht	dwug_de					4.0	4.0					4.0	2
+183	2532889X_1957-02-17_01_113.tcf.xml-35-17	polenz_buettnerbauer_1895-5416-11	abgebrüht	dwug_de				1.0	1.0						1.0	2
+189	2532889X_1958-05-24_01_026.tcf.xml-56-15	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de	2.0				3.0		2.0				2.0	3
+190	2532889X_1958-05-24_01_026.tcf.xml-56-15	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de					1.0	2.0					1.5	2
+198	2532889X_1959-04-28_01_013.tcf.xml-1-26	2532889X_1969-06-05_01_127.tcf.xml-12-17	abgebrüht	dwug_de	4.0			4.0		4.0					4.0	3
+202	2532889X_1959-04-28_01_013.tcf.xml-1-26	davidis_kochbuch_1879-3461-3	abgebrüht	dwug_de					1.0	2.0					1.5	2
+230	2532889X_1960-06-24_01_050.tcf.xml-54-5	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de			1.0		3.0	2.0					2.0	3
+232	2532889X_1961-02-05_01_049.tcf.xml-4-1	2532889X_1963-12-14_01_038.tcf.xml-22-3	abgebrüht	dwug_de	4.0			4.0							4.0	2
+233	2532889X_1961-02-05_01_049.tcf.xml-4-1	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de	2.0			1.0							1.5	2
+235	2532889X_1961-06-03_01_032.tcf.xml-46-13	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de		2.0				2.0					2.0	2
+236	2532889X_1961-06-03_01_032.tcf.xml-46-13	26120215_1977_04_09_01_064.tcf.xml-25-31	abgebrüht	dwug_de	4.0			4.0							4.0	2
+248	2532889X_1961-07-23_01_063.tcf.xml-171-4	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de	2.0				1.0						1.5	2
+249	2532889X_1961-07-23_01_063.tcf.xml-171-4	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de				1.0	1.0						1.0	2
+250	2532889X_1961-08-25_01_112.tcf.xml-31-1	26120215_1948_02_08_01_248.tcf.xml-15-1	abgebrüht	dwug_de		3.0					4.0				3.5	2
+251	2532889X_1961-08-25_01_112.tcf.xml-31-1	26120215_1971_11_02_01_173.tcf.xml-30-9	abgebrüht	dwug_de				4.0	4.0	4.0					4.0	3
+252	2532889X_1961-08-25_01_112.tcf.xml-31-1	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de				1.0	1.0	2.0					1.0	3
+254	2532889X_1961-09-02_01_130.tcf.xml-29-20	2532889X_1963-03-21_01_008.tcf.xml-8-12	abgebrüht	dwug_de	4.0				4.0						4.0	2
+255	2532889X_1961-09-02_01_130.tcf.xml-29-20	26120215_1957_03_31_02_137.tcf.xml-25-41	abgebrüht	dwug_de		4.0				4.0					4.0	2
+258	2532889X_1961-09-02_01_130.tcf.xml-29-20	davidis_kochbuch_1879-5129-12	abgebrüht	dwug_de				1.0		2.0					1.5	2
+259	2532889X_1961-09-02_01_130.tcf.xml-29-20	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de					1.0	2.0					1.5	2
+261	2532889X_1961-09-09_01_018.tcf.xml-5-12	davidis_kochbuch_1849-2062-61	abgebrüht	dwug_de				1.0	1.0	2.0					1.0	3
+263	2532889X_1961-09-16_01_006.tcf.xml-7-11	26120215_1977_04_09_01_064.tcf.xml-25-31	abgebrüht	dwug_de	4.0					4.0					4.0	2
+264	2532889X_1961-09-16_01_006.tcf.xml-7-11	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de				1.0		2.0					1.5	2
+265	2532889X_1961-09-16_01_007.tcf.xml-137-11	2532889X_1963-03-21_01_008.tcf.xml-8-12	abgebrüht	dwug_de				4.0		4.0					4.0	2
+266	2532889X_1961-09-16_01_007.tcf.xml-137-11	silberer_traber_1883-605-60	abgebrüht	dwug_de				1.0	1.0	2.0					1.0	3
+284	2532889X_1962-07-13_01_039.tcf.xml-23-13	26120215_1946_11_05_01_038.tcf.xml-10-60	abgebrüht	dwug_de			4.0		4.0						4.0	2
+285	2532889X_1962-07-13_01_039.tcf.xml-23-13	26120215_1950_04_07_01_018.tcf.xml-3-23	abgebrüht	dwug_de	4.0			4.0		4.0					4.0	3
+286	2532889X_1962-07-13_01_039.tcf.xml-23-13	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de				4.0	3.0						3.5	2
+307	2532889X_1963-03-21_01_008.tcf.xml-8-12	2532889X_1969-06-05_01_127.tcf.xml-12-17	abgebrüht	dwug_de	4.0			4.0	4.0	2.0					4.0	4
+308	2532889X_1963-03-21_01_008.tcf.xml-8-12	26120215_1946_11_05_01_038.tcf.xml-10-60	abgebrüht	dwug_de	4.0			4.0		3.0					4.0	3
+309	2532889X_1963-03-21_01_008.tcf.xml-8-12	26120215_1952_10_16_01_189.tcf.xml-12-3	abgebrüht	dwug_de	4.0				4.0	4.0					4.0	3
+312	2532889X_1963-03-21_01_008.tcf.xml-8-12	26120215_1985_02_23_01_462.tcf.xml-5-9	abgebrüht	dwug_de	4.0			4.0	4.0						4.0	3
+313	2532889X_1963-03-21_01_008.tcf.xml-8-12	26120215_1986_04_05_01_040.tcf.xml-9-17	abgebrüht	dwug_de	4.0			4.0	4.0						4.0	3
+316	2532889X_1963-03-21_01_008.tcf.xml-8-12	davidis_kochbuch_1849-2082-9	abgebrüht	dwug_de	2.0				1.0	2.0					2.0	3
+317	2532889X_1963-03-21_01_008.tcf.xml-8-12	davidis_kochbuch_1849-2355-12	abgebrüht	dwug_de				1.0	1.0						1.0	2
+319	2532889X_1963-03-21_01_008.tcf.xml-8-12	davidis_kochbuch_1849-4053-7	abgebrüht	dwug_de	2.0				1.0						1.5	2
+321	2532889X_1963-03-21_01_008.tcf.xml-8-12	davidis_kochbuch_1879-2333-32	abgebrüht	dwug_de				1.0	1.0	2.0					1.0	3
+322	2532889X_1963-03-21_01_008.tcf.xml-8-12	davidis_kochbuch_1879-2506-4	abgebrüht	dwug_de				1.0	1.0						1.0	2
+324	2532889X_1963-03-21_01_008.tcf.xml-8-12	davidis_kochbuch_1879-4195-4	abgebrüht	dwug_de					1.0	2.0					1.5	2
+325	2532889X_1963-03-21_01_008.tcf.xml-8-12	davidis_kochbuch_1879-4226-4	abgebrüht	dwug_de				1.0	1.0						1.0	2
+326	2532889X_1963-03-21_01_008.tcf.xml-8-12	davidis_kochbuch_1879-597-37	abgebrüht	dwug_de	2.0			1.0							1.5	2
+327	2532889X_1963-03-21_01_008.tcf.xml-8-12	platen_oedipus_1829-1032-10	abgebrüht	dwug_de	4.0				3.0						3.5	2
+328	2532889X_1963-03-21_01_008.tcf.xml-8-12	toennies_gemeinschaft_1887-2092-149	abgebrüht	dwug_de					4.0	4.0					4.0	2
+340	2532889X_1963-07-12_01_026.tcf.xml-7-13	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de					1.0	2.0					1.5	2
+348	2532889X_1963-12-14_01_038.tcf.xml-22-3	2532889X_1967-10-17_01_088.tcf.xml-28-5	abgebrüht	dwug_de				4.0		4.0					4.0	2
+349	2532889X_1963-12-14_01_038.tcf.xml-22-3	26120215_1946_12_21_01_040.tcf.xml-7-5	abgebrüht	dwug_de	4.0				4.0	3.0					4.0	3
+351	2532889X_1963-12-14_01_038.tcf.xml-22-3	26120215_1951_07_14_01_162.tcf.xml-27-5	abgebrüht	dwug_de	4.0				4.0						4.0	2
+352	2532889X_1963-12-14_01_038.tcf.xml-22-3	26120215_1951_10_12_01_036.tcf.xml-5-14	abgebrüht	dwug_de					4.0	4.0					4.0	2
+357	2532889X_1963-12-14_01_038.tcf.xml-22-3	26120215_1961_12_24_01_483.tcf.xml-31-38	abgebrüht	dwug_de	2.0			1.0	1.0	2.0					1.5	4
+359	2532889X_1963-12-14_01_038.tcf.xml-22-3	26120215_1965_04_07_01_070.tcf.xml-3-5	abgebrüht	dwug_de	4.0				4.0						4.0	2
+361	2532889X_1963-12-14_01_038.tcf.xml-22-3	26120215_1971_02_23_01_109.tcf.xml-10-13	abgebrüht	dwug_de	4.0				4.0	4.0					4.0	3
+364	2532889X_1963-12-14_01_038.tcf.xml-22-3	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de	2.0			1.0	1.0	2.0					1.5	4
+366	2532889X_1963-12-14_01_038.tcf.xml-22-3	davidis_kochbuch_1849-3453-8	abgebrüht	dwug_de					1.0	2.0					1.5	2
+370	2532889X_1963-12-14_01_038.tcf.xml-22-3	davidis_kochbuch_1879-3146-3	abgebrüht	dwug_de				1.0	1.0						1.0	2
+374	2532889X_1963-12-14_01_038.tcf.xml-22-3	davidis_kochbuch_1879-591-25	abgebrüht	dwug_de					1.0	2.0					1.5	2
+377	2532889X_1963-12-14_01_038.tcf.xml-22-3	davidis_kochbuch_1879-753-17	abgebrüht	dwug_de	2.0			1.0		2.0					2.0	3
+397	2532889X_1965-06-16_01_189.tcf.xml-9-11	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de	2.0			4.0	3.0						3.0	3
+398	2532889X_1965-06-16_01_189.tcf.xml-9-11	davidis_kochbuch_1849-2062-61	abgebrüht	dwug_de	2.0					2.0					2.0	2
+400	2532889X_1965-08-29_01_264.tcf.xml-45-25	26120215_1950_04_07_01_018.tcf.xml-3-23	abgebrüht	dwug_de				4.0	4.0						4.0	2
+401	2532889X_1965-08-29_01_264.tcf.xml-45-25	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de				1.0	1.0						1.0	2
+402	2532889X_1965-08-29_01_264.tcf.xml-45-25	davidis_kochbuch_1849-4797-34	abgebrüht	dwug_de				1.0	1.0						1.0	2
+429	2532889X_1966-03-19_01_022.tcf.xml-20-14	26120215_1977_04_09_01_064.tcf.xml-25-31	abgebrüht	dwug_de	4.0				4.0	4.0					4.0	3
+432	2532889X_1966-03-19_01_022.tcf.xml-20-14	davidis_kochbuch_1879-4195-4	abgebrüht	dwug_de					1.0	2.0					1.5	2
+455	2532889X_1967-10-17_01_088.tcf.xml-28-5	26120215_1957_03_12_01_174.tcf.xml-16-10	abgebrüht	dwug_de			4.0			4.0	4.0				4.0	3
+456	2532889X_1967-10-17_01_088.tcf.xml-28-5	davidis_kochbuch_1849-4797-34	abgebrüht	dwug_de					1.0	2.0					1.5	2
+485	2532889X_1969-06-05_01_127.tcf.xml-12-17	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de	2.0			4.0	3.0						3.0	3
+486	2532889X_1969-06-05_01_127.tcf.xml-12-17	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de				1.0	1.0						1.0	2
+857	2532889X_1985-01-10_01_081.tcf.xml-5-20	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de	2.0					2.0					2.0	2
+1045	26120215_1946_11_05_01_038.tcf.xml-10-60	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de	2.0			1.0		2.0					2.0	3
+1046	26120215_1946_11_05_01_038.tcf.xml-10-60	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de				1.0		2.0					1.5	2
+1048	26120215_1946_12_21_01_040.tcf.xml-7-5	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de		2.0				2.0	3.0				2.0	3
+1049	26120215_1946_12_21_01_040.tcf.xml-7-5	26120215_1977_10_20_01_265.tcf.xml-13-7	abgebrüht	dwug_de				1.0	2.0						1.5	2
+1053	26120215_1947_05_06_01_050.tcf.xml-83-22	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de	2.0			1.0		2.0					2.0	3
+1061	26120215_1948_02_08_01_248.tcf.xml-15-1	26120215_1957_03_31_02_137.tcf.xml-25-41	abgebrüht	dwug_de			4.0			4.0					4.0	2
+1062	26120215_1948_02_08_01_248.tcf.xml-15-1	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de				4.0		2.0	2.0				2.0	3
+1065	26120215_1948_02_08_01_248.tcf.xml-15-1	26120215_1979_03_01_01_078.tcf.xml-8-14	abgebrüht	dwug_de						4.0	4.0				4.0	2
+1072	26120215_1948_03_02_01_049.tcf.xml-5-3	26120215_1950_04_07_01_018.tcf.xml-3-23	abgebrüht	dwug_de	3.0			4.0	4.0						4.0	3
+1083	26120215_1949_10_29_01_046.tcf.xml-53-19	26120215_1950_04_07_01_018.tcf.xml-3-23	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1084	26120215_1949_10_29_01_046.tcf.xml-53-19	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de					1.0	2.0					1.5	2
+1086	26120215_1950_04_07_01_018.tcf.xml-3-23	26120215_1956_01_24_01_030.tcf.xml-11-4	abgebrüht	dwug_de	4.0					4.0					4.0	2
+1088	26120215_1950_04_07_01_018.tcf.xml-3-23	26120215_1956_08_05_02_318.tcf.xml-5-12	abgebrüht	dwug_de	4.0					4.0					4.0	2
+1089	26120215_1950_04_07_01_018.tcf.xml-3-23	26120215_1957_05_19_02_149.tcf.xml-23-17	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1090	26120215_1950_04_07_01_018.tcf.xml-3-23	26120215_1966_05_25_01_169.tcf.xml-16-4	abgebrüht	dwug_de	4.0				4.0						4.0	2
+1091	26120215_1950_04_07_01_018.tcf.xml-3-23	26120215_1967_06_28_01_098.tcf.xml-46-9	abgebrüht	dwug_de	4.0				4.0	4.0					4.0	3
+1100	26120215_1950_04_07_01_018.tcf.xml-3-23	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de	2.0			1.0							1.5	2
+1102	26120215_1950_04_07_01_018.tcf.xml-3-23	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de	2.0					2.0					2.0	2
+1103	26120215_1950_04_07_01_018.tcf.xml-3-23	davidis_kochbuch_1879-6112-25	abgebrüht	dwug_de				1.0		2.0					1.5	2
+1104	26120215_1950_04_07_01_018.tcf.xml-3-23	krafft_landwirthschaft03_1876-3285-18	abgebrüht	dwug_de				1.0		2.0					1.5	2
+1111	26120215_1951_07_14_01_162.tcf.xml-27-5	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de					1.0	2.0					1.5	2
+1114	26120215_1951_10_12_01_036.tcf.xml-5-14	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de	2.0				1.0						1.5	2
+1116	26120215_1951_11_24_01_007.tcf.xml-16-13	26120215_1971_05_27_01_276.tcf.xml-76-9	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1118	26120215_1951_11_24_01_007.tcf.xml-16-13	silberer_traber_1883-605-60	abgebrüht	dwug_de				1.0	1.0						1.0	2
+1119	26120215_1952_06_05_01_017.tcf.xml-48-4	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de			1.0			2.0					1.5	2
+1124	26120215_1952_10_16_01_189.tcf.xml-12-3	26120215_1963_12_08_01_177.tcf.xml-15-13	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1125	26120215_1952_10_16_01_189.tcf.xml-12-3	davidis_kochbuch_1849-2062-61	abgebrüht	dwug_de				1.0	1.0	2.0					1.0	3
+1128	26120215_1953_01_17_01_130.tcf.xml-2-60	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de	2.0				3.0	2.0	3.0				2.5	4
+1130	26120215_1953_01_17_01_130.tcf.xml-2-60	davidis_kochbuch_1849-2062-61	abgebrüht	dwug_de				1.0		2.0					1.5	2
+1131	26120215_1953_05_27_01_094.tcf.xml-4-9	26120215_1962_05_30_01_050.tcf.xml-22-4	abgebrüht	dwug_de	4.0	4.0			3.0		4.0				4.0	4
+1132	26120215_1953_05_27_01_094.tcf.xml-4-9	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de	2.0		1.0		3.0						2.0	3
+1134	26120215_1953_05_27_01_094.tcf.xml-4-9	26120215_1971_11_02_01_173.tcf.xml-30-9	abgebrüht	dwug_de	4.0				4.0	4.0					4.0	3
+1135	26120215_1953_05_27_01_094.tcf.xml-4-9	26120215_1972_05_07_01_184.tcf.xml-27-21	abgebrüht	dwug_de						4.0	4.0				4.0	2
+1136	26120215_1953_05_27_01_094.tcf.xml-4-9	davidis_kochbuch_1849-2062-61	abgebrüht	dwug_de	2.0			1.0							1.5	2
+1140	26120215_1954_04_22_01_173.tcf.xml-23-3	26120215_1977_04_09_01_064.tcf.xml-25-31	abgebrüht	dwug_de	4.0				4.0						4.0	2
+1141	26120215_1954_04_22_01_173.tcf.xml-23-3	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de	2.0			1.0	2.0						2.0	3
+1152	26120215_1956_01_24_01_030.tcf.xml-11-4	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de		2.0		4.0		2.0	2.0				2.0	4
+1153	26120215_1956_01_24_01_030.tcf.xml-11-4	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de	2.0					2.0					2.0	2
+1158	26120215_1956_04_22_02_105.tcf.xml-65-30	26120215_1977_04_09_01_064.tcf.xml-25-31	abgebrüht	dwug_de	4.0			4.0	4.0						4.0	3
+1160	26120215_1956_05_16_01_186.tcf.xml-64-5	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de				1.0	1.0						1.0	2
+1161	26120215_1956_05_16_01_186.tcf.xml-64-5	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de	2.0			4.0	1.0						2.0	3
+1189	26120215_1957_03_12_01_174.tcf.xml-16-10	26120215_1962_06_09_01_398.tcf.xml-98-13	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1191	26120215_1957_03_12_01_174.tcf.xml-16-10	davidis_kochbuch_1849-2062-61	abgebrüht	dwug_de	2.0			1.0		2.0					2.0	3
+1195	26120215_1957_03_31_02_137.tcf.xml-25-41	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de	2.0				1.0						1.5	2
+1208	26120215_1957_10_30_01_131.tcf.xml-30-19	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de				4.0	3.0	2.0					3.0	3
+1212	26120215_1958_12_24_01_169.tcf.xml-28-12	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de				1.0	1.0						1.0	2
+1213	26120215_1958_12_24_01_169.tcf.xml-28-12	davidis_kochbuch_1849-2082-9	abgebrüht	dwug_de		2.0				2.0					2.0	2
+1215	26120215_1959_09_03_01_190.tcf.xml-12-7	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de	2.0			1.0		2.0					2.0	3
+1228	26120215_1961_12_24_01_483.tcf.xml-31-38	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de	4.0					4.0					4.0	2
+1233	26120215_1962_06_09_01_398.tcf.xml-98-13	26120215_1963_02_10_01_145.tcf.xml-31-23	abgebrüht	dwug_de	2.0	3.0		4.0		2.0					2.5	4
+1235	26120215_1963_02_10_01_145.tcf.xml-31-23	26120215_1966_05_25_01_169.tcf.xml-16-4	abgebrüht	dwug_de	2.0			1.0			2.0				2.0	3
+1237	26120215_1963_02_10_01_145.tcf.xml-31-23	26120215_1971_02_23_01_109.tcf.xml-10-13	abgebrüht	dwug_de	2.0				3.0	2.0	2.0				2.0	4
+1241	26120215_1963_02_10_01_145.tcf.xml-31-23	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de				1.0		2.0					1.5	2
+1242	26120215_1963_02_10_01_145.tcf.xml-31-23	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de	4.0		4.0								4.0	2
+1243	26120215_1963_02_10_01_145.tcf.xml-31-23	davidis_kochbuch_1849-2069-31	abgebrüht	dwug_de		3.0			2.0	4.0					3.0	3
+1244	26120215_1963_02_10_01_145.tcf.xml-31-23	davidis_kochbuch_1849-2082-9	abgebrüht	dwug_de				1.0	2.0						1.5	2
+1246	26120215_1963_02_10_01_145.tcf.xml-31-23	davidis_kochbuch_1849-2392-7	abgebrüht	dwug_de				1.0	2.0	3.0					2.0	3
+1248	26120215_1963_02_10_01_145.tcf.xml-31-23	davidis_kochbuch_1849-3498-5	abgebrüht	dwug_de		3.0				4.0					3.5	2
+1249	26120215_1963_02_10_01_145.tcf.xml-31-23	davidis_kochbuch_1849-3625-6	abgebrüht	dwug_de			4.0			4.0	4.0				4.0	3
+1250	26120215_1963_02_10_01_145.tcf.xml-31-23	davidis_kochbuch_1849-4797-34	abgebrüht	dwug_de			4.0	1.0	2.0	4.0					3.0	4
+1252	26120215_1963_02_10_01_145.tcf.xml-31-23	davidis_kochbuch_1849-6071-10	abgebrüht	dwug_de			4.0	1.0		4.0					4.0	3
+1253	26120215_1963_02_10_01_145.tcf.xml-31-23	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de				1.0	1.0	2.0					1.0	3
+1254	26120215_1963_02_10_01_145.tcf.xml-31-23	davidis_kochbuch_1879-3696-8	abgebrüht	dwug_de	3.0	3.0		1.0							3.0	3
+1256	26120215_1963_02_10_01_145.tcf.xml-31-23	davidis_kochbuch_1879-597-37	abgebrüht	dwug_de		2.0			3.0	4.0	4.0				3.5	4
+1260	26120215_1963_02_10_01_145.tcf.xml-31-23	rein_japan02_1886-2847-26	abgebrüht	dwug_de				4.0	3.0						3.5	2
+1262	26120215_1963_02_10_01_145.tcf.xml-31-23	silberer_traber_1883-605-60	abgebrüht	dwug_de	4.0				3.0	3.0	4.0				3.5	4
+1265	26120215_1963_07_09_01_005.tcf.xml-2-27	26120215_1966_05_25_01_169.tcf.xml-16-4	abgebrüht	dwug_de	4.0				4.0	4.0					4.0	3
+1266	26120215_1963_07_09_01_005.tcf.xml-2-27	davidis_kochbuch_1849-2392-7	abgebrüht	dwug_de					2.0	2.0					2.0	2
+1277	26120215_1963_12_08_01_177.tcf.xml-15-13	davidis_kochbuch_1849-4797-34	abgebrüht	dwug_de					1.0	2.0					1.5	2
+1285	26120215_1965_02_07_01_482.tcf.xml-57-7	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de	2.0					2.0					2.0	2
+1289	26120215_1965_04_07_01_070.tcf.xml-3-5	silberer_traber_1883-605-60	abgebrüht	dwug_de	2.0			1.0	1.0	2.0					1.5	4
+1318	26120215_1966_05_25_01_169.tcf.xml-16-4	26120215_1966_11_11_01_073.tcf.xml-81-3	abgebrüht	dwug_de		4.0	4.0								4.0	2
+1319	26120215_1966_05_25_01_169.tcf.xml-16-4	26120215_1975_02_01_01_413.tcf.xml-54-22	abgebrüht	dwug_de				4.0		4.0					4.0	2
+1320	26120215_1966_05_25_01_169.tcf.xml-16-4	26120215_1977_04_09_01_064.tcf.xml-25-31	abgebrüht	dwug_de				4.0	4.0	4.0					4.0	3
+1321	26120215_1966_05_25_01_169.tcf.xml-16-4	davidis_kochbuch_1849-3482-6	abgebrüht	dwug_de	2.0			1.0	1.0						1.0	3
+1326	26120215_1966_05_25_01_169.tcf.xml-16-4	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de	1.0			1.0							1.0	2
+1328	26120215_1966_05_25_01_169.tcf.xml-16-4	silberer_traber_1883-107-21	abgebrüht	dwug_de	2.0			1.0							1.5	2
+1390	26120215_1967_06_28_01_098.tcf.xml-46-9	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de	2.0			1.0							1.5	2
+1410	26120215_1969_05_31_01_070.tcf.xml-7-20	silberer_traber_1883-605-60	abgebrüht	dwug_de					1.0	2.0					1.5	2
+1451	26120215_1971_05_27_01_276.tcf.xml-76-9	26120215_1977_04_09_01_064.tcf.xml-25-31	abgebrüht	dwug_de				4.0		4.0					4.0	2
+1455	26120215_1971_11_02_01_173.tcf.xml-30-9	26120215_1972_05_07_01_184.tcf.xml-27-21	abgebrüht	dwug_de	4.0		4.0		4.0		4.0				4.0	4
+1456	26120215_1971_11_02_01_173.tcf.xml-30-9	26120215_1977_04_09_01_064.tcf.xml-25-31	abgebrüht	dwug_de		4.0	4.0			4.0					4.0	3
+1458	26120215_1971_11_02_01_173.tcf.xml-30-9	brehm_thierleben01_1864-3282-21	abgebrüht	dwug_de	2.0					2.0					2.0	2
+1460	26120215_1971_11_02_01_173.tcf.xml-30-9	davidis_kochbuch_1849-4797-34	abgebrüht	dwug_de				1.0		2.0					1.5	2
+1464	26120215_1971_11_02_01_173.tcf.xml-30-9	davidis_kochbuch_1879-721-7	abgebrüht	dwug_de	2.0				1.0						1.5	2
+1465	26120215_1971_11_02_01_173.tcf.xml-30-9	davidis_kochbuch_1879-7229-4	abgebrüht	dwug_de	2.0				1.0						1.5	2
+1520	26120215_1977_04_09_01_064.tcf.xml-25-31	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de					1.0	2.0					1.5	2
+1521	26120215_1977_04_09_01_064.tcf.xml-25-31	davidis_kochbuch_1879-3868-23	abgebrüht	dwug_de				1.0		2.0					1.5	2
+1523	26120215_1977_04_09_01_064.tcf.xml-25-31	rein_japan02_1886-2847-26	abgebrüht	dwug_de				1.0	1.0	2.0					1.0	3
+1527	26120215_1977_08_16_01_150.tcf.xml-28-11	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de	4.0					4.0					4.0	2
+1534	26120215_1977_10_20_01_265.tcf.xml-13-7	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1656	26120215_1985_02_23_01_462.tcf.xml-5-9	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de				4.0			4.0				4.0	2
+1684	26120215_1989_02_25_01_393.tcf.xml-29-31	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de	2.0			1.0		2.0					2.0	3
+1685	26120215_1989_02_25_01_393.tcf.xml-29-31	silberer_traber_1883-605-60	abgebrüht	dwug_de				1.0	1.0						1.0	2
+1686	26120215_1989_04_28_01_171.tcf.xml-2-7	brehm_thierleben06_1869-15516-1	abgebrüht	dwug_de				1.0		2.0					1.5	2
+1869	brehm_thierleben01_1864-3282-21	davidis_kochbuch_1849-2034-12	abgebrüht	dwug_de	4.0				4.0	4.0					4.0	3
+1870	brehm_thierleben01_1864-3282-21	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de	4.0					4.0					4.0	2
+1872	brehm_thierleben06_1869-15516-1	davidis_kochbuch_1849-2062-61	abgebrüht	dwug_de	4.0			3.0		4.0					4.0	3
+1874	brehm_thierleben06_1869-15516-1	davidis_kochbuch_1849-3494-3	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1876	brehm_thierleben06_1869-15516-1	davidis_kochbuch_1849-3513-5	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1887	brehm_thierleben06_1869-15516-1	silberer_traber_1883-605-60	abgebrüht	dwug_de	4.0			3.0	4.0	3.0					3.5	4
+1897	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1849-2221-8	abgebrüht	dwug_de	4.0			4.0							4.0	2
+1898	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1849-2355-12	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1899	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1849-3513-5	abgebrüht	dwug_de	4.0			4.0		4.0					4.0	3
+1900	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1849-3584-11	abgebrüht	dwug_de	4.0			4.0	4.0						4.0	3
+1901	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1849-3745-3	abgebrüht	dwug_de				4.0	4.0	4.0					4.0	3
+1903	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1849-6071-10	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1905	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1879-2994-18	abgebrüht	dwug_de	4.0				4.0						4.0	2
+1910	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1879-3870-3	abgebrüht	dwug_de				4.0		4.0					4.0	2
+1911	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1879-4195-4	abgebrüht	dwug_de	4.0			4.0							4.0	2
+1912	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1879-4226-4	abgebrüht	dwug_de				4.0	4.0						4.0	2
+1913	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1879-4234-7	abgebrüht	dwug_de				4.0	4.0						4.0	2
+1916	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1879-6112-25	abgebrüht	dwug_de	4.0					4.0					4.0	2
+1917	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1879-6739-7	abgebrüht	dwug_de				4.0		4.0					4.0	2
+1918	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1879-7217-16	abgebrüht	dwug_de	4.0			4.0							4.0	2
+1919	davidis_kochbuch_1849-2034-12	davidis_kochbuch_1879-7229-4	abgebrüht	dwug_de				3.0	4.0						3.5	2
+1921	davidis_kochbuch_1849-2034-12	platen_oedipus_1829-1032-10	abgebrüht	dwug_de				1.0	2.0						1.5	2
+1922	davidis_kochbuch_1849-2034-12	silberer_traber_1883-605-60	abgebrüht	dwug_de	4.0			4.0		4.0					4.0	3
+1924	davidis_kochbuch_1849-2062-61	davidis_kochbuch_1849-3482-6	abgebrüht	dwug_de				4.0	4.0						4.0	2
+1925	davidis_kochbuch_1849-2062-61	davidis_kochbuch_1849-4053-7	abgebrüht	dwug_de				4.0		4.0					4.0	2
+1928	davidis_kochbuch_1849-2062-61	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de	4.0			3.0	4.0						4.0	3
+1929	davidis_kochbuch_1849-2062-61	davidis_kochbuch_1879-902-7	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1930	davidis_kochbuch_1849-2082-9	davidis_kochbuch_1879-2994-18	abgebrüht	dwug_de		4.0			4.0						4.0	2
+1931	davidis_kochbuch_1849-2221-8	davidis_kochbuch_1849-4053-7	abgebrüht	dwug_de					4.0	4.0					4.0	2
+1932	davidis_kochbuch_1849-2221-8	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de	4.0			4.0							4.0	2
+1934	davidis_kochbuch_1849-2355-12	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de				4.0	4.0	4.0					4.0	3
+1940	davidis_kochbuch_1849-3453-8	silberer_traber_1883-605-60	abgebrüht	dwug_de				4.0	4.0						4.0	2
+1941	davidis_kochbuch_1849-3494-3	davidis_kochbuch_1879-2506-4	abgebrüht	dwug_de		4.0			4.0						4.0	2
+1946	davidis_kochbuch_1849-3625-6	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de	4.0			4.0							4.0	2
+1948	davidis_kochbuch_1849-4049-4	silberer_traber_1883-605-60	abgebrüht	dwug_de	4.0				4.0						4.0	2
+1952	davidis_kochbuch_1849-4797-34	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de	4.0					4.0					4.0	2
+1954	davidis_kochbuch_1849-4797-34	rein_japan02_1886-2847-26	abgebrüht	dwug_de				4.0	4.0						4.0	2
+1960	davidis_kochbuch_1879-2344-30	silberer_traber_1883-605-60	abgebrüht	dwug_de	4.0					4.0					4.0	2
+1961	davidis_kochbuch_1879-2506-4	silberer_traber_1883-605-60	abgebrüht	dwug_de	4.0					4.0					4.0	2
+1962	davidis_kochbuch_1879-2994-18	davidis_kochbuch_1879-5545-9	abgebrüht	dwug_de				4.0	4.0	4.0					4.0	3
+1963	davidis_kochbuch_1879-3321-3	davidis_kochbuch_1879-3332-4	abgebrüht	dwug_de				4.0	4.0						4.0	2
+1965	davidis_kochbuch_1879-3321-3	silberer_traber_1883-605-60	abgebrüht	dwug_de	4.0			4.0							4.0	2
+1967	davidis_kochbuch_1879-3332-4	davidis_kochbuch_1879-3870-3	abgebrüht	dwug_de	4.0			4.0							4.0	2
+1970	davidis_kochbuch_1879-3332-4	davidis_kochbuch_1879-583-65	abgebrüht	dwug_de	4.0				4.0						4.0	2
+1973	davidis_kochbuch_1879-3332-4	silberer_traber_1883-605-60	abgebrüht	dwug_de	4.0			4.0	4.0	4.0					4.0	4
+1981	davidis_kochbuch_1879-5545-9	davidis_kochbuch_1879-721-7	abgebrüht	dwug_de	4.0			4.0							4.0	2
+1982	davidis_kochbuch_1879-5545-9	davidis_kochbuch_1879-7217-16	abgebrüht	dwug_de	4.0			4.0	4.0						4.0	3
+1987	davidis_kochbuch_1879-5545-9	toennies_gemeinschaft_1887-2092-149	abgebrüht	dwug_de					1.0	2.0					1.5	2
+1990	davidis_kochbuch_1879-583-65	silberer_traber_1883-107-21	abgebrüht	dwug_de				4.0	4.0						4.0	2
+1991	davidis_kochbuch_1879-583-65	silberer_traber_1883-605-60	abgebrüht	dwug_de	4.0			4.0							4.0	2
+1993	davidis_kochbuch_1879-902-7	silberer_traber_1883-605-60	abgebrüht	dwug_de	4.0				4.0						4.0	2
+3787	silberer_traber_1883-107-21	silberer_traber_1883-605-60	abgebrüht	dwug_de					4.0	4.0					4.0	2

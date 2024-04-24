@@ -1,0 +1,546 @@
+	identifier1	identifier2	lemma	dataset	annotator2	annotator5	annotator4	annotator0	annotator1	annotator3	annotator6	annotator8	annotator9	annotator7	median_label	non_nan_count
+36	2532889X_1948-02-11_01_009.tcf.xml-174-75	2532889X_1952-12-04_01_034.tcf.xml-131-16	zersetzen	dwug_de				3.0		4.0					3.5	2
+37	2532889X_1948-02-11_01_009.tcf.xml-174-75	2532889X_1953-04-15_01_066.tcf.xml-47-4	zersetzen	dwug_de	3.0			4.0							3.5	2
+38	2532889X_1948-02-11_01_009.tcf.xml-174-75	2532889X_1960-07-06_01_172.tcf.xml-206-17	zersetzen	dwug_de	4.0			3.0	3.0	4.0					3.5	4
+39	2532889X_1948-02-11_01_009.tcf.xml-174-75	2532889X_1986-04-05_01_411.tcf.xml-34-14	zersetzen	dwug_de	2.0				2.0						2.0	2
+40	2532889X_1948-02-11_01_009.tcf.xml-174-75	26120215_1968_10_07_01_194.tcf.xml-98-35	zersetzen	dwug_de				4.0	4.0						4.0	2
+41	2532889X_1948-02-11_01_009.tcf.xml-174-75	26120215_1985_12_14_01_316.tcf.xml-350-3	zersetzen	dwug_de	4.0					4.0					4.0	2
+42	2532889X_1948-02-11_01_009.tcf.xml-174-75	beck_eisen04_1899-14550-30	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+45	2532889X_1948-02-11_01_009.tcf.xml-174-75	kerl_metallurgische_1866-7448-10	zersetzen	dwug_de	2.0			2.0	2.0	2.0					2.0	4
+46	2532889X_1948-02-11_01_009.tcf.xml-174-75	lasswitz_seife_1890-606-28	zersetzen	dwug_de	3.0	2.0		2.0						3.0	2.5	4
+47	2532889X_1948-02-11_01_009.tcf.xml-174-75	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de	3.0				2.0	2.0					2.0	3
+48	2532889X_1948-02-11_01_009.tcf.xml-174-75	samter_erfindungen_1896-12317-16	zersetzen	dwug_de	3.0		2.0			2.0					2.0	3
+49	2532889X_1948-02-11_01_009.tcf.xml-174-75	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de	3.0			2.0	2.0	2.0					2.0	4
+55	2532889X_1948-07-07_01_022.tcf.xml-28-22	2532889X_1953-02-08_01_037.tcf.xml-142-13	zersetzen	dwug_de					4.0	4.0					4.0	2
+56	2532889X_1948-07-07_01_022.tcf.xml-28-22	2532889X_1953-04-15_01_066.tcf.xml-47-4	zersetzen	dwug_de				4.0		4.0					4.0	2
+60	2532889X_1948-07-07_01_022.tcf.xml-28-22	thaer_landwirthschaft02_1810-4483-15	zersetzen	dwug_de					2.0		2.0				2.0	2
+61	2532889X_1948-08-08_01_035.tcf.xml-369-60	2532889X_1953-02-08_01_037.tcf.xml-142-13	zersetzen	dwug_de					4.0	4.0					4.0	2
+62	2532889X_1948-08-08_01_035.tcf.xml-369-60	2532889X_1990-08-31_01_211.tcf.xml-27-17	zersetzen	dwug_de					2.0	2.0					2.0	2
+64	2532889X_1948-08-08_01_035.tcf.xml-369-60	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	4.0			4.0	4.0						4.0	3
+65	2532889X_1948-08-08_01_035.tcf.xml-369-60	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de				2.0		2.0					2.0	2
+66	2532889X_1948-10-15_01_038.tcf.xml-20-16	2532889X_1955-12-08_01_054.tcf.xml-14-10	zersetzen	dwug_de				4.0	4.0	4.0					4.0	3
+68	2532889X_1948-10-15_01_038.tcf.xml-20-16	quenstedt_mineralogie_1854-11674-36	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+69	2532889X_1948-10-15_01_038.tcf.xml-20-16	thaer_landwirthschaft04_1812-1075-14	zersetzen	dwug_de				2.0	3.0						2.5	2
+87	2532889X_1949-09-08_01_010.tcf.xml-5-12	2532889X_1955-12-08_01_054.tcf.xml-14-10	zersetzen	dwug_de	4.0			4.0							4.0	2
+89	2532889X_1949-09-08_01_010.tcf.xml-5-12	quenstedt_mineralogie_1854-11674-36	zersetzen	dwug_de				1.0		2.0					1.5	2
+90	2532889X_1949-09-08_01_010.tcf.xml-5-12	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+91	2532889X_1950-01-07_01_043.tcf.xml-58-4	2532889X_1954-12-02_01_059.tcf.xml-41-9	zersetzen	dwug_de	4.0			4.0	3.0	4.0					4.0	4
+92	2532889X_1950-01-07_01_043.tcf.xml-58-4	2532889X_1955-12-08_01_054.tcf.xml-14-10	zersetzen	dwug_de	2.0		4.0		4.0						4.0	3
+93	2532889X_1950-01-07_01_043.tcf.xml-58-4	2532889X_1957-08-18_01_088.tcf.xml-44-12	zersetzen	dwug_de				4.0	4.0						4.0	2
+95	2532889X_1950-03-28_01_117.tcf.xml-6-22	2532889X_1955-12-08_01_054.tcf.xml-14-10	zersetzen	dwug_de				4.0	4.0						4.0	2
+101	2532889X_1950-03-29_01_082.tcf.xml-6-48	kerl_metallurgische_1866-7448-10	zersetzen	dwug_de	2.0			2.0	2.0	2.0					2.0	4
+116	2532889X_1950-05-14_01_034.tcf.xml-344-27	2532889X_1953-02-08_01_037.tcf.xml-142-13	zersetzen	dwug_de	4.0			4.0		4.0					4.0	3
+117	2532889X_1950-05-14_01_034.tcf.xml-344-27	2532889X_1954-12-02_01_059.tcf.xml-41-9	zersetzen	dwug_de					4.0	4.0					4.0	2
+118	2532889X_1950-05-14_01_034.tcf.xml-344-27	lasswitz_seife_1890-606-28	zersetzen	dwug_de	2.0			2.0							2.0	2
+120	2532889X_1950-05-14_01_034.tcf.xml-344-27	thaer_landwirthschaft02_1810-3149-27	zersetzen	dwug_de		2.0			2.0		3.0				2.0	3
+121	2532889X_1950-07-22_01_053.tcf.xml-318-16	2532889X_1952-12-04_01_034.tcf.xml-131-16	zersetzen	dwug_de				3.0		4.0					3.5	2
+123	2532889X_1950-07-22_01_053.tcf.xml-318-16	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	4.0					4.0					4.0	2
+126	2532889X_1950-07-22_01_053.tcf.xml-318-16	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de	2.0					2.0					2.0	2
+129	2532889X_1950-09-01_01_071.tcf.xml-41-30	26120215_1983_04_23_01_133.tcf.xml-3-7	zersetzen	dwug_de					2.0	2.0					2.0	2
+131	2532889X_1950-09-01_01_071.tcf.xml-41-30	wundt_medizinische_1867-8117-25	zersetzen	dwug_de		2.0			2.0		3.0				2.0	3
+133	2532889X_1951-02-28_01_035.tcf.xml-19-30	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de					4.0	4.0					4.0	2
+138	2532889X_1951-04-05_01_036.tcf.xml-10-31	2532889X_1966-12-23_01_112.tcf.xml-36-27	zersetzen	dwug_de				4.0	4.0						4.0	2
+140	2532889X_1951-04-05_01_036.tcf.xml-10-31	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	4.0			4.0							4.0	2
+146	2532889X_1952-08-21_01_058.tcf.xml-2-15	2532889X_1953-04-15_01_066.tcf.xml-47-4	zersetzen	dwug_de	4.0			4.0	3.0	3.0					3.5	4
+174	2532889X_1953-02-08_01_037.tcf.xml-142-13	2532889X_1955-11-26_01_036.tcf.xml-220-37	zersetzen	dwug_de	4.0				4.0						4.0	2
+177	2532889X_1953-02-08_01_037.tcf.xml-142-13	2532889X_1957-08-18_01_088.tcf.xml-44-12	zersetzen	dwug_de	3.0			4.0		4.0					4.0	3
+179	2532889X_1953-02-08_01_037.tcf.xml-142-13	2532889X_1961-03-18_01_065.tcf.xml-65-20	zersetzen	dwug_de	4.0				3.0						3.5	2
+180	2532889X_1953-02-08_01_037.tcf.xml-142-13	2532889X_1961-05-15_01_041.tcf.xml-98-27	zersetzen	dwug_de					4.0	4.0					4.0	2
+182	2532889X_1953-02-08_01_037.tcf.xml-142-13	2532889X_1965-01-21_01_165.tcf.xml-2-34	zersetzen	dwug_de	2.0	3.0	4.0								3.0	3
+184	2532889X_1953-02-08_01_037.tcf.xml-142-13	2532889X_1966-12-23_01_112.tcf.xml-36-27	zersetzen	dwug_de				4.0		3.0					3.5	2
+187	2532889X_1953-02-08_01_037.tcf.xml-142-13	2532889X_1968-10-26_01_124.tcf.xml-94-17	zersetzen	dwug_de				2.0		2.0					2.0	2
+189	2532889X_1953-02-08_01_037.tcf.xml-142-13	2532889X_1971-08-13_01_075.tcf.xml-9-16	zersetzen	dwug_de	4.0				4.0						4.0	2
+190	2532889X_1953-02-08_01_037.tcf.xml-142-13	2532889X_1972-12-21_01_183.tcf.xml-52-16	zersetzen	dwug_de	4.0			4.0		4.0					4.0	3
+192	2532889X_1953-02-08_01_037.tcf.xml-142-13	2532889X_1978-07-22_01_205.tcf.xml-9-21	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+194	2532889X_1953-02-08_01_037.tcf.xml-142-13	26120215_1948_09_11_01_125.tcf.xml-151-10	zersetzen	dwug_de				3.0		4.0					3.5	2
+196	2532889X_1953-02-08_01_037.tcf.xml-142-13	26120215_1949_11_26_01_020.tcf.xml-10-28	zersetzen	dwug_de	4.0					4.0					4.0	2
+197	2532889X_1953-02-08_01_037.tcf.xml-142-13	26120215_1956_03_04_02_033.tcf.xml-29-63	zersetzen	dwug_de	2.0				2.0						2.0	2
+198	2532889X_1953-02-08_01_037.tcf.xml-142-13	26120215_1968_10_07_01_194.tcf.xml-98-35	zersetzen	dwug_de				4.0	4.0	4.0					4.0	3
+201	2532889X_1953-02-08_01_037.tcf.xml-142-13	26120215_1970_08_16_01_038.tcf.xml-40-25	zersetzen	dwug_de				4.0	4.0	4.0					4.0	3
+203	2532889X_1953-02-08_01_037.tcf.xml-142-13	26120215_1981_05_02_01_139.tcf.xml-6-8	zersetzen	dwug_de	2.0			2.0							2.0	2
+204	2532889X_1953-02-08_01_037.tcf.xml-142-13	26120215_1983_04_23_01_133.tcf.xml-3-7	zersetzen	dwug_de				2.0		2.0					2.0	2
+206	2532889X_1953-02-08_01_037.tcf.xml-142-13	26120215_1983_11_07_01_032.tcf.xml-10-5	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+207	2532889X_1953-02-08_01_037.tcf.xml-142-13	26120215_1988_09_17_01_158.tcf.xml-11-6	zersetzen	dwug_de	2.0					2.0					2.0	2
+209	2532889X_1953-02-08_01_037.tcf.xml-142-13	beck_eisen04_1899-7612-15	zersetzen	dwug_de	2.0			2.0							2.0	2
+211	2532889X_1953-02-08_01_037.tcf.xml-142-13	brandes_naturlehre03_1832-1749-21	zersetzen	dwug_de	2.0					2.0					2.0	2
+212	2532889X_1953-02-08_01_037.tcf.xml-142-13	brandes_naturlehre03_1832-2419-20	zersetzen	dwug_de	2.0				2.0						2.0	2
+214	2532889X_1953-02-08_01_037.tcf.xml-142-13	brehm_thierleben03_1866-13960-9	zersetzen	dwug_de				2.0	2.0						2.0	2
+215	2532889X_1953-02-08_01_037.tcf.xml-142-13	brehm_thierleben06_1869-13162-15	zersetzen	dwug_de	2.0	2.0		2.0	2.0						2.0	4
+216	2532889X_1953-02-08_01_037.tcf.xml-142-13	buechner_kraft_1855-1437-28	zersetzen	dwug_de	2.0					2.0					2.0	2
+217	2532889X_1953-02-08_01_037.tcf.xml-142-13	carus_psyche_1846-1790-25	zersetzen	dwug_de	2.0				2.0						2.0	2
+218	2532889X_1953-02-08_01_037.tcf.xml-142-13	darwin_pflanzen_1876-4967-52	zersetzen	dwug_de					2.0	2.0					2.0	2
+219	2532889X_1953-02-08_01_037.tcf.xml-142-13	ganswindt_faerberei_1889-5988-9	zersetzen	dwug_de				2.0		2.0					2.0	2
+220	2532889X_1953-02-08_01_037.tcf.xml-142-13	ganswindt_faerberei_1889-6671-44	zersetzen	dwug_de					2.0	2.0					2.0	2
+221	2532889X_1953-02-08_01_037.tcf.xml-142-13	gottschall_poetik_1858-1845-48	zersetzen	dwug_de				3.0		3.0					3.0	2
+223	2532889X_1953-02-08_01_037.tcf.xml-142-13	gutzkow_zeitgenossen01_1842-1175-5	zersetzen	dwug_de	2.0	2.0			3.0						2.0	3
+225	2532889X_1953-02-08_01_037.tcf.xml-142-13	humboldt_kosmos04_1858-2319-28	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+226	2532889X_1953-02-08_01_037.tcf.xml-142-13	kerl_metallurgische_1866-7448-10	zersetzen	dwug_de	2.0			2.0							2.0	2
+227	2532889X_1953-02-08_01_037.tcf.xml-142-13	ledebur_eisenhuettenkunde_1884-1845-36	zersetzen	dwug_de	2.0			2.0							2.0	2
+228	2532889X_1953-02-08_01_037.tcf.xml-142-13	libelt_hs6623ii_1828-2150-38	zersetzen	dwug_de				2.0	2.0						2.0	2
+229	2532889X_1953-02-08_01_037.tcf.xml-142-13	liebig_agricultur_1840-218-49	zersetzen	dwug_de	2.0					2.0					2.0	2
+230	2532889X_1953-02-08_01_037.tcf.xml-142-13	ludwig_physiologie01_1852-687-11	zersetzen	dwug_de			2.0	2.0	2.0						2.0	3
+231	2532889X_1953-02-08_01_037.tcf.xml-142-13	marx_kapital01_1867-5268-10	zersetzen	dwug_de	4.0	2.0			3.0	1.0	2.0				2.0	5
+232	2532889X_1953-02-08_01_037.tcf.xml-142-13	mommsen_roemische03_1856-4692-12	zersetzen	dwug_de	4.0				4.0						4.0	2
+234	2532889X_1953-02-08_01_037.tcf.xml-142-13	quenstedt_mineralogie_1854-11674-36	zersetzen	dwug_de	2.0			1.0		2.0					2.0	3
+235	2532889X_1953-02-08_01_037.tcf.xml-142-13	quenstedt_mineralogie_1854-11874-1	zersetzen	dwug_de	2.0	2.0		2.0	2.0						2.0	4
+237	2532889X_1953-02-08_01_037.tcf.xml-142-13	quenstedt_mineralogie_1854-5781-5	zersetzen	dwug_de			2.0	2.0	2.0	2.0					2.0	4
+238	2532889X_1953-02-08_01_037.tcf.xml-142-13	quenstedt_mineralogie_1854-6208-42	zersetzen	dwug_de				2.0	2.0						2.0	2
+239	2532889X_1953-02-08_01_037.tcf.xml-142-13	quenstedt_mineralogie_1854-6215-6	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+241	2532889X_1953-02-08_01_037.tcf.xml-142-13	sachs_botanik_1875-3854-12	zersetzen	dwug_de				2.0		2.0					2.0	2
+242	2532889X_1953-02-08_01_037.tcf.xml-142-13	samter_erfindungen_1896-12317-16	zersetzen	dwug_de	3.0			2.0	2.0	2.0					2.0	4
+243	2532889X_1953-02-08_01_037.tcf.xml-142-13	samter_erfindungen_1896-8919-24	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+244	2532889X_1953-02-08_01_037.tcf.xml-142-13	schleiden_pflanze_1848-182-82	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+245	2532889X_1953-02-08_01_037.tcf.xml-142-13	siebold_suesswasserfische_1863-2851-25	zersetzen	dwug_de	2.0		2.0	2.0	2.0	2.0					2.0	5
+248	2532889X_1953-02-08_01_037.tcf.xml-142-13	thaer_landwirthschaft02_1810-2279-27	zersetzen	dwug_de	3.0		2.0	2.0							2.0	3
+249	2532889X_1953-02-08_01_037.tcf.xml-142-13	thaer_landwirthschaft02_1810-3149-27	zersetzen	dwug_de				2.0	2.0						2.0	2
+251	2532889X_1953-02-08_01_037.tcf.xml-142-13	thaer_landwirthschaft04_1812-1075-14	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+253	2532889X_1953-02-08_01_037.tcf.xml-142-13	urbanitzky_electricitaet_1885-9389-58	zersetzen	dwug_de	2.0				2.0						2.0	2
+255	2532889X_1953-02-08_01_037.tcf.xml-142-13	wundt_medizinische_1867-8117-25	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+262	2532889X_1953-04-03_01_043.tcf.xml-10-26	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	4.0					4.0					4.0	2
+264	2532889X_1953-04-03_01_043.tcf.xml-10-26	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de	2.0			2.0							2.0	2
+265	2532889X_1953-04-15_01_066.tcf.xml-47-4	2532889X_1957-08-18_01_088.tcf.xml-44-12	zersetzen	dwug_de				4.0	3.0						3.5	2
+268	2532889X_1953-04-15_01_066.tcf.xml-47-4	2532889X_1989-09-18_01_176.tcf.xml-8-14	zersetzen	dwug_de	4.0					4.0					4.0	2
+269	2532889X_1953-04-15_01_066.tcf.xml-47-4	26120215_1956_03_04_02_033.tcf.xml-29-63	zersetzen	dwug_de				2.0		2.0					2.0	2
+270	2532889X_1953-04-15_01_066.tcf.xml-47-4	26120215_1962_09_28_01_268.tcf.xml-14-2	zersetzen	dwug_de	4.0					3.0					3.5	2
+274	2532889X_1953-04-15_01_066.tcf.xml-47-4	kerl_metallurgische_1866-2774-43	zersetzen	dwug_de	2.0					2.0					2.0	2
+275	2532889X_1953-04-15_01_066.tcf.xml-47-4	lasswitz_seife_1890-606-28	zersetzen	dwug_de	2.0			2.0	2.0	2.0					2.0	4
+276	2532889X_1953-04-15_01_066.tcf.xml-47-4	ledebur_eisenhuettenkunde_1884-14016-15	zersetzen	dwug_de	2.0			2.0		2.0					2.0	3
+277	2532889X_1953-04-15_01_066.tcf.xml-47-4	libelt_hs6623ii_1828-2150-38	zersetzen	dwug_de	2.0			2.0							2.0	2
+278	2532889X_1953-04-15_01_066.tcf.xml-47-4	quenstedt_mineralogie_1854-11674-36	zersetzen	dwug_de		3.0		3.0			2.0				3.0	3
+281	2532889X_1953-04-15_01_066.tcf.xml-47-4	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de	3.0			2.0	2.0	1.0					2.0	4
+282	2532889X_1953-04-15_01_066.tcf.xml-47-4	samter_erfindungen_1896-12317-16	zersetzen	dwug_de	2.0			2.0		2.0					2.0	3
+283	2532889X_1953-04-15_01_066.tcf.xml-47-4	siemens_abhandlungen_1881-408-21	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+284	2532889X_1953-04-15_01_066.tcf.xml-47-4	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de	2.0			2.0		1.0					2.0	3
+285	2532889X_1953-05-17_01_030.tcf.xml-64-8	2532889X_1954-12-02_01_059.tcf.xml-41-9	zersetzen	dwug_de	4.0			3.0							3.5	2
+287	2532889X_1953-05-17_01_030.tcf.xml-64-8	2532889X_1957-08-18_01_088.tcf.xml-44-12	zersetzen	dwug_de				4.0	3.0						3.5	2
+302	2532889X_1953-11-21_01_040.tcf.xml-49-28	quenstedt_mineralogie_1854-11674-36	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+308	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1956-03-01_01_023.tcf.xml-18-24	zersetzen	dwug_de	4.0			4.0		4.0					4.0	3
+309	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1956-11-06_01_007.tcf.xml-13-17	zersetzen	dwug_de	4.0			4.0							4.0	2
+310	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1958-11-05_01_013.tcf.xml-12-20	zersetzen	dwug_de				3.0		4.0					3.5	2
+312	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1961-03-18_01_065.tcf.xml-65-20	zersetzen	dwug_de				4.0		4.0					4.0	2
+315	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1965-09-18_01_056.tcf.xml-21-34	zersetzen	dwug_de				3.0	4.0	3.0					3.0	3
+316	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1966-04-17_01_023.tcf.xml-9-24	zersetzen	dwug_de				4.0	3.0						3.5	2
+317	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1968-05-14_01_017.tcf.xml-3-49	zersetzen	dwug_de				4.0	4.0						4.0	2
+320	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1969-04-19_01_193.tcf.xml-2-20	zersetzen	dwug_de	2.0				2.0						2.0	2
+321	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1969-06-21_01_297.tcf.xml-24-18	zersetzen	dwug_de	4.0			4.0	4.0	4.0					4.0	4
+322	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1969-08-20_01_110.tcf.xml-64-28	zersetzen	dwug_de				4.0		4.0					4.0	2
+323	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1970-01-31_01_086.tcf.xml-14-11	zersetzen	dwug_de	4.0				4.0						4.0	2
+324	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1972-09-23_01_175.tcf.xml-5-16	zersetzen	dwug_de	2.0			2.0							2.0	2
+325	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1972-12-21_01_183.tcf.xml-52-16	zersetzen	dwug_de	4.0				4.0						4.0	2
+326	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1976-11-13_01_450.tcf.xml-16-15	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+329	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1979-01-09_01_166.tcf.xml-17-1	zersetzen	dwug_de				4.0	4.0						4.0	2
+331	2532889X_1954-12-02_01_059.tcf.xml-41-9	2532889X_1986-04-05_01_411.tcf.xml-34-14	zersetzen	dwug_de	2.0			2.0	2.0	4.0					2.0	4
+333	2532889X_1954-12-02_01_059.tcf.xml-41-9	26120215_1956_03_04_02_033.tcf.xml-29-63	zersetzen	dwug_de				2.0		2.0					2.0	2
+334	2532889X_1954-12-02_01_059.tcf.xml-41-9	26120215_1960_06_02_01_197.tcf.xml-33-20	zersetzen	dwug_de	4.0					4.0					4.0	2
+335	2532889X_1954-12-02_01_059.tcf.xml-41-9	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de					4.0	4.0					4.0	2
+337	2532889X_1954-12-02_01_059.tcf.xml-41-9	26120215_1970_01_31_01_063.tcf.xml-13-37	zersetzen	dwug_de	2.0				2.0						2.0	2
+338	2532889X_1954-12-02_01_059.tcf.xml-41-9	26120215_1971_05_14_01_333.tcf.xml-19-38	zersetzen	dwug_de					4.0	4.0					4.0	2
+339	2532889X_1954-12-02_01_059.tcf.xml-41-9	26120215_1975_09_30_01_207.tcf.xml-23-63	zersetzen	dwug_de	2.0	3.0			4.0						3.0	3
+344	2532889X_1954-12-02_01_059.tcf.xml-41-9	avelallemant_gaunerthum03_1862-946-47	zersetzen	dwug_de				3.0		4.0					3.5	2
+346	2532889X_1954-12-02_01_059.tcf.xml-41-9	baumstark_encyclopaedie_1835-4445-7	zersetzen	dwug_de	2.0			1.0		2.0					2.0	3
+347	2532889X_1954-12-02_01_059.tcf.xml-41-9	beck_eisen04_1899-7612-15	zersetzen	dwug_de	2.0				2.0						2.0	2
+349	2532889X_1954-12-02_01_059.tcf.xml-41-9	brandes_naturlehre03_1832-2419-20	zersetzen	dwug_de				2.0	2.0						2.0	2
+350	2532889X_1954-12-02_01_059.tcf.xml-41-9	brandes_naturlehre03_1832-3271-13	zersetzen	dwug_de		2.0	2.0		2.0	2.0					2.0	4
+351	2532889X_1954-12-02_01_059.tcf.xml-41-9	brehm_thierleben03_1866-13960-9	zersetzen	dwug_de	2.0			2.0		2.0					2.0	3
+354	2532889X_1954-12-02_01_059.tcf.xml-41-9	dilthey_geisteswissenschaften_1883-3349-17	zersetzen	dwug_de				3.0	4.0	2.0					3.0	3
+356	2532889X_1954-12-02_01_059.tcf.xml-41-9	ganswindt_faerberei_1889-6671-44	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+357	2532889X_1954-12-02_01_059.tcf.xml-41-9	gottschall_poetik_1858-1845-48	zersetzen	dwug_de	4.0			3.0							3.5	2
+358	2532889X_1954-12-02_01_059.tcf.xml-41-9	griesinger_psychische_1845-572-34	zersetzen	dwug_de	4.0			4.0	4.0						4.0	3
+359	2532889X_1954-12-02_01_059.tcf.xml-41-9	gutzkow_zeitgenossen01_1842-1175-5	zersetzen	dwug_de	3.0	2.0	4.0	2.0	3.0						3.0	5
+360	2532889X_1954-12-02_01_059.tcf.xml-41-9	hahnemann_organon_1810-586-18	zersetzen	dwug_de	2.0			2.0		2.0					2.0	3
+361	2532889X_1954-12-02_01_059.tcf.xml-41-9	humboldt_aequinoktial01_1859-3347-78	zersetzen	dwug_de				2.0		2.0					2.0	2
+362	2532889X_1954-12-02_01_059.tcf.xml-41-9	humboldt_aequinoktial02_1859-988-24	zersetzen	dwug_de				2.0		2.0					2.0	2
+364	2532889X_1954-12-02_01_059.tcf.xml-41-9	kerl_metallurgische_1866-4246-28	zersetzen	dwug_de					2.0	2.0					2.0	2
+367	2532889X_1954-12-02_01_059.tcf.xml-41-9	ledebur_eisenhuettenkunde_1884-1681-7	zersetzen	dwug_de	2.0			2.0		2.0					2.0	3
+369	2532889X_1954-12-02_01_059.tcf.xml-41-9	libelt_hs6623ii_1828-2150-38	zersetzen	dwug_de	2.0				2.0						2.0	2
+370	2532889X_1954-12-02_01_059.tcf.xml-41-9	liebig_agricultur_1840-1742-66	zersetzen	dwug_de	2.0		2.0		2.0		2.0				2.0	4
+371	2532889X_1954-12-02_01_059.tcf.xml-41-9	liebig_knallsilber_1822-15-26	zersetzen	dwug_de	2.0					2.0					2.0	2
+372	2532889X_1954-12-02_01_059.tcf.xml-41-9	marx_kapital01_1867-5268-10	zersetzen	dwug_de	4.0	2.0		2.0							2.0	3
+373	2532889X_1954-12-02_01_059.tcf.xml-41-9	mommsen_roemische03_1856-4692-12	zersetzen	dwug_de				4.0		4.0					4.0	2
+374	2532889X_1954-12-02_01_059.tcf.xml-41-9	quenstedt_mineralogie_1854-11674-36	zersetzen	dwug_de	2.0				2.0						2.0	2
+375	2532889X_1954-12-02_01_059.tcf.xml-41-9	quenstedt_mineralogie_1854-11874-1	zersetzen	dwug_de	2.0		2.0	2.0		2.0	2.0				2.0	5
+376	2532889X_1954-12-02_01_059.tcf.xml-41-9	quenstedt_mineralogie_1854-12985-4	zersetzen	dwug_de	2.0			2.0							2.0	2
+378	2532889X_1954-12-02_01_059.tcf.xml-41-9	quenstedt_mineralogie_1854-2750-15	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+379	2532889X_1954-12-02_01_059.tcf.xml-41-9	sachs_botanik_1875-3854-12	zersetzen	dwug_de	2.0			2.0							2.0	2
+380	2532889X_1954-12-02_01_059.tcf.xml-41-9	schleiden_pflanze_1848-182-82	zersetzen	dwug_de				2.0		2.0					2.0	2
+381	2532889X_1954-12-02_01_059.tcf.xml-41-9	siebold_suesswasserfische_1863-2851-25	zersetzen	dwug_de	2.0	2.0			2.0	2.0					2.0	4
+382	2532889X_1954-12-02_01_059.tcf.xml-41-9	siemens_abhandlungen_1881-408-21	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+384	2532889X_1954-12-02_01_059.tcf.xml-41-9	thaer_landwirthschaft02_1810-2279-27	zersetzen	dwug_de				2.0	2.0						2.0	2
+385	2532889X_1954-12-02_01_059.tcf.xml-41-9	thaer_landwirthschaft02_1810-3252-24	zersetzen	dwug_de	2.0				2.0	3.0					2.0	3
+386	2532889X_1954-12-02_01_059.tcf.xml-41-9	thaer_landwirthschaft02_1810-4483-15	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+387	2532889X_1954-12-02_01_059.tcf.xml-41-9	thaer_landwirthschaft04_1812-1075-14	zersetzen	dwug_de	2.0		2.0		3.0						2.0	3
+388	2532889X_1954-12-02_01_059.tcf.xml-41-9	treviranus_biologie04_1814-734-22	zersetzen	dwug_de				2.0		2.0					2.0	2
+389	2532889X_1954-12-02_01_059.tcf.xml-41-9	urbanitzky_electricitaet_1885-4589-11	zersetzen	dwug_de					2.0	2.0					2.0	2
+390	2532889X_1954-12-02_01_059.tcf.xml-41-9	urbanitzky_electricitaet_1885-4651-33	zersetzen	dwug_de				2.0	2.0						2.0	2
+391	2532889X_1954-12-02_01_059.tcf.xml-41-9	wagner_zukunft_1850-798-58	zersetzen	dwug_de	4.0				3.0						3.5	2
+399	2532889X_1955-11-26_01_036.tcf.xml-220-37	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de				4.0	4.0						4.0	2
+400	2532889X_1955-11-26_01_036.tcf.xml-220-37	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de	2.0			2.0		2.0					2.0	3
+401	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1956-11-06_01_007.tcf.xml-13-17	zersetzen	dwug_de					4.0	4.0					4.0	2
+402	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1958-01-25_01_095.tcf.xml-87-29	zersetzen	dwug_de	4.0					4.0					4.0	2
+403	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1958-11-05_01_013.tcf.xml-12-20	zersetzen	dwug_de	4.0			4.0	4.0						4.0	3
+404	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1959-10-09_01_097.tcf.xml-57-15	zersetzen	dwug_de				2.0		2.0					2.0	2
+407	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1966-12-11_01_233.tcf.xml-4-23	zersetzen	dwug_de				2.0		2.0					2.0	2
+408	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1968-05-14_01_017.tcf.xml-3-49	zersetzen	dwug_de	4.0			4.0		4.0					4.0	3
+409	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1969-04-19_01_193.tcf.xml-2-20	zersetzen	dwug_de	2.0				2.0						2.0	2
+412	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1970-03-17_01_079.tcf.xml-19-15	zersetzen	dwug_de					4.0	4.0					4.0	2
+415	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1972-09-23_01_175.tcf.xml-5-16	zersetzen	dwug_de				2.0	2.0	4.0					2.0	3
+417	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1973-12-28_01_119.tcf.xml-5-34	zersetzen	dwug_de	2.0		3.0	4.0							3.0	3
+419	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1976-11-20_01_219.tcf.xml-25-15	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+420	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1979-01-09_01_166.tcf.xml-17-1	zersetzen	dwug_de	4.0			4.0		3.0					4.0	3
+421	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1981-02-18_01_108.tcf.xml-6-53	zersetzen	dwug_de					2.0	4.0	4.0				4.0	3
+422	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1984-10-27_01_180.tcf.xml-1-11	zersetzen	dwug_de				2.0	2.0						2.0	2
+425	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1989-09-09_01_213.tcf.xml-7-19	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+426	2532889X_1955-12-08_01_054.tcf.xml-14-10	2532889X_1990-08-31_01_211.tcf.xml-27-17	zersetzen	dwug_de	2.0					2.0					2.0	2
+429	2532889X_1955-12-08_01_054.tcf.xml-14-10	26120215_1956_11_25_02_177.tcf.xml-15-18	zersetzen	dwug_de			2.0		2.0		3.0				2.0	3
+430	2532889X_1955-12-08_01_054.tcf.xml-14-10	26120215_1957_10_24_01_021.tcf.xml-76-33	zersetzen	dwug_de	4.0			3.0							3.5	2
+435	2532889X_1955-12-08_01_054.tcf.xml-14-10	26120215_1970_08_16_01_038.tcf.xml-40-25	zersetzen	dwug_de		3.0				4.0					3.5	2
+437	2532889X_1955-12-08_01_054.tcf.xml-14-10	26120215_1973_07_08_01_244.tcf.xml-2-4	zersetzen	dwug_de	2.0			2.0							2.0	2
+438	2532889X_1955-12-08_01_054.tcf.xml-14-10	26120215_1975_09_30_01_207.tcf.xml-23-63	zersetzen	dwug_de				3.0	2.0	3.0					3.0	3
+439	2532889X_1955-12-08_01_054.tcf.xml-14-10	26120215_1981_10_20_01_064.tcf.xml-32-26	zersetzen	dwug_de				4.0		4.0					4.0	2
+442	2532889X_1955-12-08_01_054.tcf.xml-14-10	26120215_1988_11_26_01_391.tcf.xml-6-6	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+444	2532889X_1955-12-08_01_054.tcf.xml-14-10	26120215_1990_04_28_01_478.tcf.xml-3-2	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+448	2532889X_1955-12-08_01_054.tcf.xml-14-10	beck_eisen02_1895-2517-58	zersetzen	dwug_de				2.0		2.0					2.0	2
+450	2532889X_1955-12-08_01_054.tcf.xml-14-10	beck_eisen04_1899-6971-37	zersetzen	dwug_de	2.0			2.0							2.0	2
+451	2532889X_1955-12-08_01_054.tcf.xml-14-10	brandes_naturlehre03_1832-3271-13	zersetzen	dwug_de	2.0			2.0							2.0	2
+452	2532889X_1955-12-08_01_054.tcf.xml-14-10	brehm_thierleben04_1867-20795-21	zersetzen	dwug_de				2.0		2.0					2.0	2
+453	2532889X_1955-12-08_01_054.tcf.xml-14-10	chamberlain_grundlagen02_1899-4790-26	zersetzen	dwug_de				4.0	3.0						3.5	2
+454	2532889X_1955-12-08_01_054.tcf.xml-14-10	curtius_alterthum01_1875-2280-20	zersetzen	dwug_de			4.0	1.0		4.0					4.0	3
+457	2532889X_1955-12-08_01_054.tcf.xml-14-10	dilthey_geisteswissenschaften_1883-4629-18	zersetzen	dwug_de	4.0				3.0	3.0					3.0	3
+458	2532889X_1955-12-08_01_054.tcf.xml-14-10	ganswindt_faerberei_1889-7592-19	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+459	2532889X_1955-12-08_01_054.tcf.xml-14-10	gottschall_poetik_1858-5415-85	zersetzen	dwug_de	4.0				4.0	4.0					4.0	3
+462	2532889X_1955-12-08_01_054.tcf.xml-14-10	hegel_phaenomenologie_1807-1346-11	zersetzen	dwug_de	4.0		4.0		3.0		3.0				3.5	4
+466	2532889X_1955-12-08_01_054.tcf.xml-14-10	jhering_recht03_1865-194-80	zersetzen	dwug_de	4.0			3.0		4.0					4.0	3
+467	2532889X_1955-12-08_01_054.tcf.xml-14-10	kerl_metallurgische_1866-1440-7	zersetzen	dwug_de	2.0	2.0	2.0		2.0	2.0	2.0				2.0	6
+469	2532889X_1955-12-08_01_054.tcf.xml-14-10	kerl_metallurgische_1866-3147-17	zersetzen	dwug_de	2.0					2.0					2.0	2
+472	2532889X_1955-12-08_01_054.tcf.xml-14-10	kerl_metallurgische_1866-7448-10	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+475	2532889X_1955-12-08_01_054.tcf.xml-14-10	ledebur_eisenhuettenkunde_1884-2649-16	zersetzen	dwug_de					2.0	2.0					2.0	2
+476	2532889X_1955-12-08_01_054.tcf.xml-14-10	liebig_agricultur_1840-1742-66	zersetzen	dwug_de		2.0		2.0							2.0	2
+479	2532889X_1955-12-08_01_054.tcf.xml-14-10	nn_oktavgfeo79_1828-3406-15	zersetzen	dwug_de	2.0		2.0	2.0			3.0				2.0	4
+480	2532889X_1955-12-08_01_054.tcf.xml-14-10	quenstedt_mineralogie_1854-12985-4	zersetzen	dwug_de	2.0			2.0							2.0	2
+481	2532889X_1955-12-08_01_054.tcf.xml-14-10	quenstedt_mineralogie_1854-6244-1	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+483	2532889X_1955-12-08_01_054.tcf.xml-14-10	schleiden_pflanze_1848-1508-22	zersetzen	dwug_de		2.0				2.0	3.0				2.0	3
+484	2532889X_1955-12-08_01_054.tcf.xml-14-10	siemens_telegraphie_1866-211-23	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+485	2532889X_1955-12-08_01_054.tcf.xml-14-10	thaer_landwirthschaft02_1810-2627-11	zersetzen	dwug_de				2.0	2.0						2.0	2
+486	2532889X_1955-12-08_01_054.tcf.xml-14-10	thaer_landwirthschaft02_1810-4102-27	zersetzen	dwug_de	2.0			3.0	2.0	2.0					2.0	4
+491	2532889X_1955-12-08_01_054.tcf.xml-14-10	urbanitzky_electricitaet_1885-4651-33	zersetzen	dwug_de				2.0	2.0						2.0	2
+503	2532889X_1956-03-01_01_023.tcf.xml-18-24	2532889X_1957-08-18_01_088.tcf.xml-44-12	zersetzen	dwug_de	4.0					4.0					4.0	2
+512	2532889X_1956-11-06_01_007.tcf.xml-13-17	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de	2.0			2.0	2.0	1.0					2.0	4
+558	2532889X_1957-08-18_01_088.tcf.xml-44-12	2532889X_1966-04-17_01_023.tcf.xml-9-24	zersetzen	dwug_de	4.0			4.0	4.0						4.0	3
+561	2532889X_1957-08-18_01_088.tcf.xml-44-12	2532889X_1978-07-22_01_205.tcf.xml-9-21	zersetzen	dwug_de	2.0			2.0							2.0	2
+562	2532889X_1957-08-18_01_088.tcf.xml-44-12	2532889X_1984-10-27_01_180.tcf.xml-1-11	zersetzen	dwug_de	2.0					2.0					2.0	2
+563	2532889X_1957-08-18_01_088.tcf.xml-44-12	2532889X_1987-10-24_01_365.tcf.xml-5-1	zersetzen	dwug_de	2.0					2.0					2.0	2
+564	2532889X_1957-08-18_01_088.tcf.xml-44-12	26120215_1955_12_17_01_303.tcf.xml-41-23	zersetzen	dwug_de	3.0					4.0					3.5	2
+565	2532889X_1957-08-18_01_088.tcf.xml-44-12	26120215_1956_11_25_02_177.tcf.xml-15-18	zersetzen	dwug_de	3.0	2.0		2.0	2.0	2.0	3.0				2.0	6
+566	2532889X_1957-08-18_01_088.tcf.xml-44-12	26120215_1969_10_16_01_070.tcf.xml-6-42	zersetzen	dwug_de	4.0				4.0	3.0					4.0	3
+567	2532889X_1957-08-18_01_088.tcf.xml-44-12	26120215_1970_09_13_01_522.tcf.xml-11-11	zersetzen	dwug_de	2.0				2.0	2.0	1.0				2.0	4
+570	2532889X_1957-08-18_01_088.tcf.xml-44-12	dilthey_geisteswissenschaften_1883-4629-18	zersetzen	dwug_de					4.0	3.0					3.5	2
+571	2532889X_1957-08-18_01_088.tcf.xml-44-12	ganswindt_faerberei_1889-7592-19	zersetzen	dwug_de					2.0	2.0					2.0	2
+575	2532889X_1957-08-18_01_088.tcf.xml-44-12	kerl_metallurgische_1866-7448-10	zersetzen	dwug_de	3.0			2.0	2.0	2.0					2.0	4
+576	2532889X_1957-08-18_01_088.tcf.xml-44-12	ledebur_eisenhuettenkunde_1884-1845-36	zersetzen	dwug_de	2.0			2.0							2.0	2
+578	2532889X_1957-08-18_01_088.tcf.xml-44-12	patzig_msgermfol841842_1828-4674-1	zersetzen	dwug_de					2.0	2.0					2.0	2
+580	2532889X_1957-08-18_01_088.tcf.xml-44-12	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de	2.0			2.0	2.0	2.0					2.0	4
+582	2532889X_1957-08-18_01_088.tcf.xml-44-12	samter_erfindungen_1896-8919-24	zersetzen	dwug_de	2.0				2.0						2.0	2
+583	2532889X_1957-08-18_01_088.tcf.xml-44-12	thaer_landwirthschaft02_1810-2627-11	zersetzen	dwug_de	2.0			2.0		2.0					2.0	3
+584	2532889X_1957-08-18_01_088.tcf.xml-44-12	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de	3.0		2.0	3.0	2.0		3.0				3.0	5
+586	2532889X_1957-08-18_01_088.tcf.xml-44-12	thaer_landwirthschaft04_1812-2451-11	zersetzen	dwug_de				2.0		2.0					2.0	2
+588	2532889X_1958-01-25_01_095.tcf.xml-87-29	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	4.0				3.0						3.5	2
+591	2532889X_1958-01-25_01_095.tcf.xml-87-29	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de	2.0			2.0							2.0	2
+595	2532889X_1958-11-05_01_013.tcf.xml-12-20	26120215_1968_11_26_01_253.tcf.xml-4-17	zersetzen	dwug_de				4.0		4.0					4.0	2
+596	2532889X_1958-11-05_01_013.tcf.xml-12-20	kerl_metallurgische_1866-7448-10	zersetzen	dwug_de					2.0	2.0					2.0	2
+610	2532889X_1959-10-09_01_097.tcf.xml-57-15	beck_eisen02_1895-2517-58	zersetzen	dwug_de		2.0	4.0								3.0	2
+613	2532889X_1959-10-09_01_097.tcf.xml-57-15	samter_erfindungen_1896-12317-16	zersetzen	dwug_de				4.0	4.0						4.0	2
+645	2532889X_1960-07-06_01_172.tcf.xml-206-17	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	4.0				4.0						4.0	2
+653	2532889X_1961-05-15_01_041.tcf.xml-98-27	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de				2.0		2.0					2.0	2
+855	2532889X_1966-04-17_01_023.tcf.xml-9-24	2532889X_1969-08-20_01_110.tcf.xml-64-28	zersetzen	dwug_de	4.0				4.0						4.0	2
+867	2532889X_1966-11-18_01_119.tcf.xml-7-29	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	4.0			4.0	4.0	4.0					4.0	4
+868	2532889X_1966-11-18_01_119.tcf.xml-7-29	26120215_1987_02_07_01_156.tcf.xml-13-10	zersetzen	dwug_de	2.0				2.0		3.0				2.0	3
+870	2532889X_1966-11-18_01_119.tcf.xml-7-29	beck_eisen02_1895-2517-58	zersetzen	dwug_de			2.0			2.0					2.0	2
+872	2532889X_1966-12-11_01_233.tcf.xml-4-23	2532889X_1978-07-22_01_205.tcf.xml-9-21	zersetzen	dwug_de					4.0	4.0	4.0				4.0	3
+875	2532889X_1966-12-11_01_233.tcf.xml-4-23	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	2.0			2.0	2.0	3.0					2.0	4
+878	2532889X_1966-12-11_01_233.tcf.xml-4-23	baumstark_encyclopaedie_1835-4445-7	zersetzen	dwug_de			4.0		4.0						4.0	2
+883	2532889X_1966-12-11_01_233.tcf.xml-4-23	paul_katzenberger01_1809-1358-66	zersetzen	dwug_de				4.0		4.0					4.0	2
+886	2532889X_1966-12-11_01_233.tcf.xml-4-23	thaer_landwirthschaft04_1812-2451-11	zersetzen	dwug_de					4.0	4.0	3.0				4.0	3
+887	2532889X_1966-12-11_01_233.tcf.xml-4-23	urbanitzky_electricitaet_1885-8670-27	zersetzen	dwug_de		4.0	4.0								4.0	2
+888	2532889X_1966-12-23_01_112.tcf.xml-36-27	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de				4.0	4.0						4.0	2
+890	2532889X_1966-12-23_01_112.tcf.xml-36-27	kerl_metallurgische_1866-7448-10	zersetzen	dwug_de	2.0			2.0	2.0	2.0					2.0	4
+923	2532889X_1968-05-14_01_017.tcf.xml-3-49	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de					2.0	2.0					2.0	2
+932	2532889X_1968-10-07_01_198.tcf.xml-210-35	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+934	2532889X_1968-10-26_01_124.tcf.xml-94-17	26120215_1968_09_13_01_018.tcf.xml-40-31	zersetzen	dwug_de				2.0		2.0					2.0	2
+938	2532889X_1968-10-26_01_124.tcf.xml-94-17	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de		4.0			4.0						4.0	2
+947	2532889X_1969-04-19_01_193.tcf.xml-2-20	baumstark_encyclopaedie_1835-4301-17	zersetzen	dwug_de			4.0			4.0					4.0	2
+954	2532889X_1969-06-21_01_297.tcf.xml-24-18	brehm_thierleben03_1866-13960-9	zersetzen	dwug_de			2.0		2.0						2.0	2
+955	2532889X_1969-06-21_01_297.tcf.xml-24-18	dilthey_geisteswissenschaften_1883-1341-83	zersetzen	dwug_de					3.0	3.0					3.0	2
+971	2532889X_1970-03-17_01_079.tcf.xml-19-15	2532889X_1976-11-13_01_450.tcf.xml-16-15	zersetzen	dwug_de					2.0	2.0					2.0	2
+980	2532889X_1970-12-14_01_109.tcf.xml-24-19	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de				4.0	4.0	4.0					4.0	3
+981	2532889X_1970-12-14_01_109.tcf.xml-24-19	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de	2.0			2.0							2.0	2
+985	2532889X_1971-08-09_01_029.tcf.xml-6-8	thaer_landwirthschaft02_1810-4483-15	zersetzen	dwug_de		4.0	4.0								4.0	2
+989	2532889X_1971-08-13_01_075.tcf.xml-9-16	dilthey_geisteswissenschaften_1883-1341-83	zersetzen	dwug_de				3.0	3.0						3.0	2
+1078	2532889X_1972-09-23_01_175.tcf.xml-5-16	2532889X_1976-11-20_01_219.tcf.xml-25-15	zersetzen	dwug_de			4.0				4.0				4.0	2
+1081	2532889X_1972-09-23_01_175.tcf.xml-5-16	humboldt_aequinoktial02_1859-988-24	zersetzen	dwug_de				3.0	4.0						3.5	2
+1082	2532889X_1972-09-23_01_175.tcf.xml-5-16	paul_katzenberger01_1809-1358-66	zersetzen	dwug_de			4.0		3.0	3.0					3.0	3
+1087	2532889X_1972-12-21_01_183.tcf.xml-52-16	26120215_1956_11_25_02_177.tcf.xml-15-18	zersetzen	dwug_de					2.0	2.0	3.0				2.0	3
+1088	2532889X_1972-12-21_01_183.tcf.xml-52-16	26120215_1970_08_16_01_038.tcf.xml-40-25	zersetzen	dwug_de					4.0	4.0					4.0	2
+1112	2532889X_1973-07-12_01_153.tcf.xml-60-34	humboldt_aequinoktial02_1859-988-24	zersetzen	dwug_de		1.0	2.0			4.0					2.0	3
+1114	2532889X_1973-07-12_01_153.tcf.xml-60-34	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de					2.0	2.0					2.0	2
+1115	2532889X_1973-08-09_01_122.tcf.xml-5-21	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de				4.0		4.0					4.0	2
+1116	2532889X_1973-08-09_01_122.tcf.xml-5-21	lasswitz_seife_1890-606-28	zersetzen	dwug_de					2.0	2.0					2.0	2
+1175	2532889X_1976-11-13_01_450.tcf.xml-16-15	kerl_metallurgische_1866-7448-10	zersetzen	dwug_de	4.0			4.0		4.0					4.0	3
+1176	2532889X_1976-11-13_01_450.tcf.xml-16-15	siemens_abhandlungen_1881-408-21	zersetzen	dwug_de		3.0			4.0						3.5	2
+1181	2532889X_1976-11-20_01_219.tcf.xml-25-15	26120215_1949_09_03_01_046.tcf.xml-6-2	zersetzen	dwug_de			2.0			2.0	3.0				2.0	3
+1182	2532889X_1976-11-20_01_219.tcf.xml-25-15	26120215_1983_06_04_01_467.tcf.xml-21-10	zersetzen	dwug_de		3.0			4.0	4.0					4.0	3
+1183	2532889X_1976-11-20_01_219.tcf.xml-25-15	baumstark_encyclopaedie_1835-4445-7	zersetzen	dwug_de		3.0				4.0					3.5	2
+1184	2532889X_1976-11-20_01_219.tcf.xml-25-15	carus_psyche_1846-1790-25	zersetzen	dwug_de			4.0			4.0					4.0	2
+1185	2532889X_1976-11-20_01_219.tcf.xml-25-15	ganswindt_faerberei_1889-7592-19	zersetzen	dwug_de			4.0			4.0					4.0	2
+1191	2532889X_1976-11-20_01_219.tcf.xml-25-15	quenstedt_mineralogie_1854-7202-21	zersetzen	dwug_de					4.0		4.0				4.0	2
+1192	2532889X_1976-11-20_01_219.tcf.xml-25-15	sachs_botanik_1875-3854-12	zersetzen	dwug_de			4.0		4.0						4.0	2
+1194	2532889X_1976-11-20_01_219.tcf.xml-25-15	siemens_telegraphie_1866-211-23	zersetzen	dwug_de			4.0		4.0						4.0	2
+1196	2532889X_1976-11-20_01_219.tcf.xml-25-15	urbanitzky_electricitaet_1885-4589-11	zersetzen	dwug_de		4.0				4.0					4.0	2
+1254	2532889X_1978-07-22_01_205.tcf.xml-9-21	brandes_naturlehre02_1831-517-41	zersetzen	dwug_de						4.0	4.0				4.0	2
+1256	2532889X_1978-07-22_01_205.tcf.xml-9-21	lasswitz_seife_1890-606-28	zersetzen	dwug_de		2.0					4.0			2.0	2.0	3
+1257	2532889X_1978-07-22_01_205.tcf.xml-9-21	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de		3.0					4.0				3.5	2
+1258	2532889X_1978-07-22_01_205.tcf.xml-9-21	wagner_zukunft_1850-798-58	zersetzen	dwug_de			2.0	3.0						2.0	2.0	3
+1265	2532889X_1979-01-09_01_166.tcf.xml-17-1	26120215_1956_11_25_02_177.tcf.xml-15-18	zersetzen	dwug_de	2.0		2.0	3.0	2.0	2.0					2.0	5
+1286	2532889X_1981-02-18_01_108.tcf.xml-6-53	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	4.0					3.0					3.5	2
+1288	2532889X_1981-02-18_01_108.tcf.xml-6-53	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de				2.0		2.0					2.0	2
+1392	2532889X_1984-10-27_01_180.tcf.xml-1-11	quenstedt_mineralogie_1854-12985-4	zersetzen	dwug_de			4.0				4.0				4.0	2
+1393	2532889X_1984-10-27_01_180.tcf.xml-1-11	thaer_landwirthschaft02_1810-2279-27	zersetzen	dwug_de		3.0	4.0								3.5	2
+1449	2532889X_1986-04-05_01_411.tcf.xml-34-14	beck_eisen02_1895-2517-58	zersetzen	dwug_de		2.0			3.0		2.0				2.0	3
+1451	2532889X_1986-04-05_01_411.tcf.xml-34-14	quenstedt_mineralogie_1854-11674-36	zersetzen	dwug_de		2.0			4.0	4.0					4.0	3
+1518	2532889X_1987-10-24_01_365.tcf.xml-5-1	kerl_metallurgische_1866-7448-10	zersetzen	dwug_de					4.0	4.0					4.0	2
+1521	2532889X_1987-10-24_01_365.tcf.xml-5-1	thaer_landwirthschaft02_1810-3149-27	zersetzen	dwug_de			4.0				4.0				4.0	2
+1552	2532889X_1989-09-09_01_213.tcf.xml-7-19	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	2.0				2.0						2.0	2
+1554	2532889X_1989-09-09_01_213.tcf.xml-7-19	humboldt_aequinoktial01_1859-3347-78	zersetzen	dwug_de		3.0	4.0								3.5	2
+1555	2532889X_1989-09-09_01_213.tcf.xml-7-19	lasswitz_seife_1890-606-28	zersetzen	dwug_de	4.0		3.0	4.0							4.0	3
+1556	2532889X_1989-09-09_01_213.tcf.xml-7-19	quenstedt_mineralogie_1854-12985-4	zersetzen	dwug_de			4.0		3.0						3.5	2
+1559	2532889X_1989-09-18_01_176.tcf.xml-8-14	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	4.0					4.0					4.0	2
+1594	2532889X_1990-08-31_01_211.tcf.xml-27-17	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	2.0			2.0		2.0					2.0	3
+1596	2532889X_1990-08-31_01_211.tcf.xml-27-17	baumstark_encyclopaedie_1835-4445-7	zersetzen	dwug_de		3.0	4.0			4.0					4.0	3
+1597	2532889X_1990-08-31_01_211.tcf.xml-27-17	quenstedt_mineralogie_1854-11674-36	zersetzen	dwug_de		2.0								3.0	2.5	2
+1598	2532889X_1990-08-31_01_211.tcf.xml-27-17	samter_erfindungen_1896-12317-16	zersetzen	dwug_de					4.0	4.0					4.0	2
+1643	26120215_1948_09_11_01_125.tcf.xml-151-10	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de				4.0		4.0					4.0	2
+1644	26120215_1948_09_11_01_125.tcf.xml-151-10	26120215_1987_02_07_01_156.tcf.xml-13-10	zersetzen	dwug_de	2.0		2.0	2.0	2.0	2.0					2.0	5
+1650	26120215_1949_09_03_01_046.tcf.xml-6-2	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de		3.0			3.0	3.0	2.0			2.0	3.0	5
+1651	26120215_1949_09_03_01_046.tcf.xml-6-2	26120215_1990_04_28_01_478.tcf.xml-3-2	zersetzen	dwug_de		2.0		2.0		2.0					2.0	3
+1652	26120215_1949_09_03_01_046.tcf.xml-6-2	baumstark_encyclopaedie_1835-4445-7	zersetzen	dwug_de					2.0	2.0					2.0	2
+1654	26120215_1949_09_03_01_046.tcf.xml-6-2	hegel_phaenomenologie_1807-1346-11	zersetzen	dwug_de				3.0		3.0					3.0	2
+1655	26120215_1949_09_03_01_046.tcf.xml-6-2	marx_kapital01_1867-5268-10	zersetzen	dwug_de				2.0		3.0					2.5	2
+1658	26120215_1949_09_03_01_046.tcf.xml-6-2	thaer_landwirthschaft02_1810-2270-31	zersetzen	dwug_de				2.0		2.0					2.0	2
+1660	26120215_1949_09_03_01_046.tcf.xml-6-2	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de					2.0	2.0					2.0	2
+1666	26120215_1949_11_26_01_020.tcf.xml-10-28	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	4.0					4.0					4.0	2
+1743	26120215_1956_03_04_02_033.tcf.xml-29-63	brehm_thierleben03_1866-13960-9	zersetzen	dwug_de						4.0	4.0				4.0	2
+1746	26120215_1956_03_04_02_033.tcf.xml-29-63	wundt_medizinische_1867-8117-25	zersetzen	dwug_de					3.0	4.0					3.5	2
+1776	26120215_1956_11_25_02_177.tcf.xml-15-18	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de	3.0		2.0	2.0	2.0	2.0	3.0				2.0	6
+1778	26120215_1956_11_25_02_177.tcf.xml-15-18	avelallemant_gaunerthum03_1862-946-47	zersetzen	dwug_de	2.0		2.0				3.0				2.0	3
+1779	26120215_1956_11_25_02_177.tcf.xml-15-18	brandes_naturlehre03_1832-1749-21	zersetzen	dwug_de	4.0				4.0	4.0					4.0	3
+1780	26120215_1956_11_25_02_177.tcf.xml-15-18	darwin_pflanzen_1876-4967-52	zersetzen	dwug_de				4.0		4.0					4.0	2
+1781	26120215_1956_11_25_02_177.tcf.xml-15-18	gottschall_poetik_1858-5415-85	zersetzen	dwug_de				2.0	2.0		1.0				2.0	3
+1782	26120215_1956_11_25_02_177.tcf.xml-15-18	liebig_agricultur_1840-1742-66	zersetzen	dwug_de	4.0				4.0	4.0					4.0	3
+1785	26120215_1956_11_25_02_177.tcf.xml-15-18	nn_oktavgfeo79_1828-3406-15	zersetzen	dwug_de	4.0				4.0	4.0					4.0	3
+1786	26120215_1956_11_25_02_177.tcf.xml-15-18	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de					3.0	4.0	4.0				4.0	3
+1787	26120215_1956_11_25_02_177.tcf.xml-15-18	quenstedt_mineralogie_1854-5781-5	zersetzen	dwug_de				4.0	4.0						4.0	2
+1788	26120215_1956_11_25_02_177.tcf.xml-15-18	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de				4.0	4.0	4.0	4.0				4.0	4
+1790	26120215_1956_11_25_02_177.tcf.xml-15-18	siemens_telegraphie_1866-211-23	zersetzen	dwug_de	4.0			4.0	4.0	4.0					4.0	4
+1812	26120215_1957_10_24_01_021.tcf.xml-76-33	26120215_1961_02_02_01_067.tcf.xml-19-12	zersetzen	dwug_de		2.0	4.0	2.0		3.0	2.0				2.0	5
+1813	26120215_1957_10_24_01_021.tcf.xml-76-33	lasswitz_seife_1890-606-28	zersetzen	dwug_de	2.0			3.0	2.0						2.0	3
+1825	26120215_1960_06_02_01_197.tcf.xml-33-20	quenstedt_mineralogie_1854-11674-36	zersetzen	dwug_de	2.0					2.0					2.0	2
+1834	26120215_1961_02_02_01_067.tcf.xml-19-12	26120215_1968_09_13_01_018.tcf.xml-40-31	zersetzen	dwug_de	4.0				4.0						4.0	2
+1835	26120215_1961_02_02_01_067.tcf.xml-19-12	26120215_1968_10_07_01_194.tcf.xml-98-35	zersetzen	dwug_de				4.0	4.0						4.0	2
+1838	26120215_1961_02_02_01_067.tcf.xml-19-12	26120215_1970_08_16_01_038.tcf.xml-40-25	zersetzen	dwug_de				4.0	4.0						4.0	2
+1839	26120215_1961_02_02_01_067.tcf.xml-19-12	26120215_1970_09_13_01_522.tcf.xml-11-11	zersetzen	dwug_de		2.0	2.0			2.0	3.0				2.0	4
+1840	26120215_1961_02_02_01_067.tcf.xml-19-12	26120215_1973_07_08_01_244.tcf.xml-2-4	zersetzen	dwug_de	2.0				2.0						2.0	2
+1841	26120215_1961_02_02_01_067.tcf.xml-19-12	26120215_1981_10_20_01_064.tcf.xml-32-26	zersetzen	dwug_de				3.0	4.0						3.5	2
+1846	26120215_1961_02_02_01_067.tcf.xml-19-12	26120215_1988_09_17_01_158.tcf.xml-11-6	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+1847	26120215_1961_02_02_01_067.tcf.xml-19-12	26120215_1990_02_15_01_031.tcf.xml-26-14	zersetzen	dwug_de	4.0				4.0						4.0	2
+1850	26120215_1961_02_02_01_067.tcf.xml-19-12	beck_eisen04_1899-14550-30	zersetzen	dwug_de	2.0					2.0					2.0	2
+1852	26120215_1961_02_02_01_067.tcf.xml-19-12	brandes_naturlehre03_1832-1749-21	zersetzen	dwug_de				3.0	2.0	2.0					2.0	3
+1853	26120215_1961_02_02_01_067.tcf.xml-19-12	brandes_naturlehre03_1832-3308-68	zersetzen	dwug_de	2.0			2.0							2.0	2
+1854	26120215_1961_02_02_01_067.tcf.xml-19-12	brehm_thierleben04_1867-20795-21	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+1855	26120215_1961_02_02_01_067.tcf.xml-19-12	brehm_thierleben06_1869-13162-15	zersetzen	dwug_de						4.0	2.0				3.0	2
+1856	26120215_1961_02_02_01_067.tcf.xml-19-12	carus_psyche_1846-1790-25	zersetzen	dwug_de	2.0			3.0		2.0					2.0	3
+1857	26120215_1961_02_02_01_067.tcf.xml-19-12	chamberlain_grundlagen02_1899-4790-26	zersetzen	dwug_de	2.0		4.0		4.0						4.0	3
+1859	26120215_1961_02_02_01_067.tcf.xml-19-12	darwin_pflanzen_1876-4967-52	zersetzen	dwug_de	2.0			2.0		2.0					2.0	3
+1861	26120215_1961_02_02_01_067.tcf.xml-19-12	ganswindt_faerberei_1889-7592-19	zersetzen	dwug_de					2.0	2.0					2.0	2
+1862	26120215_1961_02_02_01_067.tcf.xml-19-12	gottschall_poetik_1858-5415-85	zersetzen	dwug_de	4.0	2.0				2.0					2.0	3
+1863	26120215_1961_02_02_01_067.tcf.xml-19-12	hartwig_erziehung_1847-662-28	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+1865	26120215_1961_02_02_01_067.tcf.xml-19-12	hegel_phaenomenologie_1807-3234-3	zersetzen	dwug_de	4.0				3.0						3.5	2
+1867	26120215_1961_02_02_01_067.tcf.xml-19-12	humboldt_kosmos04_1858-2319-28	zersetzen	dwug_de	2.0			2.0							2.0	2
+1869	26120215_1961_02_02_01_067.tcf.xml-19-12	kerl_metallurgische_1866-1440-7	zersetzen	dwug_de					2.0		2.0				2.0	2
+1873	26120215_1961_02_02_01_067.tcf.xml-19-12	ledebur_eisenhuettenkunde_1884-1845-36	zersetzen	dwug_de				2.0	2.0						2.0	2
+1874	26120215_1961_02_02_01_067.tcf.xml-19-12	liebig_agricultur_1840-218-49	zersetzen	dwug_de	2.0				2.0						2.0	2
+1875	26120215_1961_02_02_01_067.tcf.xml-19-12	ludwig_physiologie01_1852-687-11	zersetzen	dwug_de	2.0		2.0		2.0						2.0	3
+1876	26120215_1961_02_02_01_067.tcf.xml-19-12	marx_kapital0302_1894-5563-56	zersetzen	dwug_de	4.0			2.0	4.0						4.0	3
+1877	26120215_1961_02_02_01_067.tcf.xml-19-12	nn_oktavgfeo79_1828-3406-15	zersetzen	dwug_de		2.0		2.0	2.0						2.0	3
+1879	26120215_1961_02_02_01_067.tcf.xml-19-12	paul_katzenberger01_1809-1358-66	zersetzen	dwug_de	2.0			2.0	3.0	2.0					2.0	4
+1881	26120215_1961_02_02_01_067.tcf.xml-19-12	quenstedt_mineralogie_1854-5781-5	zersetzen	dwug_de			2.0			2.0					2.0	2
+1882	26120215_1961_02_02_01_067.tcf.xml-19-12	quenstedt_mineralogie_1854-6208-42	zersetzen	dwug_de	2.0			2.0	2.0						2.0	3
+1883	26120215_1961_02_02_01_067.tcf.xml-19-12	quenstedt_mineralogie_1854-6215-6	zersetzen	dwug_de				2.0	2.0	2.0	2.0				2.0	4
+1884	26120215_1961_02_02_01_067.tcf.xml-19-12	quenstedt_mineralogie_1854-6244-1	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+1885	26120215_1961_02_02_01_067.tcf.xml-19-12	quenstedt_mineralogie_1854-7202-21	zersetzen	dwug_de				2.0		2.0					2.0	2
+1886	26120215_1961_02_02_01_067.tcf.xml-19-12	samter_erfindungen_1896-12317-16	zersetzen	dwug_de				2.0		2.0					2.0	2
+1887	26120215_1961_02_02_01_067.tcf.xml-19-12	samter_erfindungen_1896-8919-24	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+1888	26120215_1961_02_02_01_067.tcf.xml-19-12	schleiden_pflanze_1848-1508-22	zersetzen	dwug_de		2.0	2.0	2.0		2.0					2.0	4
+1891	26120215_1961_02_02_01_067.tcf.xml-19-12	thaer_landwirthschaft02_1810-3149-27	zersetzen	dwug_de				2.0		2.0					2.0	2
+1893	26120215_1961_02_02_01_067.tcf.xml-19-12	thaer_landwirthschaft02_1810-4102-27	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+1894	26120215_1961_02_02_01_067.tcf.xml-19-12	thaer_landwirthschaft04_1812-2451-11	zersetzen	dwug_de				2.0		2.0					2.0	2
+1895	26120215_1961_02_02_01_067.tcf.xml-19-12	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+1897	26120215_1961_02_02_01_067.tcf.xml-19-12	urbanitzky_electricitaet_1885-9389-58	zersetzen	dwug_de	2.0			2.0							2.0	2
+1899	26120215_1961_02_02_01_067.tcf.xml-19-12	wundt_medizinische_1867-8117-25	zersetzen	dwug_de	2.0				2.0						2.0	2
+1907	26120215_1962_09_28_01_268.tcf.xml-14-2	beck_eisen04_1899-7612-15	zersetzen	dwug_de					2.0	2.0					2.0	2
+2081	26120215_1968_09_13_01_018.tcf.xml-40-31	ludwig_physiologie01_1852-687-11	zersetzen	dwug_de			2.0			2.0	2.0				2.0	3
+2083	26120215_1968_09_13_01_018.tcf.xml-40-31	thaer_landwirthschaft02_1810-2279-27	zersetzen	dwug_de					2.0	2.0					2.0	2
+2086	26120215_1968_11_26_01_253.tcf.xml-4-17	26120215_1987_02_07_01_156.tcf.xml-13-10	zersetzen	dwug_de	2.0	2.0	2.0	2.0		2.0	2.0				2.0	6
+2087	26120215_1968_11_26_01_253.tcf.xml-4-17	26120215_1990_02_15_01_031.tcf.xml-26-14	zersetzen	dwug_de		3.0	3.0								3.0	2
+2104	26120215_1970_01_31_01_063.tcf.xml-13-37	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de						2.0	3.0				2.5	2
+2125	26120215_1970_08_16_01_038.tcf.xml-40-25	samter_erfindungen_1896-12317-16	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+2135	26120215_1971_05_14_01_333.tcf.xml-19-38	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de				2.0		2.0					2.0	2
+2168	26120215_1973_07_08_01_244.tcf.xml-2-4	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de	4.0				4.0	4.0	4.0				4.0	4
+2182	26120215_1975_09_30_01_207.tcf.xml-23-63	paul_katzenberger01_1809-1358-66	zersetzen	dwug_de	3.0	3.0									3.0	2
+2294	26120215_1981_05_02_01_139.tcf.xml-6-8	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de		2.0		4.0	4.0						4.0	3
+2295	26120215_1981_05_02_01_139.tcf.xml-6-8	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de		4.0				4.0					4.0	2
+2325	26120215_1983_02_05_01_092.tcf.xml-71-52	curtius_alterthum01_1875-2280-20	zersetzen	dwug_de				3.0	3.0	4.0					3.0	3
+2327	26120215_1983_02_05_01_092.tcf.xml-71-52	samter_erfindungen_1896-12317-16	zersetzen	dwug_de				2.0	2.0						2.0	2
+2329	26120215_1983_04_23_01_133.tcf.xml-3-7	lasswitz_seife_1890-606-28	zersetzen	dwug_de					4.0	4.0					4.0	2
+2330	26120215_1983_04_23_01_133.tcf.xml-3-7	paul_katzenberger01_1809-1358-66	zersetzen	dwug_de		3.0			2.0	3.0	3.0				3.0	4
+2331	26120215_1983_04_23_01_133.tcf.xml-3-7	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de			4.0				4.0				4.0	2
+2332	26120215_1983_04_23_01_133.tcf.xml-3-7	samter_erfindungen_1896-12317-16	zersetzen	dwug_de		4.0					4.0				4.0	2
+2336	26120215_1983_06_04_01_467.tcf.xml-21-10	quenstedt_mineralogie_1854-6215-6	zersetzen	dwug_de				4.0	4.0						4.0	2
+2338	26120215_1983_06_04_01_467.tcf.xml-21-10	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de					4.0		4.0				4.0	2
+2341	26120215_1983_11_07_01_032.tcf.xml-10-5	brandes_naturlehre02_1831-517-41	zersetzen	dwug_de			4.0			4.0					4.0	2
+2344	26120215_1983_11_07_01_032.tcf.xml-10-5	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de		3.0					4.0				3.5	2
+2387	26120215_1987_02_07_01_156.tcf.xml-13-10	baumstark_encyclopaedie_1835-4301-17	zersetzen	dwug_de					4.0		4.0				4.0	2
+2389	26120215_1987_02_07_01_156.tcf.xml-13-10	kerl_metallurgische_1866-1440-7	zersetzen	dwug_de				4.0	4.0						4.0	2
+2390	26120215_1987_02_07_01_156.tcf.xml-13-10	ludwig_physiologie01_1852-687-11	zersetzen	dwug_de	4.0				4.0						4.0	2
+2391	26120215_1987_02_07_01_156.tcf.xml-13-10	quenstedt_mineralogie_1854-11674-36	zersetzen	dwug_de	4.0	2.0		1.0		4.0	4.0				4.0	5
+2393	26120215_1987_02_07_01_156.tcf.xml-13-10	quenstedt_mineralogie_1854-6215-6	zersetzen	dwug_de	4.0				4.0	4.0					4.0	3
+2395	26120215_1987_02_07_01_156.tcf.xml-13-10	thaer_landwirthschaft02_1810-2270-31	zersetzen	dwug_de			4.0		4.0						4.0	2
+2397	26120215_1987_02_07_01_156.tcf.xml-13-10	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de	4.0			3.0		4.0	4.0				4.0	4
+2411	26120215_1988_09_17_01_158.tcf.xml-11-6	paul_katzenberger01_1809-1358-66	zersetzen	dwug_de		3.0			3.0	3.0					3.0	3
+2413	26120215_1988_09_17_01_158.tcf.xml-11-6	treviranus_biologie04_1814-734-22	zersetzen	dwug_de					3.0		4.0				3.5	2
+2416	26120215_1988_11_26_01_391.tcf.xml-6-6	ganswindt_faerberei_1889-6671-44	zersetzen	dwug_de		4.0			4.0		4.0				4.0	3
+2417	26120215_1988_11_26_01_391.tcf.xml-6-6	samter_erfindungen_1896-12317-16	zersetzen	dwug_de	4.0			4.0							4.0	2
+2430	26120215_1990_04_28_01_478.tcf.xml-3-2	samter_erfindungen_1896-12317-16	zersetzen	dwug_de					4.0	4.0					4.0	2
+2453	alexis_ruhe04_1852-770-36	dilthey_geisteswissenschaften_1883-1341-83	zersetzen	dwug_de	2.0		4.0		4.0						4.0	3
+2454	alexis_ruhe04_1852-770-36	humboldt_aequinoktial01_1859-3347-78	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+2511	baumstark_encyclopaedie_1835-4301-17	baumstark_encyclopaedie_1835-4445-7	zersetzen	dwug_de						4.0	4.0				4.0	2
+2513	baumstark_encyclopaedie_1835-4301-17	quenstedt_mineralogie_1854-12985-4	zersetzen	dwug_de		4.0			4.0	4.0					4.0	3
+2515	baumstark_encyclopaedie_1835-4301-17	quenstedt_mineralogie_1854-7202-21	zersetzen	dwug_de		2.0			4.0						3.0	2
+2517	baumstark_encyclopaedie_1835-4445-7	brandes_naturlehre02_1831-517-41	zersetzen	dwug_de		3.0	4.0								3.5	2
+2519	baumstark_encyclopaedie_1835-4445-7	brandes_naturlehre03_1832-2419-20	zersetzen	dwug_de						4.0	4.0				4.0	2
+2521	baumstark_encyclopaedie_1835-4445-7	hahnemann_organon_1810-586-18	zersetzen	dwug_de			4.0			4.0					4.0	2
+2522	baumstark_encyclopaedie_1835-4445-7	kerl_metallurgische_1866-3147-17	zersetzen	dwug_de					4.0	4.0					4.0	2
+2523	baumstark_encyclopaedie_1835-4445-7	lasswitz_seife_1890-606-28	zersetzen	dwug_de					3.0	4.0					3.5	2
+2525	baumstark_encyclopaedie_1835-4445-7	ledebur_eisenhuettenkunde_1884-2649-16	zersetzen	dwug_de		3.0			4.0						3.5	2
+2530	baumstark_encyclopaedie_1835-4445-7	thaer_landwirthschaft02_1810-2270-31	zersetzen	dwug_de		4.0			4.0						4.0	2
+2531	baumstark_encyclopaedie_1835-4445-7	thaer_landwirthschaft02_1810-2627-11	zersetzen	dwug_de			4.0				1.0				2.5	2
+2532	baumstark_encyclopaedie_1835-4445-7	urbanitzky_electricitaet_1885-8670-27	zersetzen	dwug_de		4.0	4.0								4.0	2
+2583	beck_eisen02_1895-2517-58	kerl_metallurgische_1866-4226-48	zersetzen	dwug_de			4.0		3.0						3.5	2
+2587	beck_eisen02_1895-2517-58	siemens_abhandlungen_1881-408-21	zersetzen	dwug_de						4.0	3.0				3.5	2
+2590	beck_eisen02_1895-2517-58	urbanitzky_electricitaet_1885-4589-11	zersetzen	dwug_de		2.0								2.0	2.0	2
+2619	beck_eisen04_1899-14550-30	humboldt_kosmos04_1858-2319-28	zersetzen	dwug_de		3.0	4.0				4.0				4.0	3
+2620	beck_eisen04_1899-14550-30	thaer_landwirthschaft02_1810-4102-27	zersetzen	dwug_de		2.0				4.0					3.0	2
+2624	beck_eisen04_1899-6971-37	thaer_landwirthschaft02_1810-3149-27	zersetzen	dwug_de		4.0				4.0					4.0	2
+2625	beck_eisen04_1899-7612-15	brandes_naturlehre02_1831-517-41	zersetzen	dwug_de		3.0			3.0		4.0				3.0	3
+2626	beck_eisen04_1899-7612-15	dilthey_geisteswissenschaften_1883-1341-83	zersetzen	dwug_de	2.0			2.0							2.0	2
+2628	beck_eisen04_1899-7612-15	lasswitz_seife_1890-606-28	zersetzen	dwug_de			3.0			4.0					3.5	2
+2650	brandes_naturlehre02_1831-517-41	kerl_metallurgische_1866-4226-48	zersetzen	dwug_de		4.0					4.0				4.0	2
+2652	brandes_naturlehre02_1831-517-41	paul_katzenberger01_1809-1358-66	zersetzen	dwug_de		2.0		3.0			3.0				3.0	3
+2656	brandes_naturlehre02_1831-517-41	siemens_abhandlungen_1881-408-21	zersetzen	dwug_de			4.0			4.0					4.0	2
+2658	brandes_naturlehre02_1831-517-41	thaer_landwirthschaft04_1812-2451-11	zersetzen	dwug_de			4.0		4.0						4.0	2
+2659	brandes_naturlehre03_1832-1749-21	paul_katzenberger01_1809-1358-66	zersetzen	dwug_de						3.0	3.0				3.0	2
+2660	brandes_naturlehre03_1832-1749-21	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de			3.0		4.0						3.5	2
+2662	brandes_naturlehre03_1832-1749-21	urbanitzky_electricitaet_1885-4651-33	zersetzen	dwug_de			4.0			4.0	4.0				4.0	3
+2663	brandes_naturlehre03_1832-2419-20	dilthey_geisteswissenschaften_1883-1341-83	zersetzen	dwug_de	2.0	2.0				4.0					2.0	3
+2664	brandes_naturlehre03_1832-2419-20	gutzkow_zeitgenossen01_1842-1175-5	zersetzen	dwug_de		3.0	3.0								3.0	2
+2665	brandes_naturlehre03_1832-2419-20	ledebur_eisenhuettenkunde_1884-2649-16	zersetzen	dwug_de		2.0	4.0		4.0						4.0	3
+2667	brandes_naturlehre03_1832-2419-20	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de						4.0	4.0				4.0	2
+2668	brandes_naturlehre03_1832-2419-20	urbanitzky_electricitaet_1885-4651-33	zersetzen	dwug_de		3.0	4.0								3.5	2
+2669	brandes_naturlehre03_1832-3271-13	dilthey_geisteswissenschaften_1883-1341-83	zersetzen	dwug_de				2.0		2.0					2.0	2
+2671	brandes_naturlehre03_1832-3271-13	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de				4.0		4.0					4.0	2
+2672	brandes_naturlehre03_1832-3271-13	thaer_landwirthschaft04_1812-2451-11	zersetzen	dwug_de		3.0				4.0	4.0				4.0	3
+2673	brandes_naturlehre03_1832-3308-68	paul_katzenberger01_1809-1358-66	zersetzen	dwug_de		2.0			3.0		4.0				3.0	3
+2674	brandes_naturlehre03_1832-3308-68	quenstedt_mineralogie_1854-11674-36	zersetzen	dwug_de	4.0				3.0	4.0					4.0	3
+2676	brandes_naturlehre03_1832-3308-68	thaer_landwirthschaft02_1810-3252-24	zersetzen	dwug_de			4.0			4.0					4.0	2
+2689	brehm_thierleben03_1866-13960-9	kerl_metallurgische_1866-7448-10	zersetzen	dwug_de	4.0			4.0							4.0	2
+2691	brehm_thierleben03_1866-13960-9	thaer_landwirthschaft02_1810-3149-27	zersetzen	dwug_de		3.0			4.0						3.5	2
+2695	brehm_thierleben04_1867-20795-21	thaer_landwirthschaft02_1810-2627-11	zersetzen	dwug_de					4.0	4.0					4.0	2
+2697	brehm_thierleben06_1869-13162-15	samter_erfindungen_1896-12317-16	zersetzen	dwug_de	4.0			3.0	4.0	4.0					4.0	4
+2728	carus_psyche_1846-1790-25	wundt_medizinische_1867-8117-25	zersetzen	dwug_de		4.0			4.0		4.0				4.0	3
+2729	chamberlain_grundlagen02_1899-4790-26	hegel_phaenomenologie_1807-1346-11	zersetzen	dwug_de				3.0	3.0						3.0	2
+2730	chamberlain_grundlagen02_1899-4790-26	kerl_metallurgische_1866-7448-10	zersetzen	dwug_de				2.0		2.0					2.0	2
+2835	dilthey_geisteswissenschaften_1883-1341-83	hegel_phaenomenologie_1807-1346-11	zersetzen	dwug_de					4.0	2.0					3.0	2
+2837	dilthey_geisteswissenschaften_1883-1341-83	ledebur_eisenhuettenkunde_1884-1681-7	zersetzen	dwug_de	2.0			2.0		3.0					2.0	3
+2838	dilthey_geisteswissenschaften_1883-1341-83	samter_erfindungen_1896-12317-16	zersetzen	dwug_de	2.0			2.0	2.0	3.0					2.0	4
+2839	dilthey_geisteswissenschaften_1883-1341-83	schleiden_pflanze_1848-182-82	zersetzen	dwug_de		2.0	2.0	2.0	2.0	4.0	2.0				2.0	6
+2840	dilthey_geisteswissenschaften_1883-1341-83	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de				2.0	2.0	2.0					2.0	3
+2842	dilthey_geisteswissenschaften_1883-4629-18	schleiden_pflanze_1848-1508-22	zersetzen	dwug_de					2.0	2.0					2.0	2
+4108	ganswindt_faerberei_1889-5988-9	kerl_metallurgische_1866-2774-43	zersetzen	dwug_de			4.0			4.0					4.0	2
+4111	ganswindt_faerberei_1889-6671-44	lasswitz_seife_1890-606-28	zersetzen	dwug_de		3.0					4.0				3.5	2
+4112	ganswindt_faerberei_1889-6671-44	paul_katzenberger01_1809-1358-66	zersetzen	dwug_de	3.0				2.0	3.0	3.0				3.0	4
+4113	ganswindt_faerberei_1889-7592-19	hartwig_erziehung_1847-662-28	zersetzen	dwug_de			4.0				4.0				4.0	2
+4116	ganswindt_faerberei_1889-7592-19	quenstedt_mineralogie_1854-12985-4	zersetzen	dwug_de			4.0			4.0	4.0				4.0	3
+4128	griesinger_psychische_1845-572-34	jhering_recht03_1865-194-80	zersetzen	dwug_de				4.0	3.0						3.5	2
+4135	gutzkow_zeitgenossen01_1842-1175-5	sachs_botanik_1875-3854-12	zersetzen	dwug_de		2.0				4.0					3.0	2
+4136	gutzkow_zeitgenossen01_1842-1175-5	thaer_landwirthschaft02_1810-2627-11	zersetzen	dwug_de			2.0				3.0			2.0	2.0	3
+4139	hahnemann_organon_1810-586-18	humboldt_kosmos04_1858-2319-28	zersetzen	dwug_de			4.0			4.0					4.0	2
+4140	hahnemann_organon_1810-586-18	lasswitz_seife_1890-606-28	zersetzen	dwug_de					4.0	3.0					3.5	2
+4143	hahnemann_organon_1810-586-18	thaer_landwirthschaft04_1812-1075-14	zersetzen	dwug_de			4.0			4.0	3.0				4.0	3
+4145	hartwig_erziehung_1847-662-28	kerl_metallurgische_1866-4226-48	zersetzen	dwug_de		4.0					3.0				3.5	2
+4149	hartwig_erziehung_1847-662-28	schleiden_pflanze_1848-182-82	zersetzen	dwug_de		3.0			4.0						3.5	2
+4159	hegel_phaenomenologie_1807-1346-11	lasswitz_seife_1890-606-28	zersetzen	dwug_de			2.0		2.0		2.0				2.0	3
+4161	hegel_phaenomenologie_1807-1346-11	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de	2.0				2.0	2.0					2.0	3
+4162	hegel_phaenomenologie_1807-1346-11	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de		2.0					2.0				2.0	2
+4163	hegel_phaenomenologie_1807-1346-11	thaer_landwirthschaft02_1810-4102-27	zersetzen	dwug_de					2.0	2.0					2.0	2
+4164	hegel_phaenomenologie_1807-3234-3	lasswitz_seife_1890-606-28	zersetzen	dwug_de				2.0	2.0	3.0					2.0	3
+4165	hegel_phaenomenologie_1807-3234-3	wagner_zukunft_1850-798-58	zersetzen	dwug_de				4.0		4.0					4.0	2
+4169	humboldt_aequinoktial01_1859-3347-78	samter_erfindungen_1896-8919-24	zersetzen	dwug_de					4.0		4.0				4.0	2
+4170	humboldt_aequinoktial01_1859-3347-78	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de	4.0			4.0							4.0	2
+4176	humboldt_aequinoktial02_1859-988-24	samter_erfindungen_1896-12317-16	zersetzen	dwug_de		1.0			4.0		4.0				4.0	3
+4178	humboldt_aequinoktial02_1859-988-24	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de	4.0			4.0							4.0	2
+4192	humboldt_kosmos04_1858-2319-28	ledebur_eisenhuettenkunde_1884-2649-16	zersetzen	dwug_de		4.0	4.0								4.0	2
+4193	humboldt_kosmos04_1858-2319-28	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de				4.0		2.0					3.0	2
+4201	kerl_metallurgische_1866-2774-43	thaer_landwirthschaft02_1810-3149-27	zersetzen	dwug_de	4.0		4.0			4.0					4.0	3
+4204	kerl_metallurgische_1866-3147-17	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de			4.0		4.0	4.0					4.0	3
+4209	kerl_metallurgische_1866-7448-10	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de	4.0		4.0		3.0						4.0	3
+4210	kerl_metallurgische_1866-7448-10	sachs_botanik_1875-3854-12	zersetzen	dwug_de						4.0	3.0				3.5	2
+4211	kerl_metallurgische_1866-7448-10	samter_erfindungen_1896-12317-16	zersetzen	dwug_de	4.0			4.0	4.0						4.0	3
+4212	kerl_metallurgische_1866-7448-10	siemens_telegraphie_1866-211-23	zersetzen	dwug_de			4.0			4.0					4.0	2
+4214	kerl_metallurgische_1866-7448-10	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de		4.0		3.0	4.0						4.0	3
+4215	kerl_metallurgische_1866-7448-10	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de	4.0			3.0	4.0						4.0	3
+4216	kerl_metallurgische_1866-7448-10	wagner_zukunft_1850-798-58	zersetzen	dwug_de	2.0				2.0						2.0	2
+4218	lasswitz_seife_1890-606-28	patzig_msgermfol841842_1828-4674-1	zersetzen	dwug_de		3.0					4.0				3.5	2
+4219	lasswitz_seife_1890-606-28	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de		2.0		3.0			4.0				3.0	3
+4220	lasswitz_seife_1890-606-28	quenstedt_mineralogie_1854-2750-15	zersetzen	dwug_de			4.0		4.0						4.0	2
+4222	lasswitz_seife_1890-606-28	thaer_landwirthschaft02_1810-3149-27	zersetzen	dwug_de		3.0	3.0			4.0					3.0	3
+4223	lasswitz_seife_1890-606-28	thaer_landwirthschaft02_1810-3252-24	zersetzen	dwug_de					3.0	4.0					3.5	2
+4235	ledebur_eisenhuettenkunde_1884-1681-7	paul_katzenberger01_1809-1358-66	zersetzen	dwug_de		3.0				4.0					3.5	2
+4237	ledebur_eisenhuettenkunde_1884-1845-36	liebig_agricultur_1840-218-49	zersetzen	dwug_de					4.0		4.0				4.0	2
+4260	libelt_hs6623ii_1828-2150-38	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de		3.0			4.0						3.5	2
+4261	libelt_hs6623ii_1828-2150-38	treviranus_biologie04_1814-734-22	zersetzen	dwug_de		3.0	4.0								3.5	2
+4263	liebig_agricultur_1840-218-49	quenstedt_mineralogie_1854-2750-15	zersetzen	dwug_de					4.0	4.0					4.0	2
+4264	liebig_agricultur_1840-218-49	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de	4.0			4.0	4.0	4.0					4.0	4
+4633	marx_kapital01_1867-5268-10	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de			2.0			2.0					2.0	2
+4638	mommsen_roemische03_1856-4692-12	quenstedt_mineralogie_1854-13504-9	zersetzen	dwug_de				2.0		2.0					2.0	2
+4744	paul_katzenberger01_1809-1358-66	quenstedt_mineralogie_1854-12985-4	zersetzen	dwug_de				3.0		3.0	2.0				3.0	3
+4745	paul_katzenberger01_1809-1358-66	samter_erfindungen_1896-12317-16	zersetzen	dwug_de				3.0			3.0				3.0	2
+4752	quenstedt_mineralogie_1854-11674-36	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de	4.0	2.0			3.0	4.0					3.5	4
+4756	quenstedt_mineralogie_1854-12985-4	quenstedt_mineralogie_1854-6244-1	zersetzen	dwug_de						4.0	4.0				4.0	2
+4758	quenstedt_mineralogie_1854-12985-4	schleiden_pflanze_1848-182-82	zersetzen	dwug_de		4.0					4.0				4.0	2
+4760	quenstedt_mineralogie_1854-12985-4	wundt_medizinische_1867-8117-25	zersetzen	dwug_de					4.0	4.0					4.0	2
+4761	quenstedt_mineralogie_1854-13504-9	quenstedt_mineralogie_1854-6244-1	zersetzen	dwug_de					4.0	4.0					4.0	2
+4763	quenstedt_mineralogie_1854-13504-9	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de		3.0		3.0	2.0	4.0					3.0	4
+4764	quenstedt_mineralogie_1854-13504-9	samter_erfindungen_1896-12317-16	zersetzen	dwug_de				4.0	4.0						4.0	2
+4765	quenstedt_mineralogie_1854-13504-9	samter_erfindungen_1896-8919-24	zersetzen	dwug_de					4.0	4.0					4.0	2
+4767	quenstedt_mineralogie_1854-13504-9	thaer_landwirthschaft02_1810-3149-27	zersetzen	dwug_de					3.0	4.0					3.5	2
+4768	quenstedt_mineralogie_1854-13504-9	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de				3.0		4.0					3.5	2
+4769	quenstedt_mineralogie_1854-13504-9	urbanitzky_electricitaet_1885-8670-27	zersetzen	dwug_de		3.0	4.0				4.0				4.0	3
+4770	quenstedt_mineralogie_1854-2750-15	thaer_landwirthschaft02_1810-4483-15	zersetzen	dwug_de		4.0					4.0				4.0	2
+4771	quenstedt_mineralogie_1854-6208-42	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de		4.0	4.0			4.0					4.0	3
+4774	quenstedt_mineralogie_1854-6244-1	quenstedt_mineralogie_1854-7983-7	zersetzen	dwug_de		4.0	4.0				4.0				4.0	3
+4775	quenstedt_mineralogie_1854-7202-21	thaer_landwirthschaft02_1810-3602-12	zersetzen	dwug_de	4.0			4.0	4.0						4.0	3
+4779	quenstedt_mineralogie_1854-7983-7	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de		3.0			4.0	4.0					4.0	3
+4781	sachs_botanik_1875-3854-12	wundt_medizinische_1867-8117-25	zersetzen	dwug_de			4.0		4.0		4.0				4.0	3
+4783	samter_erfindungen_1896-12317-16	treviranus_biologie04_1814-4295-33	zersetzen	dwug_de				3.0	4.0	4.0					4.0	3
+4785	schleiden_pflanze_1848-182-82	thaer_landwirthschaft02_1810-4102-27	zersetzen	dwug_de					4.0	4.0					4.0	2
+4786	siemens_abhandlungen_1881-408-21	urbanitzky_electricitaet_1885-4651-33	zersetzen	dwug_de		3.0					4.0				3.5	2
+4792	thaer_landwirthschaft02_1810-3602-12	thaer_landwirthschaft02_1810-4483-15	zersetzen	dwug_de	4.0					4.0					4.0	2
+4794	thaer_landwirthschaft02_1810-4102-27	urbanitzky_electricitaet_1885-8670-27	zersetzen	dwug_de					4.0	4.0					4.0	2

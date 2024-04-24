@@ -1,4 +1,4 @@
-judgment	cosine_similarity
+lemma	label	cosine_similarity
 attack	4.0	0.8509951233863831
 attack	3.0	0.5249142050743103
 attack	4.0	0.5620293617248535

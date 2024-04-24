@@ -1,0 +1,353 @@
+	identifier1	identifier2	lemma	dataset	annotator2	annotator5	annotator4	annotator0	annotator1	annotator3	annotator6	annotator8	annotator9	annotator7	median_label	non_nan_count
+0	2532889X_1947-07-02_01_047.tcf.xml-15-13	2532889X_1969-09-07_01_200.tcf.xml-37-16	abbauen	dwug_de		3.0	2.0				2.0				2.0	3
+5	2532889X_1947-07-02_01_047.tcf.xml-15-13	26120215_1981_07_08_01_073.tcf.xml-4-23	abbauen	dwug_de					4.0	2.0					3.0	2
+6	2532889X_1947-07-02_01_047.tcf.xml-15-13	26120215_1989_07_26_01_156.tcf.xml-20-11	abbauen	dwug_de			2.0			2.0					2.0	2
+9	2532889X_1947-07-02_01_047.tcf.xml-15-13	baumstark_encyclopaedie_1835-3398-12	abbauen	dwug_de			4.0			4.0					4.0	2
+10	2532889X_1947-07-02_01_047.tcf.xml-15-13	baumstark_encyclopaedie_1835-3477-6	abbauen	dwug_de		2.0	4.0			4.0					4.0	3
+11	2532889X_1947-07-02_01_047.tcf.xml-15-13	baumstark_encyclopaedie_1835-3510-14	abbauen	dwug_de					3.0	4.0					3.5	2
+12	2532889X_1947-07-02_01_047.tcf.xml-15-13	beck_eisen01_1884-8131-33	abbauen	dwug_de			1.0				4.0				2.5	2
+14	2532889X_1947-07-02_01_047.tcf.xml-15-13	beck_eisen03_1897-15223-9	abbauen	dwug_de		2.0		2.0							2.0	2
+16	2532889X_1947-07-02_01_047.tcf.xml-15-13	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de	4.0		1.0							2.0	2.0	3
+18	2532889X_1947-07-02_01_047.tcf.xml-15-13	ledebur_eisenhuettenkunde_1884-8934-38	abbauen	dwug_de					3.0	3.0					3.0	2
+27	2532889X_1950-04-12_01_080.tcf.xml-8-22	beck_eisen02_1895-1381-74	abbauen	dwug_de	2.0			2.0	2.0						2.0	3
+28	2532889X_1950-04-12_01_080.tcf.xml-8-22	beck_eisen03_1897-15223-9	abbauen	dwug_de			1.0				2.0				1.5	2
+30	2532889X_1950-04-12_01_080.tcf.xml-8-22	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de		2.0				2.0	1.0				2.0	3
+36	2532889X_1953-05-21_01_026.tcf.xml-149-16	2532889X_1971-09-08_01_056.tcf.xml-14-40	abbauen	dwug_de	4.0					4.0					4.0	2
+38	2532889X_1953-05-21_01_026.tcf.xml-149-16	26120215_1990_07_28_01_810.tcf.xml-15-12	abbauen	dwug_de	4.0				3.0						3.5	2
+40	2532889X_1959-03-13_01_104.tcf.xml-29-34	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de				3.0	3.0						3.0	2
+44	2532889X_1959-03-13_01_104.tcf.xml-29-34	beck_eisen02_1895-1381-74	abbauen	dwug_de				3.0						2.0	2.5	2
+46	2532889X_1959-10-10_01_117.tcf.xml-33-26	2532889X_1971-09-08_01_056.tcf.xml-14-40	abbauen	dwug_de				2.0		2.0					2.0	2
+51	2532889X_1959-10-10_01_117.tcf.xml-33-26	baumstark_encyclopaedie_1835-12861-16	abbauen	dwug_de		4.0					4.0				4.0	2
+52	2532889X_1959-10-10_01_117.tcf.xml-33-26	baumstark_encyclopaedie_1835-3425-29	abbauen	dwug_de					3.0		2.0				2.5	2
+53	2532889X_1959-10-10_01_117.tcf.xml-33-26	baumstark_encyclopaedie_1835-3469-13	abbauen	dwug_de		4.0				4.0					4.0	2
+54	2532889X_1959-10-10_01_117.tcf.xml-33-26	beck_eisen01_1884-5379-8	abbauen	dwug_de		3.0			4.0		4.0				4.0	3
+56	2532889X_1959-10-10_01_117.tcf.xml-33-26	beck_eisen02_1895-18933-5	abbauen	dwug_de						4.0	4.0				4.0	2
+58	2532889X_1959-10-10_01_117.tcf.xml-33-26	berg_ostasien04_1873-4058-13	abbauen	dwug_de				2.0	3.0						2.5	2
+64	2532889X_1959-10-10_01_117.tcf.xml-33-26	peschel_voelkerkunde_1874-3546-36	abbauen	dwug_de			4.0				4.0				4.0	2
+65	2532889X_1960-05-12_01_006.tcf.xml-19-50	2532889X_1971-09-08_01_056.tcf.xml-14-40	abbauen	dwug_de	4.0				4.0						4.0	2
+67	2532889X_1960-05-12_01_006.tcf.xml-19-50	beck_eisen02_1895-1381-74	abbauen	dwug_de	2.0		1.0			2.0					2.0	3
+68	2532889X_1960-06-09_01_020.tcf.xml-2-27	2532889X_1971-09-08_01_056.tcf.xml-14-40	abbauen	dwug_de	4.0				4.0						4.0	2
+70	2532889X_1960-06-09_01_020.tcf.xml-2-27	26120215_1990_07_28_01_810.tcf.xml-15-12	abbauen	dwug_de				3.0	3.0	3.0					3.0	3
+74	2532889X_1961-07-08_01_128.tcf.xml-1-14	26120215_1956_09_28_01_084.tcf.xml-4-19	abbauen	dwug_de	2.0			2.0		2.0					2.0	3
+76	2532889X_1961-07-08_01_128.tcf.xml-1-14	berg_ostasien04_1873-4058-13	abbauen	dwug_de					2.0	4.0					3.0	2
+78	2532889X_1961-07-08_01_128.tcf.xml-1-14	humboldt_aequinoktial03_1859-726-26	abbauen	dwug_de		3.0				4.0					3.5	2
+79	2532889X_1961-07-08_01_128.tcf.xml-1-14	lehnert_seehaefen01_1891-4737-54	abbauen	dwug_de					4.0	4.0					4.0	2
+80	2532889X_1961-07-08_01_128.tcf.xml-1-14	peschel_voelkerkunde_1874-3546-43	abbauen	dwug_de			4.0				4.0				4.0	2
+84	2532889X_1962-12-13_01_083.tcf.xml-9-12	26120215_1990_07_28_01_810.tcf.xml-15-12	abbauen	dwug_de	4.0				3.0	3.0					3.0	3
+86	2532889X_1962-12-13_01_083.tcf.xml-9-12	gerstner_mechanik03_1834-7860-24	abbauen	dwug_de			2.0		2.0						2.0	2
+87	2532889X_1963-03-05_01_016.tcf.xml-3-16	2532889X_1971-09-08_01_056.tcf.xml-14-40	abbauen	dwug_de	2.0				2.0	2.0					2.0	3
+98	2532889X_1964-01-31_01_179.tcf.xml-239-7	2532889X_1971-09-08_01_056.tcf.xml-14-40	abbauen	dwug_de	4.0			3.0		4.0					4.0	3
+99	2532889X_1964-01-31_01_179.tcf.xml-239-7	2532889X_1986-09-10_01_136.tcf.xml-7-5	abbauen	dwug_de					4.0	3.0					3.5	2
+100	2532889X_1964-01-31_01_179.tcf.xml-239-7	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de	2.0			2.0	2.0						2.0	3
+102	2532889X_1964-09-02_01_107.tcf.xml-102-33	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de	4.0					3.0					3.5	2
+103	2532889X_1964-09-02_01_107.tcf.xml-102-33	26120215_1986_12_31_01_041.tcf.xml-4-25	abbauen	dwug_de			3.0			4.0	4.0				4.0	3
+109	2532889X_1966-07-10_01_074.tcf.xml-3-18	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de	4.0				3.0						3.5	2
+112	2532889X_1966-07-10_01_074.tcf.xml-3-18	26120215_1956_09_28_01_084.tcf.xml-4-19	abbauen	dwug_de					3.0	4.0					3.5	2
+115	2532889X_1966-08-06_01_046.tcf.xml-13-5	2532889X_1987-03-18_01_013.tcf.xml-25-46	abbauen	dwug_de				4.0	4.0	3.0					4.0	3
+117	2532889X_1966-08-06_01_046.tcf.xml-13-5	humboldt_bogota_1853-257-34	abbauen	dwug_de		2.0		2.0		2.0	2.0				2.0	4
+118	2532889X_1968-01-24_01_048.tcf.xml-4-12	2532889X_1971-09-08_01_056.tcf.xml-14-40	abbauen	dwug_de				3.0	3.0	4.0	3.0				3.0	4
+121	2532889X_1968-01-24_01_048.tcf.xml-4-12	beck_eisen02_1895-8983-27	abbauen	dwug_de			1.0				2.0				1.5	2
+125	2532889X_1968-04-03_01_171.tcf.xml-21-18	2532889X_1971-09-08_01_056.tcf.xml-14-40	abbauen	dwug_de	4.0				4.0	3.0					4.0	3
+126	2532889X_1968-04-03_01_171.tcf.xml-21-18	humboldt_gutachten_1838-109-17	abbauen	dwug_de				2.0	2.0	1.0					2.0	3
+127	2532889X_1969-09-07_01_200.tcf.xml-37-16	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de	4.0			4.0	4.0						4.0	3
+131	2532889X_1969-09-07_01_200.tcf.xml-37-16	beck_eisen02_1895-19457-11	abbauen	dwug_de		2.0				2.0					2.0	2
+134	2532889X_1969-09-07_01_200.tcf.xml-37-16	humboldt_bogota_1853-257-34	abbauen	dwug_de		2.0		3.0	2.0						2.0	3
+135	2532889X_1970-01-10_01_062.tcf.xml-1-46	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de				4.0	3.0						3.5	2
+136	2532889X_1970-01-10_01_062.tcf.xml-1-46	baumstark_encyclopaedie_1835-3469-13	abbauen	dwug_de				2.0		2.0					2.0	2
+137	2532889X_1970-01-10_01_062.tcf.xml-1-46	humboldt_gutachten_1838-109-17	abbauen	dwug_de	2.0			2.0		2.0					2.0	3
+140	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1973-06-30_01_194.tcf.xml-47-22	abbauen	dwug_de	2.0					2.0					2.0	2
+142	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1977-08-26_01_087.tcf.xml-25-45	abbauen	dwug_de				4.0		4.0					4.0	2
+143	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1978-06-09_01_083.tcf.xml-2-32	abbauen	dwug_de			2.0		3.0	3.0					3.0	3
+144	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1978-07-21_01_096.tcf.xml-14-30	abbauen	dwug_de				3.0		4.0					3.5	2
+145	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1982-05-27_01_152.tcf.xml-34-7	abbauen	dwug_de	2.0			2.0							2.0	2
+147	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1986-01-14_01_031.tcf.xml-60-15	abbauen	dwug_de				3.0	3.0						3.0	2
+148	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1986-09-10_01_136.tcf.xml-7-5	abbauen	dwug_de	3.0			4.0		3.0					3.0	3
+149	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de				4.0		3.0					3.5	2
+150	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1987-03-18_01_013.tcf.xml-25-46	abbauen	dwug_de	4.0			3.0	3.0						3.0	3
+151	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1987-12-23_01_055.tcf.xml-32-12	abbauen	dwug_de	4.0			4.0		3.0					4.0	3
+152	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1988-04-05_01_089.tcf.xml-26-45	abbauen	dwug_de	4.0			4.0		3.0					4.0	3
+153	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1988-10-01_01_582.tcf.xml-5-13	abbauen	dwug_de	2.0	2.0			2.0	2.0					2.0	4
+155	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1990-04-26_01_220.tcf.xml-8-7	abbauen	dwug_de					4.0	3.0					3.5	2
+156	2532889X_1971-09-08_01_056.tcf.xml-14-40	2532889X_1990-05-09_01_014.tcf.xml-6-18	abbauen	dwug_de				3.0	3.0						3.0	2
+158	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1947_10_29_01_105.tcf.xml-3-18	abbauen	dwug_de				2.0	2.0	2.0	3.0				2.0	4
+162	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1963_04_07_01_034.tcf.xml-54-28	abbauen	dwug_de	4.0			4.0							4.0	2
+163	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1963_11_29_01_007.tcf.xml-13-8	abbauen	dwug_de	2.0	4.0	4.0		4.0						4.0	4
+165	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1966_04_29_01_295.tcf.xml-3-18	abbauen	dwug_de	4.0			4.0							4.0	2
+166	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1967_06_02_01_258.tcf.xml-7-3	abbauen	dwug_de	2.0				2.0	2.0					2.0	3
+167	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1968_09_29_01_271.tcf.xml-44-16	abbauen	dwug_de	4.0					4.0					4.0	2
+169	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1974_02_16_01_247.tcf.xml-4-30	abbauen	dwug_de	2.0			2.0		2.0					2.0	3
+170	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1976_07_29_01_069.tcf.xml-14-37	abbauen	dwug_de				3.0		4.0					3.5	2
+171	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1981_07_08_01_073.tcf.xml-4-23	abbauen	dwug_de			3.0	3.0		3.0					3.0	3
+172	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1982_01_21_01_056.tcf.xml-8-30	abbauen	dwug_de				4.0	3.0	3.0					3.0	3
+173	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1983_08_17_01_096.tcf.xml-3-21	abbauen	dwug_de	4.0			3.0							3.5	2
+177	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1986_12_31_01_041.tcf.xml-4-25	abbauen	dwug_de	4.0			3.0		4.0					4.0	3
+178	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1989_07_26_01_156.tcf.xml-20-11	abbauen	dwug_de	4.0		3.0		3.0	3.0					3.0	4
+179	2532889X_1971-09-08_01_056.tcf.xml-14-40	26120215_1990_08_21_01_363.tcf.xml-5-26	abbauen	dwug_de	4.0			4.0		3.0					4.0	3
+182	2532889X_1971-09-08_01_056.tcf.xml-14-40	baumstark_encyclopaedie_1835-3398-12	abbauen	dwug_de	2.0	2.0			2.0	2.0	2.0				2.0	5
+183	2532889X_1971-09-08_01_056.tcf.xml-14-40	baumstark_encyclopaedie_1835-3421-18	abbauen	dwug_de		2.0			2.0						2.0	2
+186	2532889X_1971-09-08_01_056.tcf.xml-14-40	baumstark_encyclopaedie_1835-3510-14	abbauen	dwug_de	2.0					2.0					2.0	2
+187	2532889X_1971-09-08_01_056.tcf.xml-14-40	beck_eisen01_1884-1203-25	abbauen	dwug_de			1.0	2.0		3.0					2.0	3
+191	2532889X_1971-09-08_01_056.tcf.xml-14-40	beck_eisen02_1895-1381-74	abbauen	dwug_de				2.0	1.0	1.0					1.0	3
+192	2532889X_1971-09-08_01_056.tcf.xml-14-40	beck_eisen02_1895-1384-18	abbauen	dwug_de					2.0	2.0					2.0	2
+193	2532889X_1971-09-08_01_056.tcf.xml-14-40	beck_eisen02_1895-20360-26	abbauen	dwug_de	2.0			2.0	2.0	1.0					2.0	4
+195	2532889X_1971-09-08_01_056.tcf.xml-14-40	beck_eisen03_1897-14128-14	abbauen	dwug_de				2.0		2.0					2.0	2
+196	2532889X_1971-09-08_01_056.tcf.xml-14-40	beck_eisen03_1897-17045-9	abbauen	dwug_de			1.0	2.0		2.0	2.0				2.0	4
+197	2532889X_1971-09-08_01_056.tcf.xml-14-40	berg_ostasien04_1873-4058-13	abbauen	dwug_de				2.0		2.0					2.0	2
+198	2532889X_1971-09-08_01_056.tcf.xml-14-40	brehm_thierleben05_1869-651-26	abbauen	dwug_de	2.0	2.0	2.0		2.0	2.0	2.0				2.0	6
+199	2532889X_1971-09-08_01_056.tcf.xml-14-40	gerstner_mechanik03_1834-7858-11	abbauen	dwug_de	2.0				2.0	2.0					2.0	3
+203	2532889X_1971-09-08_01_056.tcf.xml-14-40	ledebur_eisenhuettenkunde_1884-8934-38	abbauen	dwug_de				2.0	2.0						2.0	2
+205	2532889X_1971-09-08_01_056.tcf.xml-14-40	peschel_voelkerkunde_1874-3546-36	abbauen	dwug_de	2.0					2.0					2.0	2
+206	2532889X_1971-09-08_01_056.tcf.xml-14-40	peschel_voelkerkunde_1874-3546-43	abbauen	dwug_de				2.0	2.0						2.0	2
+208	2532889X_1971-09-08_01_056.tcf.xml-14-40	quenstedt_mineralogie_1854-14158-25	abbauen	dwug_de	2.0		1.0	2.0	2.0						2.0	4
+209	2532889X_1972-11-27_01_085.tcf.xml-12-5	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de					4.0	4.0					4.0	2
+210	2532889X_1972-11-27_01_085.tcf.xml-12-5	beck_eisen03_1897-15223-9	abbauen	dwug_de					2.0	1.0					1.5	2
+213	2532889X_1973-04-28_01_168.tcf.xml-22-53	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de		1.0	1.0		3.0						1.0	3
+214	2532889X_1973-04-28_01_168.tcf.xml-22-53	26120215_1956_09_28_01_084.tcf.xml-4-19	abbauen	dwug_de				2.0		2.0					2.0	2
+217	2532889X_1973-04-28_01_168.tcf.xml-22-53	baumstark_encyclopaedie_1835-3530-19	abbauen	dwug_de				2.0	4.0						3.0	2
+218	2532889X_1973-04-28_01_168.tcf.xml-22-53	beck_eisen02_1895-703-21	abbauen	dwug_de			1.0		3.0						2.0	2
+221	2532889X_1973-04-28_01_168.tcf.xml-22-53	peschel_voelkerkunde_1874-3546-43	abbauen	dwug_de			1.0				2.0				1.5	2
+227	2532889X_1973-06-30_01_194.tcf.xml-47-22	beck_eisen03_1897-14128-14	abbauen	dwug_de		4.0	3.0								3.5	2
+231	2532889X_1973-06-30_01_194.tcf.xml-47-22	humboldt_gutachten_1838-60-41	abbauen	dwug_de		4.0	4.0								4.0	2
+233	2532889X_1974-10-20_01_048.tcf.xml-29-11	2532889X_1982-05-27_01_152.tcf.xml-34-7	abbauen	dwug_de		3.0								2.0	2.5	2
+234	2532889X_1974-10-20_01_048.tcf.xml-29-11	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de				2.0	2.0	2.0					2.0	3
+236	2532889X_1974-10-20_01_048.tcf.xml-29-11	26120215_1974_02_16_01_247.tcf.xml-4-30	abbauen	dwug_de			2.0			4.0	4.0				4.0	3
+237	2532889X_1974-10-20_01_048.tcf.xml-29-11	26120215_1979_07_18_01_037.tcf.xml-75-26	abbauen	dwug_de					4.0	4.0					4.0	2
+238	2532889X_1974-10-20_01_048.tcf.xml-29-11	26120215_1984_11_18_01_041.tcf.xml-9-21	abbauen	dwug_de			4.0			3.0	4.0				4.0	3
+239	2532889X_1974-10-20_01_048.tcf.xml-29-11	26120215_1990_07_28_01_810.tcf.xml-15-12	abbauen	dwug_de		2.0			3.0						2.5	2
+240	2532889X_1974-10-20_01_048.tcf.xml-29-11	baumstark_encyclopaedie_1835-3510-14	abbauen	dwug_de				4.0		4.0					4.0	2
+242	2532889X_1974-10-20_01_048.tcf.xml-29-11	beck_eisen02_1895-19457-11	abbauen	dwug_de			1.0				2.0				1.5	2
+247	2532889X_1975-02-24_01_093.tcf.xml-21-36	26120215_1970_07_23_01_183.tcf.xml-22-11	abbauen	dwug_de					4.0	3.0					3.5	2
+248	2532889X_1975-02-24_01_093.tcf.xml-21-36	humboldt_gutachten_1838-109-17	abbauen	dwug_de					2.0	1.0					1.5	2
+249	2532889X_1976-01-30_01_041.tcf.xml-46-26	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de	4.0					4.0					4.0	2
+250	2532889X_1976-01-30_01_041.tcf.xml-46-26	beck_eisen02_1895-1004-17	abbauen	dwug_de				2.0	2.0						2.0	2
+251	2532889X_1976-01-30_01_041.tcf.xml-46-26	humboldt_gutachten_1838-109-17	abbauen	dwug_de	2.0				2.0	2.0					2.0	3
+259	2532889X_1977-01-01_01_162.tcf.xml-63-12	beck_eisen02_1895-18933-5	abbauen	dwug_de					2.0	2.0					2.0	2
+262	2532889X_1977-01-01_01_162.tcf.xml-63-12	nn_maehrisches166_1893-368-17	abbauen	dwug_de					4.0	3.0					3.5	2
+264	2532889X_1977-08-26_01_087.tcf.xml-25-45	26120215_1986_05_30_01_021.tcf.xml-12-10	abbauen	dwug_de					4.0	4.0					4.0	2
+265	2532889X_1977-08-26_01_087.tcf.xml-25-45	beck_eisen02_1895-1381-74	abbauen	dwug_de					2.0	2.0					2.0	2
+267	2532889X_1977-08-26_01_087.tcf.xml-25-45	humboldt_bogota_1853-257-34	abbauen	dwug_de					2.0	2.0					2.0	2
+271	2532889X_1978-06-09_01_083.tcf.xml-2-32	baumstark_encyclopaedie_1835-3361-21	abbauen	dwug_de					2.0	2.0					2.0	2
+274	2532889X_1978-07-21_01_096.tcf.xml-14-30	beck_eisen03_1897-15223-9	abbauen	dwug_de		2.0	2.0				3.0				2.0	3
+276	2532889X_1979-12-15_01_109.tcf.xml-18-28	26120215_1956_09_28_01_084.tcf.xml-4-19	abbauen	dwug_de	4.0			4.0							4.0	2
+278	2532889X_1982-05-27_01_152.tcf.xml-34-7	26120215_1966_04_29_01_295.tcf.xml-3-18	abbauen	dwug_de				2.0		3.0					2.5	2
+282	2532889X_1982-05-27_01_152.tcf.xml-34-7	baumstark_encyclopaedie_1835-3530-19	abbauen	dwug_de		4.0				4.0					4.0	2
+286	2532889X_1982-05-27_01_152.tcf.xml-34-7	humboldt_gutachten_1838-109-17	abbauen	dwug_de					4.0	4.0					4.0	2
+287	2532889X_1982-05-27_01_152.tcf.xml-34-7	ledebur_eisenhuettenkunde_1884-9090-10	abbauen	dwug_de			4.0			4.0					4.0	2
+288	2532889X_1982-05-27_01_152.tcf.xml-34-7	peschel_voelkerkunde_1874-3546-43	abbauen	dwug_de			4.0				4.0				4.0	2
+290	2532889X_1985-03-12_01_066.tcf.xml-11-12	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de			4.0		3.0	4.0					4.0	3
+292	2532889X_1985-03-12_01_066.tcf.xml-11-12	26120215_1984_11_18_01_041.tcf.xml-9-21	abbauen	dwug_de					2.0		2.0				2.0	2
+297	2532889X_1985-04-03_01_036.tcf.xml-7-19	2532889X_1986-01-14_01_031.tcf.xml-60-15	abbauen	dwug_de	4.0				4.0						4.0	2
+298	2532889X_1985-04-03_01_036.tcf.xml-7-19	2532889X_1987-12-23_01_055.tcf.xml-32-12	abbauen	dwug_de				3.0		3.0					3.0	2
+299	2532889X_1985-04-03_01_036.tcf.xml-7-19	26120215_1956_09_28_01_084.tcf.xml-4-19	abbauen	dwug_de	4.0					4.0					4.0	2
+300	2532889X_1985-04-03_01_036.tcf.xml-7-19	26120215_1962_01_05_01_035.tcf.xml-141-16	abbauen	dwug_de				4.0	4.0	3.0					4.0	3
+302	2532889X_1985-04-03_01_036.tcf.xml-7-19	26120215_1970_09_26_01_179.tcf.xml-10-20	abbauen	dwug_de	2.0				2.0	2.0					2.0	3
+304	2532889X_1985-04-03_01_036.tcf.xml-7-19	26120215_1983_08_17_01_096.tcf.xml-3-21	abbauen	dwug_de					4.0	4.0					4.0	2
+307	2532889X_1985-04-03_01_036.tcf.xml-7-19	baumstark_encyclopaedie_1835-12861-16	abbauen	dwug_de		2.0			3.0		2.0				2.0	3
+309	2532889X_1985-04-03_01_036.tcf.xml-7-19	beck_eisen02_1895-13263-28	abbauen	dwug_de	2.0			2.0							2.0	2
+310	2532889X_1985-04-03_01_036.tcf.xml-7-19	beck_eisen02_1895-1381-74	abbauen	dwug_de				2.0	2.0	2.0					2.0	3
+312	2532889X_1985-04-03_01_036.tcf.xml-7-19	beck_eisen03_1897-15223-9	abbauen	dwug_de	3.0			2.0	2.0	2.0					2.0	4
+313	2532889X_1985-04-03_01_036.tcf.xml-7-19	humboldt_gutachten_1838-109-17	abbauen	dwug_de	3.0			2.0	2.0	2.0					2.0	4
+315	2532889X_1985-04-11_01_106.tcf.xml-8-18	beck_eisen03_1897-15223-9	abbauen	dwug_de			1.0	3.0		2.0					2.0	3
+317	2532889X_1985-10-17_01_179.tcf.xml-140-22	beck_eisen02_1895-1381-74	abbauen	dwug_de			1.0	3.0	2.0						2.0	3
+318	2532889X_1985-12-18_01_048.tcf.xml-4-12	2532889X_1986-12-30_01_048.tcf.xml-58-32	abbauen	dwug_de					4.0	4.0					4.0	2
+320	2532889X_1986-01-14_01_031.tcf.xml-60-15	26120215_1985_09_11_01_030.tcf.xml-63-27	abbauen	dwug_de					4.0		4.0				4.0	2
+322	2532889X_1986-09-10_01_136.tcf.xml-7-5	26120215_1956_09_28_01_084.tcf.xml-4-19	abbauen	dwug_de				4.0		4.0					4.0	2
+323	2532889X_1986-12-30_01_048.tcf.xml-58-32	2532889X_1987-11-27_01_026.tcf.xml-8-26	abbauen	dwug_de	2.0			2.0		3.0					2.0	3
+325	2532889X_1986-12-30_01_048.tcf.xml-58-32	2532889X_1989-04-04_01_114.tcf.xml-33-25	abbauen	dwug_de					4.0	3.0					3.5	2
+326	2532889X_1986-12-30_01_048.tcf.xml-58-32	2532889X_1989-05-27_01_118.tcf.xml-19-9	abbauen	dwug_de	2.0			2.0	2.0	2.0					2.0	4
+328	2532889X_1986-12-30_01_048.tcf.xml-58-32	2532889X_1990-04-28_01_305.tcf.xml-4-29	abbauen	dwug_de				4.0	3.0						3.5	2
+329	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1955_07_30_01_004.tcf.xml-20-38	abbauen	dwug_de				4.0			3.0				3.5	2
+331	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1962_01_05_01_035.tcf.xml-141-16	abbauen	dwug_de				3.0	3.0						3.0	2
+332	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1968_01_24_01_005.tcf.xml-140-27	abbauen	dwug_de	4.0			3.0		3.0					3.0	3
+333	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1970_09_26_01_179.tcf.xml-10-20	abbauen	dwug_de				2.0	2.0	2.0					2.0	3
+334	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1974_10_27_01_066.tcf.xml-27-20	abbauen	dwug_de	4.0					3.0					3.5	2
+335	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1978_06_09_01_160.tcf.xml-6-24	abbauen	dwug_de	4.0			4.0		4.0					4.0	3
+337	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1979_07_18_01_037.tcf.xml-75-26	abbauen	dwug_de				2.0		2.0					2.0	2
+338	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1981_03_25_01_020.tcf.xml-9-1	abbauen	dwug_de		3.0	4.0		2.0	3.0	3.0				3.0	5
+339	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1982_01_30_01_155.tcf.xml-21-5	abbauen	dwug_de					4.0	4.0					4.0	2
+340	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1984_08_02_01_043.tcf.xml-10-15	abbauen	dwug_de	3.0				2.0	2.0					2.0	3
+341	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1985_03_06_01_091.tcf.xml-14-8	abbauen	dwug_de	3.0			3.0							3.0	2
+343	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1988_11_23_01_007.tcf.xml-33-33	abbauen	dwug_de				3.0		4.0					3.5	2
+344	2532889X_1986-12-30_01_048.tcf.xml-58-32	26120215_1990_09_29_01_919.tcf.xml-4-19	abbauen	dwug_de				4.0	3.0	3.0					3.0	3
+347	2532889X_1986-12-30_01_048.tcf.xml-58-32	baumstark_encyclopaedie_1835-3361-21	abbauen	dwug_de	2.0				2.0						2.0	2
+348	2532889X_1986-12-30_01_048.tcf.xml-58-32	baumstark_encyclopaedie_1835-3469-13	abbauen	dwug_de	2.0				2.0						2.0	2
+349	2532889X_1986-12-30_01_048.tcf.xml-58-32	baumstark_encyclopaedie_1835-3477-40	abbauen	dwug_de			2.0	3.0		2.0	2.0				2.0	4
+350	2532889X_1986-12-30_01_048.tcf.xml-58-32	baumstark_encyclopaedie_1835-3477-6	abbauen	dwug_de	2.0				3.0		3.0				3.0	3
+351	2532889X_1986-12-30_01_048.tcf.xml-58-32	baumstark_encyclopaedie_1835-3481-17	abbauen	dwug_de			2.0			2.0					2.0	2
+352	2532889X_1986-12-30_01_048.tcf.xml-58-32	baumstark_encyclopaedie_1835-3530-19	abbauen	dwug_de					2.0	2.0					2.0	2
+353	2532889X_1986-12-30_01_048.tcf.xml-58-32	beck_eisen01_1884-8131-33	abbauen	dwug_de				2.0		2.0					2.0	2
+354	2532889X_1986-12-30_01_048.tcf.xml-58-32	beck_eisen02_1895-13263-28	abbauen	dwug_de	2.0					2.0					2.0	2
+355	2532889X_1986-12-30_01_048.tcf.xml-58-32	beck_eisen02_1895-18933-5	abbauen	dwug_de	2.0					2.0					2.0	2
+357	2532889X_1986-12-30_01_048.tcf.xml-58-32	beck_eisen02_1895-19646-33	abbauen	dwug_de	2.0			2.0							2.0	2
+358	2532889X_1986-12-30_01_048.tcf.xml-58-32	beck_eisen02_1895-19648-14	abbauen	dwug_de	2.0				2.0						2.0	2
+360	2532889X_1986-12-30_01_048.tcf.xml-58-32	beck_eisen03_1897-15223-9	abbauen	dwug_de				2.0	2.0						2.0	2
+361	2532889X_1986-12-30_01_048.tcf.xml-58-32	beck_eisen03_1897-15224-3	abbauen	dwug_de					2.0	2.0					2.0	2
+362	2532889X_1986-12-30_01_048.tcf.xml-58-32	beck_eisen03_1897-17058-5	abbauen	dwug_de				2.0	2.0						2.0	2
+363	2532889X_1986-12-30_01_048.tcf.xml-58-32	berg_ostasien04_1873-4792-15	abbauen	dwug_de	2.0				2.0						2.0	2
+366	2532889X_1986-12-30_01_048.tcf.xml-58-32	humboldt_aequinoktial03_1859-726-26	abbauen	dwug_de				2.0		2.0					2.0	2
+367	2532889X_1986-12-30_01_048.tcf.xml-58-32	humboldt_aequinoktial04_1859-3573-22	abbauen	dwug_de		2.0	1.0		2.0	2.0					2.0	4
+368	2532889X_1986-12-30_01_048.tcf.xml-58-32	humboldt_bogota_1853-228-17	abbauen	dwug_de			1.0		4.0	1.0					1.0	3
+369	2532889X_1986-12-30_01_048.tcf.xml-58-32	humboldt_gutachten_1838-60-41	abbauen	dwug_de	2.0				2.0						2.0	2
+372	2532889X_1986-12-30_01_048.tcf.xml-58-32	quenstedt_mineralogie_1854-11664-6	abbauen	dwug_de					2.0	1.0					1.5	2
+374	2532889X_1986-12-30_01_048.tcf.xml-58-32	quenstedt_mineralogie_1854-14140-32	abbauen	dwug_de	2.0		1.0	2.0							2.0	3
+375	2532889X_1986-12-30_01_048.tcf.xml-58-32	quenstedt_mineralogie_1854-14153-23	abbauen	dwug_de	2.0					2.0					2.0	2
+376	2532889X_1986-12-30_01_048.tcf.xml-58-32	urbanitzky_electricitaet_1885-14714-7	abbauen	dwug_de			1.0		2.0	2.0					2.0	3
+377	2532889X_1987-03-18_01_013.tcf.xml-25-46	26120215_1990_07_28_01_810.tcf.xml-15-12	abbauen	dwug_de	2.0	4.0			4.0						4.0	3
+381	2532889X_1987-11-27_01_026.tcf.xml-8-26	26120215_1970_07_23_01_183.tcf.xml-22-11	abbauen	dwug_de				2.0	2.0	3.0					2.0	3
+382	2532889X_1987-11-27_01_026.tcf.xml-8-26	26120215_1974_02_16_01_247.tcf.xml-4-30	abbauen	dwug_de				4.0	3.0						3.5	2
+383	2532889X_1987-11-27_01_026.tcf.xml-8-26	26120215_1979_07_18_01_037.tcf.xml-75-26	abbauen	dwug_de					2.0	3.0					2.5	2
+384	2532889X_1987-11-27_01_026.tcf.xml-8-26	26120215_1984_11_18_01_041.tcf.xml-9-21	abbauen	dwug_de		4.0				4.0					4.0	2
+388	2532889X_1987-11-27_01_026.tcf.xml-8-26	beck_eisen03_1897-15223-9	abbauen	dwug_de			2.0	3.0	3.0	2.0				2.0	2.0	5
+392	2532889X_1987-11-27_01_026.tcf.xml-8-26	lehnert_seehaefen01_1891-4737-54	abbauen	dwug_de	4.0		1.0		2.0		2.0				2.0	4
+394	2532889X_1987-12-23_01_055.tcf.xml-32-12	beck_eisen02_1895-703-21	abbauen	dwug_de	2.0			3.0		1.0					2.0	3
+395	2532889X_1988-03-25_01_045.tcf.xml-6-23	humboldt_bogota_1853-257-34	abbauen	dwug_de			1.0	2.0	3.0		3.0				2.5	4
+396	2532889X_1988-04-05_01_089.tcf.xml-26-45	26120215_1982_01_30_01_155.tcf.xml-21-5	abbauen	dwug_de		4.0				4.0					4.0	2
+397	2532889X_1988-04-05_01_089.tcf.xml-26-45	26120215_1990_07_28_01_810.tcf.xml-15-12	abbauen	dwug_de	4.0					3.0					3.5	2
+398	2532889X_1988-10-01_01_582.tcf.xml-5-13	beck_eisen02_1895-1381-74	abbauen	dwug_de	2.0			4.0	4.0						4.0	3
+402	2532889X_1989-04-10_01_050.tcf.xml-50-50	humboldt_gutachten_1838-109-17	abbauen	dwug_de	3.0				2.0	2.0					2.0	3
+403	2532889X_1989-05-27_01_118.tcf.xml-19-9	26120215_1956_09_28_01_084.tcf.xml-4-19	abbauen	dwug_de				2.0	2.0	2.0					2.0	3
+409	2532889X_1989-12-21_01_041.tcf.xml-17-12	humboldt_bogota_1853-257-34	abbauen	dwug_de		2.0	1.0		2.0	2.0					2.0	4
+410	2532889X_1990-04-26_01_220.tcf.xml-8-7	26120215_1970_07_23_01_183.tcf.xml-22-11	abbauen	dwug_de	3.0					3.0					3.0	2
+412	2532889X_1990-04-28_01_305.tcf.xml-4-29	26120215_1966_02_09_01_027.tcf.xml-55-17	abbauen	dwug_de					4.0		3.0				3.5	2
+413	2532889X_1990-04-28_01_305.tcf.xml-4-29	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de				2.0		2.0					2.0	2
+415	2532889X_1990-05-09_01_014.tcf.xml-6-18	26120215_1990_07_28_01_810.tcf.xml-15-12	abbauen	dwug_de					3.0	3.0					3.0	2
+419	26120215_1946_05_09_01_023.tcf.xml-24-10	26120215_1990_07_28_01_810.tcf.xml-15-12	abbauen	dwug_de			2.0	2.0		2.0					2.0	3
+421	26120215_1947_10_29_01_105.tcf.xml-3-18	beck_eisen02_1895-1381-74	abbauen	dwug_de	4.0					3.0					3.5	2
+425	26120215_1947_11_18_01_017.tcf.xml-3-16	humboldt_bogota_1853-257-34	abbauen	dwug_de	4.0		2.0		2.0						2.0	3
+430	26120215_1955_07_30_01_004.tcf.xml-20-38	baumstark_encyclopaedie_1835-3530-19	abbauen	dwug_de					2.0		2.0				2.0	2
+431	26120215_1955_07_30_01_004.tcf.xml-20-38	beck_eisen02_1895-1381-74	abbauen	dwug_de	4.0			2.0		1.0					2.0	3
+434	26120215_1955_07_30_01_004.tcf.xml-20-38	peschel_voelkerkunde_1874-3546-43	abbauen	dwug_de		2.0			2.0		2.0				2.0	3
+437	26120215_1956_09_28_01_084.tcf.xml-4-19	26120215_1970_07_23_01_183.tcf.xml-22-11	abbauen	dwug_de	4.0				4.0						4.0	2
+442	26120215_1956_09_28_01_084.tcf.xml-4-19	26120215_1984_11_18_01_041.tcf.xml-9-21	abbauen	dwug_de	3.0		2.0				2.0				2.0	3
+443	26120215_1956_09_28_01_084.tcf.xml-4-19	26120215_1985_03_06_01_091.tcf.xml-14-8	abbauen	dwug_de	4.0				4.0						4.0	2
+446	26120215_1956_09_28_01_084.tcf.xml-4-19	beck_eisen01_1884-1203-25	abbauen	dwug_de				3.0	2.0						2.5	2
+447	26120215_1956_09_28_01_084.tcf.xml-4-19	beck_eisen01_1884-8131-33	abbauen	dwug_de				2.0	3.0	2.0					2.0	3
+449	26120215_1956_09_28_01_084.tcf.xml-4-19	beck_eisen03_1897-17045-9	abbauen	dwug_de	2.0		1.0	2.0							2.0	3
+450	26120215_1956_09_28_01_084.tcf.xml-4-19	berg_ostasien04_1873-4058-13	abbauen	dwug_de				2.0	2.0	2.0					2.0	3
+451	26120215_1956_09_28_01_084.tcf.xml-4-19	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de	3.0			2.0	2.0						2.0	3
+452	26120215_1956_09_28_01_084.tcf.xml-4-19	humboldt_gutachten_1838-109-17	abbauen	dwug_de	3.0			2.0	2.0	2.0					2.0	4
+453	26120215_1956_09_28_01_084.tcf.xml-4-19	ledebur_eisenhuettenkunde_1884-9090-10	abbauen	dwug_de	2.0			2.0	2.0	2.0					2.0	4
+454	26120215_1956_09_28_01_084.tcf.xml-4-19	peschel_voelkerkunde_1874-3546-36	abbauen	dwug_de				2.0	2.0						2.0	2
+455	26120215_1956_09_28_01_084.tcf.xml-4-19	quenstedt_mineralogie_1854-14153-23	abbauen	dwug_de	2.0			2.0							2.0	2
+457	26120215_1960_05_12_01_117.tcf.xml-12-4	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de	2.0			2.0		2.0					2.0	3
+459	26120215_1962_01_05_01_035.tcf.xml-141-16	beck_eisen02_1895-1009-4	abbauen	dwug_de				2.0	2.0						2.0	2
+460	26120215_1963_04_07_01_034.tcf.xml-54-28	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de	2.0			2.0	2.0	2.0					2.0	4
+467	26120215_1966_04_29_01_295.tcf.xml-3-18	26120215_1984_11_18_01_041.tcf.xml-9-21	abbauen	dwug_de				2.0	2.0						2.0	2
+468	26120215_1967_06_02_01_258.tcf.xml-7-3	26120215_1978_06_09_01_160.tcf.xml-6-24	abbauen	dwug_de				2.0	2.0						2.0	2
+469	26120215_1967_06_02_01_258.tcf.xml-7-3	26120215_1979_07_18_01_037.tcf.xml-75-26	abbauen	dwug_de		3.0				4.0					3.5	2
+470	26120215_1967_06_02_01_258.tcf.xml-7-3	26120215_1981_07_08_01_073.tcf.xml-4-23	abbauen	dwug_de					2.0	2.0					2.0	2
+477	26120215_1967_06_02_01_258.tcf.xml-7-3	beck_eisen02_1895-1381-74	abbauen	dwug_de	4.0				2.0	2.0					2.0	3
+478	26120215_1967_06_02_01_258.tcf.xml-7-3	beck_eisen02_1895-19457-11	abbauen	dwug_de		2.0				1.0					1.5	2
+480	26120215_1967_06_02_01_258.tcf.xml-7-3	berg_ostasien04_1873-4058-13	abbauen	dwug_de				4.0	3.0						3.5	2
+481	26120215_1967_06_02_01_258.tcf.xml-7-3	berg_ostasien04_1873-4792-15	abbauen	dwug_de			3.0			4.0	4.0				4.0	3
+482	26120215_1967_06_02_01_258.tcf.xml-7-3	gerstner_mechanik03_1834-8939-9	abbauen	dwug_de		3.0								2.0	2.5	2
+483	26120215_1968_01_24_01_005.tcf.xml-140-27	26120215_1984_11_18_01_041.tcf.xml-9-21	abbauen	dwug_de	2.0			3.0		2.0					2.0	3
+488	26120215_1970_07_23_01_183.tcf.xml-22-11	26120215_1984_11_18_01_041.tcf.xml-9-21	abbauen	dwug_de		2.0		3.0	2.0	4.0	2.0				2.0	5
+489	26120215_1970_07_23_01_183.tcf.xml-22-11	26120215_1990_08_21_01_363.tcf.xml-5-26	abbauen	dwug_de	4.0			3.0							3.5	2
+491	26120215_1970_07_23_01_183.tcf.xml-22-11	baumstark_encyclopaedie_1835-3425-45	abbauen	dwug_de	2.0			2.0	2.0	2.0					2.0	4
+492	26120215_1970_07_23_01_183.tcf.xml-22-11	baumstark_encyclopaedie_1835-3477-6	abbauen	dwug_de	2.0				3.0	2.0					2.0	3
+493	26120215_1970_07_23_01_183.tcf.xml-22-11	beck_eisen01_1884-1203-25	abbauen	dwug_de	2.0					2.0					2.0	2
+496	26120215_1970_07_23_01_183.tcf.xml-22-11	beck_eisen02_1895-1381-74	abbauen	dwug_de	3.0			2.0		1.0	2.0				2.0	4
+497	26120215_1970_07_23_01_183.tcf.xml-22-11	beck_eisen03_1897-15223-9	abbauen	dwug_de	2.0			2.0							2.0	2
+499	26120215_1970_07_23_01_183.tcf.xml-22-11	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de	3.0		2.0		2.0						2.0	3
+500	26120215_1970_07_23_01_183.tcf.xml-22-11	humboldt_gutachten_1838-109-17	abbauen	dwug_de	2.0			2.0	1.0	2.0					2.0	4
+502	26120215_1970_07_23_01_183.tcf.xml-22-11	quenstedt_mineralogie_1854-11683-34	abbauen	dwug_de	2.0			2.0		2.0					2.0	3
+503	26120215_1970_09_26_01_179.tcf.xml-10-20	26120215_1981_07_08_01_073.tcf.xml-4-23	abbauen	dwug_de				4.0	2.0	4.0					4.0	3
+507	26120215_1970_09_26_01_179.tcf.xml-10-20	berg_ostasien04_1873-4792-15	abbauen	dwug_de					3.0	2.0	4.0				3.0	3
+509	26120215_1971_08_01_01_017.tcf.xml-8-8	26120215_1984_11_18_01_041.tcf.xml-9-21	abbauen	dwug_de					2.0	2.0					2.0	2
+511	26120215_1974_02_16_01_247.tcf.xml-4-30	26120215_1984_11_18_01_041.tcf.xml-9-21	abbauen	dwug_de						3.0	4.0				3.5	2
+514	26120215_1974_02_16_01_247.tcf.xml-4-30	beck_eisen02_1895-19457-11	abbauen	dwug_de		3.0	1.0	2.0							2.0	3
+521	26120215_1978_06_09_01_160.tcf.xml-6-24	26120215_1990_07_28_01_810.tcf.xml-15-12	abbauen	dwug_de				3.0	3.0						3.0	2
+525	26120215_1979_07_18_01_037.tcf.xml-75-26	baumstark_encyclopaedie_1835-12861-16	abbauen	dwug_de					3.0	3.0	3.0				3.0	3
+528	26120215_1979_07_18_01_037.tcf.xml-75-26	beck_eisen03_1897-15224-3	abbauen	dwug_de		2.0			2.0						2.0	2
+529	26120215_1979_07_18_01_037.tcf.xml-75-26	berg_ostasien04_1873-4058-13	abbauen	dwug_de			4.0			4.0					4.0	2
+532	26120215_1979_07_18_01_037.tcf.xml-75-26	gerstner_mechanik03_1834-7860-24	abbauen	dwug_de			4.0		2.0	4.0					4.0	3
+533	26120215_1979_07_18_01_037.tcf.xml-75-26	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de	4.0		1.0		4.0						4.0	3
+535	26120215_1979_07_18_01_037.tcf.xml-75-26	quenstedt_mineralogie_1854-14153-23	abbauen	dwug_de		3.0					3.0				3.0	2
+537	26120215_1981_07_08_01_073.tcf.xml-4-23	26120215_1984_11_18_01_041.tcf.xml-9-21	abbauen	dwug_de				4.0						4.0	4.0	2
+538	26120215_1981_07_08_01_073.tcf.xml-4-23	26120215_1990_07_28_01_810.tcf.xml-15-12	abbauen	dwug_de					2.0	2.0					2.0	2
+539	26120215_1981_07_08_01_073.tcf.xml-4-23	baumstark_encyclopaedie_1835-12861-16	abbauen	dwug_de		3.0					2.0				2.5	2
+542	26120215_1981_07_08_01_073.tcf.xml-4-23	beck_eisen02_1895-8983-27	abbauen	dwug_de			2.0		3.0	2.0					2.0	3
+546	26120215_1981_07_08_01_073.tcf.xml-4-23	peschel_voelkerkunde_1874-3546-43	abbauen	dwug_de					2.0	2.0					2.0	2
+547	26120215_1982_01_21_01_056.tcf.xml-8-30	26120215_1984_11_18_01_041.tcf.xml-9-21	abbauen	dwug_de	2.0			2.0	3.0						2.0	3
+549	26120215_1982_01_30_01_155.tcf.xml-21-5	beck_eisen03_1897-14128-14	abbauen	dwug_de				2.0	2.0	2.0					2.0	3
+551	26120215_1984_08_02_01_043.tcf.xml-10-15	baumstark_encyclopaedie_1835-3348-26	abbauen	dwug_de				4.0	4.0	4.0					4.0	3
+557	26120215_1984_08_02_01_043.tcf.xml-10-15	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de	4.0	2.0		1.0							2.0	3
+558	26120215_1984_11_18_01_041.tcf.xml-9-21	26120215_1989_07_26_01_156.tcf.xml-20-11	abbauen	dwug_de	2.0			2.0		2.0					2.0	3
+559	26120215_1984_11_18_01_041.tcf.xml-9-21	26120215_1990_07_28_01_810.tcf.xml-15-12	abbauen	dwug_de				3.0	2.0		3.0				3.0	3
+563	26120215_1984_11_18_01_041.tcf.xml-9-21	baumstark_encyclopaedie_1835-3425-45	abbauen	dwug_de					3.0	3.0	4.0				3.0	3
+564	26120215_1984_11_18_01_041.tcf.xml-9-21	baumstark_encyclopaedie_1835-3477-40	abbauen	dwug_de			4.0				4.0				4.0	2
+567	26120215_1984_11_18_01_041.tcf.xml-9-21	beck_eisen03_1897-15223-9	abbauen	dwug_de	4.0			1.0	2.0	2.0					2.0	4
+569	26120215_1984_11_18_01_041.tcf.xml-9-21	berg_ostasien04_1873-4058-13	abbauen	dwug_de				3.0		4.0					3.5	2
+570	26120215_1984_11_18_01_041.tcf.xml-9-21	berg_ostasien04_1873-4792-15	abbauen	dwug_de	4.0				4.0	2.0	4.0			4.0	4.0	5
+571	26120215_1984_11_18_01_041.tcf.xml-9-21	gerstner_mechanik03_1834-7860-24	abbauen	dwug_de	4.0			4.0	4.0	4.0					4.0	4
+572	26120215_1984_11_18_01_041.tcf.xml-9-21	humboldt_gutachten_1838-109-17	abbauen	dwug_de	4.0			1.0	2.0	1.0					1.5	4
+573	26120215_1984_11_18_01_041.tcf.xml-9-21	quenstedt_mineralogie_1854-14153-23	abbauen	dwug_de		2.0	1.0		2.0						2.0	3
+574	26120215_1985_09_11_01_030.tcf.xml-63-27	humboldt_gutachten_1838-109-17	abbauen	dwug_de	2.0					2.0					2.0	2
+577	26120215_1986_10_10_01_075.tcf.xml-7-19	baumstark_encyclopaedie_1835-3530-19	abbauen	dwug_de			1.0		2.0						1.5	2
+580	26120215_1988_11_23_01_007.tcf.xml-33-33	beck_eisen02_1895-1381-74	abbauen	dwug_de					2.0	2.0	3.0				2.0	3
+583	26120215_1990_07_28_01_810.tcf.xml-15-12	26120215_1990_09_29_01_919.tcf.xml-4-19	abbauen	dwug_de	4.0					4.0					4.0	2
+584	26120215_1990_07_28_01_810.tcf.xml-15-12	baumstark_encyclopaedie_1835-3348-3	abbauen	dwug_de				3.0	3.0						3.0	2
+585	26120215_1990_07_28_01_810.tcf.xml-15-12	baumstark_encyclopaedie_1835-3469-13	abbauen	dwug_de	2.0	2.0			3.0						2.0	3
+586	26120215_1990_07_28_01_810.tcf.xml-15-12	baumstark_encyclopaedie_1835-3510-14	abbauen	dwug_de	2.0			2.0							2.0	2
+587	26120215_1990_07_28_01_810.tcf.xml-15-12	beck_eisen02_1895-1009-4	abbauen	dwug_de		2.0			3.0	2.0					2.0	3
+588	26120215_1990_07_28_01_810.tcf.xml-15-12	beck_eisen03_1897-15223-9	abbauen	dwug_de				2.0		2.0					2.0	2
+592	26120215_1990_07_28_01_810.tcf.xml-15-12	humboldt_bogota_1853-257-34	abbauen	dwug_de	3.0			3.0							3.0	2
+593	26120215_1990_07_28_01_810.tcf.xml-15-12	humboldt_gutachten_1838-109-17	abbauen	dwug_de	3.0			2.0	2.0	2.0					2.0	4
+594	26120215_1990_08_21_01_363.tcf.xml-5-26	beck_eisen02_1895-19646-33	abbauen	dwug_de				2.0	2.0	2.0					2.0	3
+596	baumstark_encyclopaedie_1835-12861-16	lehnert_seehaefen01_1891-4737-54	abbauen	dwug_de		2.0					4.0				3.0	2
+603	baumstark_encyclopaedie_1835-3361-21	baumstark_encyclopaedie_1835-3510-14	abbauen	dwug_de			1.0			4.0					2.5	2
+606	baumstark_encyclopaedie_1835-3361-21	beck_eisen03_1897-15223-9	abbauen	dwug_de	4.0			4.0		4.0					4.0	3
+607	baumstark_encyclopaedie_1835-3361-21	beck_eisen03_1897-15224-3	abbauen	dwug_de					3.0		4.0				3.5	2
+608	baumstark_encyclopaedie_1835-3361-21	gerstner_mechanik03_1834-7858-11	abbauen	dwug_de				3.0	3.0						3.0	2
+613	baumstark_encyclopaedie_1835-3421-18	beck_eisen03_1897-17045-9	abbauen	dwug_de					4.0	1.0					2.5	2
+615	baumstark_encyclopaedie_1835-3425-29	beck_eisen02_1895-18933-5	abbauen	dwug_de		2.0			3.0						2.5	2
+623	baumstark_encyclopaedie_1835-3425-45	humboldt_gutachten_1838-109-17	abbauen	dwug_de					3.0		2.0				2.5	2
+624	baumstark_encyclopaedie_1835-3469-13	beck_eisen03_1897-15223-9	abbauen	dwug_de		4.0			4.0		4.0				4.0	3
+625	baumstark_encyclopaedie_1835-3469-13	berg_ostasien04_1873-4792-15	abbauen	dwug_de			1.0		3.0		2.0				2.0	3
+627	baumstark_encyclopaedie_1835-3469-13	humboldt_aequinoktial03_1859-726-26	abbauen	dwug_de		3.0			3.0						3.0	2
+628	baumstark_encyclopaedie_1835-3477-40	beck_eisen02_1895-18933-5	abbauen	dwug_de		3.0					4.0				3.5	2
+629	baumstark_encyclopaedie_1835-3477-40	humboldt_gutachten_1838-109-17	abbauen	dwug_de					3.0		4.0				3.5	2
+631	baumstark_encyclopaedie_1835-3477-6	beck_eisen02_1895-703-21	abbauen	dwug_de		2.0			2.0		3.0				2.0	3
+633	baumstark_encyclopaedie_1835-3477-6	gerstner_mechanik03_1834-7860-24	abbauen	dwug_de		2.0				2.0					2.0	2
+634	baumstark_encyclopaedie_1835-3481-17	beck_eisen02_1895-1381-74	abbauen	dwug_de	4.0			4.0	3.0						4.0	3
+635	baumstark_encyclopaedie_1835-3510-14	berg_ostasien04_1873-4058-13	abbauen	dwug_de				4.0	3.0						3.5	2
+640	baumstark_encyclopaedie_1835-3510-14	quenstedt_mineralogie_1854-11664-6	abbauen	dwug_de					3.0	2.0					2.5	2
+650	beck_eisen01_1884-1203-25	humboldt_aequinoktial03_1859-726-26	abbauen	dwug_de		3.0					4.0				3.5	2
+651	beck_eisen01_1884-1203-25	peschel_voelkerkunde_1874-3546-43	abbauen	dwug_de		4.0				4.0					4.0	2
+655	beck_eisen01_1884-8131-33	beck_eisen02_1895-8983-27	abbauen	dwug_de		4.0			4.0	4.0	4.0				4.0	4
+659	beck_eisen02_1895-1004-17	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de			4.0		4.0	4.0					4.0	3
+663	beck_eisen02_1895-13263-28	beck_eisen02_1895-19457-11	abbauen	dwug_de			4.0				4.0				4.0	2
+664	beck_eisen02_1895-13263-28	beck_eisen02_1895-8983-27	abbauen	dwug_de			4.0			4.0					4.0	2
+665	beck_eisen02_1895-13263-28	berg_ostasien04_1873-4792-15	abbauen	dwug_de						3.0	3.0				3.0	2
+666	beck_eisen02_1895-13263-28	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de			4.0			4.0					4.0	2
+671	beck_eisen02_1895-1381-74	humboldt_bogota_1853-257-34	abbauen	dwug_de				4.0	4.0						4.0	2
+672	beck_eisen02_1895-1381-74	humboldt_gutachten_1838-109-17	abbauen	dwug_de		4.0		3.0	4.0		4.0				4.0	4
+674	beck_eisen02_1895-1381-74	quenstedt_mineralogie_1854-11664-6	abbauen	dwug_de	4.0				4.0	4.0					4.0	3
+675	beck_eisen02_1895-1381-74	quenstedt_mineralogie_1854-14140-32	abbauen	dwug_de	4.0					3.0					3.5	2
+678	beck_eisen02_1895-1384-18	beck_eisen03_1897-15223-9	abbauen	dwug_de				4.0	4.0						4.0	2
+681	beck_eisen02_1895-18933-5	humboldt_aequinoktial02_1859-3475-27	abbauen	dwug_de				4.0	4.0						4.0	2
+682	beck_eisen02_1895-18933-5	humboldt_aequinoktial03_1859-726-26	abbauen	dwug_de		4.0	1.0				4.0				4.0	3
+684	beck_eisen02_1895-18933-5	quenstedt_mineralogie_1854-11683-34	abbauen	dwug_de		3.0	3.0		3.0						3.0	3
+686	beck_eisen02_1895-19457-11	beck_eisen03_1897-15223-9	abbauen	dwug_de				4.0	4.0	4.0					4.0	3
+688	beck_eisen02_1895-19457-11	peschel_voelkerkunde_1874-3546-36	abbauen	dwug_de			4.0				4.0				4.0	2
+693	beck_eisen02_1895-703-21	beck_eisen03_1897-15223-9	abbauen	dwug_de	4.0					4.0					4.0	2
+694	beck_eisen02_1895-703-21	beck_eisen03_1897-17058-5	abbauen	dwug_de					3.0		4.0				3.5	2
+698	beck_eisen02_1895-8983-27	humboldt_gutachten_1838-109-17	abbauen	dwug_de	4.0			4.0	4.0						4.0	3
+703	beck_eisen03_1897-15223-9	humboldt_bogota_1853-257-34	abbauen	dwug_de		4.0	4.0		4.0						4.0	3
+705	beck_eisen03_1897-15223-9	lehnert_seehaefen01_1891-4737-54	abbauen	dwug_de	4.0			4.0							4.0	2
+706	beck_eisen03_1897-15223-9	nn_maehrisches166_1893-368-17	abbauen	dwug_de					2.0	2.0					2.0	2
+707	beck_eisen03_1897-15224-3	gerstner_mechanik03_1834-7860-24	abbauen	dwug_de					2.0		2.0				2.0	2
+715	berg_ostasien04_1873-4058-13	humboldt_bogota_1853-228-17	abbauen	dwug_de				2.0	3.0	3.0					3.0	3
+716	berg_ostasien04_1873-4792-15	humboldt_aequinoktial03_1859-726-26	abbauen	dwug_de			4.0		2.0					3.0	3.0	3
+719	berg_ostasien04_1873-4792-15	peschel_voelkerkunde_1874-3546-36	abbauen	dwug_de			1.0			3.0	2.0				2.0	3
+1980	gerstner_mechanik01_1831-5298-15	humboldt_gutachten_1838-109-17	abbauen	dwug_de	4.0	3.0		2.0		2.0	2.0				2.0	5
+1983	gerstner_mechanik03_1834-8939-9	humboldt_gutachten_1838-109-17	abbauen	dwug_de	4.0					4.0					4.0	2
+1984	humboldt_aequinoktial02_1859-3475-27	humboldt_aequinoktial03_1859-726-26	abbauen	dwug_de	4.0				3.0						3.5	2
+1985	humboldt_aequinoktial02_1859-3475-27	humboldt_gutachten_1838-109-17	abbauen	dwug_de		4.0				4.0	4.0				4.0	3
+1987	humboldt_aequinoktial03_1859-726-26	humboldt_gutachten_1838-60-41	abbauen	dwug_de			2.0		3.0						2.5	2
+1990	humboldt_aequinoktial04_1859-3573-22	humboldt_bogota_1853-257-34	abbauen	dwug_de	4.0			4.0							4.0	2
+1992	humboldt_bogota_1853-257-34	quenstedt_mineralogie_1854-14158-25	abbauen	dwug_de				4.0	4.0	4.0					4.0	3
+1994	humboldt_gutachten_1838-109-17	peschel_voelkerkunde_1874-3546-36	abbauen	dwug_de				4.0	4.0						4.0	2
+1995	humboldt_gutachten_1838-109-17	peschel_voelkerkunde_1874-3546-43	abbauen	dwug_de					4.0	4.0	4.0				4.0	3
+1997	humboldt_gutachten_1838-60-41	peschel_voelkerkunde_1874-3546-43	abbauen	dwug_de		4.0			4.0		4.0				4.0	3

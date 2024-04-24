@@ -7,7 +7,7 @@ from scipy import stats
 import re
 import random
 
-datasets = ['dwug_en']
+datasets = ['dwug_en', 'dwug_de']
 input_path = '../../../DWUG/'
 output_path = 'data_output'
 Path(output_path).mkdir(parents=True, exist_ok=True)
@@ -21,7 +21,7 @@ undesired_keys = ['identifier_system', 'project', 'lang', 'user', 'pos', 'date',
 
 
 def write_csv(file_path, data, keys):
-    with open(file_path, 'w') as f:
+    with open(file_path, 'w', encoding="utf-8") as f:
         header = '\t'.join(keys)
         f.write(header)
         f.write('\n')
@@ -55,12 +55,12 @@ def generate_pairs(uses, judgments_df_filtered):
     uses_dict = {use['identifier']: use for use in uses}
     lemma = uses[0]['lemma']
 
-    df = judgments_df_filtered.groupby(['lemma']).get_group((lemma + '_nn',))
+    df = judgments_df_filtered.groupby(['lemma']).get_group((lemma,))
 
     for i in df.index:
 
-        judgment_mean = str(df.loc[i][4:13].mean())
-        # print('Mean judgment:', judgment_mean)
+        judgment_median = str(df.loc[i]['median_label'])
+        # print('Median judgment:', judgment_median)
 
         use1 = uses_dict.get(df.loc[i]['identifier1'])
         use2 = uses_dict.get(df.loc[i]['identifier2'])
@@ -73,7 +73,7 @@ def generate_pairs(uses, judgments_df_filtered):
                 'context2': use2['context'],
                 'indexes_target_token1': use1['indexes_target_token'],
                 'indexes_target_token2': use2['indexes_target_token'],
-                'judgment': judgment_mean,
+                'judgment': judgment_median,
             }
             pairs.append(pair)
         else:
@@ -82,11 +82,30 @@ def generate_pairs(uses, judgments_df_filtered):
     return pairs
 
 
+def generate_and_write_pairs_for_dataset(dataset):
+    dataset_path = os.path.join(input_path, dataset, 'data')
+    print('Generating and writing pairs for whole dataset:', dataset_path, ' ...')
+
+    judgments_aggregated = aggregate_judgments_df(load_judgments_df_from_source_datasets())
+    judgments_filtered = filter_aggregated_judgments(judgments_aggregated, True)
+    pairs = []
+
+    for p in Path(dataset_path).glob('*/'):
+        uses_file_path = os.path.join(str(p), 'uses.csv')
+
+        pairs.extend(generate_pairs(load_csv(uses_file_path, undesired_keys), judgments_filtered))
+
+    output_path_lemma = os.path.join(output_path, 'pairs_whole_dataset')
+    Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
+    write_csv(os.path.join(output_path_lemma, dataset + '_pairs_challenge.csv'), pairs,
+              pairs[0].keys() if pairs else [])
+
+
 def generate_and_write_pairs_challenge():
     print('Generating and writing pairs for challenge ...')
 
     judgments_aggregated = aggregate_judgments_df(load_judgments_df_from_source_datasets())
-    judgments_filtered = filter_aggregated_judgments(judgments_aggregated)
+    judgments_filtered = filter_aggregated_judgments(judgments_aggregated, True)
 
     for dataset in datasets:
         dataset_path = os.path.join(input_path, dataset, 'data')
@@ -94,7 +113,7 @@ def generate_and_write_pairs_challenge():
             lemma_path = str(p).split('/')[-1].replace('-', '_')
             uses_file_path = os.path.join(str(p), 'uses.csv')
 
-            lemma = os.path.basename(lemma_path)
+            lemma = os.path.basename(lemma_path).split('_')[0]
 
             pairs = generate_pairs(load_csv(uses_file_path, undesired_keys), judgments_filtered)
 
@@ -116,7 +135,7 @@ def generate_and_write_list_challenge(strict=True, to_find=4.0):
             lemma_path = str(p).split('/')[-1].replace('-', '_')
             uses_file_path = os.path.join(str(p), 'uses.csv')
 
-            lemma = os.path.basename(lemma_path)
+            lemma = os.path.basename(lemma_path).split('_')[0]
 
             uses = load_csv(uses_file_path, undesired_keys)
 
@@ -166,7 +185,7 @@ def find_practical_reference_usages(usage, judgments_df, strict=True, to_find=4.
     local_order = {}
 
     lemma = usage['lemma']
-    df_grouped = judgments_df.groupby(['lemma']).get_group((lemma + '_nn',))
+    df_grouped = judgments_df.groupby(['lemma']).get_group((lemma,))
     df = df_grouped[
         (df_grouped["identifier1"] == usage['identifier']) | (df_grouped["identifier2"] == usage['identifier'])]
 
@@ -180,24 +199,22 @@ def find_practical_reference_usages(usage, judgments_df, strict=True, to_find=4.
         judgment = df.loc[i]
         # print('Processing judgment', judgment)
 
-        judgment_mean = judgment[4:13].mean()
-        if strict and judgment_mean not in judgment_to_have:
+        judgment_median = judgment['median_label']
+        if strict and judgment_median not in judgment_to_have:
             continue
-        elif not strict and judgment_mean not in judgment_to_have:
+        elif not strict and judgment_median not in judgment_to_have:
             continue
-
-            # print('Mean judgment:', judgment_mean)
 
         referenced_usage = judgment['identifier2'] if usage['identifier'] == judgment['identifier1'] else \
             judgment['identifier1']
 
         list_challenge['identifier' + str(random_order[index - 1])] = referenced_usage
-        list_challenge['judgment' + str(random_order[index - 1])] = str(judgment_mean)
-        local_order[referenced_usage] = judgment_mean
+        list_challenge['judgment' + str(random_order[index - 1])] = str(judgment_median)
+        local_order[referenced_usage] = judgment_median
         list_challenge['count'] += 1
 
         if strict:
-            judgment_to_have.remove(judgment_mean)
+            judgment_to_have.remove(judgment_median)
         elif index == 1:
             list_challenge['to_find'] = referenced_usage
             judgment_to_have = [1.0, 2.0, 3.0, 4.0]
@@ -238,13 +255,12 @@ def load_judgments_df_from_source_datasets():
             df = pd.read_csv(p, delimiter='\t', quoting=3, na_filter=False)
             df['dataset'] = dataset
             df_judgments = pd.concat([df_judgments, df])
-    # display(df_judgments)
-    # Display a sample to validate
-    # display(df_judgments.sample(n=10))
+
     return df_judgments
 
 
-def load_and_write_uses_judgments():
+def load_and_write_uses_judgments(judgments_strict_filtered=False):
+    df_judgments = pd.DataFrame()
     for dataset in datasets:
         dataset_path = os.path.join(input_path, dataset, 'data')
         for p in Path(dataset_path).glob('*/'):
@@ -252,16 +268,24 @@ def load_and_write_uses_judgments():
             uses_file_path = os.path.join(str(p), 'uses.csv')
             judgments_file_path = os.path.join(str(p), 'judgments.csv')
 
-            lemma = os.path.basename(lemma_path)
+            lemma = os.path.basename(lemma_path).split('_')[0]
 
             uses = load_csv(uses_file_path, undesired_keys)
-            judgments = load_csv(judgments_file_path, [])
+            df = pd.read_csv(judgments_file_path, delimiter='\t', quoting=3, na_filter=False)
+            df['dataset'] = dataset
+            df_judgments = pd.concat([df_judgments, df])
+
+            judgments_df_filtered = filter_aggregated_judgments(aggregate_judgments_df(df_judgments=df_judgments),
+                                                                strict=judgments_strict_filtered)
+
+            judgments = judgments_df_filtered.groupby(['lemma']).get_group((lemma,))
 
             output_path_lemma = os.path.join(output_path, dataset, 'data', lemma)
             Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
 
-            write_csv(os.path.join(output_path_lemma, 'judgments.csv'), judgments,
-                      judgments[0].keys() if judgments else [])
+            judgments.to_csv(os.path.join(output_path_lemma, 'judgments.csv'), sep='\t', na_rep='',
+                             quoting=csv.QUOTE_NONE)
+
             write_csv(os.path.join(output_path_lemma, 'uses.csv'), uses, uses[0].keys() if uses else [])
 
 
@@ -278,23 +302,37 @@ def aggregate_judgments_df(df_judgments):
         judgments_annotator = df_judgments[df_judgments['annotator'] == annotator][
             ['identifier1', 'identifier2', 'lemma', 'dataset', 'judgment']].rename(columns={'judgment': annotator},
                                                                                    inplace=False)
-        # display(judgments_annotator)
         df_judgments_pair_vs_ann = pd.concat([df_judgments_pair_vs_ann, judgments_annotator])
 
     # Discard duplicates
-    df_judgments_pair_vs_ann_aggregated = df_judgments_pair_vs_ann.groupby(
+    df = df_judgments_pair_vs_ann.groupby(
         ['identifier1', 'identifier2']).first().reset_index()
-    return df_judgments_pair_vs_ann_aggregated
+
+    annotator_keys = [key for key in df.keys() if key.startswith('annotator')]
+    # print('Annotator keys:', annotator_keys)
+
+    df['median_label'] = df[annotator_keys].median(axis=1)
+
+    return df
 
 
-def filter_aggregated_judgments(df):
-    df_new = df.copy()
+def filter_aggregated_judgments(df, strict=False):  # ToDo agreement filter?
+    annotator_keys = [key for key in df.keys() if key.startswith('annotator')]
 
-    for i in df.index:
-        # Filter out pairs with 0 judgment
-        if 0 in df.loc[i][4:13].values:
-            df_new.drop(index=i, inplace=True)
-            # print('Dropped pair with 0 judgment', df.loc[i])
+    # Filter out '0.0' judgments
+    df_new = df.replace(np.nan, -1.0)
+    df_new.replace(0.0, np.nan, inplace=True)
+    df_new.dropna(subset=annotator_keys, how='any', inplace=True)
+    df_new.replace(-1.0, np.nan, inplace=True)
+    df_new['non_nan_count'] = df_new[annotator_keys].count(axis=1)
+
+    if strict:
+        # Drop where only 1 annotator
+        df_new = df_new[df_new['non_nan_count'] >= 2]
+
+    # remove '_nn' from lemma
+    df_new['lemma'] = df_new['lemma'].str.replace('_nn$', '', regex=True)
+    # print(df.keys())
 
     return df_new
 
@@ -312,11 +350,12 @@ def analyse_judgment_cosine_correlation_spearman(path):
     for pair in pairs:
         judgment = pair['judgment']
         judgments.append(judgment)
+        lemma = pair['lemma']
 
         cosine_similarity = pair['cosine_similarity']
         cosine_similarities.append(cosine_similarity)
 
-        data.append({'lemma': lemma, 'judgment': judgment, 'cosine_similarity': cosine_similarity})
+        data.append({'lemma': lemma, 'label': judgment, 'cosine_similarity': cosine_similarity})
 
     # Calculate spearman correlation
     spearman_correlation = stats.spearmanr(judgments, cosine_similarities, nan_policy='omit')
@@ -324,6 +363,55 @@ def analyse_judgment_cosine_correlation_spearman(path):
     # print('Spearman correlation:', spearman_correlation)
 
     file_name = lemma + '_' + str(spearman_correlation.statistic) + '_PC_Spearman.csv'
+    output_path_file = os.path.join(output_path_folder, file_name)
+    write_csv(output_path_file, data, data[0].keys())
+
+
+def analyse_pairs_challenge_mapped(path):
+    pairs = read_csv(path)
+    labels = []
+    mapped_labels = []
+    lemma = pairs[0]['lemma']
+
+    data = []
+    hits = 0
+
+    large_difference = 0
+
+    output_path_folder = output_path + '/mapped_labels_analysis/'
+    Path(output_path_folder).mkdir(parents=True, exist_ok=True)
+
+    for pair in pairs:
+        label = float(pair['judgment']).__round__()
+        labels.append(label)
+        #lemma = pair['lemma']
+
+        mapped_label = int(pair['mapped_label'])
+        #mapped_labels.append(mapped_label)
+
+        hit = label == mapped_label
+        if hit:
+            hits += 1
+
+        difference = abs(label - mapped_label)
+        if difference > 1:
+            large_difference += 1
+
+        data.append(
+            {'lemma': lemma, 'label': label, 'mapped_label': mapped_label, 'hit': hit,
+             'difference': difference})
+
+    # Calculate hit percentage
+    hit_percentage = hits / pairs.__len__()
+    data[0]['hit_percentage'] = hit_percentage
+
+    # Calculate large difference percentage
+    large_difference_percentage = large_difference / pairs.__len__()
+    data[0]['large_difference_percentage'] = large_difference_percentage
+
+    # print('Spearman correlation:', hit_percentage)
+
+    file_name = lemma + '_' + str(hit_percentage) + '_hit_percentage.csv'
     output_path_file = os.path.join(output_path_folder, file_name)
     write_csv(output_path_file, data, data[0].keys())
 
@@ -380,16 +468,20 @@ def analyse_list_challenge_ranking_spearman(filepath):
     print('Attacked list challenge generated. Save to:', output_path_file)
 
 
-generate_and_write_list_challenge()
-generate_and_write_random_challenge()
+# generate_and_write_list_challenge()
+# generate_and_write_random_challenge()
 # generate_and_write_pairs_challenge()
+generate_and_write_pairs_for_dataset('dwug_de')
 
+# load_and_write_uses_judgments(True)
 
+# analyse_judgment_cosine_correlation_spearman('data_output/attacked_pairs/attacked_pairs_abbauen.csv')
 # analyse_list_challenge_ranking_spearman(    'data_output/attacked_list_challenge/attacked_list_challenge_attack.csv')
+# analyse_pairs_challenge_mapped('data_output/attacked_pairs/attacked_pairs_attack.csv')
 
 # generate_and_print_list_challenge()
 
-# analyse_judgment_cosine_correlation_spearman('data_output/attacked_pairs/attacked_pairs_attack.csv')
+
 # generate_and_print_set_of_pairs()
 
 # write_csv('data_output/attack_pairs/pairs_attack_.csv', aggregate_judgments_df(), aggregate_judgments_df().keys())
