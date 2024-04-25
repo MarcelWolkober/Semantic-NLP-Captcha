@@ -1,14 +1,14 @@
-# Create new env ( RUN FILE AS 'source install_packages' on linux or DELETE ROW 'conda init' and run previously on Windows)
+# Create new env ( RUN FILE AS 'source install_packages' on linux or DELETE ROW 'conda init' and run init previously on Windows)
 conda init
 conda config --set auto_activate_base false
-conda create --name nlp_captcha2
+conda create --name nlp_captcha
 
 # Install pip
-conda install -n nlp_captcha2 pip
-conda install -n nlp_captcha2 git pip
+conda install -n nlp_captcha pip
+conda install -n nlp_captcha git pip
 
 
-conda activate nlp_captcha2
+conda activate nlp_captcha
 
 #Install packages
 pip install setuptools
