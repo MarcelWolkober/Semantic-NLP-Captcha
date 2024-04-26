@@ -1,9 +1,8 @@
 package com.nlpcaptcha.captcha;
 
-import com.nlpcaptcha.captcha.model.ListChallenge;
+import com.nlpcaptcha.captcha.model.ListRankingChallenge;
 import com.nlpcaptcha.captcha.model.Position;
 import com.nlpcaptcha.captcha.model.Usage;
-import org.apache.commons.lang3.StringUtils;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
@@ -11,13 +10,8 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.net.URL;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 
 import static java.util.Objects.requireNonNull;
 
@@ -41,7 +35,7 @@ public class HibernateUtil {
           .build();
 
         Metadata metadata = new MetadataSources(serviceRegistry)
-          .addAnnotatedClass(ListChallenge.class)
+          .addAnnotatedClass(ListRankingChallenge.class)
           .addAnnotatedClass(Usage.class)
           .addAnnotatedClass(Position.class)
           .buildMetadata();

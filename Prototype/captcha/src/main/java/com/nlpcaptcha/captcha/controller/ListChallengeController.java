@@ -1,9 +1,8 @@
 package com.nlpcaptcha.captcha.controller;
 
 
-import com.nlpcaptcha.captcha.model.ListChallenge;
-import com.nlpcaptcha.captcha.model.Position;
-import com.nlpcaptcha.captcha.model.Usage;
+import com.nlpcaptcha.captcha.model.ListRankingChallenge;
+import com.nlpcaptcha.captcha.repository.DataReader;
 import com.nlpcaptcha.captcha.repository.ListChallengeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,20 +19,22 @@ public class ListChallengeController {
     ListChallengeRepository listChallengeRepository;
 
     @GetMapping("/listchallenges")
-    public List<ListChallenge> getAllListChallenges() {
+    public List<ListRankingChallenge> getAllListChallenges() {
         //ResponseEntity(List<ListChallenge>)
+
+
         return listChallengeRepository.findAll();
     }
 
 
 
     @PostMapping("/addlistchallenge")
-    public ResponseEntity<ListChallenge> saveListChallenge(@RequestBody ListChallenge listChallenge) {
+    public ResponseEntity<ListRankingChallenge> saveListChallenge(@RequestBody ListRankingChallenge listRankingChallenge) {
         try {
-            ListChallenge _listChallenge = listChallengeRepository
-                    .save(new ListChallenge(listChallenge.getLemma(), listChallenge.getReferenceUsage(), listChallenge.getListUsages()));
+            ListRankingChallenge _listRankingChallenge = listChallengeRepository
+                    .save(new ListRankingChallenge(listRankingChallenge.getLemma(), listRankingChallenge.getReferenceUsage(), listRankingChallenge.getListUsages()));
 
-            return new ResponseEntity<>(_listChallenge, HttpStatus.CREATED);
+            return new ResponseEntity<>(_listRankingChallenge, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }

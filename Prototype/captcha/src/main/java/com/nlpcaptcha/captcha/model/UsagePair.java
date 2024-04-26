@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 public class UsagePair {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "usage_pair_id")
     private Long id;
 
     @OneToOne(cascade = CascadeType.ALL)
@@ -15,8 +16,12 @@ public class UsagePair {
     @OneToOne(cascade = CascadeType.ALL)
     private Usage usage2;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "pair_challenge_id")
+    private PairChallenge pairChallenge;
+
     @Column(name = "label")
-    private Float label;
+    private float label;
 
     public Usage getUsage1() {
         return usage1;
@@ -49,5 +54,13 @@ public class UsagePair {
         this.usage2 = usage2;
         this.label = label;
     }
-    
+
+
+    public PairChallenge getPairChallenge() {
+        return pairChallenge;
+    }
+
+    public void setPairChallenge(PairChallenge pairChallenge) {
+        this.pairChallenge = pairChallenge;
+    }
 }

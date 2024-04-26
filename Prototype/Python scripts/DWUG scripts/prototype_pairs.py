@@ -470,8 +470,8 @@ def analyse_list_challenge_ranking_spearman(filepath):
 
 # generate_and_write_list_challenge()
 # generate_and_write_random_challenge()
-# generate_and_write_pairs_challenge()
-generate_and_write_pairs_for_dataset('dwug_de')
+generate_and_write_pairs_challenge()
+#generate_and_write_pairs_for_dataset('dwug_en')
 
 # load_and_write_uses_judgments(True)
 
