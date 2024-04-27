@@ -21,7 +21,7 @@ Path(output_path_pairs).mkdir(parents=True, exist_ok=True)
 output_path_list_challenge = 'data_output/attacked_list_challenge'
 Path(output_path_list_challenge).mkdir(parents=True, exist_ok=True)
 
-mapping_params = [0.25246081, 0.48095611, 0.68803579]
+mapping_params = [0.18143242, 0.572626, 0.77368778]
 
 
 def load_csv_file(file_path):
@@ -263,10 +263,11 @@ def mapping_co_sim_to_label_fit(list_train_data):
     # nach Krippendorff maximum iterieren mit deutsche gold daten
 
     # Initial guess for the mapping parameters
-    initial_mapping = np.array([0.24216072, 0.48696087, 0.64023089])  # #[0.25246081, 0.4095611, 0.68803579]
+    initial_mapping = [0.18143242, 0.572626, 0.77368778]
+    # #[0.25246081, 0.4095611, 0.68803579]
 
     # Labels and cosine similarities
-    labels = np.array([float(pair['label']) for pair in list_train_data])
+    labels = np.array([float(pair['judgment']) for pair in list_train_data])
     cos_sim = np.array([float(pair['cosine_similarity']) for pair in list_train_data])
 
     # Find the mapping parameters that maximize the Krippendorff's alpha coefficient
@@ -278,7 +279,7 @@ def mapping_co_sim_to_label_fit(list_train_data):
 
 
 def mapping_co_sim_to_label_predict(cos_sim):
-    mapped = np.digitize(float(cos_sim), bins=[0.24216072, 0.48696087, 0.64023089])
+    mapped = np.digitize(float(cos_sim), bins=mapping_params)
     mapped += 1
     return mapped
 
@@ -302,8 +303,9 @@ def generate_krippendorff_coefficient(pairs_mapped):
 # attack_and_write_pairs_challenges(pairs)
 # analyze_and_write_pairs_challenges(pairs)
 
-attack_and_write_pairs_challenges(load_csv_file('data_output/pairs_whole_dataset/dwug_de_pairs_challenge.csv'))
+# attack_and_write_pairs_challenges(load_csv_file('data_output/pairs_whole_dataset/dwug_de_pairs_challenge.csv'))
 
-# mapping_co_sim_to_label_fit(    load_csv_file('data_output/judgment_cosine_correlation/abbauen_0.7351388199302153_PC_Spearman.csv'))
+mapping_co_sim_to_label_fit(
+    load_csv_file('data_output/attacked_pairs/attacked_pairs_abbauen.csv'))
 
 # print( mapping_co_sim_to_label_predict(load_csv_file('data_output/attacked_pairs/attacked_pairs_attack.csv')))
