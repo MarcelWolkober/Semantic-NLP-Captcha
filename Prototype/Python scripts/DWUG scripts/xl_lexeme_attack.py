@@ -4,11 +4,12 @@ from pathlib import Path
 from WordTransformer import WordTransformer, InputExample
 from sentence_transformers import util
 import krippendorff
-from scipy.optimize import minimize
+from scipy.optimize import minimize, OptimizeResult
 import numpy as np
+from matplotlib import pyplot as plt
 
 print('loading model...')
-model = WordTransformer('pierluigic/xl-lexeme')
+model = None  # WordTransformer('pierluigic/xl-lexeme')
 print('model loaded')
 
 datasets = ['dwug_en']
@@ -21,7 +22,15 @@ Path(output_path_pairs).mkdir(parents=True, exist_ok=True)
 output_path_list_challenge = 'data_output/attacked_list_challenge'
 Path(output_path_list_challenge).mkdir(parents=True, exist_ok=True)
 
-mapping_params = [0.18143242, 0.572626, 0.77368778]
+output_path_objective_function_data = 'data_output/objective_function'
+Path(output_path_objective_function_data).mkdir(parents=True, exist_ok=True)
+
+output_path_objective_function_plot = 'data_output/objective_function_plot'
+Path(output_path_objective_function_plot).mkdir(parents=True, exist_ok=True)
+
+mapping_params = [0.32892136, 0.56140356, 0.74925642]  # [0.18143242, 0.572626, 0.77368778]
+current_dataset = 'dwug_en'
+current_mode = 'Nelder-Mead'
 
 
 def load_csv_file(file_path):
@@ -92,14 +101,20 @@ def attack_pair(pair):
     return cosine_similarity
 
 
-def attack_and_write_pairs_challenges(pairs):
+def redo_mapping_co_sim_to_label_for_file(path):
+    pairs = load_csv_file(path)
+    for pair in pairs:
+        pair['mapped_label'] = mapping_co_sim_to_label_predict(pair['cosine_similarity'])
+    write_file(path, pairs, pairs[0].keys())
+
+
+def attack_and_write_pairs_challenges(pairs, name):
     number_of_pairs = len(pairs)
     print('Generating cosine similarity for ', number_of_pairs, ' pairs ...')
     if pairs.__len__() == 0:
         return
     data = []
     count = 1
-    lemma = pairs[0]['lemma']
 
     # Initial call to print 0% progress
     # printProgressBar(0, number_of_pairs, prefix='Progress:', suffix='Complete', length=50)
@@ -108,6 +123,8 @@ def attack_and_write_pairs_challenges(pairs):
         if str(pair['context1']).__len__() > 512 or pair['context2'].__len__() > 512:
             print('Context too long, skipping pair')
             continue
+
+        lemma = pair['lemma']
 
         cosine_similarity = attack_pair(pair)
         mapped_label = mapping_co_sim_to_label_predict(cosine_similarity.item())
@@ -121,13 +138,13 @@ def attack_and_write_pairs_challenges(pairs):
 
         }
         count += 1
-        print('generating pairs', count, ' of ', number_of_pairs)
+        print('generating pair', count, ' of ', number_of_pairs)
         # printProgressBar(count, number_of_pairs, prefix='Progress:', suffix='Complete', length=50)
 
         data.append(output_file)
 
-    write_file(os.path.join(output_path_pairs, 'attacked_pairs_' + lemma + '.csv'), data, data[0].keys())
-    print('Cosine similarity generated. Save to:', output_path_pairs + '/attacked_pairs_' + lemma + '.csv')
+    write_file(os.path.join(output_path_pairs, 'attacked_pairs_' + name + '.csv'), data, data[0].keys())
+    print('Cosine similarity generated. Save to:', output_path_pairs + '/attacked_pairs_' + name + '.csv')
 
 
 def attack_random_challenge(challenge, uses, value):
@@ -242,7 +259,19 @@ def write_list_challenges_for_datasets():
             attack_and_write_list_challenges(list_challenges, uses)
 
 
-def to_minimize(mapping, labels, cos_sim):
+def callback(intermediate_result: OptimizeResult):
+    global current_mode
+
+    path = os.path.join(output_path_objective_function_data, current_mode + '_objective_function_fitting_data.csv')
+    with open(path, "a", encoding="utf-8") as f:
+        line = '\t'.join([str(v) for v in [intermediate_result.x.tolist(), -1 * intermediate_result.fun]])
+        f.write(line)
+        f.write('\n')
+
+    #    print('Current mapping:', intermediate_result.x, 'Value of the objective function:', -1 * intermediate_result.fun,          'Method: Nelder-Mead')
+
+
+def objective_function_to_minimize(mapping, labels, cos_sim):
     # Sort the mapping parameters
     mapping_sorted = np.sort(mapping)
 
@@ -258,24 +287,47 @@ def to_minimize(mapping, labels, cos_sim):
     return -alpha
 
 
-# liste mit label und cos_sim
-def mapping_co_sim_to_label_fit(list_train_data):
-    # nach Krippendorff maximum iterieren mit deutsche gold daten
+# Minimizes krippendorff alpha with mapping params as input
+def mapping_co_sim_to_label_fit(list_train_data, method='Nelder-Mead', initial_mapping=None):
+    if initial_mapping is None:
+        initial_mapping = [0.25, 0.5, 0.75]
+    global current_mode
+    current_mode = method
+
+    # Save minimization data for plotting
+    path = os.path.join(output_path_objective_function_data, method + '_objective_function_fitting_data.csv')
+    with open(path, "w", encoding="utf-8") as f:
+        header = '\t'.join(['current_mapping', 'objective_function_value'])
+        f.write(header)
+        f.write('\n')
 
     # Initial guess for the mapping parameters
-    initial_mapping = [0.18143242, 0.572626, 0.77368778]
-    # #[0.25246081, 0.4095611, 0.68803579]
+    # initial_mapping =
 
     # Labels and cosine similarities
     labels = np.array([float(pair['judgment']) for pair in list_train_data])
     cos_sim = np.array([float(pair['cosine_similarity']) for pair in list_train_data])
 
     # Find the mapping parameters that maximize the Krippendorff's alpha coefficient
-    result = minimize(to_minimize, initial_mapping, args=(labels, cos_sim), method='Nelder-Mead')
+    result = minimize(objective_function_to_minimize, initial_mapping, args=(labels, cos_sim), method=method,
+                      callback=callback)
+    # todo sanity checks
 
+    initial_mapping_str = '_'.join([str(value) for value in initial_mapping])
+    new_path = os.path.join(output_path_objective_function_data,
+                            method + '_' + initial_mapping_str + '_objective_function_fitting_data.csv')
+    try:
+        os.rename(path, new_path)
+    except FileExistsError:
+        os.remove(new_path)
+        os.rename(path, new_path)
+
+    global mapping_params
     mapping_params = np.sort(result.x)
     # Print the optimal mapping parameters
-    print('Optimal mapping parameters:', result.x)
+    print('Minimization successful:', result.success, 'with method:', method, 'and initial mapping:', initial_mapping)
+    print('Optimal mapping parameters:', result.x, 'with value of the objective function:', -1 * result.fun)
+    print(' ')
 
 
 def mapping_co_sim_to_label_predict(cos_sim):
@@ -295,7 +347,60 @@ def generate_krippendorff_coefficient(pairs_mapped):
     return krippendorff_coefficient
 
 
-# generate_krippendorff_coefficient(load_csv_file('data_output/attacked_pairs/attacked_pairs_attack.csv'))
+def test_different_methods_and_init_mappings():
+    mappings = [[0.32892136, 0.56140356, 0.74925642], [0.18143242, 0.572626, 0.77368778], [0.25, 0.5, 0.75],
+                [0.25246081, 0.4095611, 0.68803579], [0.1, 0.5, 0.9], [0.1, 0.3, 0.7], [0.2, 0.4, 0.8]]
+    for i in range(1, 10):
+        d = 0.1 * i
+        temp_mapping = [d, d + (d / (2 * 9)), d + (d / 9)]
+        mappings.append(temp_mapping)
+    print(mappings)
+    for method in ['Nelder-Mead', 'Powell']:
+        for mapping in mappings:
+            try:
+                mapping_co_sim_to_label_fit(load_csv_file('data_output/attacked_pairs/attacked_pairs_dwug_de.csv'),
+                                            method=method, initial_mapping=mapping)
+            except Exception:
+                print('Error in method:', method, 'with mapping:', mapping)
+                continue
+
+
+def plot_objective_function_values(mapping_params, function_values, name):
+    plt.plot(mapping_params, function_values)
+    plt.xlabel('Mapping parameters')
+    plt.ylabel('Objective function value')
+    plt.title('Objective function value for different mapping parameters')
+    plt.savefig(os.path.join(output_path_objective_function_plot, name + '_plot.png'))
+    plt.close()
+
+
+def plot_all(path):
+    file_names = os.listdir(path)
+    for file_name in file_names:
+        if file_name.__contains__('objective_function_fitting'):
+            data = load_csv_file(os.path.join(path, file_name))
+            file_name = file_name.replace('.csv', '')
+            mapping_params = [[float(e) for e in
+                               mapping['current_mapping'].removeprefix('[').removesuffix(']').replace(' ', '').split(
+                                   ',')] for mapping in data]
+            mapping_params_index_1 = [mapping[0] for mapping in mapping_params]
+            mapping_params_index_2 = [mapping[1] for mapping in mapping_params]
+            mapping_params_index_3 = [mapping[2] for mapping in mapping_params]
+
+            mapping_params_strings = [mapping['current_mapping'] for mapping in data]
+            function_values = [float(e['objective_function_value']) for e in data]
+            plot_objective_function_values(mapping_params_index_1, function_values, file_name + '_index_1')
+            plot_objective_function_values(mapping_params_index_2, function_values, file_name + '_index_2')
+            plot_objective_function_values(mapping_params_index_3, function_values, file_name + '_index_3')
+
+
+test_different_methods_and_init_mappings()
+
+# plot_all(output_path_objective_function_data)
+
+# redo_mapping_co_sim_to_label_for_file('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
+
+# generate_krippendorff_coefficient(load_csv_file('data_output/attacked_pairs/attacked_pairs_dwug_en.csv'))
 
 # write_list_challenges_for_datasets()
 
@@ -303,9 +408,9 @@ def generate_krippendorff_coefficient(pairs_mapped):
 # attack_and_write_pairs_challenges(pairs)
 # analyze_and_write_pairs_challenges(pairs)
 
-# attack_and_write_pairs_challenges(load_csv_file('data_output/pairs_whole_dataset/dwug_de_pairs_challenge.csv'))
+# attack_and_write_pairs_challenges(load_csv_file('data_output/pairs_whole_dataset/strict_dwug_de_pairs_challenge.csv'),                                  'dwug_de')
+# attack_and_write_pairs_challenges(load_csv_file('data_output/pairs_whole_dataset/strict_dwug_en_pairs_challenge.csv'),                                  'dwug_en')
 
-mapping_co_sim_to_label_fit(
-    load_csv_file('data_output/attacked_pairs/attacked_pairs_abbauen.csv'))
+#  except Exception:         print('Error in method:', method)         continue
 
 # print( mapping_co_sim_to_label_predict(load_csv_file('data_output/attacked_pairs/attacked_pairs_attack.csv')))

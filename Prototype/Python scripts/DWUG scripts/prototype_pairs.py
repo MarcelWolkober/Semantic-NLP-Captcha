@@ -51,11 +51,17 @@ def load_csv(file_path, _undesired_keys):
 
 
 def generate_pairs(uses, judgments_df_filtered):
+    if (judgments_df_filtered.empty):
+        return []
+
     pairs = []
     uses_dict = {use['identifier']: use for use in uses}
     lemma = uses[0]['lemma']
-
-    df = judgments_df_filtered.groupby(['lemma']).get_group((lemma,))
+    try:
+        df = judgments_df_filtered.groupby(['lemma']).get_group((lemma,))
+    except KeyError:
+        print('Could not find lemma in judgments:', lemma)
+        return []
 
     for i in df.index:
 
@@ -87,13 +93,16 @@ def generate_and_write_pairs_for_dataset(dataset):
     print('Generating and writing pairs for whole dataset:', dataset_path, ' ...')
 
     judgments_aggregated = aggregate_judgments_df(load_judgments_df_from_source_datasets())
-    judgments_filtered = filter_aggregated_judgments(judgments_aggregated, True)
+    judgments_filtered = filter_aggregated_judgments(judgments_aggregated, False)
     pairs = []
 
     for p in Path(dataset_path).glob('*/'):
         uses_file_path = os.path.join(str(p), 'uses.csv')
 
         pairs.extend(generate_pairs(load_csv(uses_file_path, undesired_keys), judgments_filtered))
+
+    pairs[0]['count_dropped_pairs'] = judgments_filtered['count_dropped_pairs'].iloc[0]
+    pairs[0]['count_all_pairs'] = judgments_filtered['count_all_pairs'].iloc[0]
 
     output_path_lemma = os.path.join(output_path, 'pairs_whole_dataset')
     Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
@@ -311,28 +320,37 @@ def aggregate_judgments_df(df_judgments):
     annotator_keys = [key for key in df.keys() if key.startswith('annotator')]
     # print('Annotator keys:', annotator_keys)
 
+    df['labels'] = df[annotator_keys].values.tolist()
     df['median_label'] = df[annotator_keys].median(axis=1)
 
     return df
 
 
-def filter_aggregated_judgments(df, strict=False):  # ToDo agreement filter?
+def filter_aggregated_judgments(df, strict=False):
     annotator_keys = [key for key in df.keys() if key.startswith('annotator')]
+    df_new = df.copy()
 
     # Filter out '0.0' judgments
-    df_new = df.replace(np.nan, -1.0)
-    df_new.replace(0.0, np.nan, inplace=True)
-    df_new.dropna(subset=annotator_keys, how='any', inplace=True)
-    df_new.replace(-1.0, np.nan, inplace=True)
+    df_new = df_new[~df_new['labels'].apply(lambda x: 0.0 in x)]
+
+    # Filter out disagreements
+    df_new = df_new[~df_new['median_label'].apply(lambda x: x not in [1.0, 2.0, 3.0, 4.0])]
+
     df_new['non_nan_count'] = df_new[annotator_keys].count(axis=1)
+
+    #
 
     if strict:
         # Drop where only 1 annotator
         df_new = df_new[df_new['non_nan_count'] >= 2]
 
     # remove '_nn' from lemma
-    df_new['lemma'] = df_new['lemma'].str.replace('_nn$', '', regex=True)
+    df_new['lemma'] = df_new['lemma'].apply(lambda x: x.split('_')[0])
     # print(df.keys())
+
+    # Count amount of dropped judgments
+    df_new['count_dropped_pairs'] = len(df.index) - len(df_new.index)
+    df_new['count_all_pairs'] = len(df.index)
 
     return df_new
 
@@ -384,10 +402,10 @@ def analyse_pairs_challenge_mapped(path):
     for pair in pairs:
         label = float(pair['judgment']).__round__()
         labels.append(label)
-        #lemma = pair['lemma']
+        lemma = pair['lemma']
 
         mapped_label = int(pair['mapped_label'])
-        #mapped_labels.append(mapped_label)
+        # mapped_labels.append(mapped_label)
 
         hit = label == mapped_label
         if hit:
@@ -468,16 +486,51 @@ def analyse_list_challenge_ranking_spearman(filepath):
     print('Attacked list challenge generated. Save to:', output_path_file)
 
 
+def analyze_minimization_methods_and_mappings(path):
+    file_names = os.listdir(path)
+
+    best_method_with_mapping = {
+        'method': None,
+        'initial_mapping': None,
+        'krippendorff': 0.0}
+
+    output_path_folder = output_path + '/minimization_optimization_analysis/'
+    Path(output_path_folder).mkdir(parents=True, exist_ok=True)
+
+    for file_name in file_names:
+        elements = file_name.split('_')
+        method = elements[0]
+        initial_mapping = [float(e) for e in elements[1:4]]
+        file_data = read_csv(os.path.join(path, file_name))
+        end_row_index = file_data.__len__() - 1
+        krippendorff = float(file_data[end_row_index]['objective_function_value'])
+
+        if krippendorff > best_method_with_mapping['krippendorff']:
+            best_method_with_mapping['method'] = method
+            best_method_with_mapping['initial_mapping'] = initial_mapping
+            best_method_with_mapping['krippendorff'] = krippendorff
+
+    print('Best method with mapping:', best_method_with_mapping)
+
+    if best_method_with_mapping['method'] is not None:
+        write_csv(os.path.join(output_path_folder, 'best_minimization_method.csv'), [best_method_with_mapping],
+                  best_method_with_mapping.keys())
+
+
 # generate_and_write_list_challenge()
 # generate_and_write_random_challenge()
-generate_and_write_pairs_challenge()
-#generate_and_write_pairs_for_dataset('dwug_en')
+# generate_and_write_pairs_challenge()
+# generate_and_write_pairs_for_dataset('dwug_en')
+# generate_and_write_pairs_for_dataset('dwug_de')
+
+# analyze_minimization_methods_and_mappings('data_output/objective_function/')
 
 # load_and_write_uses_judgments(True)
 
 # analyse_judgment_cosine_correlation_spearman('data_output/attacked_pairs/attacked_pairs_abbauen.csv')
 # analyse_list_challenge_ranking_spearman(    'data_output/attacked_list_challenge/attacked_list_challenge_attack.csv')
-# analyse_pairs_challenge_mapped('data_output/attacked_pairs/attacked_pairs_attack.csv')
+
+analyse_pairs_challenge_mapped('data_output/attacked_pairs/attacked_pairs_dwug_de.csv')
 
 # generate_and_print_list_challenge()
 

@@ -16,5 +16,6 @@ pip install wheel
 
 pip install numpy
 pip install pandas
+pip install matplotlib
 pip install krippendorff
 pip install git+https://github.com/pierluigic/xl-lexeme
