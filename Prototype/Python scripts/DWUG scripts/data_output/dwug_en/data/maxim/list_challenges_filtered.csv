@@ -1,0 +1,4 @@
+lemma	identifier_ref	identifier1	judgment1	identifier2	judgment2	identifier3	judgment3	identifier4	judgment4	order	to_find	count
+maxim	fic_1860_2807.txt-342-10			nf_1851_758845.txt-2313-9	3.0	fic_1969_10521.txt-571-8	1.0	nf_1984_773424.txt-310-33	4.0	['nf_1984_773424.txt-310-33', 'nf_1851_758845.txt-2313-9', 'fic_1969_10521.txt-571-8']		3
+maxim	nf_1837_772749.txt-870-3	mag_1825_553652.txt-78-3	3.0			fic_2007_33912.txt-10-4	1.0	nf_1847_748116.txt-3039-14	4.0	['nf_1847_748116.txt-3039-14', 'mag_1825_553652.txt-78-3', 'fic_2007_33912.txt-10-4']		3
+maxim	mag_1826_553699.txt-30-27	fic_1963_16356.txt-79-8	1.0	fic_1827_7269.txt-2252-64	4.0	mag_1994_425913.txt-107-45	3.0			['fic_1827_7269.txt-2252-64', 'mag_1994_425913.txt-107-45', 'fic_1963_16356.txt-79-8']		3

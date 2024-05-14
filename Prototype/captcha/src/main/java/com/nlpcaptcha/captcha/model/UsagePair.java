@@ -63,4 +63,8 @@ public class UsagePair {
     public void setPairChallenge(PairChallenge pairChallenge) {
         this.pairChallenge = pairChallenge;
     }
+
+    public Long getId() {
+        return id;
+    }
 }

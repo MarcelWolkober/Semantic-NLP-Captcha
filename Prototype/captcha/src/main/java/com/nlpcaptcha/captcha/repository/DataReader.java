@@ -1,13 +1,11 @@
 package com.nlpcaptcha.captcha.repository;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class DataReader {
     private static final String TAB_DELIMITER = "\t";

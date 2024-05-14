@@ -1,0 +1,2 @@
+reference_usage	usage1	cosine_similarity1	usage2	cosine_similarity2	usage3	cosine_similarity3	usage4	cosine_similarity4	order	given_order
+news_1997_621028.txt-9-3	mag_1850_525729.txt-74-7	0.9325157403945923	mag_1961_477867.txt-225-15	0.9659822583198547	mag_1997_428156.txt-120-28	0.921616792678833	missing_usage	0.0	['mag_1961_477867.txt-225-15', 'mag_1850_525729.txt-74-7', 'mag_1997_428156.txt-120-28']	['mag_1961_477867.txt-225-15', 'mag_1850_525729.txt-74-7', 'mag_1997_428156.txt-120-28']

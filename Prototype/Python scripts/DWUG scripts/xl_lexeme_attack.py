@@ -9,7 +9,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 print('loading model...')
-model = None  # WordTransformer('pierluigic/xl-lexeme')
+model = None #WordTransformer('pierluigic/xl-lexeme')
 print('model loaded')
 
 datasets = ['dwug_en']
@@ -147,13 +147,53 @@ def attack_and_write_pairs_challenges(pairs, name):
     print('Cosine similarity generated. Save to:', output_path_pairs + '/attacked_pairs_' + name + '.csv')
 
 
+# Currently only for testing purposes
 def attack_random_challenge(challenge, uses, value):
     list_challenge = attack_list_challenge(challenge, uses)
     usage_to_return = list_challenge['order'][4 - int(value) - 1]
     print(usage_to_return)
 
 
-def attack_list_challenge(list_challenge, uses):
+def fix_attacked_list_challenges_order(path_to_file):
+    challenges = load_csv_file(path_to_file)
+    for challenge in challenges:
+        if challenge['usage1'] == 'missing_usage':
+            temp_cosine_similarity = challenge['cosine_similarity1']
+            challenge['cosine_similarity1'] = challenge['cosine_similarity4']
+            challenge['cosine_similarity4'] = challenge['cosine_similarity3']
+            challenge['cosine_similarity3'] = challenge['cosine_similarity2']
+            challenge['cosine_similarity2'] = temp_cosine_similarity
+        if challenge['usage2'] == 'missing_usage':
+            temp_cosine_similarity = challenge['cosine_similarity2']
+            challenge['cosine_similarity2'] = challenge['cosine_similarity4']
+            challenge['cosine_similarity4'] = challenge['cosine_similarity3']
+            challenge['cosine_similarity3'] = temp_cosine_similarity
+        if challenge['usage3'] == 'missing_usage':
+            temp_cosine_similarity = challenge['cosine_similarity3']
+            challenge['cosine_similarity3'] = challenge['cosine_similarity4']
+            challenge['cosine_similarity4'] = temp_cosine_similarity
+
+
+        # Create a list of tuples (usage, cosine_similarity)
+        usage_cosine_list = [(challenge[f'usage{i}'], challenge[f'cosine_similarity{i}']) for i in range(1, 5)]
+
+        # Remove key-value pairs where the value is 'missing_usage'
+        usage_cosine_list_new = [t for t in usage_cosine_list if t.__str__().find('missing_usage') == -1]
+        # usage_cosine_list_new = [ v for t in usage_cosine_list if t[1] != '\'missing_usage\'']
+
+        # Sort the list based on cosine similarity in descending order
+        sorted_list = sorted(usage_cosine_list_new, key=lambda x: x[1], reverse=True)
+
+        # Extract the ordered usage keys
+        ordered_usages = [item[0] for item in sorted_list]
+
+        challenge['order'] = ordered_usages
+
+    save_file = str(path_to_file).replace('.csv', '_fixed.csv' )
+    write_file(save_file, challenges, challenges[0].keys())
+
+
+def attack_list_challenge(list_challenge, uses):  # TODO: Fix oder of consimilarity
     lemma = list_challenge['lemma']
     usage_missing_usage = {
         'lemma': lemma,
@@ -188,6 +228,7 @@ def attack_list_challenge(list_challenge, uses):
     count = 1
     for usage in usages:
         if usage in [None, usage_missing_usage]:
+            count += 1
             continue
 
         pair = {
@@ -233,7 +274,7 @@ def attack_and_write_list_challenges(challenges, uses):
     for list_challenge in challenges:
         print('for list_challenge ', count, ' of ', len(challenges))
         count += 1
-        attack_random_challenge(list_challenge, uses, 4.0)
+        # attack_random_challenge(list_challenge, uses, 4.0)
         ranking = attack_list_challenge(list_challenge, uses)
         data.append(ranking)
 
@@ -241,6 +282,28 @@ def attack_and_write_list_challenges(challenges, uses):
                data, data[0].keys() if data else [])
     print('Attacked list challenge generated. Save to:',
           output_path_list_challenge + '/attacked_list_challenge_' + lemma + '.csv')
+
+
+def attack_and_write_list_challenges_whole_dataset(dataset, challenges):
+    print('Analysing list challenges for dataset ', dataset, ' ...')
+    uses = []
+    dataset_path = os.path.join(input_path, dataset, 'data')
+    for p in Path(dataset_path).glob('*/'):
+        uses_file_path = os.path.join(str(p), 'uses.csv')
+        uses.append(load_csv_file(uses_file_path))
+
+    data = []
+    count = 1
+    for list_challenge in challenges:
+        print('for list_challenge ', count, ' of ', len(challenges))
+        count += 1
+        ranking = attack_list_challenge(list_challenge, uses)
+        data.append(ranking)
+
+    write_file(os.path.join(output_path_list_challenge, dataset + '_attacked_list_challenge_.csv'),
+               data, data[0].keys() if data else [])
+    print('Attacked list challenge generated. Save to:',
+          output_path_list_challenge + dataset + '_attacked_list_challenge_.csv')
 
 
 def write_list_challenges_for_datasets():
@@ -253,8 +316,12 @@ def write_list_challenges_for_datasets():
 
             lemma = os.path.basename(lemma_path)
 
-            uses = load_csv_file(uses_file_path)
-            list_challenges = load_csv_file(list_challenges_file_path)
+            try:
+                uses = load_csv_file(uses_file_path)
+                list_challenges = load_csv_file(list_challenges_file_path)
+            except FileNotFoundError:
+                print('No list challenges found for lemma:', lemma)
+                continue
 
             attack_and_write_list_challenges(list_challenges, uses)
 
@@ -344,6 +411,12 @@ def generate_krippendorff_coefficient(pairs_mapped):
                                                   level_of_measurement='ordinal')
 
     print('Krippendorff coefficient:', krippendorff_coefficient)
+    output_file = os.path.join('data_output/analysis/', current_dataset, 'krippendorff coefficient' + '.txt')
+    Path(os.path.dirname(output_file)).mkdir(parents=True, exist_ok=True)
+
+    with open(output_file, 'w', encoding="utf-8") as f:
+        f.write('Krippendorff coefficient: ' + str(krippendorff_coefficient))
+
     return krippendorff_coefficient
 
 
@@ -394,19 +467,25 @@ def plot_all(path):
             plot_objective_function_values(mapping_params_index_3, function_values, file_name + '_index_3')
 
 
-test_different_methods_and_init_mappings()
+# test_different_methods_and_init_mappings()
 
 # plot_all(output_path_objective_function_data)
 
 # redo_mapping_co_sim_to_label_for_file('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
 
-# generate_krippendorff_coefficient(load_csv_file('data_output/attacked_pairs/attacked_pairs_dwug_en.csv'))
+# generate_krippendorff_coefficient(load_csv_file('data_output/attacked_pairs/attacked_pairs_dwug_de.csv'))
 
 # write_list_challenges_for_datasets()
+fix_attacked_list_challenges_order('data_output/attacked_list_challenge/dwug_en_attacked_list_challenge.csv')
 
 # pairs = load_csv_file(use_pairs_input_path)
 # attack_and_write_pairs_challenges(pairs)
 # analyze_and_write_pairs_challenges(pairs)
+
+# list_challenges = load_csv_file('data_output/list_challenges_whole_dataset/dwug_en_list_challenges_filtered.csv')
+# attack_and_write_list_challenges_whole_dataset('dwug_en', list_challenges)
+
+# write_list_challenges_for_datasets()
 
 # attack_and_write_pairs_challenges(load_csv_file('data_output/pairs_whole_dataset/strict_dwug_de_pairs_challenge.csv'),                                  'dwug_de')
 # attack_and_write_pairs_challenges(load_csv_file('data_output/pairs_whole_dataset/strict_dwug_en_pairs_challenge.csv'),                                  'dwug_en')

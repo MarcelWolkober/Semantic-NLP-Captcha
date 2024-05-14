@@ -110,7 +110,7 @@ def generate_and_write_pairs_for_dataset(dataset):
               pairs[0].keys() if pairs else [])
 
 
-def generate_and_write_pairs_challenge():
+def generate_and_write_pairs_challenge(number_of_pairs_per_challenge=4):
     print('Generating and writing pairs for challenge ...')
 
     judgments_aggregated = aggregate_judgments_df(load_judgments_df_from_source_datasets())
@@ -132,11 +132,32 @@ def generate_and_write_pairs_challenge():
             write_csv(os.path.join(output_path_lemma, 'pairs_challenge.csv'), pairs, pairs[0].keys() if pairs else [])
 
 
-def generate_and_write_list_challenge(strict=True, to_find=4.0):
+def join_list_challenges(input_path_folder):
+    all_list_challenges = []
+
+    Path(input_path_folder).mkdir(parents=True, exist_ok=True)
+
+    output_path_folder = output_path + '/list_challenges_whole_dataset/'
+    Path(output_path_folder).mkdir(parents=True, exist_ok=True)
+
+    file_names = os.listdir(input_path_folder)
+
+    for file_name in file_names:
+        all_list_challenges.extend(read_csv(os.path.join(input_path_folder, file_name)))
+
+    write_csv(os.path.join(output_path_folder, 'dwug_en_list_challenge.csv'), all_list_challenges,
+              all_list_challenges[0].keys())
+
+
+# Strict if min 2 annotators,  to_find only used if !strict and to_find is the judgment to find in the list
+# joined if whole dataset as one file
+def generate_and_write_list_challenge(strict=True, to_find=4.0, joined=True):
     print('Generating and writing lists for challenge, strict =', strict, ' ...')
 
     judgments_aggregated = aggregate_judgments_df(load_judgments_df_from_source_datasets())
     judgments = filter_aggregated_judgments(judgments_aggregated)
+
+    whole_list_challenges = []
 
     for dataset in datasets:
         dataset_path = os.path.join(input_path, dataset, 'data')
@@ -161,18 +182,32 @@ def generate_and_write_list_challenge(strict=True, to_find=4.0):
                 print('No list challenges possible for lemma ', lemma)
                 continue
 
-            list_challenge_header = local_challenges[0].keys() if local_challenges else []
-            output_path_lemma = os.path.join(output_path, dataset, 'data', lemma)
-            file_name = 'list_challenges_filtered.csv'
-            if not strict:
-                file_name = 'random_challenges_filtered.csv'
+            if not joined:
+                list_challenge_header = local_challenges[0].keys() if local_challenges else []
+                output_path_lemma = os.path.join(output_path, dataset, 'data', lemma)
+                file_name = 'list_challenges_filtered.csv'
+                if not strict:
+                    file_name = 'random_challenges_filtered.csv'
 
-            Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
+                Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
 
-            write_csv(os.path.join(output_path_lemma, file_name), local_challenges, list_challenge_header)
+                write_csv(os.path.join(output_path_lemma, file_name), local_challenges, list_challenge_header)
+            else:
+                whole_list_challenges.extend(local_challenges)
+
+        list_challenge_header = whole_list_challenges[0].keys() if whole_list_challenges else []
+        output_path_lemma = os.path.join(output_path, 'list_challenges_whole_dataset')
+        Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
+        file_name = dataset + '_list_challenges_filtered.csv'
+        if not strict:
+            file_name = dataset + '_random_challenges_filtered.csv'
+
+        Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
+        write_csv(os.path.join(output_path_lemma, file_name), whole_list_challenges, list_challenge_header)
+        print('List challenges generated. Save to:', os.path.join(output_path_lemma, file_name))
 
 
-# Get one usage with 4 and 1 judgment for random challenge
+# Get one usage with 4 and 1 judgment for random challenge, that is when not strict
 def find_practical_reference_usages(usage, judgments_df, strict=True, to_find=4.0):
     judgment_to_have = [1.0, 2.0, 3.0, 4.0] if strict else [to_find]
     list_challenge = {
@@ -280,20 +315,20 @@ def load_and_write_uses_judgments(judgments_strict_filtered=False):
             lemma = os.path.basename(lemma_path).split('_')[0]
 
             uses = load_csv(uses_file_path, undesired_keys)
-            df = pd.read_csv(judgments_file_path, delimiter='\t', quoting=3, na_filter=False)
-            df['dataset'] = dataset
-            df_judgments = pd.concat([df_judgments, df])
-
-            judgments_df_filtered = filter_aggregated_judgments(aggregate_judgments_df(df_judgments=df_judgments),
-                                                                strict=judgments_strict_filtered)
-
-            judgments = judgments_df_filtered.groupby(['lemma']).get_group((lemma,))
+            # df = pd.read_csv(judgments_file_path, delimiter='\t', quoting=3, na_filter=False)
+            # df['dataset'] = dataset
+            # df_judgments = pd.concat([df_judgments, df])
+            #
+            # judgments_df_filtered = filter_aggregated_judgments(aggregate_judgments_df(df_judgments=df_judgments),
+            #                                                     strict=judgments_strict_filtered)
+            #
+            # judgments = judgments_df_filtered.groupby(['lemma']).get_group((lemma,))
+            #
+            # judgments.to_csv(os.path.join(output_path_lemma, 'judgments.csv'), sep='\t', na_rep='',
+            #                  quoting=csv.QUOTE_NONE)
 
             output_path_lemma = os.path.join(output_path, dataset, 'data', lemma)
             Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
-
-            judgments.to_csv(os.path.join(output_path_lemma, 'judgments.csv'), sep='\t', na_rep='',
-                             quoting=csv.QUOTE_NONE)
 
             write_csv(os.path.join(output_path_lemma, 'uses.csv'), uses, uses[0].keys() if uses else [])
 
@@ -355,7 +390,7 @@ def filter_aggregated_judgments(df, strict=False):
     return df_new
 
 
-def analyse_judgment_cosine_correlation_spearman(path):
+def analyse_judgment_cosine_correlation_spearman(path, write=True):
     pairs = read_csv(path)
     judgments = []
     cosine_similarities = []
@@ -379,13 +414,15 @@ def analyse_judgment_cosine_correlation_spearman(path):
     spearman_correlation = stats.spearmanr(judgments, cosine_similarities, nan_policy='omit')
     data[0]['spearman_correlation'] = spearman_correlation.statistic
     # print('Spearman correlation:', spearman_correlation)
+    if write:
+        file_name = lemma + '_' + str(spearman_correlation.statistic) + '_PC_Spearman.csv'
+        output_path_file = os.path.join(output_path_folder, file_name)
+        write_csv(output_path_file, data, data[0].keys())
 
-    file_name = lemma + '_' + str(spearman_correlation.statistic) + '_PC_Spearman.csv'
-    output_path_file = os.path.join(output_path_folder, file_name)
-    write_csv(output_path_file, data, data[0].keys())
+    return data
 
 
-def analyse_pairs_challenge_mapped(path):
+def analyse_pairs_challenge_mapped(path, write=True):
     pairs = read_csv(path)
     labels = []
     mapped_labels = []
@@ -429,12 +466,15 @@ def analyse_pairs_challenge_mapped(path):
 
     # print('Spearman correlation:', hit_percentage)
 
-    file_name = lemma + '_' + str(hit_percentage) + '_hit_percentage.csv'
-    output_path_file = os.path.join(output_path_folder, file_name)
-    write_csv(output_path_file, data, data[0].keys())
+    if write:
+        file_name = lemma + '_' + str(hit_percentage) + '_hit_percentage.csv'
+        output_path_file = os.path.join(output_path_folder, file_name)
+        write_csv(output_path_file, data, data[0].keys())
+
+    return data
 
 
-def analyse_list_challenge_ranking_spearman(filepath):
+def analyse_list_challenge_ranking_spearman(filepath, write=True):
     list_challenges = read_csv(filepath)
     data = []
     order_set = np.array([], dtype=int)
@@ -448,6 +488,7 @@ def analyse_list_challenge_ranking_spearman(filepath):
     output_path_folder = output_path + '/list_challenge_ranking_analysis/'
     Path(output_path_folder).mkdir(parents=True, exist_ok=True)
 
+    # per list challenge compare the order of the attacker and the true order and calculate spearman correlation
     for list_challenge in list_challenges:
         # noinspection RegExpRedundantEscape
         regex_order = re.sub(r' |\'|\s|\[|\]', '', list_challenge['order'])
@@ -470,23 +511,29 @@ def analyse_list_challenge_ranking_spearman(filepath):
 
         error_distance = np.sum(np.abs(np.subtract(given_order_list_numbers, order_list_numbers)))
 
-        # add reverse order to Set
-        order_set = np.append(order_set, order_list_numbers[::-1])
-        given_order_set = np.append(given_order_set, given_order_list_numbers[::-1])
+        # add reverse order to Set ---- old -----
+        # order_set = np.append(order_set, order_list_numbers[::-1])
+        # given_order_set = np.append(given_order_set, given_order_list_numbers[::-1])
+
+        spearman_correlation = stats.spearmanr(order_list_numbers, given_order_list_numbers).statistic
 
         data.append(
-            {'lemma': lemma, 'attacker_indexes': order_list_numbers, 'error_distance': error_distance,
+            {'lemma': lemma, 'attacker_indexes': order_list_numbers, 'spearman_correlation': spearman_correlation,
+             'error_distance': error_distance,
              'real_order': list_challenge['given_order'], 'attacker_order': list_challenge['order']})
 
-    spearman_correlation = stats.spearmanr(order_set, given_order_set)
-    data[0]['spearman_correlation'] = spearman_correlation.statistic
-    file_name = lemma + '_' + str(spearman_correlation.statistic) + '_LC_Spearman.csv'
-    output_path_file = os.path.join(output_path_folder, file_name)
-    write_csv(output_path_file, data, data[0].keys())
-    print('Attacked list challenge generated. Save to:', output_path_file)
+    # data[0]['spearman_correlation'] = spearman_correlation.statistic
+
+    if write:
+        file_name = str(filepath).split('/')[str(filepath).split('/').__len__() - 1] + '_LC_Spearman.csv'
+        output_path_file = os.path.join(output_path_folder, file_name)
+        write_csv(output_path_file, data, data[0].keys())
+        print('Attacked list challenge generated. Save to:', output_path_file)
+
+    return data
 
 
-def analyze_minimization_methods_and_mappings(path):
+def analyze_minimization_methods_and_mappings(path, write_mapping=True):
     file_names = os.listdir(path)
 
     best_method_with_mapping = {
@@ -512,13 +559,30 @@ def analyze_minimization_methods_and_mappings(path):
 
     print('Best method with mapping:', best_method_with_mapping)
 
-    if best_method_with_mapping['method'] is not None:
+    if best_method_with_mapping['method'] is not None and write_mapping:
         write_csv(os.path.join(output_path_folder, 'best_minimization_method.csv'), [best_method_with_mapping],
                   best_method_with_mapping.keys())
+    elif best_method_with_mapping['method'] is not None and not write_mapping:
+        return best_method_with_mapping
 
 
-# generate_and_write_list_challenge()
+def analyze_all():
+    analyze_minimization_methods_and_mappings('data_output/objective_function/')
+    # analyzed_list_challenge_en = analyse_list_challenge_ranking_spearman('data_output/attacked_list_challenge/', False) needs fix
+    judgment_cosine_relation = analyse_judgment_cosine_correlation_spearman(
+        'data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
+    list_challenge_ranking = analyse_list_challenge_ranking_spearman(
+        'data_output/attacked_list_challenge/dwug_en_attacked_list_challenge.csv')
+    analyse_pairs_challenge_mapped('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
+
+
+# analyze_all()
+
+# join_list_challenges()
+# generate_and_write_list_challenge(joined=True)
+
 # generate_and_write_random_challenge()
+
 # generate_and_write_pairs_challenge()
 # generate_and_write_pairs_for_dataset('dwug_en')
 # generate_and_write_pairs_for_dataset('dwug_de')
@@ -528,9 +592,8 @@ def analyze_minimization_methods_and_mappings(path):
 # load_and_write_uses_judgments(True)
 
 # analyse_judgment_cosine_correlation_spearman('data_output/attacked_pairs/attacked_pairs_abbauen.csv')
-# analyse_list_challenge_ranking_spearman(    'data_output/attacked_list_challenge/attacked_list_challenge_attack.csv')
-
-analyse_pairs_challenge_mapped('data_output/attacked_pairs/attacked_pairs_dwug_de.csv')
+analyse_list_challenge_ranking_spearman('data_output/attacked_list_challenge/dwug_en_attacked_list_challenge_fixed.csv')
+# analyse_pairs_challenge_mapped('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
 
 # generate_and_print_list_challenge()
 
