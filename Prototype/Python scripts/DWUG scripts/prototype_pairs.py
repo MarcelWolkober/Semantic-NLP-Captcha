@@ -109,8 +109,29 @@ def generate_and_write_pairs_for_dataset(dataset):
     write_csv(os.path.join(output_path_lemma, dataset + '_pairs_challenge.csv'), pairs,
               pairs[0].keys() if pairs else [])
 
+#Bundles pairs into challenges of #number_of_pairs_per_challenge pairs, TODO: maybe make challenge permutation random
+def generate_and_write_pair_challenges(path_to_pairs_file, number_of_pairs_per_challenge=4):
+    pairs = read_csv(path_to_pairs_file)
+    challenges = []
+    header = ['id', 'pair1', 'pair2', 'pair3', 'pair4']
+    for i in range(0, pairs.__len__(), number_of_pairs_per_challenge):
+        usages = pairs[i:i + number_of_pairs_per_challenge]
+        challenge = {'id': i}
+        lemma1 = usages[0]['lemma']
+        lemma_end = usages[len(usages) - 1]['lemma']
+        if not lemma1 == lemma_end:
+            continue
 
-def generate_and_write_pairs_challenge(number_of_pairs_per_challenge=4):
+        for j in range(1, len(usages)):
+            challenge['usage' + str(j)] = usages[j]
+
+        challenges.append(challenge)
+
+    write_csv(path_to_pairs_file.replace('_pairs', '_pair_challenges_' + str(number_of_pairs_per_challenge)),
+              challenges, header)
+
+
+def generate_and_write_pairs_separate():
     print('Generating and writing pairs for challenge ...')
 
     judgments_aggregated = aggregate_judgments_df(load_judgments_df_from_source_datasets())
@@ -474,14 +495,20 @@ def analyse_pairs_challenge_mapped(path, write=True):
     return data
 
 
-def analyse_list_challenge_ranking_spearman(filepath, write=True):
+def analyse_list_challenge_ranking_spearman(filepath, write=True, whole_dataset=True):
     list_challenges = read_csv(filepath)
     data = []
     order_set = np.array([], dtype=int)
     given_order_set = np.array([], dtype=int)
 
+    hits = 0
+    large_difference = 0
+    spearman_correlations = 0.0
+
     filename = os.path.basename(filepath).split('_')
-    lemma = filename[filename.__len__() - 1].split('.')[0]
+    lemma = None
+    if not whole_dataset:
+        lemma = filename[filename.__len__() - 1].split('.')[0]
 
     print('Analyzing list challenge ranking for lemma:', lemma)
 
@@ -515,14 +542,23 @@ def analyse_list_challenge_ranking_spearman(filepath, write=True):
         # order_set = np.append(order_set, order_list_numbers[::-1])
         # given_order_set = np.append(given_order_set, given_order_list_numbers[::-1])
 
-        spearman_correlation = stats.spearmanr(order_list_numbers, given_order_list_numbers).statistic
+        spearman_correlation = round(stats.spearmanr(order_list_numbers, given_order_list_numbers).statistic, 4)
+        spearman_correlations += spearman_correlation
+
+        if spearman_correlation == 1.0:
+            hits += 1
+        if spearman_correlation < 0.75:
+            large_difference += 1
 
         data.append(
-            {'lemma': lemma, 'attacker_indexes': order_list_numbers, 'spearman_correlation': spearman_correlation,
+            {'id': '', 'lemma': lemma, 'attacker_indexes': order_list_numbers,
+             'spearman_correlation': spearman_correlation,
              'error_distance': error_distance,
              'real_order': list_challenge['given_order'], 'attacker_order': list_challenge['order']})
 
-    # data[0]['spearman_correlation'] = spearman_correlation.statistic
+    data[0]['hit_percentage'] = hits / list_challenges.__len__()
+    data[0]['large_difference_percentage'] = large_difference / list_challenges.__len__()
+    data[0]['mean_spearman_correlation'] = spearman_correlations / list_challenges.__len__()
 
     if write:
         file_name = str(filepath).split('/')[str(filepath).split('/').__len__() - 1] + '_LC_Spearman.csv'
@@ -583,7 +619,10 @@ def analyze_all():
 
 # generate_and_write_random_challenge()
 
-# generate_and_write_pairs_challenge()
+
+generate_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pairs.csv')
+generate_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pairs.csv', 3)
+# generate_and_write_pairs_separate()
 # generate_and_write_pairs_for_dataset('dwug_en')
 # generate_and_write_pairs_for_dataset('dwug_de')
 
@@ -592,7 +631,7 @@ def analyze_all():
 # load_and_write_uses_judgments(True)
 
 # analyse_judgment_cosine_correlation_spearman('data_output/attacked_pairs/attacked_pairs_abbauen.csv')
-analyse_list_challenge_ranking_spearman('data_output/attacked_list_challenge/dwug_en_attacked_list_challenge_fixed.csv')
+# analyse_list_challenge_ranking_spearman('data_output/attacked_list_challenge/dwug_en_attacked_list_challenge_fixed.csv')
 # analyse_pairs_challenge_mapped('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
 
 # generate_and_print_list_challenge()

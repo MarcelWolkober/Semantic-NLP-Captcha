@@ -7,9 +7,10 @@ import krippendorff
 from scipy.optimize import minimize, OptimizeResult
 import numpy as np
 from matplotlib import pyplot as plt
+import ast
 
 print('loading model...')
-model = None #WordTransformer('pierluigic/xl-lexeme')
+model = None  # WordTransformer('pierluigic/xl-lexeme')
 print('model loaded')
 
 datasets = ['dwug_en']
@@ -108,7 +109,7 @@ def redo_mapping_co_sim_to_label_for_file(path):
     write_file(path, pairs, pairs[0].keys())
 
 
-def attack_and_write_pairs_challenges(pairs, name):
+def attack_and_write_pairs(pairs, name):
     number_of_pairs = len(pairs)
     print('Generating cosine similarity for ', number_of_pairs, ' pairs ...')
     if pairs.__len__() == 0:
@@ -173,7 +174,6 @@ def fix_attacked_list_challenges_order(path_to_file):
             challenge['cosine_similarity3'] = challenge['cosine_similarity4']
             challenge['cosine_similarity4'] = temp_cosine_similarity
 
-
         # Create a list of tuples (usage, cosine_similarity)
         usage_cosine_list = [(challenge[f'usage{i}'], challenge[f'cosine_similarity{i}']) for i in range(1, 5)]
 
@@ -189,7 +189,7 @@ def fix_attacked_list_challenges_order(path_to_file):
 
         challenge['order'] = ordered_usages
 
-    save_file = str(path_to_file).replace('.csv', '_fixed.csv' )
+    save_file = str(path_to_file).replace('.csv', '_fixed.csv')
     write_file(save_file, challenges, challenges[0].keys())
 
 
@@ -264,6 +264,98 @@ def attack_list_challenge(list_challenge, uses):  # TODO: Fix oder of consimilar
     ranking['order'] = ordered_usages
 
     return ranking
+
+
+def attack_and_write_pair_challenges(path_to_file):
+    challenges = load_csv_file(path_to_file)
+    print(f'Attacking {challenges.__len__()} pair challenges ...')
+
+    attacked_challenges = []
+
+    breaker = 0
+
+    for challenge in challenges:  # Todo: remove breaker
+        attacked_challenge = {'id': challenge['id'], 'lemma': None, 'pair1_mapped_label': None,
+                              'pair1_true_label': None, 'pair1_cosine_similarity': None, 'pair2_mapped_label': None,
+                              'pair2_true_label': None, 'pair2_cosine_similarity': None, 'pair3_mapped_label': None,
+                              'pair3_true_label': None, 'pair3_cosine_similarity': None, 'pair4_mapped_label': None,
+                              'pair4_true_label': None, 'pair4_cosine_similarity': None,
+                              'krippendorff_coefficient': None}
+
+        label_list = []
+        mapped_label_list = []
+
+        # ast for converting strings to a dictionary
+        pair1 = ast.literal_eval(challenge['pair1'])
+        pair2 = ast.literal_eval(challenge['pair2'])
+        pair3 = ast.literal_eval(challenge['pair3'])
+        pair4 = ''
+
+        attacked_challenge['lemma'] = pair1['lemma']
+
+        pair1_cosine_similarity = attack_pair(pair1).item()
+        pair2_cosine_similarity = attack_pair(pair2).item()
+        pair3_cosine_similarity = attack_pair(pair3).item()
+        pair4_cosine_similarity = None
+
+        pair1_mapped_label = mapping_co_sim_to_label_predict(pair1_cosine_similarity)
+        pair2_mapped_label = mapping_co_sim_to_label_predict(pair2_cosine_similarity)
+        pair3_mapped_label = mapping_co_sim_to_label_predict(pair3_cosine_similarity)
+        pair4_mapped_label = None
+
+        mapped_label_list.append(float(pair1_mapped_label))
+        mapped_label_list.append(float(pair2_mapped_label))
+        mapped_label_list.append(float(pair3_mapped_label))
+
+        label_list.append(float(pair1['judgment']))
+        label_list.append(float(pair2['judgment']))
+        label_list.append(float(pair3['judgment']))
+
+        try:
+            pair4 = ast.literal_eval(challenge['pair4'])
+            pair4_cosine_similarity = attack_pair(pair4).item()
+            pair4_mapped_label = mapping_co_sim_to_label_predict(pair4_cosine_similarity)
+
+            mapped_label_list.append(float(pair4_mapped_label))
+
+            label_list.append(float(pair4['judgment']))
+
+            attacked_challenge['pair4_true_label'] = pair4['judgment']
+
+        except ValueError or KeyError:
+            pass
+
+        attacked_challenge['pair1_mapped_label'] = pair1_mapped_label
+        attacked_challenge['pair1_true_label'] = pair1['judgment']
+        attacked_challenge['pair1_cosine_similarity'] = pair1_cosine_similarity
+        attacked_challenge['pair2_mapped_label'] = pair2_mapped_label
+        attacked_challenge['pair2_true_label'] = pair2['judgment']
+        attacked_challenge['pair2_cosine_similarity'] = pair2_cosine_similarity
+        attacked_challenge['pair3_mapped_label'] = pair3_mapped_label
+        attacked_challenge['pair3_true_label'] = pair3['judgment']
+        attacked_challenge['pair3_cosine_similarity'] = pair3_cosine_similarity
+        attacked_challenge['pair4_mapped_label'] = pair4_mapped_label
+        attacked_challenge['pair4_cosine_similarity'] = pair4_cosine_similarity
+
+        if len(np.unique(label_list)) > 1 and len(np.unique(mapped_label_list)) > 1:
+            attacked_challenge['krippendorff_coefficient'] = krippendorff.alpha(
+                reliability_data=np.array([label_list, mapped_label_list]), level_of_measurement='ordinal')
+        else:
+            attacked_challenge['krippendorff_coefficient'] = 1.0
+        print(attacked_challenge)
+
+        attacked_challenges.append(attacked_challenge)
+
+        breaker += 1
+        if breaker == 10:
+            break
+
+    output_folder = os.path.join('data_output/', 'attacked_pair_challenges')
+    Path(output_folder).mkdir(parents=True, exist_ok=True)
+
+    file_name = str(path_to_file).split('/')[-1].replace('.csv', '_attacked.csv')
+
+    write_file(os.path.join(output_folder, file_name), attacked_challenges, attacked_challenges[0].keys())
 
 
 def attack_and_write_list_challenges(challenges, uses):
@@ -438,11 +530,11 @@ def test_different_methods_and_init_mappings():
                 continue
 
 
-def plot_objective_function_values(mapping_params, function_values, name):
-    plt.plot(mapping_params, function_values)
+def plot_objective_function_values(mapping_params, function_values, name, index):
+    plt.scatter(mapping_params, function_values)
     plt.xlabel('Mapping parameters')
-    plt.ylabel('Objective function value')
-    plt.title('Objective function value for different mapping parameters')
+    plt.ylabel('Krippendorff alpha value')
+    plt.title('Objective function value for different mapping parameters: ' + index)
     plt.savefig(os.path.join(output_path_objective_function_plot, name + '_plot.png'))
     plt.close()
 
@@ -460,35 +552,41 @@ def plot_all(path):
             mapping_params_index_2 = [mapping[1] for mapping in mapping_params]
             mapping_params_index_3 = [mapping[2] for mapping in mapping_params]
 
-            mapping_params_strings = [mapping['current_mapping'] for mapping in data]
             function_values = [float(e['objective_function_value']) for e in data]
-            plot_objective_function_values(mapping_params_index_1, function_values, file_name + '_index_1')
-            plot_objective_function_values(mapping_params_index_2, function_values, file_name + '_index_2')
-            plot_objective_function_values(mapping_params_index_3, function_values, file_name + '_index_3')
+
+            # # Determine the global minimum and maximum x-values
+            # global_x_min = min(np.min(mapping_params_index_1), np.min(mapping_params_index_1), np.min(mapping_params_index_1))
+            # global_x_max = max(np.max(mapping_params_index_1), np.max(mapping_params_index_1), np.max(mapping_params_index_1))
+            #
+            # step_size = 0.01
+
+            plot_objective_function_values(mapping_params_index_1, function_values, file_name + '_index_1', 'index_1')
+            plot_objective_function_values(mapping_params_index_2, function_values, file_name + '_index_2', 'index_2')
+            plot_objective_function_values(mapping_params_index_3, function_values, file_name + '_index_3', 'index_3')
 
 
 # test_different_methods_and_init_mappings()
 
-# plot_all(output_path_objective_function_data)
+plot_all(output_path_objective_function_data)
 
 # redo_mapping_co_sim_to_label_for_file('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
 
 # generate_krippendorff_coefficient(load_csv_file('data_output/attacked_pairs/attacked_pairs_dwug_de.csv'))
 
 # write_list_challenges_for_datasets()
-fix_attacked_list_challenges_order('data_output/attacked_list_challenge/dwug_en_attacked_list_challenge.csv')
+# fix_attacked_list_challenges_order('data_output/attacked_list_challenge/dwug_en_attacked_list_challenge.csv')
 
 # pairs = load_csv_file(use_pairs_input_path)
-# attack_and_write_pairs_challenges(pairs)
-# analyze_and_write_pairs_challenges(pairs)
+
+# attack_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pair_challenges_4.csv')
 
 # list_challenges = load_csv_file('data_output/list_challenges_whole_dataset/dwug_en_list_challenges_filtered.csv')
 # attack_and_write_list_challenges_whole_dataset('dwug_en', list_challenges)
 
 # write_list_challenges_for_datasets()
 
-# attack_and_write_pairs_challenges(load_csv_file('data_output/pairs_whole_dataset/strict_dwug_de_pairs_challenge.csv'),                                  'dwug_de')
-# attack_and_write_pairs_challenges(load_csv_file('data_output/pairs_whole_dataset/strict_dwug_en_pairs_challenge.csv'),                                  'dwug_en')
+# attack_and_write_pairs(load_csv_file('data_output/pairs_whole_dataset/strict_dwug_de_pairs_challenge.csv'),                                  'dwug_de')
+# attack_and_write_pairs(load_csv_file('data_output/pairs_whole_dataset/strict_dwug_en_pairs_challenge.csv'),                                  'dwug_en')
 
 #  except Exception:         print('Error in method:', method)         continue
 
