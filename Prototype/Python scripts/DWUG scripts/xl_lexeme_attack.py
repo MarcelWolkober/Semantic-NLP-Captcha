@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 import ast
 
 print('loading model...')
-model = None  # WordTransformer('pierluigic/xl-lexeme')
+model = WordTransformer('pierluigic/xl-lexeme')
 print('model loaded')
 
 datasets = ['dwug_en']
@@ -285,11 +285,15 @@ def attack_and_write_pair_challenges(path_to_file):
         label_list = []
         mapped_label_list = []
 
-        # ast for converting strings to a dictionary
-        pair1 = ast.literal_eval(challenge['pair1'])
-        pair2 = ast.literal_eval(challenge['pair2'])
-        pair3 = ast.literal_eval(challenge['pair3'])
-        pair4 = ''
+        try:
+
+            # ast for converting strings to a dictionary
+            pair1 = ast.literal_eval(challenge['pair1'])
+            pair2 = ast.literal_eval(challenge['pair2'])
+            pair3 = ast.literal_eval(challenge['pair3'])
+            pair4 = ''
+        except ValueError:
+            continue
 
         attacked_challenge['lemma'] = pair1['lemma']
 
@@ -337,18 +341,19 @@ def attack_and_write_pair_challenges(path_to_file):
         attacked_challenge['pair4_mapped_label'] = pair4_mapped_label
         attacked_challenge['pair4_cosine_similarity'] = pair4_cosine_similarity
 
-        if len(np.unique(label_list)) > 1 and len(np.unique(mapped_label_list)) > 1:
+        if len(np.unique(label_list)) > 1 or len(np.unique(mapped_label_list)) > 1:
             attacked_challenge['krippendorff_coefficient'] = krippendorff.alpha(
                 reliability_data=np.array([label_list, mapped_label_list]), level_of_measurement='ordinal')
         else:
             attacked_challenge['krippendorff_coefficient'] = 1.0
-        print(attacked_challenge)
+        breaker += 1
+        print('Attacking pair challenge ' + str(breaker) + ' of ' + str(len(challenges)))
 
         attacked_challenges.append(attacked_challenge)
 
-        breaker += 1
-        if breaker == 10:
-            break
+
+        # if breaker == 10:
+        #     break
 
     output_folder = os.path.join('data_output/', 'attacked_pair_challenges')
     Path(output_folder).mkdir(parents=True, exist_ok=True)
@@ -567,7 +572,7 @@ def plot_all(path):
 
 # test_different_methods_and_init_mappings()
 
-plot_all(output_path_objective_function_data)
+# plot_all(output_path_objective_function_data)
 
 # redo_mapping_co_sim_to_label_for_file('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
 
@@ -578,7 +583,8 @@ plot_all(output_path_objective_function_data)
 
 # pairs = load_csv_file(use_pairs_input_path)
 
-# attack_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pair_challenges_4.csv')
+attack_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pair_challenges_4.csv')
+attack_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pair_challenges_3.csv')
 
 # list_challenges = load_csv_file('data_output/list_challenges_whole_dataset/dwug_en_list_challenges_filtered.csv')
 # attack_and_write_list_challenges_whole_dataset('dwug_en', list_challenges)

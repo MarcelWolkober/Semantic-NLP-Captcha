@@ -109,22 +109,27 @@ def generate_and_write_pairs_for_dataset(dataset):
     write_csv(os.path.join(output_path_lemma, dataset + '_pairs_challenge.csv'), pairs,
               pairs[0].keys() if pairs else [])
 
+
 #Bundles pairs into challenges of #number_of_pairs_per_challenge pairs, TODO: maybe make challenge permutation random
 def generate_and_write_pair_challenges(path_to_pairs_file, number_of_pairs_per_challenge=4):
     pairs = read_csv(path_to_pairs_file)
     challenges = []
     header = ['id', 'pair1', 'pair2', 'pair3', 'pair4']
     for i in range(0, pairs.__len__(), number_of_pairs_per_challenge):
-        usages = pairs[i:i + number_of_pairs_per_challenge]
-        challenge = {'id': i}
-        lemma1 = usages[0]['lemma']
-        lemma_end = usages[len(usages) - 1]['lemma']
+        challenge_pairs = pairs[i:i + number_of_pairs_per_challenge]
+        challenge = {'string_id': i}
+        lemma1 = challenge_pairs[0]['lemma']
+        lemma_end = challenge_pairs[len(challenge_pairs) - 1]['lemma']
         if not lemma1 == lemma_end:
             continue
+        string_id = ''
+        for j in range(1, len(challenge_pairs) + 1):
+            local_pair = challenge_pairs[j - 1]
+            challenge['usage' + str(j)] = local_pair
 
-        for j in range(1, len(usages)):
-            challenge['usage' + str(j)] = usages[j]
+            string_id += local_pair['identifier1'] + '-' + local_pair['identifier2'] + '|'
 
+        challenge['string_id'] = string_id
         challenges.append(challenge)
 
     write_csv(path_to_pairs_file.replace('_pairs', '_pair_challenges_' + str(number_of_pairs_per_challenge)),
