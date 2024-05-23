@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 import ast
 
 print('loading model...')
-model = WordTransformer('pierluigic/xl-lexeme')
+model = None  # WordTransformer('pierluigic/xl-lexeme')
 print('model loaded')
 
 datasets = ['dwug_en']
@@ -193,7 +193,7 @@ def fix_attacked_list_challenges_order(path_to_file):
     write_file(save_file, challenges, challenges[0].keys())
 
 
-def attack_list_challenge(list_challenge, uses):  # TODO: Fix oder of consimilarity
+def attack_list_challenge(list_challenge, uses):
     lemma = list_challenge['lemma']
     usage_missing_usage = {
         'lemma': lemma,
@@ -274,7 +274,7 @@ def attack_and_write_pair_challenges(path_to_file):
 
     breaker = 0
 
-    for challenge in challenges:  # Todo: remove breaker
+    for challenge in challenges:
         attacked_challenge = {'id': challenge['id'], 'lemma': None, 'pair1_mapped_label': None,
                               'pair1_true_label': None, 'pair1_cosine_similarity': None, 'pair2_mapped_label': None,
                               'pair2_true_label': None, 'pair2_cosine_similarity': None, 'pair3_mapped_label': None,
@@ -286,7 +286,6 @@ def attack_and_write_pair_challenges(path_to_file):
         mapped_label_list = []
 
         try:
-
             # ast for converting strings to a dictionary
             pair1 = ast.literal_eval(challenge['pair1'])
             pair2 = ast.literal_eval(challenge['pair2'])
@@ -324,19 +323,19 @@ def attack_and_write_pair_challenges(path_to_file):
 
             label_list.append(float(pair4['judgment']))
 
-            attacked_challenge['pair4_true_label'] = pair4['judgment']
+            attacked_challenge['pair4_true_label'] = int(float(pair4['judgment']))
 
         except ValueError or KeyError:
             pass
 
         attacked_challenge['pair1_mapped_label'] = pair1_mapped_label
-        attacked_challenge['pair1_true_label'] = pair1['judgment']
+        attacked_challenge['pair1_true_label'] = int(float(pair1['judgment']))
         attacked_challenge['pair1_cosine_similarity'] = pair1_cosine_similarity
         attacked_challenge['pair2_mapped_label'] = pair2_mapped_label
-        attacked_challenge['pair2_true_label'] = pair2['judgment']
+        attacked_challenge['pair2_true_label'] = int(float(pair2['judgment']))
         attacked_challenge['pair2_cosine_similarity'] = pair2_cosine_similarity
         attacked_challenge['pair3_mapped_label'] = pair3_mapped_label
-        attacked_challenge['pair3_true_label'] = pair3['judgment']
+        attacked_challenge['pair3_true_label'] = int(float(pair3['judgment']))
         attacked_challenge['pair3_cosine_similarity'] = pair3_cosine_similarity
         attacked_challenge['pair4_mapped_label'] = pair4_mapped_label
         attacked_challenge['pair4_cosine_similarity'] = pair4_cosine_similarity
@@ -351,7 +350,6 @@ def attack_and_write_pair_challenges(path_to_file):
 
         attacked_challenges.append(attacked_challenge)
 
-
         # if breaker == 10:
         #     break
 
@@ -361,6 +359,49 @@ def attack_and_write_pair_challenges(path_to_file):
     file_name = str(path_to_file).split('/')[-1].replace('.csv', '_attacked.csv')
 
     write_file(os.path.join(output_folder, file_name), attacked_challenges, attacked_challenges[0].keys())
+
+
+def fix_attacked_pair_challenges_mapped_labels(path_to_file):
+    challenges = load_csv_file(path_to_file)
+    for challenge in challenges:
+        label_list = []
+        mapped_label_list = []
+
+        label_list.append(float(challenge['pair1_true_label']))
+        label_list.append(float(challenge['pair2_true_label']))
+        label_list.append(float(challenge['pair3_true_label']))
+        mapped_label4 = challenge['pair4_mapped_label']
+
+        challenge['pair1_true_label'] = int(float(challenge['pair1_true_label']))
+        challenge['pair2_true_label'] = int(float(challenge['pair2_true_label']))
+        challenge['pair3_true_label'] = int(float(challenge['pair3_true_label']))
+
+
+        challenge['pair1_mapped_label'] = mapping_co_sim_to_label_predict(float(challenge['pair1_cosine_similarity']))
+        challenge['pair2_mapped_label'] = mapping_co_sim_to_label_predict(float(challenge['pair2_cosine_similarity']))
+        challenge['pair3_mapped_label'] = mapping_co_sim_to_label_predict(float(challenge['pair3_cosine_similarity']))
+
+        if mapped_label4 is not None and mapped_label4 != '':
+            label_list.append(float(challenge['pair4_true_label']))
+            challenge['pair4_mapped_label'] = mapping_co_sim_to_label_predict(
+                float(challenge['pair4_cosine_similarity']))
+            mapped_label_list.append(float(challenge['pair4_mapped_label']))
+            challenge['pair4_true_label'] = int(float(challenge['pair4_true_label']))
+
+
+        mapped_label_list.append(float(challenge['pair1_mapped_label']))
+        mapped_label_list.append(float(challenge['pair2_mapped_label']))
+        mapped_label_list.append(float(challenge['pair3_mapped_label']))
+
+        if len(np.unique(label_list)) > 1 or len(np.unique(mapped_label_list)) > 1:
+            challenge['krippendorff_coefficient'] = krippendorff.alpha(
+                reliability_data=np.array([label_list, mapped_label_list]), level_of_measurement='ordinal')
+        else:
+            challenge['krippendorff_coefficient'] = 1.0
+
+    file_name = str(path_to_file).replace('.csv', '_fixed.csv')
+
+    write_file( file_name, challenges, challenges[0].keys())
 
 
 def attack_and_write_list_challenges(challenges, uses):
@@ -495,24 +536,23 @@ def mapping_co_sim_to_label_fit(list_train_data, method='Nelder-Mead', initial_m
 
 
 def mapping_co_sim_to_label_predict(cos_sim):
-    mapped = np.digitize(float(cos_sim), bins=mapping_params)
+    mapped = np.digitize(float(cos_sim), bins=[0.32892136, 0.56140356, 0.74925642])
     mapped += 1
     return mapped
 
 
-def generate_krippendorff_coefficient(pairs_mapped):
-    labels = [float(pair['judgment']) for pair in pairs_mapped]
-    mapped_labels = [float(pair['mapped_label']) for pair in pairs_mapped]
-
-    krippendorff_coefficient = krippendorff.alpha(reliability_data=[labels, mapped_labels],
+def generate_krippendorff_coefficient(data_list1, data_list2, write_to_file=False):
+    krippendorff_coefficient = krippendorff.alpha(reliability_data=[data_list1, data_list2],
                                                   level_of_measurement='ordinal')
 
     print('Krippendorff coefficient:', krippendorff_coefficient)
-    output_file = os.path.join('data_output/analysis/', current_dataset, 'krippendorff coefficient' + '.txt')
-    Path(os.path.dirname(output_file)).mkdir(parents=True, exist_ok=True)
 
-    with open(output_file, 'w', encoding="utf-8") as f:
-        f.write('Krippendorff coefficient: ' + str(krippendorff_coefficient))
+    if write_to_file:
+        output_file = os.path.join('data_output/analysis/', current_dataset, 'krippendorff coefficient' + '.txt')
+        Path(os.path.dirname(output_file)).mkdir(parents=True, exist_ok=True)
+
+        with open(output_file, 'w', encoding="utf-8") as f:
+            f.write('Krippendorff coefficient: ' + str(krippendorff_coefficient))
 
     return krippendorff_coefficient
 
@@ -569,22 +609,24 @@ def plot_all(path):
             plot_objective_function_values(mapping_params_index_2, function_values, file_name + '_index_2', 'index_2')
             plot_objective_function_values(mapping_params_index_3, function_values, file_name + '_index_3', 'index_3')
 
-
 # test_different_methods_and_init_mappings()
 
 # plot_all(output_path_objective_function_data)
 
 # redo_mapping_co_sim_to_label_for_file('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
 
-# generate_krippendorff_coefficient(load_csv_file('data_output/attacked_pairs/attacked_pairs_dwug_de.csv'))
+# generate_krippendorff_coefficient([4,2,3,2], [4,3,4,3])
 
 # write_list_challenges_for_datasets()
 # fix_attacked_list_challenges_order('data_output/attacked_list_challenge/dwug_en_attacked_list_challenge.csv')
 
 # pairs = load_csv_file(use_pairs_input_path)
 
-attack_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pair_challenges_4.csv')
-attack_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pair_challenges_3.csv')
+# attack_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pair_challenges_4.csv')
+# attack_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pair_challenges_3.csv')
+
+fix_attacked_pair_challenges_mapped_labels('data_output/attacked_pair_challenges/dwug_en_pair_challenges_4_attacked.csv')
+fix_attacked_pair_challenges_mapped_labels('data_output/attacked_pair_challenges/dwug_en_pair_challenges_3_attacked.csv')
 
 # list_challenges = load_csv_file('data_output/list_challenges_whole_dataset/dwug_en_list_challenges_filtered.csv')
 # attack_and_write_list_challenges_whole_dataset('dwug_en', list_challenges)

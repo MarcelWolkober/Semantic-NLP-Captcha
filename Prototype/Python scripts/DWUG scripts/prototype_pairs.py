@@ -110,7 +110,7 @@ def generate_and_write_pairs_for_dataset(dataset):
               pairs[0].keys() if pairs else [])
 
 
-#Bundles pairs into challenges of #number_of_pairs_per_challenge pairs, TODO: maybe make challenge permutation random
+# Bundles pairs into challenges of #number_of_pairs_per_challenge pairs, TODO: maybe make challenge permutation random
 def generate_and_write_pair_challenges(path_to_pairs_file, number_of_pairs_per_challenge=4):
     pairs = read_csv(path_to_pairs_file)
     challenges = []
@@ -448,7 +448,7 @@ def analyse_judgment_cosine_correlation_spearman(path, write=True):
     return data
 
 
-def analyse_pairs_challenge_mapped(path, write=True):
+def analyse_pairs_mapped(path, write=True):
     pairs = read_csv(path)
     labels = []
     mapped_labels = []
@@ -500,7 +500,59 @@ def analyse_pairs_challenge_mapped(path, write=True):
     return data
 
 
-def analyse_list_challenge_ranking_spearman(filepath, write=True, whole_dataset=True):
+def analyse_attacked_pair_challenges(path, write=True):
+    pair_challenges = read_csv(path)
+    data = []
+    challenges_solved_entirely = 0
+    challenges_solved_partially = 0
+    krippendorff_coefficients = 0.0
+    krippendorff_zeros = 0
+
+    for pair_challenge in pair_challenges:
+
+        # noinspection SpellCheckingInspection
+        kripp_coeff = float(pair_challenge['krippendorff_coefficient'])
+        solved_entirely = False
+        solved_partially = False
+
+        krippendorff_coefficients += abs(kripp_coeff)
+
+        if kripp_coeff == 1.0:
+            challenges_solved_entirely += 1
+            solved_entirely = True
+            solved_partially = True
+        elif abs(kripp_coeff) >= 0.8:
+            challenges_solved_partially += 1
+            solved_partially = True
+        elif kripp_coeff == 0.0:
+            krippendorff_zeros += 1
+
+        data.append({'id': pair_challenge['id'], 'krippendorff_coefficient': kripp_coeff,
+                     'solved_entirely': solved_entirely, 'solved_partially': solved_partially})
+
+    percentage_solved_entirely = challenges_solved_entirely / pair_challenges.__len__()
+    percentage_solved_partially = challenges_solved_partially / pair_challenges.__len__()
+    mean_krippendorff_coefficient = krippendorff_coefficients / pair_challenges.__len__()
+
+    data[0]['percentage_solved_entirely'] = percentage_solved_entirely
+    data[0]['percentage_solved_partially'] = percentage_solved_partially
+    data[0]['mean_krippendorff_coefficient'] = mean_krippendorff_coefficient
+    data[0]['number_of_krippendorff_zeros'] = krippendorff_zeros
+    data[0]['number_of_challenges'] = pair_challenges.__len__()
+
+
+    if write:
+        output_path_folder = output_path + '/attacked_pair_challenges_analysis/'
+        Path(output_path_folder).mkdir(parents=True, exist_ok=True)
+
+        file_name = str(path).split('/')[str(path).split('/').__len__() - 1].replace('.csv', '_analysed.csv')
+        output_path_file = os.path.join(output_path_folder, file_name)
+        write_csv(output_path_file, data, data[0].keys())
+        print('Attacked list challenge generated. Save to:', output_path_file)
+
+    return data
+
+def analyse_attacked_list_challenges(filepath, write=True, whole_dataset=True):
     list_challenges = read_csv(filepath)
     data = []
     order_set = np.array([], dtype=int)
@@ -515,10 +567,9 @@ def analyse_list_challenge_ranking_spearman(filepath, write=True, whole_dataset=
     if not whole_dataset:
         lemma = filename[filename.__len__() - 1].split('.')[0]
 
-    print('Analyzing list challenge ranking for lemma:', lemma)
+    print('Analysing list challenge ranking for :', lemma)
 
-    output_path_folder = output_path + '/list_challenge_ranking_analysis/'
-    Path(output_path_folder).mkdir(parents=True, exist_ok=True)
+
 
     # per list challenge compare the order of the attacker and the true order and calculate spearman correlation
     for list_challenge in list_challenges:
@@ -543,7 +594,8 @@ def analyse_list_challenge_ranking_spearman(filepath, write=True, whole_dataset=
 
         error_distance = np.sum(np.abs(np.subtract(given_order_list_numbers, order_list_numbers)))
 
-        # add reverse order to Set ---- old -----
+        #  ---- old -----
+        # add reverse order to Set
         # order_set = np.append(order_set, order_list_numbers[::-1])
         # given_order_set = np.append(given_order_set, given_order_list_numbers[::-1])
 
@@ -555,8 +607,16 @@ def analyse_list_challenge_ranking_spearman(filepath, write=True, whole_dataset=
         if spearman_correlation < 0.75:
             large_difference += 1
 
+        id = list_challenge['reference_usage'] + '|' + list_challenge['usage1'] + '|' + list_challenge['usage2'] + '|' + \
+             list_challenge['usage3'] + '|' + list_challenge['usage4']
+
+        try:
+            lemma = list_challenge['lemma']
+        except KeyError:
+            pass
+
         data.append(
-            {'id': '', 'lemma': lemma, 'attacker_indexes': order_list_numbers,
+            {'id': id, 'lemma': lemma, 'attacker_indexes': order_list_numbers,
              'spearman_correlation': spearman_correlation,
              'error_distance': error_distance,
              'real_order': list_challenge['given_order'], 'attacker_order': list_challenge['order']})
@@ -566,7 +626,10 @@ def analyse_list_challenge_ranking_spearman(filepath, write=True, whole_dataset=
     data[0]['mean_spearman_correlation'] = spearman_correlations / list_challenges.__len__()
 
     if write:
-        file_name = str(filepath).split('/')[str(filepath).split('/').__len__() - 1] + '_LC_Spearman.csv'
+        output_path_folder = output_path + '/attacked_list_challenge_analysis/'
+        Path(output_path_folder).mkdir(parents=True, exist_ok=True)
+
+        file_name = str(filepath).split('/')[str(filepath).split('/').__len__() - 1].replace('.csv', '_analysed.csv')
         output_path_file = os.path.join(output_path_folder, file_name)
         write_csv(output_path_file, data, data[0].keys())
         print('Attacked list challenge generated. Save to:', output_path_file)
@@ -574,7 +637,7 @@ def analyse_list_challenge_ranking_spearman(filepath, write=True, whole_dataset=
     return data
 
 
-def analyze_minimization_methods_and_mappings(path, write_mapping=True):
+def analyse_minimization_methods_and_mappings(path, write_mapping=True):
     file_names = os.listdir(path)
 
     best_method_with_mapping = {
@@ -607,17 +670,17 @@ def analyze_minimization_methods_and_mappings(path, write_mapping=True):
         return best_method_with_mapping
 
 
-def analyze_all():
-    analyze_minimization_methods_and_mappings('data_output/objective_function/')
-    # analyzed_list_challenge_en = analyse_list_challenge_ranking_spearman('data_output/attacked_list_challenge/', False) needs fix
+def analyse_all():
+    analyse_minimization_methods_and_mappings('data_output/objective_function/')
+    # analyzed_list_challenge_en = analyse_attacked_list_challenges('data_output/attacked_list_challenge/', False) needs fix
     judgment_cosine_relation = analyse_judgment_cosine_correlation_spearman(
         'data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
-    list_challenge_ranking = analyse_list_challenge_ranking_spearman(
+    list_challenge_ranking = analyse_attacked_list_challenges(
         'data_output/attacked_list_challenge/dwug_en_attacked_list_challenge.csv')
-    analyse_pairs_challenge_mapped('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
+    analyse_pairs_mapped('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
 
 
-# analyze_all()
+# analyse_all()
 
 # join_list_challenges()
 # generate_and_write_list_challenge(joined=True)
@@ -625,19 +688,21 @@ def analyze_all():
 # generate_and_write_random_challenge()
 
 
-generate_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pairs.csv')
-generate_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pairs.csv', 3)
+# generate_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pairs.csv')
+# generate_and_write_pair_challenges('data_output/pairs_whole_dataset/dwug_en_pairs.csv', 3)
 # generate_and_write_pairs_separate()
 # generate_and_write_pairs_for_dataset('dwug_en')
 # generate_and_write_pairs_for_dataset('dwug_de')
 
-# analyze_minimization_methods_and_mappings('data_output/objective_function/')
+# analyse_minimization_methods_and_mappings('data_output/objective_function/')
 
 # load_and_write_uses_judgments(True)
 
 # analyse_judgment_cosine_correlation_spearman('data_output/attacked_pairs/attacked_pairs_abbauen.csv')
-# analyse_list_challenge_ranking_spearman('data_output/attacked_list_challenge/dwug_en_attacked_list_challenge_fixed.csv')
-# analyse_pairs_challenge_mapped('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
+
+# analyse_attacked_list_challenges('data_output/attacked_list_challenge/dwug_en_attacked_list_challenge_fixed.csv')
+# analyse_attacked_pair_challenges('data_output/attacked_pair_challenges/dwug_en_pair_challenges_3_attacked_fixed.csv')
+# analyse_pairs_mapped('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
 
 # generate_and_print_list_challenge()
 
