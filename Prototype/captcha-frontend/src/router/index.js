@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import PairView from "@/views/PairView.vue";
 import NotFound from "@/components/NotFound.vue";
 import PairChallengeView from "@/views/PairChallengeView.vue";
+import ListChallengeView from "@/views/ListChallengeView.vue";
 
 const routes = [
   {
@@ -21,7 +22,12 @@ const routes = [
     name: "pair-challenge",
     component: PairChallengeView
   },
+  {
+    path: "/list-challenge",
+    name: "list-challenge",
+    component: ListChallengeView
 
+  },
   {
     path: "/about",
     name: "about",

@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name= "list_usages")
+@Table(name = "list_usages")
 public class ListUsage implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -15,6 +15,9 @@ public class ListUsage implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column(name = "string_id")
+    private String stringId;
 
     @Column(nullable = false, name = "lemma")
     private String lemma;
@@ -35,13 +38,24 @@ public class ListUsage implements Serializable {
     /*    @OneToOne(cascade = CascadeType.ALL)
     private Position pos; */
 
-    protected ListUsage(){}
+    protected ListUsage() {
+    }
 
     public ListUsage(String lemma, String context, int posStartIndex, int posEndIndex) {
         this.lemma = lemma;
         this.context = context;
         this.posStartIndex = posStartIndex;
         this.posEndIndex = posEndIndex;
+    }
+
+    public ListUsage(ListRankingChallenge listRankingChallenge, String stringId, String lemma, String context, int posEndIndex, int posStartIndex, int rankingPosition) {
+        this.listRankingChallenge = listRankingChallenge;
+        this.stringId = stringId;
+        this.lemma = lemma;
+        this.context = context;
+        this.posEndIndex = posEndIndex;
+        this.posStartIndex = posStartIndex;
+        this.rankingPosition = rankingPosition;
     }
 
     public ListRankingChallenge getListChallenge() {
@@ -103,5 +117,9 @@ public class ListUsage implements Serializable {
 
     public void setRankingPosition(int rankingPosition) {
         this.rankingPosition = rankingPosition;
+    }
+
+    public String getStringId() {
+        return stringId;
     }
 }

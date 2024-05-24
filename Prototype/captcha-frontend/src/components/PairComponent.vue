@@ -1,5 +1,5 @@
 <template>
-  <div class="pairComponent">
+  <div class="PairComponent">
     <h1>PairComponent</h1>
     <p>Determine the degree of semantic relatedness of word <strong>{{ lemma }}</strong> in the following contexts </p>
     <p v-html="boldContext1"></p>
@@ -110,7 +110,7 @@ export default {
       let endIndex = this.indexes1[1];
       return "Context 1:" + this.context1.slice(0, startIndex) +
         "<strong>" + this.context1.slice(startIndex, endIndex) + "</strong>" +
-        this.context1.slice(endIndex, this.context1.length - 1);
+        this.context1.slice(endIndex, this.context1.length);
     },
     boldContext2() {
       if (this.indexes2[0] === -1) {
@@ -120,7 +120,7 @@ export default {
       let endIndex = this.indexes2[1];
       return "Context 2: " + this.context2.slice(0, startIndex) +
         "<strong>" + this.context2.slice(startIndex, endIndex) + "</strong>" +
-        this.context2.slice(endIndex, this.context2.length - 1);
+        this.context2.slice(endIndex, this.context2.length);
     }
   }
 
