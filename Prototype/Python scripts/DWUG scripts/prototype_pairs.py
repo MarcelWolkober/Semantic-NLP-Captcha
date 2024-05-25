@@ -50,6 +50,25 @@ def load_csv(file_path, _undesired_keys):
         return filtered_rows
 
 
+def write_uses_for_dataset(dataset, output_folder):
+    dataset_path = os.path.join(input_path, dataset, 'data')
+    print('Writing uses for dataset:', dataset_path, ' ...')
+    all_uses = []
+
+    for p in Path(dataset_path).glob('*/'):
+        lemma_path = str(p).split('/')[-1].replace('-', '_')
+        uses_file_path = os.path.join(str(p), 'uses.csv')
+
+        uses = load_csv(uses_file_path, undesired_keys)
+
+        all_uses.extend(uses)
+
+    output_path_lemma = os.path.join(output_folder)
+    Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
+
+    write_csv(os.path.join(output_path_lemma, dataset + '_uses.csv'), all_uses, all_uses[0].keys() if all_uses else [])
+
+
 def generate_pairs(uses, judgments_df_filtered):
     if (judgments_df_filtered.empty):
         return []
@@ -127,7 +146,7 @@ def generate_and_write_pair_challenges(path_to_pairs_file, number_of_pairs_per_c
             local_pair = challenge_pairs[j - 1]
             challenge['usage' + str(j)] = local_pair
 
-            string_id += local_pair['identifier1'] + '-' + local_pair['identifier2'] + '|'
+            string_id += local_pair['identifier1'] + '|' + local_pair['identifier2'] + '||'
 
         challenge['string_id'] = string_id
         challenges.append(challenge)
@@ -540,7 +559,6 @@ def analyse_attacked_pair_challenges(path, write=True):
     data[0]['number_of_krippendorff_zeros'] = krippendorff_zeros
     data[0]['number_of_challenges'] = pair_challenges.__len__()
 
-
     if write:
         output_path_folder = output_path + '/attacked_pair_challenges_analysis/'
         Path(output_path_folder).mkdir(parents=True, exist_ok=True)
@@ -551,6 +569,7 @@ def analyse_attacked_pair_challenges(path, write=True):
         print('Attacked list challenge generated. Save to:', output_path_file)
 
     return data
+
 
 def analyse_attacked_list_challenges(filepath, write=True, whole_dataset=True):
     list_challenges = read_csv(filepath)
@@ -568,8 +587,6 @@ def analyse_attacked_list_challenges(filepath, write=True, whole_dataset=True):
         lemma = filename[filename.__len__() - 1].split('.')[0]
 
     print('Analysing list challenge ranking for :', lemma)
-
-
 
     # per list challenge compare the order of the attacker and the true order and calculate spearman correlation
     for list_challenge in list_challenges:
@@ -697,6 +714,8 @@ def analyse_all():
 # analyse_minimization_methods_and_mappings('data_output/objective_function/')
 
 # load_and_write_uses_judgments(True)
+
+write_uses_for_dataset('dwug_en', 'data_output/uses_whole_dataset/')
 
 # analyse_judgment_cosine_correlation_spearman('data_output/attacked_pairs/attacked_pairs_abbauen.csv')
 

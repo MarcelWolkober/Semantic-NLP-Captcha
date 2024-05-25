@@ -1,13 +1,19 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import PairView from "@/views/PairView.vue";
-import NotFound from "@/components/NotFound.vue";
+import NotFound from "@/components/misc/NotFound.vue";
 import PairChallengeView from "@/views/PairChallengeView.vue";
 import ListChallengeView from "@/views/ListChallengeView.vue";
+import StudyView from "@/views/StudyView.vue";
 
 const routes = [
   {
     path: "/",
+    name: "study",
+    component: StudyView
+  },
+  {
+    path: "/home",
     name: "home",
     component: HomeView
   },

@@ -10,6 +10,9 @@ public class UsagePair {
     @Column(name = "usage_pair_id")
     private Long id;
 
+    @Column(name = "identifier", nullable = false)
+    private String identifier;
+
     @OneToOne(cascade = CascadeType.ALL)
     private Usage usage1;
 
@@ -49,7 +52,8 @@ public class UsagePair {
 
     protected UsagePair(){}
 
-    public UsagePair(Usage usage1, Usage usage2, Float label) {
+    public UsagePair(String identifier, Usage usage1, Usage usage2, Float label) {
+        this.identifier = identifier;
         this.usage1 = usage1;
         this.usage2 = usage2;
         this.label = label;
@@ -66,5 +70,9 @@ public class UsagePair {
 
     public Long getId() {
         return id;
+    }
+
+    public String getIdentifier() {
+        return identifier;
     }
 }

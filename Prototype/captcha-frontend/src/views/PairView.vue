@@ -1,7 +1,7 @@
 <script>
-import PairComponent from "@/components/PairComponent.vue";
-import CaptchaSuccessful from "@/components/CaptchaSuccessful.vue";
-import CaptchaFailed from "@/components/CaptchaFailed.vue";
+import PairComponent from "@/components/challenges/PairComponent.vue";
+import CaptchaSuccessful from "@/components/misc/CaptchaSuccessful.vue";
+import CaptchaFailed from "@/components/misc/CaptchaFailed.vue";
 
 export default {
   name: "PairView",

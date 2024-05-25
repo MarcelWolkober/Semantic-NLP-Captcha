@@ -1,15 +1,21 @@
 package com.nlpcaptcha.captcha.controller;
 
+import com.nlpcaptcha.captcha.model.PairChallenge;
 import com.nlpcaptcha.captcha.model.Usage;
 import com.nlpcaptcha.captcha.model.UsagePair;
 import com.nlpcaptcha.captcha.repository.*;
+import com.nlpcaptcha.captcha.repository.UsageRepository;
+import com.nlpcaptcha.captcha.services.PairChallengeService;
+import com.nlpcaptcha.captcha.services.PairService;
+import com.nlpcaptcha.captcha.services.UsageService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 
 
 @RestController
@@ -28,30 +34,18 @@ public class DataReaderController {
     @Autowired
     UsageRepository usageRepository;
 
-    @PostMapping("/usagepairs")
+    private static final Logger logger = LoggerFactory.getLogger(UsageController.class);
+
+
+    @PostMapping("/usage-pairs")
     public ResponseEntity<String> addUsagePairsFromFile(@RequestBody String path) {
-        DataReader dataReader = new DataReader();
-        List<List<String>> records = dataReader.readData(path);
-        records.removeFirst();
 
         try {
-            for (List<String> record : records) {
-
-                int startIndex1 = Integer.parseInt(record.get(5).split(":")[0]);
-                int endIndex1 = Integer.parseInt(record.get(5).split(":")[1]);
-                Usage usage1 = new Usage(record.get(0), record.get(3), startIndex1, endIndex1);
-                //usageRepository.save(usage1);
-
-                int startIndex2 = Integer.parseInt(record.get(6).split(":")[0]);
-                int endIndex2 = Integer.parseInt(record.get(6).split(":")[1]);
-                Usage usage2 = new Usage(record.get(0), record.get(4), startIndex2, endIndex2);
-                //usageRepository.save(usage2);
-
-                float label = Float.parseFloat(record.get(7));
-                UsagePair pair = new UsagePair(usage1, usage2, label);
-                usagePairRepository.save(pair);
-            }
+            PairService pairService = new PairService(usageRepository);
+            List<UsagePair> usagePairs = pairService.readData(path);
+            usagePairRepository.saveAll(usagePairs);
         } catch (Exception e) {
+            logger.error("An error occurred while reading Pairs: ", e);
             return new ResponseEntity<>("Error while reading and creating Data", HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return new ResponseEntity<>("Data read and created successfully", HttpStatus.OK);
@@ -59,5 +53,35 @@ public class DataReaderController {
 
     }
 
+    @PostMapping("/usages")
+    public ResponseEntity<String> addUsagesFromFile(@RequestBody String path) {
 
+        try {
+            UsageService usageService = new UsageService(usageRepository);
+            List<Usage> usages = usageService.readData(path);
+            usageRepository.saveAll(usages);
+        } catch (Exception e) {
+            logger.error("An error occurred while reading Usages: ", e);
+            return new ResponseEntity<>("Error while reading and creating Data", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        return new ResponseEntity<>("Data read and created successfully", HttpStatus.OK);
+
+
+    }
+
+    @PostMapping("/pair-challenges")
+    public ResponseEntity<String> addPairChallengesFromFile(@RequestBody String path) {
+
+        try {
+            PairChallengeService pairChallengeService = new PairChallengeService(pairChallengeRepository, usagePairRepository, usageRepository);
+            List<PairChallenge> pairChallenges = pairChallengeService.readData(path);
+            pairChallengeRepository.saveAll(pairChallenges);
+        } catch (Exception e) {
+            logger.error("An error occurred while reading Pair Challenges: ", e);
+            return new ResponseEntity<>("Error while reading and creating Data", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        return new ResponseEntity<>("Pair Challenges read and created successfully", HttpStatus.OK);
+
+
+    }
 }

@@ -1,12 +1,5 @@
-<template>
-  <div class="ListChallengeView">
-    <ListChallengeComponent :_-i-d="ID" :_lemma="lemma" :_reference-usage="referenceUsage" :_usages="usages" />
-  </div>
-</template>
-
-
 <script>
-import ListChallengeComponent from "@/components/ListChallengeComponent.vue";
+import ListChallengeComponent from "@/components/challenges/ListChallengeComponent.vue";
 
 
 export default {
@@ -31,6 +24,14 @@ export default {
   }
 };
 </script>
+
+
+<template>
+  <div class="ListChallengeView">
+    <ListChallengeComponent :_-i-d="ID" :_lemma="lemma" :_reference-usage="referenceUsage" :_usages="usages" />
+  </div>
+</template>
+
 
 
 <style scoped>

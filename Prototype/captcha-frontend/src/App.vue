@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import PairComponent from "@/components/PairComponent.vue";
+import PairComponent from "@/components/challenges/PairComponent.vue";
 
 export default {
   name: "App",

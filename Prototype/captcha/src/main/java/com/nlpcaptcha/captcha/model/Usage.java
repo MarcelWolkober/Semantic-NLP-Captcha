@@ -7,12 +7,13 @@ import java.io.Serializable;
 @Entity
 @Table(name = "usages")
 public class Usage implements Serializable {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "usage_id")
     private Long id;
+
+    @Column(nullable = false, name = "identifier", unique = true)
+    private String identifier;
 
     @Column(nullable = false, name = "lemma")
     private String lemma;
@@ -32,8 +33,9 @@ public class Usage implements Serializable {
     protected Usage() {
     }
 
-    public Usage(String lemma, String context, int posStartIndex, int posEndIndex) {
+    public Usage(String lemma, String identifier, String context, int posStartIndex, int posEndIndex) {
         this.lemma = lemma;
+        this.identifier = identifier;
         this.context = context;
         this.posStartIndex = posStartIndex;
         this.posEndIndex = posEndIndex;
@@ -77,4 +79,11 @@ public class Usage implements Serializable {
         this.posEndIndex = posEndIndex;
     }
 
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
+    }
 }

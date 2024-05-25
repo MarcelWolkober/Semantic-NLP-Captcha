@@ -1,12 +1,7 @@
 package com.nlpcaptcha.captcha.controller;
 
-import com.nlpcaptcha.captcha.model.ListRankingChallenge;
-import com.nlpcaptcha.captcha.model.PairChallenge;
-import com.nlpcaptcha.captcha.model.Usage;
 import com.nlpcaptcha.captcha.model.UsagePair;
-import com.nlpcaptcha.captcha.repository.DataReader;
 import com.nlpcaptcha.captcha.repository.UsagePairRepository;
-import com.nlpcaptcha.captcha.repository.UsageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,8 +19,6 @@ public class UsagePairController {
     @Autowired
     UsagePairRepository usagePairRepository;
 
-    @Autowired
-    UsageRepository usageRepository;
 
     @GetMapping("/all")
     public List<UsagePair> getAllUsagePairs() {
@@ -46,7 +39,7 @@ public class UsagePairController {
     public ResponseEntity<UsagePair> getNextUsagePair() {
         try {
             UsagePair pair = usagePairRepository.findAll().getFirst(); //TODO adjust to get next
-            return new ResponseEntity<>(pair, HttpStatus.CREATED);
+            return new ResponseEntity<>(pair, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
