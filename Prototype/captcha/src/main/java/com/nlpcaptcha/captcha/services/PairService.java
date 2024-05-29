@@ -123,6 +123,7 @@ public class PairService {
 
     }
 
+    @Transactional
     public void deletePair(UsagePair usagePair) {
         Set<Usage> usages = usagePair.getUsages();
 

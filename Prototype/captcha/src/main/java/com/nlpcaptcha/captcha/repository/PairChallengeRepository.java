@@ -7,4 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PairChallengeRepository extends JpaRepository<PairChallenge, Long> {
 
+    boolean existsByIdentifier(String identifier);
+
+    PairChallenge findByIdentifier(String identifier);
 }

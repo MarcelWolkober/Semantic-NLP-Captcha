@@ -34,14 +34,10 @@ public class UsagePair implements Serializable {
     @JsonView(Views.Public.class)
     private final Set<Usage> usages = new HashSet<>();
 
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "pair_challenge_id")
-    @JsonView(Views.Public.class)
-    private PairChallenge pairChallenge;
+    @ManyToMany(mappedBy = "usagePairs")
+    private final List<PairChallenge> pairChallenges = new ArrayList<>();
 
     @Column(name = "label")
-    @JsonView(Views.Public.class)
     private float label;
 
     public UsagePair(String identifier, Usage usage1, Usage usage2, Float label) {
@@ -67,12 +63,16 @@ public class UsagePair implements Serializable {
     protected UsagePair() {
     }
 
-    public PairChallenge getPairChallenge() {
-        return pairChallenge;
+    public List<PairChallenge> getPairChallenges() {
+        return pairChallenges;
     }
 
-    public void setPairChallenge(PairChallenge pairChallenge) {
-        this.pairChallenge = pairChallenge;
+    public void addPairChallenge(PairChallenge pairChallenge) {
+        this.pairChallenges.add(pairChallenge);
+    }
+
+    public void removePairChallenge(PairChallenge pairChallenge) {
+        this.pairChallenges.remove(pairChallenge);
     }
 
     public Long getId() {
@@ -89,13 +89,31 @@ public class UsagePair implements Serializable {
 
     @Override
     public String toString() {
+        StringBuilder pairChallenges = new StringBuilder();
+        for (PairChallenge pairChallenge : this.pairChallenges) {
+            pairChallenges.append(pairChallenge.getIdentifier());
+        }
+
         return "UsagePair{" +
                 "id=" + id +
                 ", identifier='" + identifier + '\'' +
                 ", usages=" + usages +
-                ", pairChallenge=" + pairChallenge +
+                ", pairChallenge=" + pairChallenges +
                 ", label=" + label +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UsagePair usagePair = (UsagePair) o;
+        return Objects.equals(identifier, usagePair.getIdentifier());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(identifier);
     }
 
 
