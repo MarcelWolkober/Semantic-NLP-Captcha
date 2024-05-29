@@ -1,4 +1,4 @@
-package com.nlpcaptcha.captcha.repository;
+package com.nlpcaptcha.captcha.services;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

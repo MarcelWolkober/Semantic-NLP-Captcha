@@ -1,7 +1,6 @@
 package com.nlpcaptcha.captcha.services;
 
 import com.nlpcaptcha.captcha.model.Usage;
-import com.nlpcaptcha.captcha.repository.DataReader;
 import com.nlpcaptcha.captcha.repository.UsageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;

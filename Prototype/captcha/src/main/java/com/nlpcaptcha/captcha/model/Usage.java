@@ -4,12 +4,12 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
-import org.hibernate.Hibernate;
 
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+
 
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
@@ -17,6 +17,7 @@ import java.util.Set;
 @Entity
 @Table(name = "usages")
 public class Usage implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -43,9 +44,16 @@ public class Usage implements Serializable {
     @JsonView(Views.Public.class)
     private int posEndIndex;
 
-
     @ManyToMany(mappedBy = "usages")
     private final Set<UsagePair> usagePairs = new HashSet<>();
+
+
+
+    @OneToMany(mappedBy = "referenceUsage")
+    private final Set<ListRankingChallenge> pairChallengesAsReferenceUsage = new HashSet<>();
+
+    @ManyToMany(mappedBy = "listUsages")
+    private final Set<ListRankingChallenge> pairChallengesAsListUsage = new HashSet<>();
 
 
     protected Usage() {
@@ -72,6 +80,29 @@ public class Usage implements Serializable {
     public void removeUsagePair(UsagePair usagePair) {
         this.usagePairs.remove(usagePair);
         usagePair.getUsages().remove(this);
+    }
+
+    public Set<ListRankingChallenge> getPairChallengesAsReferenceUsage() {
+        return pairChallengesAsReferenceUsage;
+    }
+
+    public Set<ListRankingChallenge> getPairChallengesAsListUsage() {
+        return pairChallengesAsListUsage;
+    }
+
+    public void addListChallengeAsReferenceUsage(ListRankingChallenge listRankingChallenge) {
+        this.pairChallengesAsReferenceUsage.add(listRankingChallenge);
+        listRankingChallenge.setReferenceUsage(this);
+    }
+
+    public void removeListChallengeAsReferenceUsage(ListRankingChallenge listRankingChallenge) {
+        this.pairChallengesAsReferenceUsage.remove(listRankingChallenge);
+        listRankingChallenge.setReferenceUsage(null);
+    }
+
+    public void addListChallengeAsListUsage(ListRankingChallenge listRankingChallenge) {
+        this.pairChallengesAsListUsage.add(listRankingChallenge);
+        listRankingChallenge.addListUsage(this);
     }
 
     public String getLemma() {

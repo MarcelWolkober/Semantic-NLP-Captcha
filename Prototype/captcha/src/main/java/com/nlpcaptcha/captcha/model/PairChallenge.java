@@ -34,6 +34,10 @@ public class PairChallenge {
     @JsonView(Views.Public.class)
     private final Set<UsagePair> usagePairs = new HashSet<>();
 
+
+    @OneToMany(mappedBy = "pairChallenge")
+    private final Set<StudyCombinedChallenge> studyCombinedChallenges = new HashSet<>();
+
     protected PairChallenge() {
     }
 
@@ -53,6 +57,20 @@ public class PairChallenge {
     private void removeUsagePair(UsagePair usagePair) {
         this.usagePairs.remove(usagePair);
         usagePair.removePairChallenge(this);
+    }
+
+    public Set<StudyCombinedChallenge> getStudyCombinedChallenges() {
+        return studyCombinedChallenges;
+    }
+
+    public void addStudyCombinedChallenge(StudyCombinedChallenge studyCombinedChallenge) {
+        this.studyCombinedChallenges.add(studyCombinedChallenge);
+        studyCombinedChallenge.setPairChallenge(this);
+    }
+
+    public void removeStudyCombinedChallenge(StudyCombinedChallenge studyCombinedChallenge) {
+        this.studyCombinedChallenges.remove(studyCombinedChallenge);
+        studyCombinedChallenge.setPairChallenge(null);
     }
 
 
@@ -82,12 +100,12 @@ public class PairChallenge {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PairChallenge pairChallenge = (PairChallenge) o;
-        return Objects.equals(id, pairChallenge.getId());
+        return Objects.equals(this.id, pairChallenge.getId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(identifier);
+        return this.id.hashCode();
     }
 
 
