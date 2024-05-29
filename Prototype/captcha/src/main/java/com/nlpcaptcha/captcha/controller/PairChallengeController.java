@@ -1,7 +1,9 @@
 package com.nlpcaptcha.captcha.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import com.nlpcaptcha.captcha.model.PairChallenge;
 import com.nlpcaptcha.captcha.model.UsagePair;
+import com.nlpcaptcha.captcha.model.Views;
 import com.nlpcaptcha.captcha.repository.DataReader;
 import com.nlpcaptcha.captcha.repository.PairChallengeRepository;
 import com.nlpcaptcha.captcha.services.PairChallengeService;
@@ -29,6 +31,7 @@ public class PairChallengeController {
     private PairChallengeService pairChallengeService;
 
     @GetMapping("/all")
+    @JsonView(Views.Public.class)
     public List<PairChallenge> getAllPairChallenges() {
 
         List<PairChallenge> pairChallenges = pairChallengeRepository.findAll();
