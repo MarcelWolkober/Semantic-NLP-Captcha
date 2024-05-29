@@ -39,16 +39,16 @@ public class DataReaderController {
 
     @PostMapping("/usage-pairs")
     public ResponseEntity<String> addUsagePairsFromFile(@RequestBody String path) {
-
+        List<UsagePair> usagePairs = null;
         try {
-            PairService pairService = new PairService(usageRepository);
-            List<UsagePair> usagePairs = pairService.readData(path);
-            usagePairRepository.saveAll(usagePairs);
+            PairService pairService = new PairService(usageRepository, usagePairRepository);
+            usagePairs = pairService.readAndSavePairs(path);
+
         } catch (Exception e) {
             logger.error("An error occurred while reading Pairs: ", e);
             return new ResponseEntity<>("Error while reading and creating Data", HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ResponseEntity<>("Data read and created successfully", HttpStatus.OK);
+        return new ResponseEntity<>("Data read and created successfully: \n" + usagePairs, HttpStatus.OK);
 
 
     }

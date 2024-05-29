@@ -1,34 +1,52 @@
 package com.nlpcaptcha.captcha.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonView;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
+import org.hibernate.Hibernate;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 @Entity
 @Table(name = "usages")
 public class Usage implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "usage_id")
+    @Column(name = "id")
+    @JsonView(Views.Public.class)
     private Long id;
 
     @Column(nullable = false, name = "identifier", unique = true)
+    @JsonView(Views.Public.class)
     private String identifier;
 
     @Column(nullable = false, name = "lemma")
+    @JsonView(Views.Public.class)
     private String lemma;
 
     @Column(nullable = false, name = "context", length = 2048)
+    @JsonView(Views.Public.class)
     private String context;
 
     @Column(nullable = false, name = "start_index")
+    @JsonView(Views.Public.class)
     private int posStartIndex;
 
     @Column(nullable = false, name = "end_index")
+    @JsonView(Views.Public.class)
     private int posEndIndex;
 
-    /*    @OneToOne(cascade = CascadeType.ALL)
-    private Position pos; */
+
+    @ManyToMany(mappedBy = "usages")
+    private final Set<UsagePair> usagePairs = new HashSet<>();
+
 
     protected Usage() {
     }
@@ -42,6 +60,19 @@ public class Usage implements Serializable {
     }
 
 
+    public Set<UsagePair> getUsagePairs() {
+        return usagePairs;
+    }
+
+    public void addUsagePair(UsagePair usagePair) {
+        this.usagePairs.add(usagePair);
+        usagePair.getUsages().add(this);
+    }
+
+    public void removeUsagePair(UsagePair usagePair) {
+        this.usagePairs.remove(usagePair);
+        usagePair.getUsages().remove(this);
+    }
 
     public String getLemma() {
         return lemma;
@@ -86,4 +117,31 @@ public class Usage implements Serializable {
     public void setIdentifier(String identifier) {
         this.identifier = identifier;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Usage usage = (Usage) o;
+        return Objects.equals(identifier, usage.getIdentifier());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(identifier);
+    }
+
+    @Override
+    public String toString() {
+        return "Usage{" +
+                "id=" + id +
+                ", identifier='" + identifier + '\'' +
+                ", lemma='" + lemma + '\'' +
+                ", context='" + context + '\'' +
+                ", posStartIndex=" + posStartIndex +
+                ", posEndIndex=" + posEndIndex +
+                '}';
+    }
+
+
 }

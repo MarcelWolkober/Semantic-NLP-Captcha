@@ -16,7 +16,7 @@ public class PairChallenge {
     @Column(name = "identifier", nullable = false)
     private String identifier;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pairChallenge", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pairChallenge", cascade = CascadeType.MERGE)
     private List<UsagePair> listUsagePairs;
 
     protected PairChallenge() {

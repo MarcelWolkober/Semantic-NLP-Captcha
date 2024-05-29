@@ -1,6 +1,8 @@
 package com.nlpcaptcha.captcha.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import com.nlpcaptcha.captcha.model.Usage;
+import com.nlpcaptcha.captcha.model.Views;
 import com.nlpcaptcha.captcha.repository.UsageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
@@ -25,6 +27,7 @@ public class UsageController {
 
 
     @GetMapping("/all")
+    @JsonView(Views.Public.class)
     public List<Usage> getAllUsagePairs() {
         return usageRepository.findAll();
     }

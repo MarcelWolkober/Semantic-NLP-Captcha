@@ -1,7 +1,6 @@
 package com.nlpcaptcha.captcha;
 
 import com.nlpcaptcha.captcha.model.ListRankingChallenge;
-import com.nlpcaptcha.captcha.model.Position;
 import com.nlpcaptcha.captcha.model.Usage;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -37,7 +36,6 @@ public class HibernateUtil {
         Metadata metadata = new MetadataSources(serviceRegistry)
           .addAnnotatedClass(ListRankingChallenge.class)
           .addAnnotatedClass(Usage.class)
-          .addAnnotatedClass(Position.class)
           .buildMetadata();
 
         return metadata.buildSessionFactory();

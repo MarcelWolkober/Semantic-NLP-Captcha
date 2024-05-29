@@ -1,45 +1,59 @@
 package com.nlpcaptcha.captcha.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonView;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+import java.util.*;
+
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 @Entity
-@Table(name= "usage_pairs")
-public class UsagePair {
+@Table(name = "usage_pairs")
+public class UsagePair implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "usage_pair_id")
+    @Column(name = "id")
+    @JsonView(Views.Public.class)
     private Long id;
 
-    @Column(name = "identifier", nullable = false)
+    @Column(name = "identifier", nullable = false, unique = true)
+    @JsonView(Views.Public.class)
     private String identifier;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private Usage usage1;
+//    @OneToMany(mappedBy = "usagePair", cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+//    private final List<Usage> usages = new ArrayList<>();//maybe as javafx Pair
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private Usage usage2;
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(name = "usage_pair_usage",
+            joinColumns = @JoinColumn(name = "usage_pair_id"),
+            inverseJoinColumns = @JoinColumn(name = "usage_id"))
+    @JsonView(Views.Public.class)
+    private final Set<Usage> usages = new HashSet<>();
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pair_challenge_id")
+    @JsonView(Views.Public.class)
     private PairChallenge pairChallenge;
 
     @Column(name = "label")
+    @JsonView(Views.Public.class)
     private float label;
 
-    public Usage getUsage1() {
-        return usage1;
+    public UsagePair(String identifier, Usage usage1, Usage usage2, Float label) {
+        this.identifier = identifier;
+        addUsage(usage1);
+        addUsage(usage2);
+        this.label = label;
     }
 
-    public void setUsage1(Usage usage1) {
-        this.usage1 = usage1;
-    }
-
-    public Usage getUsage2() {
-        return usage2;
-    }
-
-    public void setUsage2(Usage usage2) {
-        this.usage2 = usage2;
+    public void addUsage(Usage usage) {
+        this.usages.add(usage);
+        usage.addUsagePair(this);
     }
 
     public Float getLabel() {
@@ -50,15 +64,8 @@ public class UsagePair {
         this.label = label;
     }
 
-    protected UsagePair(){}
-
-    public UsagePair(String identifier, Usage usage1, Usage usage2, Float label) {
-        this.identifier = identifier;
-        this.usage1 = usage1;
-        this.usage2 = usage2;
-        this.label = label;
+    protected UsagePair() {
     }
-
 
     public PairChallenge getPairChallenge() {
         return pairChallenge;
@@ -75,4 +82,21 @@ public class UsagePair {
     public String getIdentifier() {
         return identifier;
     }
+
+    public Set<Usage> getUsages() {
+        return usages;
+    }
+
+    @Override
+    public String toString() {
+        return "UsagePair{" +
+                "id=" + id +
+                ", identifier='" + identifier + '\'' +
+                ", usages=" + usages +
+                ", pairChallenge=" + pairChallenge +
+                ", label=" + label +
+                '}';
+    }
+
+
 }

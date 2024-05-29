@@ -9,4 +9,5 @@ public interface UsagePairRepository extends JpaRepository<UsagePair, Long> {
 
     public UsagePair findByIdentifier(String identifier);
 
+    boolean existsByIdentifier(String identifier);
 }

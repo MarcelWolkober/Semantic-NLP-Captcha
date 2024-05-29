@@ -1,6 +1,5 @@
 package com.nlpcaptcha.captcha.services;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.nlpcaptcha.captcha.model.PairChallenge;
 import com.nlpcaptcha.captcha.model.UsagePair;
 import com.nlpcaptcha.captcha.repository.DataReader;
@@ -29,7 +28,7 @@ public class PairChallengeService {
     public PairChallengeService(PairChallengeRepository pairChallengeRepository, UsagePairRepository usagePairRepository, UsageRepository usageRepository) {
         this.pairChallengeRepository = pairChallengeRepository;
         this.usagePairRepository = usagePairRepository;
-        this.pairService = new PairService(usageRepository);
+        this.pairService = new PairService(usageRepository, usagePairRepository);
     }
 
 
@@ -60,7 +59,7 @@ public class PairChallengeService {
 
                     JSONObject stringPair = new JSONObject(record.get(i + 1));
 
-                    pair = pairService.createPairByUsageIdentifiers(stringPair.getString("identifier1"),
+                    pair = pairService.createAndSavePairByUsageIdentifiers(stringPair.getString("identifier1"),
                             stringPair.getString("identifier2"),
                             Float.parseFloat(stringPair.getString("judgment")));
 
