@@ -1,10 +1,12 @@
 package com.nlpcaptcha.captcha.controller;
 
+import com.nlpcaptcha.captcha.model.ListRankingChallenge;
 import com.nlpcaptcha.captcha.model.PairChallenge;
 import com.nlpcaptcha.captcha.model.Usage;
 import com.nlpcaptcha.captcha.model.UsagePair;
 import com.nlpcaptcha.captcha.repository.*;
 import com.nlpcaptcha.captcha.repository.UsageRepository;
+import com.nlpcaptcha.captcha.services.ListChallengeService;
 import com.nlpcaptcha.captcha.services.PairChallengeService;
 import com.nlpcaptcha.captcha.services.PairService;
 import com.nlpcaptcha.captcha.services.UsageService;
@@ -33,6 +35,9 @@ public class DataReaderController {
 
     @Autowired
     UsageRepository usageRepository;
+
+    @Autowired
+    ListChallengeService listChallengeService;
 
     private static final Logger logger = LoggerFactory.getLogger(UsageController.class);
 
@@ -83,5 +88,19 @@ public class DataReaderController {
         return new ResponseEntity<>("Pair Challenges read and created successfully", HttpStatus.OK);
 
 
+    }
+
+    @PostMapping("/list-challenges")
+    public ResponseEntity<String> addListChallengesFromFile(@RequestBody String path) {
+        List<ListRankingChallenge> listChallenges;
+        try {
+
+            listChallenges = listChallengeService.readData(path);
+
+        } catch (Exception e) {
+            logger.error("An error occurred while reading List Challenges: ", e);
+            return new ResponseEntity<>("Error while reading and creating Data", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        return new ResponseEntity<>("List Challenges read and created successfully: \n" + listChallenges, HttpStatus.OK);
     }
 }

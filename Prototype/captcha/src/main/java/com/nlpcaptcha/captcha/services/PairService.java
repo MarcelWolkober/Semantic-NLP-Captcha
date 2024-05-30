@@ -93,6 +93,14 @@ public class PairService {
      */
     @Transactional
     public UsagePair createAndSavePairByUsageIdentifiers(String identifier1, String identifier2, float label) throws IllegalArgumentException {
+
+        String identifier = identifier1 + "|" + identifier2;
+        UsagePair usagePair = usagePairRepository.findByIdentifier(identifier);
+
+        if (usagePair != null) {
+            return usagePair;
+        }
+
         Usage existingUsage1 = usageRepository.findByIdentifier(identifier1);
         Usage existingUsage2 = usageRepository.findByIdentifier(identifier2);
 
@@ -100,25 +108,16 @@ public class PairService {
             throw new IllegalArgumentException("One or both of the usages do not exist in the database");
         }
 
-        String identifier = identifier1 + "|" + identifier2;
-        UsagePair usagePair = new UsagePair(identifier, existingUsage1, existingUsage2, label);
-        UsagePair savedPair =  usagePairRepository.save(usagePair);
+        usagePair = new UsagePair(identifier, existingUsage1, existingUsage2, label);
 
-        List<UsagePair> db = usagePairRepository.findAll();
-        List<Usage> debug = usageRepository.findAll();
 
         // Check if the UsagePair has more than two Usages
         if (usagePair.getUsages().size() > 2) {
             throw new IllegalArgumentException("A UsagePair can only have two Usages");
         }
-        // Save the Usage objects again after setting the UsagePair
-        usageRepository.save(existingUsage1);
-        usageRepository.save(existingUsage2);
-
-        debug = usageRepository.findAll();
 
         // Save the UsagePair
-        return savedPair;
+        return usagePairRepository.save(usagePair);
 
     }
 

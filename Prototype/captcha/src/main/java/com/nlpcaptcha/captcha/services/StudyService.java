@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class StudyService {
-
+/*
     private final StudyCombinedChallengeRepository studyCombinedChallengeRepository;
     private final PairChallengeService pairChallengeService;
     private final ListChallengeService listRankingChallengeService;
@@ -21,7 +21,7 @@ public class StudyService {
         this.listRankingChallengeService = new ListChallengeService();
     }
 
-
+*/
 
     @Transactional
     public StudyCombinedChallenge saveStudyCombinedChallenge(StudyCombinedChallenge studyCombinedChallenge) {

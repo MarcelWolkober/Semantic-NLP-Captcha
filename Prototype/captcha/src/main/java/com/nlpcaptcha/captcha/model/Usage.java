@@ -48,7 +48,6 @@ public class Usage implements Serializable {
     private final Set<UsagePair> usagePairs = new HashSet<>();
 
 
-
     @OneToMany(mappedBy = "referenceUsage")
     private final Set<ListRankingChallenge> pairChallengesAsReferenceUsage = new HashSet<>();
 
@@ -92,17 +91,18 @@ public class Usage implements Serializable {
 
     public void addListChallengeAsReferenceUsage(ListRankingChallenge listRankingChallenge) {
         this.pairChallengesAsReferenceUsage.add(listRankingChallenge);
-        listRankingChallenge.setReferenceUsage(this);
-    }
 
-    public void removeListChallengeAsReferenceUsage(ListRankingChallenge listRankingChallenge) {
-        this.pairChallengesAsReferenceUsage.remove(listRankingChallenge);
-        listRankingChallenge.setReferenceUsage(null);
+        if (!listRankingChallenge.getReferenceUsage().equals(this)) {
+            listRankingChallenge.setReferenceUsage(this);
+        }
     }
 
     public void addListChallengeAsListUsage(ListRankingChallenge listRankingChallenge) {
         this.pairChallengesAsListUsage.add(listRankingChallenge);
-        listRankingChallenge.addListUsage(this);
+        if (!listRankingChallenge.getListUsages().contains(this)) {
+            listRankingChallenge.addListUsage(this);
+        }
+
     }
 
     public String getLemma() {

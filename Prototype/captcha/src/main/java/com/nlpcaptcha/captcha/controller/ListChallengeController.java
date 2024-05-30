@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 import com.nlpcaptcha.captcha.model.ListRankingChallenge;
 import com.nlpcaptcha.captcha.model.Views;
 import com.nlpcaptcha.captcha.repository.ListChallengeRepository;
+import com.nlpcaptcha.captcha.services.ListChallengeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,13 @@ public class ListChallengeController {
     @Autowired
     ListChallengeRepository listChallengeRepository;
 
+    @Autowired
+    ListChallengeService listChallengeService;
+
+
+
+
+
     @GetMapping("/all")
     @JsonView(Views.Public.class)
     public List<ListRankingChallenge> getAllListChallenges() {
@@ -36,8 +44,8 @@ public class ListChallengeController {
     @PostMapping("/add")
     public ResponseEntity<ListRankingChallenge> saveListChallenge(@RequestBody ListRankingChallenge listRankingChallenge) {
         try {
-            ListRankingChallenge _listRankingChallenge = listChallengeRepository
-                    .save(new ListRankingChallenge(listRankingChallenge.getLemma(), listRankingChallenge.getReferenceUsage(), listRankingChallenge.getListUsages()));
+            ListRankingChallenge _listRankingChallenge = null; // listChallengeRepository
+                  //  .save(new ListRankingChallenge(listRankingChallenge.getLemma(), listRankingChallenge.getReferenceUsage(), listRankingChallenge.getListUsages()));
 
             return new ResponseEntity<>(_listRankingChallenge, HttpStatus.CREATED);
         } catch (Exception e) {

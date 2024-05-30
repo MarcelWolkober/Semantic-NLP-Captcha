@@ -6,10 +6,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 
 @JsonIdentityInfo(
@@ -24,6 +21,13 @@ public class ListRankingChallenge implements Serializable {
     @Column(name = "list_ranking_challenge_id")
     @JsonView(Views.Public.class)
     private Long id;
+
+    /**
+     * Unique identifier of the challenge by combining the identifiers of the usages with "||" as separator
+     */
+    @Column(nullable = false, name = "identifier", unique = true)
+    @JsonView(Views.Public.class)
+    private String identifier;
 
     @Column(nullable = false)
     @JsonView(Views.Public.class)
@@ -41,18 +45,26 @@ public class ListRankingChallenge implements Serializable {
     private final List<Usage> listUsages = new ArrayList<>();
 
 
+    @ElementCollection
+    @CollectionTable(name = "order_items", joinColumns = @JoinColumn(name = "list_ranking_challenge_id"))
+    @Column(name = "order_item")
+    private List<String> order;
+
+
     @OneToMany(mappedBy = "listRankingChallenge")
     private final Set<StudyCombinedChallenge> studyCombinedChallenges = new HashSet<>();
 
     protected ListRankingChallenge() {
     }
 
-    public ListRankingChallenge(String lemma, Usage referenceUsage, List<Usage> listUsages) {
+    public ListRankingChallenge(String identifier, String lemma, Usage referenceUsage, List<Usage> listUsages, List<String> order) {
+        this.identifier = identifier;
         this.lemma = lemma;
-        this.referenceUsage = referenceUsage;
+        setReferenceUsage(referenceUsage);
         for (Usage usage : listUsages) {
             addListUsage(usage);
         }
+        this.order = order;
     }
 
     public String getLemma() {
@@ -69,6 +81,7 @@ public class ListRankingChallenge implements Serializable {
 
     public void setReferenceUsage(Usage referenceUsage) {
         this.referenceUsage = referenceUsage;
+        referenceUsage.addListChallengeAsReferenceUsage(this);
     }
 
     public List<Usage> getListUsages() {
@@ -77,6 +90,7 @@ public class ListRankingChallenge implements Serializable {
 
     public void addListUsage(Usage usage) {
         this.listUsages.add(usage);
+        usage.addListChallengeAsListUsage(this);
     }
 
     public Long getId() {
@@ -112,13 +126,20 @@ public class ListRankingChallenge implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ListRankingChallenge that = (ListRankingChallenge) o;
-        return id.equals(that.id);
+        return Objects.equals(this.identifier, that.getIdentifier());
     }
 
     @Override
     public int hashCode() {
-        return id.hashCode();
+        return Objects.hash(identifier);
     }
 
 
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public List<String> getOrder() {
+        return order;
+    }
 }

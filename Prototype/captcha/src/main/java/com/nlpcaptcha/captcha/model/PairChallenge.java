@@ -65,7 +65,10 @@ public class PairChallenge {
 
     public void addStudyCombinedChallenge(StudyCombinedChallenge studyCombinedChallenge) {
         this.studyCombinedChallenges.add(studyCombinedChallenge);
-        studyCombinedChallenge.setPairChallenge(this);
+        if (studyCombinedChallenge.getPairChallenge() != this){
+            studyCombinedChallenge.setPairChallenge(this);
+        }
+
     }
 
     public void removeStudyCombinedChallenge(StudyCombinedChallenge studyCombinedChallenge) {
@@ -105,7 +108,7 @@ public class PairChallenge {
 
     @Override
     public int hashCode() {
-        return this.id.hashCode();
+        return Objects.hash(identifier);
     }
 
 

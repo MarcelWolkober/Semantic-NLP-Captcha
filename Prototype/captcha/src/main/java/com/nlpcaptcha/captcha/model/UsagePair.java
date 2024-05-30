@@ -49,7 +49,9 @@ public class UsagePair implements Serializable {
 
     public void addUsage(Usage usage) {
         this.usages.add(usage);
-        usage.addUsagePair(this);
+        if (!usage.getUsagePairs().contains(this))
+            usage.addUsagePair(this);
+
     }
 
     public Float getLabel() {

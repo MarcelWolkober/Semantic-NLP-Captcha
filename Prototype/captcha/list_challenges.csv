@@ -1,0 +1,6 @@
+lemma	identifier_ref	identifier1	judgment1	identifier2	judgment2	identifier3	judgment3	identifier4	judgment4	order	to_find	count
+afternoon	mag_1855_556005.txt-194-2	mag_1845_587596.txt-153-9	2.0			fic_1993_1040092.txt-5145-7	3.0	nf_1834_755185.txt-2925-9	4.0	['nf_1834_755185.txt-2925-9', 'fic_1993_1040092.txt-5145-7', 'mag_1845_587596.txt-153-9']		3
+attack	fic_1846_7679.txt-262-9	fic_1854_9193.txt-8301-13	3.0	mag_1992_396000.txt-164-14	4.0	mag_1828_553929.txt-364-34	2.0	mag_1970_282294.txt-7-3	1.0	['mag_1992_396000.txt-164-14', 'fic_1854_9193.txt-8301-13', 'mag_1828_553929.txt-364-34', 'mag_1970_282294.txt-7-3']		4
+attack	fic_1833_7239.txt-1694-15	nf_1840_768793.txt-1045-33	4.0	news_2001_661977.txt-17-13	2.0			mag_1846_555400.txt-243-7	3.0	['nf_1840_768793.txt-1045-33', 'mag_1846_555400.txt-243-7', 'news_2001_661977.txt-17-13']		3
+attack	fic_1852_2364.txt-6112-60	fic_1838_7086.txt-2732-33	4.0	news_1991_612479.txt-40-20	3.0			mag_1993_424232.txt-41-14	2.0	['fic_1838_7086.txt-2732-33', 'news_1991_612479.txt-40-20', 'mag_1993_424232.txt-41-14']		3
+attack	fic_1844_3928.txt-3118-8	news_1991_612479.txt-40-20	2.0			fic_1977_10624.txt-816-11	4.0	news_1967_726451.txt-39-2	3.0	['fic_1977_10624.txt-816-11', 'news_1967_726451.txt-39-2', 'news_1991_612479.txt-40-20']		3
