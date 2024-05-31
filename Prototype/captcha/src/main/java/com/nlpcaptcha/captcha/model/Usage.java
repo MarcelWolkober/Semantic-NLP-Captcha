@@ -1,5 +1,6 @@
 package com.nlpcaptcha.captcha.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -11,9 +12,7 @@ import java.util.Objects;
 import java.util.Set;
 
 
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
+
 @Entity
 @Table(name = "usages")
 public class Usage implements Serializable {
@@ -47,10 +46,11 @@ public class Usage implements Serializable {
     @ManyToMany(mappedBy = "usages")
     private final Set<UsagePair> usagePairs = new HashSet<>();
 
-
+    @JsonBackReference
     @OneToMany(mappedBy = "referenceUsage")
     private final Set<ListRankingChallenge> pairChallengesAsReferenceUsage = new HashSet<>();
 
+    @JsonBackReference
     @ManyToMany(mappedBy = "listUsages")
     private final Set<ListRankingChallenge> pairChallengesAsListUsage = new HashSet<>();
 

@@ -74,14 +74,14 @@ public class ListChallengeService {
                 labels.add(Float.parseFloat(tempLabel));
             }
 
-            listChallenges.add(createAndSaveListChallengeByIdentifiers(lemma, referenceUsageIdentifier, listUsagesIdentifiers, labels, order));
+            listChallenges.add(createAndSaveListChallengeByIdentifiers( referenceUsageIdentifier, listUsagesIdentifiers, labels, order));
 
         }
         return listChallenges;
     }
 
     @Transactional
-    public ListRankingChallenge createAndSaveListChallengeByIdentifiers(String lemma, String referenceUsageIdentifier, List<String> listUsagesIdentifiers, List<Float> labels, List<String> order) throws IllegalArgumentException {
+    public ListRankingChallenge createAndSaveListChallengeByIdentifiers(String referenceUsageIdentifier, List<String> listUsagesIdentifiers, List<Float> labels, List<String> order) throws IllegalArgumentException {
 
         String challengeIdentifier = referenceUsageIdentifier + "||" + String.join("||", listUsagesIdentifiers);
 
@@ -95,6 +95,7 @@ public class ListChallengeService {
 
         List<Usage> listUsages = new ArrayList<>();
         Usage referenceUsage = usageRepository.findByIdentifier(referenceUsageIdentifier);
+        String lemma = referenceUsage.getLemma();
 
         for (String identifier : listUsagesIdentifiers) {
             Usage tempUsage = usageRepository.findByIdentifier(identifier);
@@ -114,5 +115,6 @@ public class ListChallengeService {
 
         return listChallengeRepository.save(listChallenge);
     }
+
 
 }

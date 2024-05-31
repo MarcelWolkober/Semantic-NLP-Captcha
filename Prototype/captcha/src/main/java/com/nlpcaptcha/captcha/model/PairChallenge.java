@@ -1,21 +1,18 @@
 package com.nlpcaptcha.captcha.model;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonView;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
+
 @Entity
 @Table(name = "pair_challenges")
-public class PairChallenge {
+public class PairChallenge implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,7 +24,8 @@ public class PairChallenge {
     @JsonView(Views.Public.class)
     private String identifier;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(name = "pair_challenge_usage_pair",
             joinColumns = @JoinColumn(name = "pair_challenge_id"),
             inverseJoinColumns = @JoinColumn(name = "usage_pair_id"))

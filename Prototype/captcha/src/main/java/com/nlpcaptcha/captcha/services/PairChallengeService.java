@@ -56,10 +56,25 @@ public class PairChallengeService {
     }
 
     @Transactional
+    public PairChallenge createAndSavePairChallengeByIdentifier(String identifier) throws JSONException {
+        try {
+           return createAndSavePairChallenge(identifier, null);
+        }
+        catch (IllegalArgumentException e){
+            throw new IllegalArgumentException("Pairs for PairChallenge with identifier " + identifier + " not found ");
+        }
+
+
+
+    }
+
+    @Transactional
     public PairChallenge createAndSavePairChallenge(String identifier, List<String> record) throws JSONException {
 
-        if (pairChallengeRepository.existsByIdentifier(identifier)) {
-            return pairChallengeRepository.findByIdentifier(identifier);
+        PairChallenge pairChallenge = pairChallengeRepository.findByIdentifier(identifier);
+
+        if (pairChallenge != null) {
+            return pairChallenge;
         }
 
         //split identifier into pair identifiers
@@ -77,13 +92,15 @@ public class PairChallengeService {
         for (int i = 0; i < pairIdentifiers.length; i++) {
             UsagePair pair = usagePairRepository.findByIdentifier(pairIdentifiers[i]);
 
-            if (pair == null) {
+            if (pair == null && record != null) {
 
                 JSONObject stringPair = new JSONObject(record.get(i + 1));
 
                 pair = pairService.createAndSavePairByUsageIdentifiers(stringPair.getString("identifier1"),
                         stringPair.getString("identifier2"),
                         Float.parseFloat(stringPair.getString("judgment")));
+            } else if (pair == null) {
+                throw new IllegalArgumentException("Pair with identifier " + pairIdentifiers[i] + " not found and no record provided");
             }
             usagePairRepository.save(pair);
             pairs.add(pair);

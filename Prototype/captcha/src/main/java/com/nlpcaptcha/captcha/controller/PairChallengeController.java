@@ -31,7 +31,7 @@ public class PairChallengeController {
     @JsonView(Views.Public.class)
     public List<PairChallenge> getAllPairChallenges() {
 
-        List<PairChallenge> pairChallenges = pairChallengeRepository.findAll();
+        List<PairChallenge> pairChallenges = pairChallengeRepository.findAll().stream().toList();
         return pairChallenges;
     }
 

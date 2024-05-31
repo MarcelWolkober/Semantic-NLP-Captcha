@@ -37,9 +37,19 @@ export default {
       userNotSelectedAllQuery: false
     };
   },
+  watch: {
+    _pairs: {
+      immediate: true,
+      handler(newVal, oldVal) {
+        console.log("Pairs changed");
+        console.log(newVal);
+        this.pairs = newVal;
+      }
+    }
+  },
   mounted() {
     console.log("PairChallengeComponent mounted");
-    console.log("Pairs count", this._pairs.length);
+    console.log("Pairs ", this._pairs);
   },
   methods: {
     addUserChoice(choice) {

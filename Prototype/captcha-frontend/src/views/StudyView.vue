@@ -1,8 +1,14 @@
 <template>
   <div class="StudyView">
-    <StudyStartComponent v-if="showStudyStart" @studyStarted="startStudy"/>
-    <PairChallengeComponent v-if="showPairChallenge" @submitPairChallenge="endPairChallenge"  :_pairs="pairs"/>
-    <ListChallengeComponent v-if="showListChallenge" @submitListChallenge="endListChallenge"/>
+    <StudyStartComponent v-if="showStudyStart" @studyStarted="startStudy" />
+    <PairChallengeComponent v-if="showPairChallenge" @submitPairChallenge="endPairChallenge" :_id="pair_challenge.id"
+                            :_pairs="pairs" />
+    <ListChallengeComponent v-if="showListChallenge" @submitListChallenge="endListChallenge" :_id="list_challenge.id"
+                            :_lemma="list_challenge.lemma" :_reference-usage="list_challenge.referenceUsage"
+                            :_usages="list_challenge.listUsages" />
+    <StudyUserFeedbackComponent v-if="showUserFeedback" @submitFeedback="submitFeedback" />
+    <StudyFinishedComponent v-if="showStudyFinished" :userFeedback="userFeedBack" />
+    <StudyErrorPageComponent v-if="showStudyErrorPage" />
   </div>
 </template>
 
@@ -11,69 +17,45 @@ import StudyStartComponent from "@/components/study/StudyStartComponent.vue";
 import PairChallengeComponent from "@/components/challenges/PairChallengeComponent.vue";
 import ListChallengeComponent from "@/components/challenges/ListChallengeComponent.vue";
 import StudyFinishedComponent from "@/components/study/StudyFinishedComponent.vue";
+import StudyDataService from "@/services/StudyDataService.js";
+import StudyUserFeedbackComponent from "@/components/study/StudyUserFeedbackComponent.vue";
+import StudyErrorPageComponent from "@/components/study/StudyErrorPageComponent.vue";
 
 export default {
   name: "StudyView",
   components: {
     StudyStartComponent,
+    StudyUserFeedbackComponent,
     StudyFinishedComponent,
     PairChallengeComponent,
-    ListChallengeComponent
+    ListChallengeComponent,
+    StudyErrorPageComponent
   },
   data() {
     return {
       studyStarted: false,
       studyReady: false,
+
       showStudyStart: true,
       showPairChallenge: false,
       showListChallenge: false,
+      showUserFeedback: false,
       showStudyFinished: false,
+      showStudyErrorPage: false,
+
+      study_challenge: null,
+      pair_challenge: null,
+      pairs: null,
+      list_challenge: null,
+
+
       startTime: null,
       endTimePairChallenge: null,
       endTime: null,
+
       pairChallengeResults: null,
       listChallengeResults: null,
-      studyResults: null,
-
-      pairs: [
-        {
-          "id": 1,
-          "usage1": {
-            "id": 1,
-            "lemma": "attack",
-            "context": ", which should be the signal of an attack having been made there.",
-            "posStartIndex": 35,
-            "posEndIndex": 41
-          },
-          "usage2": {
-            "id": 2,
-            "lemma": "attack",
-            "context": "commenced the life of a pioneer, and that, in a night attack, his cabin had been burned, his wife killed, and his son carried away by the savages.",
-            "posStartIndex": 54,
-            "posEndIndex": 60
-          },
-          "pairChallenge": null,
-          "label": 4.0
-        },
-        {
-          "id": 2,
-          "usage1": {
-            "id": 1,
-            "lemma": "attack",
-            "context": ", which should be the signal of an attack having been made there.",
-            "posStartIndex": 35,
-            "posEndIndex": 41
-          },
-          "usage2": {
-            "id": 2,
-            "lemma": "attack",
-            "context": "commenced the life of a pioneer, and that, in a night attack, his cabin had been burned, his wife killed, and his son carried away by the savages.",
-            "posStartIndex": 54,
-            "posEndIndex": 60
-          },
-          "pairChallenge": null,
-          "label": 4.0
-        }]
+      userFeedBack: null
 
 
     };
@@ -85,20 +67,87 @@ export default {
       this.startTime = Date.now(); // Store the start time
       console.log("Study started at:", this.startTime);
     },
-    endPairChallenge() {
+    endPairChallenge(challengeId, userChoices) {
       this.showPairChallenge = false;
       this.showListChallenge = true;
       this.endTimePairChallenge = Date.now(); // Store the end time of the pair challenge
       console.log("Pair challenge ended at:", this.endTimePairChallenge);
-      // Continue with your logic here...
+
+      this.pairChallengeResults = {
+        pairChallengeId: challengeId,
+        chosenLabel: userChoices
+      };
+
+
+
     },
-    endListChallenge() {
+    endListChallenge(challengeId, order) {
       this.showListChallenge = false;
-      this.showStudyFinished = true;
+      this.showUserFeedback = true;
       this.endTime = Date.now(); // Store the end time
       console.log("Study ended at:", this.endTime);
-      // Continue with your logic here...
+
+
+      this.listChallengeResults = {
+        listChallengeId: challengeId,
+        order: order
+      };
+
+
+    },
+    submitFeedback(feedback) {
+
+
+      this.userFeedBack = feedback;
+
+      console.log("Feedback submitted", feedback);
+
+      const studyResults = {
+        startTime: this.startTime,
+        endTimePairChallenge: this.endTimePairChallenge,
+        endTime: this.endTime,
+        pairChallengeResults: this.pairChallengeResults,
+        listChallengeResults: this.listChallengeResults,
+        userFeedback: feedback
+      };
+
+
+      StudyDataService.postStudy(studyResults).then(response => {
+
+        if (response.status === 200) {
+          console.log("Study results posted successfully");
+          this.showUserFeedback = false;
+          this.showStudyFinished = true;
+
+        } else {
+          console.log("Study results not posted successfully");
+          this.showUserFeedback = false;
+          this.showStudyErrorPage = true;
+        }
+
+      }).
+      catch(e => {
+        console.log("Error posting study results", e);
+        this.showUserFeedback = false;
+        this.showStudyErrorPage = true;
+      });
+
+
+
     }
+  },
+  created() {
+    console.log("StudyView created");
+    StudyDataService.getAll().then(response => {
+      this.study_challenge = response.data[0];
+      this.pair_challenge = this.study_challenge.pairChallenge;
+      this.pairs = this.pair_challenge.usagePairs;
+      this.list_challenge = this.study_challenge.listRankingChallenge;
+
+      console.log("Study challenge:", this.study_challenge);
+      console.log("Pair challenge:", this.pair_challenge);
+      console.log("List challenge:", this.list_challenge);
+    });
   }
 };
 </script>

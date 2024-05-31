@@ -1,6 +1,7 @@
 package com.nlpcaptcha.captcha.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
@@ -9,9 +10,7 @@ import java.io.Serializable;
 import java.util.*;
 
 
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
+
 @Entity
 @Table(name = "list_ranking_challenges")
 public class ListRankingChallenge implements Serializable {
@@ -33,10 +32,12 @@ public class ListRankingChallenge implements Serializable {
     @JsonView(Views.Public.class)
     private String lemma;
 
+    @JsonManagedReference
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JsonView(Views.Public.class)
     private Usage referenceUsage;
 
+    @JsonManagedReference
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(name = "list_ranking_challenge_usages",
             joinColumns = @JoinColumn(name = "list_ranking_challenge_id"),
@@ -103,8 +104,12 @@ public class ListRankingChallenge implements Serializable {
 
     public void addStudyCombinedChallenge(StudyCombinedChallenge studyCombinedChallenge) {
         this.studyCombinedChallenges.add(studyCombinedChallenge);
-        studyCombinedChallenge.setListRankingChallenge(this);
+
+        if (!getStudyCombinedChallenges().contains(studyCombinedChallenge)) {
+            studyCombinedChallenge.setListRankingChallenge(this);
+        }
     }
+
 
     public void removeStudyCombinedChallenge(StudyCombinedChallenge studyCombinedChallenge) {
         this.studyCombinedChallenges.remove(studyCombinedChallenge);

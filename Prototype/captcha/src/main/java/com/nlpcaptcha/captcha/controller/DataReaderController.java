@@ -1,15 +1,9 @@
 package com.nlpcaptcha.captcha.controller;
 
-import com.nlpcaptcha.captcha.model.ListRankingChallenge;
-import com.nlpcaptcha.captcha.model.PairChallenge;
-import com.nlpcaptcha.captcha.model.Usage;
-import com.nlpcaptcha.captcha.model.UsagePair;
+import com.nlpcaptcha.captcha.model.*;
 import com.nlpcaptcha.captcha.repository.*;
 import com.nlpcaptcha.captcha.repository.UsageRepository;
-import com.nlpcaptcha.captcha.services.ListChallengeService;
-import com.nlpcaptcha.captcha.services.PairChallengeService;
-import com.nlpcaptcha.captcha.services.PairService;
-import com.nlpcaptcha.captcha.services.UsageService;
+import com.nlpcaptcha.captcha.services.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +34,8 @@ public class DataReaderController {
     ListChallengeService listChallengeService;
 
     private static final Logger logger = LoggerFactory.getLogger(UsageController.class);
+    @Autowired
+    private StudyService studyService;
 
 
     @PostMapping("/usage-pairs")
@@ -102,5 +98,19 @@ public class DataReaderController {
             return new ResponseEntity<>("Error while reading and creating Data", HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return new ResponseEntity<>("List Challenges read and created successfully: \n" + listChallenges, HttpStatus.OK);
+    }
+
+    @PostMapping("/study-challenges")
+    public ResponseEntity<String> addStudyChallengesFromFile(@RequestBody String path) {
+        List<StudyCombinedChallenge> studyChallenges;
+        try {
+
+            studyChallenges = studyService.readData(path);
+
+        } catch (Exception e) {
+            logger.error("An error occurred while reading List Challenges: ", e);
+            return new ResponseEntity<>("Error while reading and creating Data", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        return new ResponseEntity<>("List Challenges read and created successfully: \n" + studyChallenges, HttpStatus.OK);
     }
 }

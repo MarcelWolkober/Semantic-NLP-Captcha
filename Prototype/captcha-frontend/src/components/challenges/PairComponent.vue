@@ -46,11 +46,14 @@ export default {
     try {
       this.id = this.pair.id;
       // this.stringID = this.pair.identifier1 + "|" + this.pair.identifier2;
-      this.lemma = this.pair.usage1.lemma;
-      this.context1 = this.pair.usage1.context;
-      this.context2 = this.pair.usage2.context;
-      this.indexes1 = [this.pair.usage1.posStartIndex, this.pair.usage1.posEndIndex];
-      this.indexes2 = [this.pair.usage2.posStartIndex, this.pair.usage2.posEndIndex];
+
+      this.usage1 = this.pair.usages[0];
+      this.usage2 = this.pair.usages[1];
+      this.lemma = this.usage1.lemma;
+      this.context1 = this.usage1.context;
+      this.context2 = this.usage2.context;
+      this.indexes1 = [this.usage1.posStartIndex, this.usage1.posEndIndex];
+      this.indexes2 = [this.usage2.posStartIndex, this.usage2.posEndIndex];
 
     } catch (e) {
       console.log(e);

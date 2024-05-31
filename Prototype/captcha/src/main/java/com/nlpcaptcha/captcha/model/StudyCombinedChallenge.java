@@ -5,15 +5,15 @@ import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.Objects;
-
 
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
 @Entity
 @Table(name = "study_challenges")
-public class StudyCombinedChallenge {
+public class StudyCombinedChallenge implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,20 +21,30 @@ public class StudyCombinedChallenge {
     @JsonView(Views.Public.class)
     private Long id;
 
+    @Column(name = "identifier", unique = true, nullable = false)
+    @JsonView(Views.Public.class)
+    private String identifier;
+
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JsonView(Views.Public.class)
     private PairChallenge pairChallenge;
 
-    @ManyToOne(cascade ={CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JsonView(Views.Public.class)
     private ListRankingChallenge listRankingChallenge;
+
+
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private StudyUserData studyUserData;
+
 
     protected StudyCombinedChallenge() {
     }
 
     public StudyCombinedChallenge(PairChallenge pairChallenge, ListRankingChallenge listRankingChallenge) {
-        this.pairChallenge = pairChallenge;
-        this.listRankingChallenge = listRankingChallenge;
+        this.identifier = pairChallenge.getIdentifier() + "|||" + listRankingChallenge.getIdentifier();
+        setPairChallenge(pairChallenge);
+        setListRankingChallenge(listRankingChallenge);
     }
 
     public Long getId() {
@@ -47,6 +57,7 @@ public class StudyCombinedChallenge {
 
     public void setListRankingChallenge(ListRankingChallenge listRankingChallenge) {
         this.listRankingChallenge = listRankingChallenge;
+        listRankingChallenge.addStudyCombinedChallenge(this);
     }
 
     public PairChallenge getPairChallenge() {
@@ -55,6 +66,20 @@ public class StudyCombinedChallenge {
 
     public void setPairChallenge(PairChallenge pairChallenge) {
         this.pairChallenge = pairChallenge;
+        pairChallenge.addStudyCombinedChallenge(this);
+    }
+
+
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public void setStudyUserData(StudyUserData studyUserData) {
+        this.studyUserData = studyUserData;
+    }
+
+    public StudyUserData getStudyUserData() {
+        return studyUserData;
     }
 
     @Override
@@ -73,12 +98,11 @@ public class StudyCombinedChallenge {
             return false;
         }
         StudyCombinedChallenge studyCombinedChallenge = (StudyCombinedChallenge) obj;
-        return Objects.equals(this.id, studyCombinedChallenge.getId());
+        return Objects.equals(this.identifier, studyCombinedChallenge.getIdentifier());
     }
 
     @Override
     public int hashCode() {
-        return this.id.hashCode();
+        return Objects.hash(identifier);
     }
-
 }

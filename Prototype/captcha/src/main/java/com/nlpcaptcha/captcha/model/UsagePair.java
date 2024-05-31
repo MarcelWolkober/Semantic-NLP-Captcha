@@ -1,5 +1,6 @@
 package com.nlpcaptcha.captcha.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -8,9 +9,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.*;
 
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
+
 @Entity
 @Table(name = "usage_pairs")
 public class UsagePair implements Serializable {
@@ -27,12 +26,13 @@ public class UsagePair implements Serializable {
 //    @OneToMany(mappedBy = "usagePair", cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
 //    private final List<Usage> usages = new ArrayList<>();//maybe as javafx Pair
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(name = "usage_pair_usage",
             joinColumns = @JoinColumn(name = "usage_pair_id"),
             inverseJoinColumns = @JoinColumn(name = "usage_id"))
     @JsonView(Views.Public.class)
     private final Set<Usage> usages = new HashSet<>();
+
 
     @ManyToMany(mappedBy = "usagePairs")
     private final List<PairChallenge> pairChallenges = new ArrayList<>();
