@@ -35,6 +35,7 @@ public class StudyCombinedChallenge implements Serializable {
 
 
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JsonView(Views.Public.class)
     private StudyUserData studyUserData;
 
 
@@ -76,6 +77,7 @@ public class StudyCombinedChallenge implements Serializable {
 
     public void setStudyUserData(StudyUserData studyUserData) {
         this.studyUserData = studyUserData;
+
     }
 
     public StudyUserData getStudyUserData() {

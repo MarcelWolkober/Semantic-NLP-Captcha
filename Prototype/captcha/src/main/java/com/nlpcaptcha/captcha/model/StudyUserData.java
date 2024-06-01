@@ -16,6 +16,7 @@ import java.util.Set;
 @Table(name = "study_user_data")
 public class StudyUserData {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -26,14 +27,43 @@ public class StudyUserData {
     private StudyCombinedChallenge studyCombinedChallenge;
 
     @Column(name = "pair_challenge_results")
+    @JsonView(Views.Public.class)
     private String pairChallengeResults;
 
     @Column(name = "list_ranking_challenge_results")
+    @JsonView(Views.Public.class)
     private String listRankingChallengeResults;
 
-    public StudyUserData(StudyCombinedChallenge studyCombinedChallenge) {
+    @Column(name = "start_time")
+    @JsonView(Views.Public.class)
+    private long startTime;
+
+    @Column(name = "pair_challenge_end_time")
+    @JsonView(Views.Public.class)
+    private long pairChallengeEndTime;
+
+    @Column(name = "end_time")
+    @JsonView(Views.Public.class)
+    private long endTime;
+
+    @Column(name = "feedback")
+    @JsonView(Views.Public.class)
+    private String feedback;
+
+
+    public StudyUserData(StudyCombinedChallenge studyCombinedChallenge, String pairChallengeResults,
+                         String listRankingChallengeResults, long startTime, long pairChallengeEndTime, long endTime,
+                         String feedback) {
         this.studyCombinedChallenge = studyCombinedChallenge;
+        this.pairChallengeResults = pairChallengeResults;
+        this.listRankingChallengeResults = listRankingChallengeResults;
+        this.startTime = startTime;
+        this.pairChallengeEndTime = pairChallengeEndTime;
+        this.endTime = endTime;
+        this.feedback = feedback;
+        studyCombinedChallenge.setStudyUserData(this);
     }
+
 
     protected StudyUserData() {
     }
@@ -61,5 +91,9 @@ public class StudyUserData {
 
     public void setListRankingChallengeResults(String listRankingChallengeResults) {
         this.listRankingChallengeResults = listRankingChallengeResults;
+    }
+
+    public void setStudyCombinedChallenge(StudyCombinedChallenge studyCombinedChallenge) {
+        this.studyCombinedChallenge = studyCombinedChallenge;
     }
 }

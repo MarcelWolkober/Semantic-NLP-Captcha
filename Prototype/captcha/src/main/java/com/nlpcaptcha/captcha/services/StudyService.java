@@ -3,16 +3,20 @@ package com.nlpcaptcha.captcha.services;
 import com.nlpcaptcha.captcha.model.ListRankingChallenge;
 import com.nlpcaptcha.captcha.model.PairChallenge;
 import com.nlpcaptcha.captcha.model.StudyCombinedChallenge;
+import com.nlpcaptcha.captcha.model.StudyUserData;
 import com.nlpcaptcha.captcha.repository.ListChallengeRepository;
 import com.nlpcaptcha.captcha.repository.PairChallengeRepository;
 import com.nlpcaptcha.captcha.repository.StudyCombinedChallengeRepository;
+import com.nlpcaptcha.captcha.repository.StudyUserDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONException;
+import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -23,15 +27,17 @@ public class StudyService {
     private final ListChallengeService listRankingChallengeService;
     private final ListChallengeRepository listChallengeRepository;
     private final PairChallengeRepository pairChallengeRepository;
+    private final StudyUserDataRepository studyUserDataRepository;
 
 
     @Autowired
-    public StudyService(StudyCombinedChallengeRepository studyCombinedChallengeRepository, PairChallengeService pairChallengeService, ListChallengeService listRankingChallengeService, ListChallengeRepository listChallengeRepository, PairChallengeRepository pairChallengeRepository) {
+    public StudyService(StudyCombinedChallengeRepository studyCombinedChallengeRepository, PairChallengeService pairChallengeService, ListChallengeService listRankingChallengeService, ListChallengeRepository listChallengeRepository, PairChallengeRepository pairChallengeRepository, StudyUserDataRepository studyUserDataRepository) {
         this.studyCombinedChallengeRepository = studyCombinedChallengeRepository;
         this.pairChallengeService = pairChallengeService;
         this.listRankingChallengeService = listRankingChallengeService;
         this.listChallengeRepository = listChallengeRepository;
         this.pairChallengeRepository = pairChallengeRepository;
+        this.studyUserDataRepository = studyUserDataRepository;
     }
 
     @Transactional
@@ -94,5 +100,43 @@ public class StudyService {
         listChallengeRepository.save(listChallenge);
 
         return studyCombinedChallenge;
+    }
+
+    public StudyCombinedChallenge saveStudyUserData(String studyUserDataString) {
+
+
+        try {
+            JSONObject jsonUSerData = new JSONObject(studyUserDataString);
+
+            Long studyChallengeId = jsonUSerData.getLong("studyChallengeId");
+
+            Optional<StudyCombinedChallenge> studyCombinedChallenge = studyCombinedChallengeRepository.findById(studyChallengeId);
+
+            if (studyCombinedChallenge.isEmpty()) {
+                throw new IllegalArgumentException("Study Challenge not found");
+            }
+
+
+            String pairChallengeResults = jsonUSerData.getString("pairChallengeResults");
+            String listChallengeResults = jsonUSerData.getString("listChallengeResults");
+            long startTime = jsonUSerData.getLong("startTime");
+            long endTimePairChallenge = jsonUSerData.getLong("endTimePairChallenge");
+            long endTime = jsonUSerData.getLong("endTime");
+            String userFeedback = jsonUSerData.getString("userFeedback");
+
+
+            StudyUserData studyUserData = new StudyUserData(studyCombinedChallenge.get(), pairChallengeResults,
+                    listChallengeResults, startTime, endTimePairChallenge, endTime, userFeedback);
+
+
+            studyUserDataRepository.save(studyUserData);
+
+            return studyCombinedChallengeRepository.save(studyCombinedChallenge.get());
+
+
+        } catch (JSONException e) {
+            throw new IllegalArgumentException("Invalid JSON format");
+        }
+
     }
 }

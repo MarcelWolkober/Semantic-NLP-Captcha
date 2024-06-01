@@ -103,6 +103,7 @@ export default {
       console.log("Feedback submitted", feedback);
 
       const studyResults = {
+        studyChallengeId: this.study_challenge.id,
         startTime: this.startTime,
         endTimePairChallenge: this.endTimePairChallenge,
         endTime: this.endTime,
@@ -116,6 +117,7 @@ export default {
 
         if (response.status === 200) {
           console.log("Study results posted successfully");
+          console.log("response: ", response.data);
           this.showUserFeedback = false;
           this.showStudyFinished = true;
 
