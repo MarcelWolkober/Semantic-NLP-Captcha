@@ -21,7 +21,7 @@ services:
     - 5432:5432
   networks:
    - captcha-network
- frond-end:
+ front-end:
   build: ./captcha-frontend
   container_name: captcha-front-end
   ports:
@@ -36,7 +36,7 @@ services:
   ports:
    - "80:80"
   depends_on:
-   - frond-end
+   - front-end
    - back-end
   networks:
    - captcha-network
