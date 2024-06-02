@@ -1,0 +1,15 @@
+services:
+ frond-end:
+  build: .
+  container_name: captcha-front-end
+  ports:
+  - "8080:80"
+ nginx:
+  image: nginx:alpine
+  container_name: nginx-app
+  volumes:
+  - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+  ports:
+  - "80:80"
+  depends_on:
+  - frond-end

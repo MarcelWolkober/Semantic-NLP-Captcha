@@ -2,16 +2,12 @@ package com.nlpcaptcha.captcha.services;
 
 import com.nlpcaptcha.captcha.model.ListRankingChallenge;
 import com.nlpcaptcha.captcha.model.Usage;
-import com.nlpcaptcha.captcha.model.UsagePair;
 import com.nlpcaptcha.captcha.repository.ListChallengeRepository;
-import com.nlpcaptcha.captcha.repository.PairChallengeRepository;
-import com.nlpcaptcha.captcha.repository.UsagePairRepository;
 import com.nlpcaptcha.captcha.repository.UsageRepository;
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.boot.configurationprocessor.json.JSONArray;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -74,7 +70,7 @@ public class ListChallengeService {
                 labels.add(Float.parseFloat(tempLabel));
             }
 
-            listChallenges.add(createAndSaveListChallengeByIdentifiers( referenceUsageIdentifier, listUsagesIdentifiers, labels, order));
+            listChallenges.add(createAndSaveListChallengeByIdentifiers(referenceUsageIdentifier, listUsagesIdentifiers, labels, order));
 
         }
         return listChallenges;

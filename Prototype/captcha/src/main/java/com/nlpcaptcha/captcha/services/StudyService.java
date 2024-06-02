@@ -9,8 +9,8 @@ import com.nlpcaptcha.captcha.repository.PairChallengeRepository;
 import com.nlpcaptcha.captcha.repository.StudyCombinedChallengeRepository;
 import com.nlpcaptcha.captcha.repository.StudyUserDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

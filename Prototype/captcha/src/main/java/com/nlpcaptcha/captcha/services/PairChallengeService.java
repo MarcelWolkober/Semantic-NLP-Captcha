@@ -6,8 +6,8 @@ import com.nlpcaptcha.captcha.repository.PairChallengeRepository;
 import com.nlpcaptcha.captcha.repository.UsagePairRepository;
 import com.nlpcaptcha.captcha.repository.UsageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -34,7 +34,7 @@ public class PairChallengeService {
     public List<PairChallenge> readData(String path) throws JSONException {
         DataReader dataReader = new DataReader();
         List<List<String>> records = dataReader.readData(path);
-        records.removeFirst();//remove header    }
+        records.removeFirst();//remove header
 
         List<PairChallenge> pairChallenges = new ArrayList<>();
 
