@@ -5,6 +5,7 @@ WORKDIR /app
 
 # Copy the package.json and install dependencies
 COPY package*.json ./
+RUN npm cache clean --force
 RUN npm install && echo "npm install completed"
 
 # Copy rest of the files
