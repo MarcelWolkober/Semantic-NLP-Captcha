@@ -5,13 +5,13 @@ WORKDIR /app
 
 # Copy the package.json and install dependencies
 COPY package*.json ./
-RUN npm install
+RUN npm install && echo "npm install completed"
 
 # Copy rest of the files
 COPY . .
 
 # Build the project
-RUN npm run build
+RUN npm run build && echo "npm run build completed"
 
 
 FROM nginx:alpine as production-build
