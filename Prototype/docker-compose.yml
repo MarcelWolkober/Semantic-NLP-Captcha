@@ -24,8 +24,6 @@ services:
  front-end:
   build: ./captcha-frontend
   container_name: captcha-front-end
-  volumes:
-   - dist-volume:/app/dist
   networks:
    - captcha-network
  nginx:
@@ -33,7 +31,7 @@ services:
   container_name: nginx-app
   volumes:
    - ./captcha-frontend/nginx/default.conf:/etc/nginx/conf.d/default.conf
-   - dist-volume:/usr/share/nginx/html
+   - ./captcha-frontend/dist:/usr/share/nginx/html
   ports:
    - "80:80"
   depends_on:
