@@ -34,7 +34,8 @@ public class AppStartupRunner implements ApplicationRunner {
         logger.atInfo().log("Application started with command-line arguments: {}", args.getOptionNames());
         try {
             logger.atInfo().log("Setting up the data");
-            usageService.readData("dwug_en_usages.csv");
+            usageService.readData("dwug_en_usages_part1.csv");
+            usageService.readData("dwug_en_usages_part2.csv");
             logger.atInfo().log("usages read");
             pairService.readAndSavePairs("dwug_en_pairs.csv");
             logger.atInfo().log("pairs read");
