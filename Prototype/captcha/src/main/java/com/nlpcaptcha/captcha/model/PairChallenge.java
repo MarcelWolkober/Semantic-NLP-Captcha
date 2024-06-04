@@ -20,7 +20,7 @@ public class PairChallenge implements Serializable {
     @JsonView(Views.Public.class)
     private Long id;
 
-    @Column(name = "identifier", nullable = false, unique = true)
+    @Column(name = "identifier", nullable = false, unique = true, length = 512)
     @JsonView(Views.Public.class)
     private String identifier;
 

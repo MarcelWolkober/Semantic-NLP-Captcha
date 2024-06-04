@@ -96,4 +96,18 @@ public class StudyUserData {
     public void setStudyCombinedChallenge(StudyCombinedChallenge studyCombinedChallenge) {
         this.studyCombinedChallenge = studyCombinedChallenge;
     }
+
+    @Override
+    public String toString() {
+        return "StudyUserData{" +
+                "id=" + id +
+                ", studyCombinedChallenge=" + studyCombinedChallenge +
+                ", pairChallengeResults='" + pairChallengeResults + '\'' +
+                ", listRankingChallengeResults='" + listRankingChallengeResults + '\'' +
+                ", startTime=" + startTime +
+                ", pairChallengeEndTime=" + pairChallengeEndTime +
+                ", endTime=" + endTime +
+                ", feedback='" + feedback + '\'' +
+                '}';
+    }
 }

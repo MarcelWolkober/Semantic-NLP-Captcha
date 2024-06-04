@@ -111,6 +111,7 @@ export default {
         userFeedback: feedback
       };
 
+      console.log("Study results:", studyResults);
 
       StudyDataService.postStudy(studyResults).then(response => {
 
@@ -139,16 +140,17 @@ export default {
     console.log("StudyView created");
     StudyDataService.getNewStudy().then(response => {
       if (response.status !== 200) {
-        console.log("Error getting study challenge");
+        console.log("No correct answer received from server", response.status, response.data);
         this.showStudyStart = false;
         this.showStudyErrorPage = true;
       } else {
         console.log("Study challenge received", response.status, response.data);
 
-        this.study_challenge = response.data[0];
-        this.pair_challenge = this.study_challenge.pairChallenge;
-        this.pairs = this.pair_challenge.usagePairs;
-        this.list_challenge = this.study_challenge.listRankingChallenge;
+        this.study_challenge = response.data;
+
+        this.pair_challenge = response.data.pairChallenge;
+        this.pairs = response.data.pairChallenge.usagePairs;
+        this.list_challenge = response.data.listRankingChallenge;
 
         console.log("Study challenge:", this.study_challenge);
         console.log("Pair challenge:", this.pair_challenge);

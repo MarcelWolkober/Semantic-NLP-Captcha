@@ -2,7 +2,6 @@ package com.nlpcaptcha.captcha.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.nlpcaptcha.captcha.model.StudyCombinedChallenge;
-import com.nlpcaptcha.captcha.model.StudyUserData;
 import com.nlpcaptcha.captcha.model.Views;
 import com.nlpcaptcha.captcha.repository.StudyCombinedChallengeRepository;
 import com.nlpcaptcha.captcha.services.StudyService;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:8080")//TODO for testing only
+@CrossOrigin(origins = "http://localhost")//TODO find a better way to allow only localhost
 @RestController
 @RequestMapping("/api/study")
 public class StudyController {
@@ -35,29 +34,26 @@ public class StudyController {
     public ResponseEntity<StudyCombinedChallenge> getNewStudyChallenge() {
 
         try {
-          StudyCombinedChallenge studyChallenge =  studyService.createNewRandomStudyChallenge();
+            StudyCombinedChallenge studyChallenge = studyService.createNewRandomStudyChallenge();
             return new ResponseEntity<>(studyChallenge, HttpStatus.OK);
         } catch (Exception e) {
             logger.error("An error occurred while creating new study: ", e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
-
-
     }
 
     @GetMapping("/all")
     @JsonView(Views.Public.class)
     public List<StudyCombinedChallenge> getAllPairChallenges() {
-
-        List<StudyCombinedChallenge> studyCombinedChallenges = studyCombinedChallengeRepository.findAll();
-        return studyCombinedChallenges;
+        return studyCombinedChallengeRepository.findAll();
     }
 
     @PostMapping("/add")
     public ResponseEntity<StudyCombinedChallenge> addStudyUserData(@RequestBody String studyUserDataString) {
         try {
-          StudyCombinedChallenge studyUserData =  studyService.saveStudyUserData(studyUserDataString);
+            StudyCombinedChallenge studyUserData = studyService.saveStudyUserData(studyUserDataString);
+            logger.info("Study user data added successfully {}", studyUserData);
             return new ResponseEntity<>(studyUserData, HttpStatus.OK);
         } catch (Exception e) {
             logger.error("An error occurred while adding study user data: ", e);

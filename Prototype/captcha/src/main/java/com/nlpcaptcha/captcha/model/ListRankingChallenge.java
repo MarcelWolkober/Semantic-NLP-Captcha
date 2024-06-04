@@ -24,7 +24,7 @@ public class ListRankingChallenge implements Serializable {
     /**
      * Unique identifier of the challenge by combining the identifiers of the usages with "||" as separator
      */
-    @Column(nullable = false, name = "identifier", unique = true)
+    @Column(nullable = false, name = "identifier", unique = true, length = 512)
     @JsonView(Views.Public.class)
     private String identifier;
 

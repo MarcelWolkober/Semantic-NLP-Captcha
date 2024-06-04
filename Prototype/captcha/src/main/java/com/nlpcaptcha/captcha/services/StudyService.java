@@ -8,10 +8,11 @@ import com.nlpcaptcha.captcha.repository.ListChallengeRepository;
 import com.nlpcaptcha.captcha.repository.PairChallengeRepository;
 import com.nlpcaptcha.captcha.repository.StudyCombinedChallengeRepository;
 import com.nlpcaptcha.captcha.repository.StudyUserDataRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.springframework.data.jpa.domain.Specification;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,6 +24,8 @@ import java.util.Random;
 @Service
 @Transactional
 public class StudyService {
+
+    private static final Logger logger = LoggerFactory.getLogger(StudyService.class);
 
     private final StudyCombinedChallengeRepository studyCombinedChallengeRepository;
     private final PairChallengeService pairChallengeService;
@@ -78,15 +81,19 @@ public class StudyService {
     }
 
     @Transactional
-    public StudyCombinedChallenge createNewRandomStudyChallenge() throws IllegalStateException{
+    public StudyCombinedChallenge createNewRandomStudyChallenge() throws IllegalStateException {
 
 
-        List<PairChallenge> pairChallenges = new ArrayList<>();
-        List<ListRankingChallenge> listRankingChallenges = new ArrayList<>();
+        List<PairChallenge> pairChallenges = pairChallengeRepository.findAll();
+        List<ListRankingChallenge> listRankingChallenges =listChallengeRepository.findAll();
+
+        if (pairChallenges.isEmpty() || listRankingChallenges.isEmpty()) {
+            throw new IllegalStateException("No available PairChallenges or ListRankingChallenges");
+        }
 
 
         // filter PairChallenges and ListRankingChallenges by smallest number of associated StudyChallenges
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < Integer.MAX_VALUE; i++) {
             // Fetch all PairChallenges and ListRankingChallenges that do not have any associated StudyUserData
             int numberOfStudyChallenges = i;
             pairChallenges = pairChallengeRepository.findAll().stream()
@@ -99,7 +106,7 @@ public class StudyService {
 
             }
         }
-                // Check if there are any available PairChallenges and ListRankingChallenges
+        // Check if there are any available PairChallenges and ListRankingChallenges -> should not do anything with the loop before going till Integer.MAX_VALUE
         if (pairChallenges.isEmpty() || listRankingChallenges.isEmpty()) {
             throw new IllegalStateException("No available PairChallenges or ListRankingChallenges");
         }
@@ -143,7 +150,7 @@ public class StudyService {
 
     public StudyCombinedChallenge saveStudyUserData(String studyUserDataString) {
 
-
+        logger.info("Saving StudyUserData: {}", studyUserDataString);
         try {
             JSONObject jsonUSerData = new JSONObject(studyUserDataString);
 
@@ -156,24 +163,28 @@ public class StudyService {
             }
 
 
-            String pairChallengeResults = jsonUSerData.getString("pairChallengeResults");
-            String listChallengeResults = jsonUSerData.getString("listChallengeResults");
+            String pairChallengeResults = jsonUSerData.getJSONObject("pairChallengeResults").toString();
+            String listChallengeResults = jsonUSerData.getJSONObject("listChallengeResults").toString();
             long startTime = jsonUSerData.getLong("startTime");
             long endTimePairChallenge = jsonUSerData.getLong("endTimePairChallenge");
             long endTime = jsonUSerData.getLong("endTime");
-            String userFeedback = jsonUSerData.getString("userFeedback");
+            String userFeedback = jsonUSerData.getJSONObject("userFeedback").toString();
 
 
             StudyUserData studyUserData = new StudyUserData(studyCombinedChallenge.get(), pairChallengeResults,
                     listChallengeResults, startTime, endTimePairChallenge, endTime, userFeedback);
 
+            logger.info("Saving StudyUserData: {}", studyUserData);
 
-            studyUserDataRepository.save(studyUserData);
+            StudyUserData studyUserDataSave = studyUserDataRepository.save(studyUserData);
+
+            logger.info("Saved StudyUserData: {}", studyUserDataSave);
 
             return studyCombinedChallengeRepository.save(studyCombinedChallenge.get());
 
 
-        } catch (JSONException e) {
+        } catch (Exception e) {
+            logger.error("error while saving StudyUserData: ", e);
             throw new IllegalArgumentException("Invalid JSON format");
         }
 

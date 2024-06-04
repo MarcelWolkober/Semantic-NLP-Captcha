@@ -24,7 +24,7 @@ FROM nginx:alpine as production-build
 
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
-# Copy from the stage 1
+#Currently not working: Uses Volumes instead of COPY NEEDS to be build before hand
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 
 EXPOSE 80

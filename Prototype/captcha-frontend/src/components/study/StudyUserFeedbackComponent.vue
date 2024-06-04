@@ -2,6 +2,8 @@
   <div class="StudyUserFeedbackComponent">
     <h1>User Feedback</h1>
     <p>Thank you for participating in the study. Please provide feedback on your experience.</p>
+    <h2>Your mother tongue is:</h2>
+    <input type="text" v-model="mother_language">
     <h2>Pair Challenge:</h2>
     <p>How convenient and practical do you think is such type of Captcha? And would you prefer it over
       any different kind of Captcha (like Image-Captcha)? </p>
@@ -30,6 +32,7 @@ export default {
   name: "StudyUserFeedbackComponent",
   data() {
     return {
+      mother_language: "",
       pair_challenge_feedback: "",
       pair_challenge_count_opinion: null,
       list_challenge_feedback: "",
@@ -53,6 +56,7 @@ export default {
 
       // Create an object with all the feedback fields
       const feedback = {
+        motherLanguage: this.mother_language,
         pairChallengeFeedback: this.pair_challenge_feedback,
         pairChallengeCountOpinion: this.pair_challenge_count_opinion,
         listChallengeFeedback: this.list_challenge_feedback,

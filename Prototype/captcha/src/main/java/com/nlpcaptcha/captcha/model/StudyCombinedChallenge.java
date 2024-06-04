@@ -21,7 +21,7 @@ public class StudyCombinedChallenge implements Serializable {
     @JsonView(Views.Public.class)
     private Long id;
 
-    @Column(name = "identifier", unique = true, nullable = false)
+    @Column(name = "identifier", unique = true, nullable = false, length = 512)
     @JsonView(Views.Public.class)
     private String identifier;
 
