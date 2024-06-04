@@ -19,6 +19,8 @@ COPY . .
 # Build the project
 RUN npm run build && echo "npm run build completed"
 
+# List the contents of the dist directory
+RUN ls /app/dist
 
 FROM nginx:alpine as production-build
 
