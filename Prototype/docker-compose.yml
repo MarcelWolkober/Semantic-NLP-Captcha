@@ -43,3 +43,6 @@ services:
   
 networks:
  captcha-network:
+ 
+volumes:
+  dist-volume:
