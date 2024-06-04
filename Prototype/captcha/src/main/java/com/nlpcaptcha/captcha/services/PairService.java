@@ -105,7 +105,7 @@ public class PairService {
         Usage existingUsage2 = usageRepository.findByIdentifier(identifier2);
 
         if (existingUsage1 == null | existingUsage2 == null) {
-            throw new IllegalArgumentException("One or both of the usages do not exist in the database");
+            throw new IllegalArgumentException("One or both of the usages do not exist in the database, identifier: " + identifier);
         }
 
         usagePair = new UsagePair(identifier, existingUsage1, existingUsage2, label);
