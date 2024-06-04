@@ -24,6 +24,8 @@ services:
  front-end:
   build: ./captcha-frontend
   container_name: captcha-front-end
+  ports:
+   - "8080:8080"
   networks:
    - captcha-network
  nginx:

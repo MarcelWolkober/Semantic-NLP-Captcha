@@ -32,6 +32,11 @@ public class PairChallengeService {
 
     @Transactional
     public List<PairChallenge> readData(String path) throws JSONException {
+        return readData(path, false);
+    }
+
+    @Transactional
+    public List<PairChallenge> readData(String path, boolean forStudyChallenge ) throws JSONException {
         DataReader dataReader = new DataReader();
         List<List<String>> records = dataReader.readData(path);
         records.removeFirst();//remove header
@@ -47,6 +52,10 @@ public class PairChallengeService {
                 continue;
             }
 
+            if(forStudyChallenge){
+                identifier = "basic_usage_1|basic_usage_2||" + identifier;
+            }
+
             PairChallenge pairChallenge = createAndSavePairChallenge(identifier, record);
 
             pairChallenges.add(pairChallenge);
@@ -58,12 +67,10 @@ public class PairChallengeService {
     @Transactional
     public PairChallenge createAndSavePairChallengeByIdentifier(String identifier) throws JSONException {
         try {
-           return createAndSavePairChallenge(identifier, null);
-        }
-        catch (IllegalArgumentException e){
+            return createAndSavePairChallenge(identifier, null);
+        } catch (IllegalArgumentException e) {
             throw new IllegalArgumentException("Pairs for PairChallenge with identifier " + identifier + " not found ");
         }
-
 
 
     }

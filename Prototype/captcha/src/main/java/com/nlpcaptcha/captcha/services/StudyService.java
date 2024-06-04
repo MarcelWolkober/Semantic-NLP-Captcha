@@ -11,12 +11,14 @@ import com.nlpcaptcha.captcha.repository.StudyUserDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @Service
 @Transactional
@@ -73,6 +75,43 @@ public class StudyService {
         }
 
         return studyCombinedChallenges;
+    }
+
+    @Transactional
+    public StudyCombinedChallenge createNewRandomStudyChallenge() throws IllegalStateException{
+
+
+        List<PairChallenge> pairChallenges = new ArrayList<>();
+        List<ListRankingChallenge> listRankingChallenges = new ArrayList<>();
+
+
+        // filter PairChallenges and ListRankingChallenges by smallest number of associated StudyChallenges
+        for (int i = 0; i < 100; i++) {
+            // Fetch all PairChallenges and ListRankingChallenges that do not have any associated StudyUserData
+            int numberOfStudyChallenges = i;
+            pairChallenges = pairChallengeRepository.findAll().stream()
+                    .filter(pairChallenge -> pairChallenge.getStudyCombinedChallenges().size() == numberOfStudyChallenges).toList();
+            listRankingChallenges = listChallengeRepository.findAll().stream()
+                    .filter(listRankingChallenge -> listRankingChallenge.getStudyCombinedChallenges().size() == numberOfStudyChallenges).toList();
+
+            if (!pairChallenges.isEmpty() && !listRankingChallenges.isEmpty()) {
+                break;
+
+            }
+        }
+                // Check if there are any available PairChallenges and ListRankingChallenges
+        if (pairChallenges.isEmpty() || listRankingChallenges.isEmpty()) {
+            throw new IllegalStateException("No available PairChallenges or ListRankingChallenges");
+        }
+
+        // Randomly select one PairChallenge and one ListRankingChallenge
+        Random random = new Random();
+        PairChallenge randomPairChallenge = pairChallenges.get(random.nextInt(pairChallenges.size()));
+        ListRankingChallenge randomListRankingChallenge = listRankingChallenges.get(random.nextInt(listRankingChallenges.size()));
+
+        // Create a new StudyCombinedChallenge using the selected PairChallenge and ListRankingChallenge
+        return createAndSaveStudyCombinedChallengeByIdentifier(randomPairChallenge.getIdentifier(), randomListRankingChallenge.getIdentifier());
+
     }
 
 

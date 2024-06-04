@@ -79,7 +79,6 @@ export default {
       };
 
 
-
     },
     endListChallenge(challengeId, order) {
       this.showListChallenge = false;
@@ -127,28 +126,38 @@ export default {
           this.showStudyErrorPage = true;
         }
 
-      }).
-      catch(e => {
+      }).catch(e => {
         console.log("Error posting study results", e);
         this.showUserFeedback = false;
         this.showStudyErrorPage = true;
       });
 
 
-
     }
   },
   created() {
     console.log("StudyView created");
-    StudyDataService.getAll().then(response => {
-      this.study_challenge = response.data[0];
-      this.pair_challenge = this.study_challenge.pairChallenge;
-      this.pairs = this.pair_challenge.usagePairs;
-      this.list_challenge = this.study_challenge.listRankingChallenge;
+    StudyDataService.getNewStudy().then(response => {
+      if (response.status !== 200) {
+        console.log("Error getting study challenge");
+        this.showStudyStart = false;
+        this.showStudyErrorPage = true;
+      } else {
+        console.log("Study challenge received", response.status, response.data);
 
-      console.log("Study challenge:", this.study_challenge);
-      console.log("Pair challenge:", this.pair_challenge);
-      console.log("List challenge:", this.list_challenge);
+        this.study_challenge = response.data[0];
+        this.pair_challenge = this.study_challenge.pairChallenge;
+        this.pairs = this.pair_challenge.usagePairs;
+        this.list_challenge = this.study_challenge.listRankingChallenge;
+
+        console.log("Study challenge:", this.study_challenge);
+        console.log("Pair challenge:", this.pair_challenge);
+        console.log("List challenge:", this.list_challenge);
+      }
+    }).catch(e => {
+      console.log("Error getting study challenge", e);
+      this.showStudyStart = false;
+      this.showStudyErrorPage = true;
     });
   }
 };

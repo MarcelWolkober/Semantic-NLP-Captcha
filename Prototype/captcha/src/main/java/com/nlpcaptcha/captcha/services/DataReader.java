@@ -15,6 +15,7 @@ public class DataReader {
     public List<List<String>> readData(String path) {
         List<List<String>> records = new ArrayList<>();
 
+        // This is a workaround to make the code work in the docker container TODO: Fix this
         String absolute_path = new File(".").getAbsolutePath();
         if(absolute_path.contains("/opt/app")){
             path = "../../data/" + path;

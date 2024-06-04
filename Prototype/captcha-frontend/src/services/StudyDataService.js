@@ -2,6 +2,11 @@ import http from "../http-common";
 
 
 class StudyDataService {
+  getNewStudy() {
+    return http.get("/study/new");
+
+  }
+
   getAll() {
     return http.get("/study/all");
   }

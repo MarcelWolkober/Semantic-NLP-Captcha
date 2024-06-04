@@ -14,7 +14,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:8081")//TODO for testing only
 @RestController
 @RequestMapping("/api/usages")
 public class UsageController {

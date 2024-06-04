@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:8081")//TODO for testing only
+@CrossOrigin(origins = "http://localhost:8080")//TODO for testing only
 @RestController
 @RequestMapping("/api/study")
 public class StudyController {
@@ -29,6 +29,22 @@ public class StudyController {
     @Autowired
     private StudyCombinedChallengeRepository studyCombinedChallengeRepository;
 
+
+    @GetMapping("/new")
+    @JsonView(Views.Public.class)
+    public ResponseEntity<StudyCombinedChallenge> getNewStudyChallenge() {
+
+        try {
+          StudyCombinedChallenge studyChallenge =  studyService.createNewRandomStudyChallenge();
+            return new ResponseEntity<>(studyChallenge, HttpStatus.OK);
+        } catch (Exception e) {
+            logger.error("An error occurred while creating new study: ", e);
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
+
+
+    }
 
     @GetMapping("/all")
     @JsonView(Views.Public.class)
