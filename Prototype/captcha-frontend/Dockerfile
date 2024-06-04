@@ -1,12 +1,15 @@
 # stage1 as builder
 FROM node:lts-alpine as builder
 
+# Set the log level
+ENV LOG_LEVEL=debug
+
 WORKDIR /app
 
 # Copy the package.json and install dependencies
 COPY package*.json ./
-# RUN rm -rf node_modules package-lock.json
-# RUN npm cache clean --force
+RUN rm -rf node_modules # package-lock.json
+RUN npm cache clean --force
 # RUN npm install
 RUN npm ci && echo "npm install completed"
 
@@ -23,7 +26,6 @@ COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # Copy from the stage 1
 COPY --from=builder /app/dist /usr/share/nginx/html
-COPY --from=builder /app/node_modules /usr/share/nginx/html/node_modules
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
