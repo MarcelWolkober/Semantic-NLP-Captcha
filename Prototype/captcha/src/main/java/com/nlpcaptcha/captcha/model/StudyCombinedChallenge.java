@@ -33,7 +33,7 @@ public class StudyCombinedChallenge implements Serializable {
     @JsonView(Views.Public.class)
     private ListRankingChallenge listRankingChallenge;
 
-
+    // TODO: Change One to Many
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JsonView(Views.Public.class)
     private StudyUserData studyUserData;

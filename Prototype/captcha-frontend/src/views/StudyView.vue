@@ -62,10 +62,36 @@ export default {
   },
   methods: {
     startStudy() {
-      this.showStudyStart = false;
-      this.showPairChallenge = true;
-      this.startTime = Date.now(); // Store the start time
-      console.log("Study started at:", this.startTime);
+      StudyDataService.getNewStudy().then(response => {
+        if (response.status !== 200) {
+          console.log("No correct answer received from server", response.status, response.data);
+          this.showStudyStart = false;
+          this.showStudyErrorPage = true;
+        } else {
+          console.log("Study challenge received", response.status, response.data);
+
+          this.study_challenge = response.data;
+
+          this.pair_challenge = response.data.pairChallenge;
+          this.pairs = response.data.pairChallenge.usagePairs;
+          this.list_challenge = response.data.listRankingChallenge;
+
+          console.log("Study challenge:", this.study_challenge);
+          console.log("Pair challenge:", this.pair_challenge);
+          console.log("List challenge:", this.list_challenge);
+
+          this.showStudyStart = false;
+          this.showPairChallenge = true;
+          this.startTime = Date.now(); // Store the start time
+          console.log("Study started at:", this.startTime);
+        }
+      }).catch(e => {
+        console.log("Error getting study challenge", e);
+        this.showStudyStart = false;
+        this.showStudyErrorPage = true;
+      });
+
+
     },
     endPairChallenge(challengeId, userChoices) {
       this.showPairChallenge = false;
@@ -138,29 +164,6 @@ export default {
   },
   created() {
     console.log("StudyView created");
-    StudyDataService.getNewStudy().then(response => {
-      if (response.status !== 200) {
-        console.log("No correct answer received from server", response.status, response.data);
-        this.showStudyStart = false;
-        this.showStudyErrorPage = true;
-      } else {
-        console.log("Study challenge received", response.status, response.data);
-
-        this.study_challenge = response.data;
-
-        this.pair_challenge = response.data.pairChallenge;
-        this.pairs = response.data.pairChallenge.usagePairs;
-        this.list_challenge = response.data.listRankingChallenge;
-
-        console.log("Study challenge:", this.study_challenge);
-        console.log("Pair challenge:", this.pair_challenge);
-        console.log("List challenge:", this.list_challenge);
-      }
-    }).catch(e => {
-      console.log("Error getting study challenge", e);
-      this.showStudyStart = false;
-      this.showStudyErrorPage = true;
-    });
   }
 };
 </script>
