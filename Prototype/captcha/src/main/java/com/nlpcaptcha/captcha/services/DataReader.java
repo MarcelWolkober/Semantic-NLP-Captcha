@@ -13,7 +13,7 @@ public class DataReader {
 
 
     public List<List<String>> readData(String path) {
-        List<List<String>> records = new ArrayList<>();
+       List<List<String>> records = new ArrayList<>();
 
         // This is a workaround to make the code work in the docker container TODO: Fix this
         String absolute_path = new File(".").getAbsolutePath();
@@ -22,9 +22,6 @@ public class DataReader {
         }
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-
-
-
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(TAB_DELIMITER);
