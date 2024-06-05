@@ -165,7 +165,7 @@ export default {
   },
   created() {
     console.log("StudyView created");
-    axios.defaults.baseURL = 'http://193.196.55.76/api';  }
+  }
 };
 </script>
 
