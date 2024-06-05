@@ -37,8 +37,8 @@ public class AppStartupRunner implements ApplicationRunner {
 //            usageService.readData("dwug_en_usages_part1.csv");
 //            usageService.readData("dwug_en_usages_part2.csv");
 //            logger.atInfo().log("usages read");
-            pairService.readAndSavePairs("pairs_sample2.csv");
-            logger.atInfo().log("pairs read");
+      //      pairService.readAndSavePairs("pairs_sample2.csv");
+       //     logger.atInfo().log("pairs read");
   //          pairChallengeService.readData("pair_challenges.csv");
     //        logger.atInfo().log("pair challenges read");
 //          listChallengeService.readData("list_challenges.csv");
