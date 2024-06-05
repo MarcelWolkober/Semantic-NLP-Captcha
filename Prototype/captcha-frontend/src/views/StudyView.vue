@@ -20,6 +20,7 @@ import StudyFinishedComponent from "@/components/study/StudyFinishedComponent.vu
 import StudyDataService from "@/services/StudyDataService.js";
 import StudyUserFeedbackComponent from "@/components/study/StudyUserFeedbackComponent.vue";
 import StudyErrorPageComponent from "@/components/study/StudyErrorPageComponent.vue";
+import axios from "axios";
 
 export default {
   name: "StudyView",
@@ -164,7 +165,7 @@ export default {
   },
   created() {
     console.log("StudyView created");
-  }
+    axios.defaults.baseURL = 'http://193.196.55.76/api';  }
 };
 </script>
 
