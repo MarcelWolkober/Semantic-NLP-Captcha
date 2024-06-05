@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @JsonIdentityInfo(
@@ -23,7 +24,7 @@ public class StudyUserData {
     @JsonView(Views.Public.class)
     private Long id;
 
-    @OneToOne(mappedBy = "studyUserData")
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private StudyCombinedChallenge studyCombinedChallenge;
 
     @Column(name = "pair_challenge_results")
@@ -61,7 +62,7 @@ public class StudyUserData {
         this.pairChallengeEndTime = pairChallengeEndTime;
         this.endTime = endTime;
         this.feedback = feedback;
-        studyCombinedChallenge.setStudyUserData(this);
+        studyCombinedChallenge.addStudyUserData(this);
     }
 
 
@@ -109,5 +110,44 @@ public class StudyUserData {
                 ", endTime=" + endTime +
                 ", feedback='" + feedback + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof StudyUserData that)) return false;
+        return this.getId().equals(that.getId()) &&
+                this.getPairChallengeResults().equals(that.getPairChallengeResults()) &&
+                this.getListRankingChallengeResults().equals(that.getListRankingChallengeResults()) &&
+                this.getStartTime() == that.getStartTime() &&
+                this.getPairChallengeEndTime() == that.getPairChallengeEndTime() &&
+                this.getEndTime() == that.getEndTime() &&
+                this.getFeedback().equals(that.getFeedback());
+
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.getId(), this.getPairChallengeResults(), this.getListRankingChallengeResults(), this.getStartTime(), this.getPairChallengeEndTime(), this.getEndTime(), this.getFeedback());
+    }
+
+    public StudyCombinedChallenge getStudyCombinedChallenge() {
+        return studyCombinedChallenge;
+    }
+
+    public long getStartTime() {
+        return startTime;
+    }
+
+    public long getPairChallengeEndTime() {
+        return pairChallengeEndTime;
+    }
+
+    public long getEndTime() {
+        return endTime;
+    }
+
+    public String getFeedback() {
+        return feedback;
     }
 }

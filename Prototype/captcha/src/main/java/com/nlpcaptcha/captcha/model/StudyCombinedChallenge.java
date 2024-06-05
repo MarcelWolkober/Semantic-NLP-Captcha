@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
-import java.util.Objects;
+import java.util.*;
 
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
@@ -34,9 +34,9 @@ public class StudyCombinedChallenge implements Serializable {
     private ListRankingChallenge listRankingChallenge;
 
     // TODO: Change One to Many
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @OneToMany(mappedBy = "studyCombinedChallenge")
     @JsonView(Views.Public.class)
-    private StudyUserData studyUserData;
+    private final Set<StudyUserData> studyUserData = new HashSet<>();
 
 
     protected StudyCombinedChallenge() {
@@ -75,12 +75,15 @@ public class StudyCombinedChallenge implements Serializable {
         return identifier;
     }
 
-    public void setStudyUserData(StudyUserData studyUserData) {
-        this.studyUserData = studyUserData;
+    public void addStudyUserData(StudyUserData studyUserData) {
+        this.studyUserData.add(studyUserData);
+        if (studyUserData.getStudyCombinedChallenges() != this) {
+            studyUserData.setStudyCombinedChallenge(this);
+        }
 
     }
 
-    public StudyUserData getStudyUserData() {
+    public Set<StudyUserData> getStudyUserData() {
         return studyUserData;
     }
 
