@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://193.196.55.76")//TODO find a better way to allow only localhost
+@CrossOrigin(origins = "http://localhost")//TODO find a better way to allow only localhost
 @RestController
 @RequestMapping("/api/study")
 public class StudyController {
