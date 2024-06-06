@@ -64,7 +64,7 @@ public class UsagePairController {
         }
     }
 
-    @GetMapping("/remove-all")
+//    @GetMapping("/remove-all")
     public ResponseEntity<String> removeAllUsagePairs() {
         try {
 
