@@ -166,13 +166,13 @@ public class StudyService {
             String pairChallengeResults = jsonUSerData.getJSONObject("pairChallengeResults").toString();
             String listChallengeResults = jsonUSerData.getJSONObject("listChallengeResults").toString();
             long startTime = jsonUSerData.getLong("startTime");
-            long endTimePairChallenge = jsonUSerData.getLong("endTimePairChallenge");
+            long endTimeFirstChallenge = jsonUSerData.getLong("endTimeFirstChallenge");
             long endTime = jsonUSerData.getLong("endTime");
             String userFeedback = jsonUSerData.getJSONObject("userFeedback").toString();
 
 
             StudyUserData studyUserData = new StudyUserData(studyCombinedChallenge.get(), pairChallengeResults,
-                    listChallengeResults, startTime, endTimePairChallenge, endTime, userFeedback);
+                    listChallengeResults, startTime, endTimeFirstChallenge, endTime, userFeedback);
 
             logger.info("Saving StudyUserData: {}", studyUserData);
 

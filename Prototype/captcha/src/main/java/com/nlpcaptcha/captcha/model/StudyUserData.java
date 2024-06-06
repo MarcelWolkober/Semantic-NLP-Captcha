@@ -6,9 +6,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
 
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
@@ -41,7 +39,7 @@ public class StudyUserData {
 
     @Column(name = "pair_challenge_end_time")
     @JsonView(Views.Public.class)
-    private long pairChallengeEndTime;
+    private long firstChallengeEndTime;
 
     @Column(name = "end_time")
     @JsonView(Views.Public.class)
@@ -53,13 +51,13 @@ public class StudyUserData {
 
 
     public StudyUserData(StudyCombinedChallenge studyCombinedChallenge, String pairChallengeResults,
-                         String listRankingChallengeResults, long startTime, long pairChallengeEndTime, long endTime,
+                         String listRankingChallengeResults, long startTime, long firstChallengeEndTime, long endTime,
                          String feedback) {
         this.studyCombinedChallenge = studyCombinedChallenge;
         this.pairChallengeResults = pairChallengeResults;
         this.listRankingChallengeResults = listRankingChallengeResults;
         this.startTime = startTime;
-        this.pairChallengeEndTime = pairChallengeEndTime;
+        this.firstChallengeEndTime = firstChallengeEndTime;
         this.endTime = endTime;
         this.feedback = feedback;
         studyCombinedChallenge.addStudyUserData(this);
@@ -106,7 +104,7 @@ public class StudyUserData {
                 ", pairChallengeResults='" + pairChallengeResults + '\'' +
                 ", listRankingChallengeResults='" + listRankingChallengeResults + '\'' +
                 ", startTime=" + startTime +
-                ", pairChallengeEndTime=" + pairChallengeEndTime +
+                ", pairChallengeEndTime=" + firstChallengeEndTime +
                 ", endTime=" + endTime +
                 ", feedback='" + feedback + '\'' +
                 '}';
@@ -120,7 +118,7 @@ public class StudyUserData {
                 this.getPairChallengeResults().equals(that.getPairChallengeResults()) &&
                 this.getListRankingChallengeResults().equals(that.getListRankingChallengeResults()) &&
                 this.getStartTime() == that.getStartTime() &&
-                this.getPairChallengeEndTime() == that.getPairChallengeEndTime() &&
+                this.getFirstChallengeEndTime() == that.getFirstChallengeEndTime() &&
                 this.getEndTime() == that.getEndTime() &&
                 this.getFeedback().equals(that.getFeedback());
 
@@ -128,7 +126,7 @@ public class StudyUserData {
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.getId(), this.getPairChallengeResults(), this.getListRankingChallengeResults(), this.getStartTime(), this.getPairChallengeEndTime(), this.getEndTime(), this.getFeedback());
+        return Objects.hash(this.getId(), this.getPairChallengeResults(), this.getListRankingChallengeResults(), this.getStartTime(), this.getFirstChallengeEndTime(), this.getEndTime(), this.getFeedback());
     }
 
     public StudyCombinedChallenge getStudyCombinedChallenge() {
@@ -139,8 +137,8 @@ public class StudyUserData {
         return startTime;
     }
 
-    public long getPairChallengeEndTime() {
-        return pairChallengeEndTime;
+    public long getFirstChallengeEndTime() {
+        return firstChallengeEndTime;
     }
 
     public long getEndTime() {

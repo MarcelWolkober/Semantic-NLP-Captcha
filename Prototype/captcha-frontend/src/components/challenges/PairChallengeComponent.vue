@@ -72,7 +72,10 @@ export default {
       } else {
         this.userNotSelectedAllQuery = false;
         console.log("User choices all:", this.userChoices);
-        this.$emit("submitPairChallenge", { challengeId: this.id, userChoices: this.userChoices });
+        this.$emit("submitPairChallenge", {
+          challengeId: this.id,
+          userChoices: this.userChoices
+        });
       }
     }
   }

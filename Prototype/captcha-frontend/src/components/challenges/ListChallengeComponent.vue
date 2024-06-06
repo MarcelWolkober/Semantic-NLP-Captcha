@@ -1,14 +1,13 @@
 <template>
   <div class="ListChallengeComponent">
     <h2>List-Challenge</h2>
-    <p> Order the following list by how similar the meaning of the word <strong>{{ lemma }}</strong> is compared to the
-      reference Usage. With the most similar being on top of the list </p>
-    <p>Reference Usage:</p>
+    <p> Order (drag & drop) the sentences by degree of relatedness of the highlighted word to the first sentence.</p>
+    <p>Reference Sentence:</p>
     <div class="referenceUsage">
       <UsageComponent :i-d="referenceUsage.id" :lemma="referenceUsage.lemma" :context="referenceUsage.context"
                       :indexes="[referenceUsage.posStartIndex, referenceUsage.posEndIndex]" />
     </div>
-    <p>Usage list to order:</p>
+<!--    <p>Usage list to order:</p>-->
     <draggable
       v-model="usages"
       @start="drag=true"
@@ -87,9 +86,4 @@ export default {
   align-items: center;
 }
 
-.usageList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 </style>

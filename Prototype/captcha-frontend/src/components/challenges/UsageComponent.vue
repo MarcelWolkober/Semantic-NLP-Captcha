@@ -24,7 +24,7 @@ export default {
       }
       let startIndex = this.indexes[0];
       let endIndex = this.indexes[1];
-      return "Context: " + this.context.slice(0, startIndex) +
+      return  this.context.slice(0, startIndex) +
         "<strong>" + this.context.slice(startIndex, endIndex) + "</strong>" +
         this.context.slice(endIndex, this.context.length);
     }

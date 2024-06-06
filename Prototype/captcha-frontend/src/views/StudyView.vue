@@ -20,7 +20,6 @@ import StudyFinishedComponent from "@/components/study/StudyFinishedComponent.vu
 import StudyDataService from "@/services/StudyDataService.js";
 import StudyUserFeedbackComponent from "@/components/study/StudyUserFeedbackComponent.vue";
 import StudyErrorPageComponent from "@/components/study/StudyErrorPageComponent.vue";
-import axios from "axios";
 
 export default {
   name: "StudyView",
@@ -44,6 +43,8 @@ export default {
       showStudyFinished: false,
       showStudyErrorPage: false,
 
+      showPairChallengeFirst: true,
+
       study_challenge: null,
       pair_challenge: null,
       pairs: null,
@@ -51,7 +52,7 @@ export default {
 
 
       startTime: null,
-      endTimePairChallenge: null,
+      endTimeFirstChallenge: null,
       endTime: null,
 
       pairChallengeResults: null,
@@ -81,8 +82,17 @@ export default {
           console.log("Pair challenge:", this.pair_challenge);
           console.log("List challenge:", this.list_challenge);
 
+          this.showPairChallengeFirst = Math.random() < 0.5;
+
           this.showStudyStart = false;
-          this.showPairChallenge = true;
+          if (this.showPairChallengeFirst) {
+            this.showPairChallenge = true;
+            this.showListChallenge = false;
+          } else {
+            this.showPairChallenge = false;
+            this.showListChallenge = true;
+          }
+
           this.startTime = Date.now(); // Store the start time
           console.log("Study started at:", this.startTime);
         }
@@ -96,30 +106,42 @@ export default {
     },
     endPairChallenge(challengeId, userChoices) {
       this.showPairChallenge = false;
-      this.showListChallenge = true;
-      this.endTimePairChallenge = Date.now(); // Store the end time of the pair challenge
-      console.log("Pair challenge ended at:", this.endTimePairChallenge);
+
+      if (this.showPairChallengeFirst) {
+        this.showListChallenge = true;
+        this.endTimeFirstChallenge = Date.now(); // Store the end time of the pair challenge
+        console.log("Pair challenge ended at:", this.endTimeFirstChallenge);
+      } else {
+        this.showUserFeedback = true;
+        this.endTime = Date.now(); // Store the end time
+        console.log("Study ended at:", this.endTime);
+      }
 
       this.pairChallengeResults = {
         pairChallengeId: challengeId,
-        chosenLabel: userChoices
+        chosenLabel: userChoices,
+        isFirstChallenge: this.showPairChallengeFirst
       };
 
 
     },
     endListChallenge(challengeId, order) {
       this.showListChallenge = false;
-      this.showUserFeedback = true;
-      this.endTime = Date.now(); // Store the end time
-      console.log("Study ended at:", this.endTime);
 
+      if (this.showPairChallengeFirst) {
+        this.showUserFeedback = true;
+        this.endTime = Date.now(); // Store the end time
+        console.log("Study ended at:", this.endTime);
+      } else {
+        this.showPairChallenge = true;
+        this.endTimeFirstChallenge = Date.now(); // Store the end time of the list challenge
+        console.log("List challenge ended at:", this.endTimeFirstChallenge);
+      }
 
       this.listChallengeResults = {
         listChallengeId: challengeId,
         order: order
       };
-
-
     },
     submitFeedback(feedback) {
 
@@ -131,7 +153,7 @@ export default {
       const studyResults = {
         studyChallengeId: this.study_challenge.id,
         startTime: this.startTime,
-        endTimePairChallenge: this.endTimePairChallenge,
+        endTimeFirstChallenge: this.endTimeFirstChallenge,
         endTime: this.endTime,
         pairChallengeResults: this.pairChallengeResults,
         listChallengeResults: this.listChallengeResults,
@@ -170,5 +192,8 @@ export default {
 </script>
 
 <style scoped>
-
+p {
+  width: 80%;
+  margin: auto;
+}
 </style>
