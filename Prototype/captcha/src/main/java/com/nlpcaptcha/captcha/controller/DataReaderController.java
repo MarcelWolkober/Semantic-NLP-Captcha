@@ -86,6 +86,23 @@ public class DataReaderController {
 
     }
 
+
+    @PostMapping("/pair-challenges-study")
+    public ResponseEntity<String> addStudyPairChallengesFromFile(@RequestBody String path) {
+
+        try {
+            PairChallengeService pairChallengeService = new PairChallengeService(pairChallengeRepository, usagePairRepository, usageRepository);
+            List<PairChallenge> pairChallenges = pairChallengeService.readData(path, true);
+            pairChallengeRepository.saveAll(pairChallenges);
+        } catch (Exception e) {
+            logger.error("An error occurred while reading Pair Challenges: ", e);
+            return new ResponseEntity<>("Error while reading and creating Data", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        return new ResponseEntity<>("Pair Challenges read and created successfully", HttpStatus.OK);
+
+
+    }
+
     @PostMapping("/list-challenges")
     public ResponseEntity<String> addListChallengesFromFile(@RequestBody String path) {
         List<ListRankingChallenge> listChallenges;
