@@ -41,14 +41,20 @@ services:
     volumes:
       - ./captcha-frontend/nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./captcha-frontend/dist:/usr/share/nginx/html
+      - ./certbot/www/:/var/www/certbot/:ro
     ports:
       - "80:80"
+      - "433:433"
     depends_on:
       - front-end
     networks:
       - captcha-network
     restart: unless-stopped
-  
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
+      - ./certbot/conf/:/etc/letsencrypt/:rw
 networks:
   captcha-network:
  

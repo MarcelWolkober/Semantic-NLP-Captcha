@@ -1,8 +1,9 @@
 <template>
   <div class="StudyStartComponent">
-    <p> In this study two challenges of a new type of CAPTCHA, named "semantic NLP CAPTCHA" will be tested. For further information about
-      CAPTCHAs see here: <a href="https://en.wikipedia.org/wiki/CAPTCHA" target="_blank">CAPTCHA - Wikipedia</a></p>
-    <p> The study will take approximately 10 minutes to complete. Please do not take any breaks while solving the
+    <p> In this study two challenges of a new type of Captcha, named "semantic NLP CAPTCHA" will be tested. Your main task will be to
+      determine the degree of meaning relatedness of two words in given sentences. </p>
+   <p> For further information about Captchas see here: <a href="https://en.wikipedia.org/wiki/CAPTCHA" target="_blank">CAPTCHA - Wikipedia</a></p>
+    <p> The study will take approximately 10 to 15 minutes to complete. Please do not take any breaks while solving the
       Captcha challenges.</p>
     <p> There will be <strong> no </strong> personal data collected, the participant answers and metrics ( such as
       mother tongue and taken time ) will be stored anonymously. </p>
