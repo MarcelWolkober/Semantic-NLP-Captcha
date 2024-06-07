@@ -5,6 +5,8 @@ import com.nlpcaptcha.captcha.model.UsagePair;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface StudyCombinedChallengeRepository extends JpaRepository<StudyCombinedChallenge, Long> {
 
@@ -13,4 +15,7 @@ public interface StudyCombinedChallengeRepository extends JpaRepository<StudyCom
     boolean existsByIdentifier(String identifier);
 
 
+    StudyCombinedChallenge findFirstByStudyUserDataIsNull();
+
+    List<StudyCombinedChallenge> findAllByStudyUserDataIsNull();
 }

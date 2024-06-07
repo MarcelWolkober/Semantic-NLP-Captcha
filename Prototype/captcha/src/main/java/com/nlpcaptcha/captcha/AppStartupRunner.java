@@ -30,22 +30,21 @@ public class AppStartupRunner implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         logger.atInfo().log("Application started with command-line arguments: {}", args.getOptionNames());
         try {
-//            logger.atInfo().log("Setting up the data");
-//            pairService.readAndSavePairs("pairs_sample.csv");
-//            pairService.readAndSavePairs("pairs_sample2.csv");
-//            logger.atInfo().log("pairs read");
-//            pairChallengeService.readData("pair_challenges.csv");
-//            logger.atInfo().log("pair challenges read");
-//          listChallengeService.readData("list_challenges.csv");
-//            logger.atInfo().log("List challenges read");
+            logger.atInfo().log("Setting up the data");
+            pairService.readAndSavePairs("dwug_en_pairs_part1.csv");
+            pairService.readAndSavePairs("dwug_en_pairs_part2.csv");
+            logger.atInfo().log("Pairs read");
+
+            listChallengeService.readData("dwug_en_list_challenges_filtered.csv");
+            logger.atInfo().log("List challenges read");
+
+            studyService.hasMoreThanFiveStudyChallenges();
         } catch (Exception e) {
             logger.error("An error occurred while setting up the data: ", e);
         }
 
     }
-
-
 }

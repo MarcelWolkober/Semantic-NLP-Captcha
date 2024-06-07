@@ -13,13 +13,13 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Random;
 
 @Service
 @Transactional
@@ -43,6 +43,21 @@ public class StudyService {
         this.listChallengeRepository = listChallengeRepository;
         this.pairChallengeRepository = pairChallengeRepository;
         this.studyUserDataRepository = studyUserDataRepository;
+    }
+
+    @Transactional
+    public StudyCombinedChallenge getNextAvailableStudyChallenge() {
+        return studyCombinedChallengeRepository.findFirstByStudyUserDataIsNull();
+    }
+
+    @Async
+    public void hasMoreThanFiveStudyChallenges() {
+        List<StudyCombinedChallenge> challenges = studyCombinedChallengeRepository.findAllByStudyUserDataIsNull();
+        logger.info("Number of study challenges: {}", challenges.size());
+        if (challenges.size() < 6) {
+            createMultipleNewRandomStudyChallenges(15);
+            logger.info("Creating 15 new study challenges");
+        }
     }
 
     @Transactional
@@ -81,40 +96,24 @@ public class StudyService {
     }
 
     @Transactional
+    public void createMultipleNewRandomStudyChallenges(int numberOfChallenges) {
+
+        try {
+            for (int i = 0; i < numberOfChallenges; i++) {
+                createNewRandomStudyChallenge();
+            }
+        } catch (Exception e) {
+            logger.error("Error while creating multiple new random study challenges: ", e);
+        }
+
+    }
+
+    @Transactional
     public StudyCombinedChallenge createNewRandomStudyChallenge() throws IllegalStateException {
 
 
-        List<PairChallenge> pairChallenges = pairChallengeRepository.findAll();
-        List<ListRankingChallenge> listRankingChallenges =listChallengeRepository.findAll();
-
-        if (pairChallenges.isEmpty() || listRankingChallenges.isEmpty()) {
-            throw new IllegalStateException("No available PairChallenges or ListRankingChallenges");
-        }
-
-
-        // filter PairChallenges and ListRankingChallenges by smallest number of associated StudyChallenges
-        for (int i = 0; i < Integer.MAX_VALUE; i++) {
-            // Fetch all PairChallenges and ListRankingChallenges that do not have any associated StudyUserData
-            int numberOfStudyChallenges = i;
-            pairChallenges = pairChallengeRepository.findAll().stream()
-                    .filter(pairChallenge -> pairChallenge.getStudyCombinedChallenges().size() == numberOfStudyChallenges).toList();
-            listRankingChallenges = listChallengeRepository.findAll().stream()
-                    .filter(listRankingChallenge -> listRankingChallenge.getStudyCombinedChallenges().size() == numberOfStudyChallenges).toList();
-
-            if (!pairChallenges.isEmpty() && !listRankingChallenges.isEmpty()) {
-                break;
-
-            }
-        }
-        // Check if there are any available PairChallenges and ListRankingChallenges -> should not do anything with the loop before going till Integer.MAX_VALUE
-        if (pairChallenges.isEmpty() || listRankingChallenges.isEmpty()) {
-            throw new IllegalStateException("No available PairChallenges or ListRankingChallenges");
-        }
-
-        // Randomly select one PairChallenge and one ListRankingChallenge
-        Random random = new Random();
-        PairChallenge randomPairChallenge = pairChallenges.get(random.nextInt(pairChallenges.size()));
-        ListRankingChallenge randomListRankingChallenge = listRankingChallenges.get(random.nextInt(listRankingChallenges.size()));
+        PairChallenge randomPairChallenge = pairChallengeService.createNewRandomPairChallengeForStudy();
+        ListRankingChallenge randomListRankingChallenge = listRankingChallengeService.getNewRandomListChallenge(4);
 
         // Create a new StudyCombinedChallenge using the selected PairChallenge and ListRankingChallenge
         return createAndSaveStudyCombinedChallengeByIdentifier(randomPairChallenge.getIdentifier(), randomListRankingChallenge.getIdentifier());

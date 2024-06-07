@@ -34,7 +34,7 @@ public class StudyController {
     public ResponseEntity<StudyCombinedChallenge> getNewStudyChallenge() {
 
         try {
-            StudyCombinedChallenge studyChallenge = studyService.createNewRandomStudyChallenge();
+            StudyCombinedChallenge studyChallenge = studyService.getNextAvailableStudyChallenge();
             return new ResponseEntity<>(studyChallenge, HttpStatus.OK);
         } catch (Exception e) {
             logger.error("An error occurred while creating new study: ", e);
@@ -52,8 +52,9 @@ public class StudyController {
     @PostMapping("/add")
     public ResponseEntity<StudyCombinedChallenge> addStudyUserData(@RequestBody String studyUserDataString) {
         try {
+            studyService.hasMoreThanFiveStudyChallenges();
             StudyCombinedChallenge studyUserData = studyService.saveStudyUserData(studyUserDataString);
-            logger.info("Study user data added successfully {}", studyUserData);
+            logger.info("Study user data added successfully");
             return new ResponseEntity<>(studyUserData, HttpStatus.OK);
         } catch (Exception e) {
             logger.error("An error occurred while adding study user data: ", e);

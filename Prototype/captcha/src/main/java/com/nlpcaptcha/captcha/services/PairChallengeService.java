@@ -5,9 +5,9 @@ import com.nlpcaptcha.captcha.model.UsagePair;
 import com.nlpcaptcha.captcha.repository.PairChallengeRepository;
 import com.nlpcaptcha.captcha.repository.UsagePairRepository;
 import com.nlpcaptcha.captcha.repository.UsageRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,12 +31,67 @@ public class PairChallengeService {
     }
 
     @Transactional
+    public PairChallenge createNewRandomPairChallengeForStudy() {
+        return createNewRandomPairChallenge(4, true);
+    }
+
+    @Transactional
+    public PairChallenge createNewRandomPairChallenge(int numberOfPairs, boolean forStudyChallenge) {
+
+
+        List<UsagePair> pairs = usagePairRepository.findAll();
+        String challengeIdentifier = "";
+
+        if(forStudyChallenge){
+            UsagePair studyStaticPair = usagePairRepository.findByIdentifier("basic_usage_1|basic_usage_2");
+            challengeIdentifier = studyStaticPair.getIdentifier() + "||";
+        }
+
+
+        // Find the minimum number of assigned challenges
+        int minAssignedChallenges = pairs.stream()
+                .mapToInt(pair -> pair.getPairChallenges().size())
+                .min()
+                .orElseThrow(() -> new IllegalStateException("No pairs found"));
+
+        // Filter pairs that have the minimum amount of assigned challenges
+        pairs = pairs.stream()
+                .filter(pair -> pair.getPairChallenges().size() == minAssignedChallenges)
+                .toList();
+
+        if (pairs.size() < numberOfPairs) {
+            throw new IllegalArgumentException("Not enough pairs to create a PairChallenge");
+        }
+
+        Random rand = new Random();
+        Set<Integer> generated = new LinkedHashSet<>();
+        while (generated.size() < numberOfPairs) {
+            Integer next = rand.nextInt(pairs.size());
+            // As we're adding to a set, this will automatically do a containment check
+            generated.add(next);
+        }
+
+        List<UsagePair> selectedPairs = generated.stream()
+                .map(pairs::get)
+                .toList();
+
+
+        challengeIdentifier +=  selectedPairs.stream()
+                .map(UsagePair::getIdentifier)
+                .reduce((a, b) -> a + "||" + b)
+                .orElseThrow(() -> new IllegalStateException("No pairs found"));
+
+        return createAndSavePairChallengeByIdentifier(challengeIdentifier);
+
+    }
+
+    @Transactional
     public List<PairChallenge> readData(String path) throws JSONException {
         return readData(path, false);
     }
 
     @Transactional
-    public List<PairChallenge> readData(String path, boolean forStudyChallenge ) throws JSONException {
+    public List<PairChallenge> readData(String path, boolean forStudyChallenge) throws JSONException {
         DataReader dataReader = new DataReader();
         List<List<String>> records = dataReader.readData(path);
         records.removeFirst();//remove header
@@ -52,7 +107,7 @@ public class PairChallengeService {
                 continue;
             }
 
-            if(forStudyChallenge){
+            if (forStudyChallenge) {
                 identifier = "basic_usage_1|basic_usage_2||" + identifier;
             }
 
