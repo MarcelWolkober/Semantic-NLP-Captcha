@@ -29,6 +29,8 @@ services:
   front-end:
     build: ./captcha-frontend
     container_name: captcha-front-end
+    volumes:
+      - certbot-ssl:/etc/letsencrypt/:ro
     ports:
       - "80:80"
       - "433:433"
@@ -36,5 +38,14 @@ services:
       - captcha-network
     restart: unless-stopped
 
+  certbot:
+    image: certbot/certbot:latest
+    command: certonly --staging --webroot --webroot-path=/var/www/certbot --email st163937@stud.uni-stuttgart.de --agree-tos --no-eff-email --force-renewal -d semantic-nlp-captcha.de
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
+      - certbot-ssl:/etc/letsencrypt/:rw
 networks:
   captcha-network:
+ 
+volumes:
+  certbot-ssl:
