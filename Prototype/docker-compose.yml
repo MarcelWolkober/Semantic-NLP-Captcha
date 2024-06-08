@@ -31,7 +31,7 @@ services:
     container_name: captcha-front-end
     ports:
       - "80:80"
-      - "433:433"
+      - "443:443"
     networks:
       - captcha-network
     restart: unless-stopped
