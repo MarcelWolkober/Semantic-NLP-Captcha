@@ -36,7 +36,6 @@ services:
       - captcha-network
     restart: unless-stopped
     volumes:
-      - ./captcha-frontend/nginx/conf/:/etc/nginx/conf.d/:ro
       - ./certbot/www/:/var/www/certbot/:ro
 
   certbot:
