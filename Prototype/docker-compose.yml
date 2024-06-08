@@ -40,6 +40,7 @@ services:
 
   certbot:
     image: certbot/certbot:latest
+    command: certonly --staging --webroot --webroot-path=/var/www/certbot --email st163937@stud.uni-stuttgart.de --agree-tos --no-eff-email --force-renewal -d semantic-nlp-captcha.de
     volumes:
       - ./certbot/www/:/var/www/certbot/:rw
       - certbot-ssl:/etc/letsencrypt/:rw
