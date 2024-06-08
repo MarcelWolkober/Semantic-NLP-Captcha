@@ -1,8 +1,8 @@
 <template>
   <div class="ListChallengeComponent">
     <h2>List-Challenge</h2>
-    <p> Order (drag & drop) the sentences by how similar in meaning you think the highlighted words are in comparison to the word in the first sentence.</p>
-    <p>The sentence with the word having the most identical meaning should be on top. </p>
+    <p> Order (drag & drop) the sentences by how similar in meaning the highlighted words are in comparison to the word in the reference sentence.</p>
+    <p>The sentence with the word having the most similar meaning should be on top. </p>
     <p>Reference Sentence:</p>
     <div class="referenceUsage">
       <UsageComponent :i-d="referenceUsage.id" :lemma="referenceUsage.lemma" :context="referenceUsage.context"
@@ -27,7 +27,7 @@
         :originalIndex="getOriginalIndex(usage)"
       />
     </draggable>
-    <button @click="submitOrder">Submit Order</button>
+    <button @click="submitOrder">Submit</button>
   </div>
 </template>
 
