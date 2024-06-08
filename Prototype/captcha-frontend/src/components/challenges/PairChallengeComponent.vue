@@ -1,6 +1,6 @@
 <template>
   <div class="PairChallengeComponent">
-    <h1> Pair Challenge </h1>
+<!--    <h1> Pair Challenge </h1>-->
     <p> Solve all the following pair challenges</p>
     <PairComponent v-for="(pair, index) in _pairs"
                    :key="index" :pair="pair" :pairNumber="index + 1" @userChoice="addUserChoice" />

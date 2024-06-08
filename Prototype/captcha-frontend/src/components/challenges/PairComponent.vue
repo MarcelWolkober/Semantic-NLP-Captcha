@@ -1,15 +1,16 @@
 <template>
   <div class="PairComponent">
-    <h2>Pair Challenge {{ pairNumber }} </h2>
-    <p>Determine the degree of meaning relatedness of the highlighted word in the following sentences: </p>
+    <h3>Pair Challenge {{ pairNumber }} </h3>
+    <p>Rate how similar in meaning the highlighted words are in the following sentences: </p>
     <div class="contexts">
       <p v-html="boldContext1"></p>
       <p v-html="boldContext2"></p>
     </div>
     <div class="button-row">
-      <button id="1" @click=saveButtonPress(1)>1 - Unrelated</button>
-      <button id="2" @click=saveButtonPress(2)>2 - Distantly Related</button>
-      <button id="3" @click=saveButtonPress(3)>3 - Closely Related</button>
+      <button id="0" @click=saveButtonPress(0)>0 - Can't decide</button>
+      <button id="1" @click=saveButtonPress(1)>1 - Dissimilar</button>
+      <button id="2" @click=saveButtonPress(2)>2 </button>
+      <button id="3" @click=saveButtonPress(3)>3 </button>
       <button id="4" @click=saveButtonPress(4)>4 - Identical</button>
     </div>
     <p v-if="pressedButton != null">You chose: {{ pressedButton }}</p>

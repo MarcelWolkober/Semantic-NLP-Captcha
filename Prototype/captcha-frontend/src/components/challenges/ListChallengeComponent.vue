@@ -1,7 +1,8 @@
 <template>
   <div class="ListChallengeComponent">
     <h2>List-Challenge</h2>
-    <p> Order (drag & drop) the sentences by degree of relatedness of the highlighted word to the first sentence.</p>
+    <p> Order (drag & drop) the sentences by how similar in meaning you think the highlighted words are in comparison to the word in the first sentence.</p>
+    <p>The sentence with the word having the most identical meaning should be on top. </p>
     <p>Reference Sentence:</p>
     <div class="referenceUsage">
       <UsageComponent :i-d="referenceUsage.id" :lemma="referenceUsage.lemma" :context="referenceUsage.context"

@@ -20,6 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @Service
 @Transactional
@@ -46,17 +47,38 @@ public class StudyService {
     }
 
     @Transactional
-    public StudyCombinedChallenge getNextAvailableStudyChallenge() {
-        return studyCombinedChallengeRepository.findFirstByStudyUserDataIsNull();
+    public StudyCombinedChallenge getNextAvailableStudyChallenge(int sizeOfStudyChallengePool, int numberOfStudyUsersPerChallenge ) {
+        List<StudyCombinedChallenge> studies =  studyCombinedChallengeRepository.findAll();
+
+        hasMoreThanXStudyChallenges(sizeOfStudyChallengePool, sizeOfStudyChallengePool, numberOfStudyUsersPerChallenge);
+
+        int minAssignedUserData = studies.stream()
+                .mapToInt(study -> study.getStudyUserData().size())
+                .min()
+                .orElseThrow(() -> new IllegalStateException("No studies found"));
+
+        studies = studies.stream()
+                .filter(study -> study.getStudyUserData().size() == minAssignedUserData)
+                .toList();
+
+        Random random = new Random();
+        int randomIndex = random.nextInt(studies.size());
+
+        return studies.get(randomIndex);
     }
 
     @Async
-    public void hasMoreThanFiveStudyChallenges() {
-        List<StudyCombinedChallenge> challenges = studyCombinedChallengeRepository.findAllByStudyUserDataIsNull();
+    public void hasMoreThanXStudyChallenges(int xNumberOfChallengesToHave, int numberOfChallengesToCreate, int maxNumberOfAssignedUserData) {
+        List<StudyCombinedChallenge> challenges = studyCombinedChallengeRepository.findAll();
+
+        challenges = challenges.stream()
+                .filter(challenge -> challenge.getStudyUserData().size() < maxNumberOfAssignedUserData)
+                .toList();
+
         logger.info("Number of study challenges: {}", challenges.size());
-        if (challenges.size() < 6) {
-            createMultipleNewRandomStudyChallenges(15);
-            logger.info("Creating 15 new study challenges");
+        if (challenges.size() < xNumberOfChallengesToHave) {
+            createMultipleNewRandomStudyChallenges(numberOfChallengesToCreate);
+            logger.info("Creating {} new study challenges", numberOfChallengesToCreate);
         }
     }
 

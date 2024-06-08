@@ -4,6 +4,8 @@ import com.nlpcaptcha.captcha.model.Usage;
 import com.nlpcaptcha.captcha.model.UsagePair;
 import com.nlpcaptcha.captcha.repository.UsagePairRepository;
 import com.nlpcaptcha.captcha.repository.UsageRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,6 +21,8 @@ import java.util.Set;
 @Service
 @Transactional
 public class PairService {
+    private static final Logger logger = LoggerFactory.getLogger(StudyService.class);
+
 
     private final UsageRepository usageRepository;
     private final UsagePairRepository usagePairRepository;
@@ -62,13 +66,23 @@ public class PairService {
             if (existingUsage1 == null) {
                 int startIndex1 = Integer.parseInt(record.get(5).split(":")[0]);
                 int endIndex1 = Integer.parseInt(record.get(5).split(":")[1]);
-                existingUsage1 = new Usage(record.get(0), record.get(1), record.get(3), startIndex1, endIndex1);
+                String context1 = record.get(3);
+                if (context1.length() > 300) {
+                    logger.info("Skipped usage with too long context: " + context1.length());
+                    continue;
+                }
+                existingUsage1 = new Usage(record.get(0), record.get(1), context1, startIndex1, endIndex1);
                 usageRepository.save(existingUsage1);
             }
             if (existingUsage2 == null) {
                 int startIndex2 = Integer.parseInt(record.get(6).split(":")[0]);
                 int endIndex2 = Integer.parseInt(record.get(6).split(":")[1]);
-                existingUsage2 = new Usage(record.get(0), record.get(2), record.get(4), startIndex2, endIndex2);
+                String context2 = record.get(4);
+                if (context2.length() > 300) {
+                    logger.info("Skipped usage with too long context: " + context2.length());
+                    continue;
+                }
+                existingUsage2 = new Usage(record.get(0), record.get(2), context2, startIndex2, endIndex2);
                 usageRepository.save(existingUsage2);
             }
 
