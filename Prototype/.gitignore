@@ -1,6 +1,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,java,visualstudiocode,pycharm
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,java,visualstudiocode,pycharm
 
+### Certbot ###
+./certbot
+/certbot
+certbot/
+certbot/*
+
 ### Java ###
 # Compiled class file
 *.class
