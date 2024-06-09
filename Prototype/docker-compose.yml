@@ -41,10 +41,10 @@ services:
       - ./certbot/conf/live/semantic-nlp-captcha.de:/etc/nginx/ssl/live/semantic-nlp-captcha.de:ro 
       - ./certbot/conf/archive/semantic-nlp-captcha.de:/etc/nginx/ssl/archive/semantic-nlp-captcha.de:ro
 
-  certbot:
-    image: certbot/certbot:latest
-    volumes:
-      - ./certbot/www/:/var/www/certbot/:rw
-      - ./certbot/conf/:/etc/letsencrypt/:rw
+#  certbot:
+#    image: certbot/certbot:latest
+#    volumes:
+#      - ./certbot/www/:/var/www/certbot/:rw
+#      - ./certbot/conf/:/etc/letsencrypt/:rw
 networks:
   captcha-network:

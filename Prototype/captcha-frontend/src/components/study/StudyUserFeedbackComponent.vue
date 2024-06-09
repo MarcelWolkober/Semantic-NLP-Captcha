@@ -1,18 +1,28 @@
 <template>
   <div class="StudyUserFeedbackComponent">
     <h1>User Feedback</h1>
-    <p>Thank you for participating in the study. Please provide feedback on your experience.</p>
+    <p>Thank you for participating in the study. This study helps to develop a new type of "Are you human?" detection
+      program called "semantic NLP CAPTCHA". <br> Please provide feedback on your experience.</p>
     <h2>General Information:</h2>
-    <p>Your mother tongue is:</p>
-    <input type="text" v-model="mother_language">
-    <p>How easy was it to determine the semantic meaning of the highlighted words in general? Rate on a scale from 1
+    <p>Is english your mother tongue ?</p>
+    <select v-model="mother_language">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+      <option value="">No answer</option>
+    </select>
+
+    <h2>Challenge:</h2>
+
+    <p>How easy was it to determine the similarity of the highlighted words in general? Rate on a scale from 1
       being impossible and 10 being trivial to determine: </p>
     <input type="number" v-model="rating_determine_semantic_meaning">
-    <h2>Pair Challenge:</h2>
-    <p>How convenient and practical do you think is such type of Captcha? </p>
+
+    <p>How convenient and practical do you think is such type of Challenge ? </p>
     <input type="text" v-model="pair_challenge_feedback1" />
+
     <p>And would you prefer it over any different kind of Captcha (like Image-Captcha)? </p>
     <input type="text" v-model="pair_challenge_feedback2" />
+
     <p>What is your opinion on the count of pairs in the pair challenge? How many would you be willing to solve without
       being majorly annoyed as a standard Captcha? </p>
     <input type="number" v-model="pair_challenge_count_opinion">

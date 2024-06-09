@@ -46,9 +46,28 @@ public class StudyService {
         this.studyUserDataRepository = studyUserDataRepository;
     }
 
+
     @Transactional
-    public StudyCombinedChallenge getNextAvailableStudyChallenge(int sizeOfStudyChallengePool, int numberOfStudyUsersPerChallenge ) {
-        List<StudyCombinedChallenge> studies =  studyCombinedChallengeRepository.findAll();
+    public StudyCombinedChallenge getRandomStudyChallenge() {
+        List<StudyCombinedChallenge> studies = studyCombinedChallengeRepository.findAll();
+
+        int minAssignedUserData = studies.stream()
+                .mapToInt(study -> study.getStudyUserData().size())
+                .min()
+                .orElseThrow(() -> new IllegalStateException("No studies found"));
+
+        studies = studies.stream()
+                .filter(study -> study.getStudyUserData().size() == minAssignedUserData)
+                .toList();
+
+        Random random = new Random();
+        int randomIndex = random.nextInt(studies.size());
+        return studies.get(randomIndex);
+    }
+
+    @Transactional
+    public StudyCombinedChallenge getNextAvailableStudyChallenge(int sizeOfStudyChallengePool, int numberOfStudyUsersPerChallenge) {
+        List<StudyCombinedChallenge> studies = studyCombinedChallengeRepository.findAll();
 
         hasMoreThanXStudyChallenges(sizeOfStudyChallengePool, sizeOfStudyChallengePool, numberOfStudyUsersPerChallenge);
 
@@ -184,12 +203,37 @@ public class StudyService {
             }
 
 
-            String pairChallengeResults = jsonUSerData.getJSONObject("pairChallengeResults").toString();
-            String listChallengeResults = jsonUSerData.getJSONObject("listChallengeResults").toString();
+            String pairChallengeResults = "";
+            String listChallengeResults = "";
+            String userFeedback = "";
             long startTime = jsonUSerData.getLong("startTime");
-            long endTimeFirstChallenge = jsonUSerData.getLong("endTimeFirstChallenge");
+
+            long endTimeFirstChallenge = 0 ;
             long endTime = jsonUSerData.getLong("endTime");
-            String userFeedback = jsonUSerData.getJSONObject("userFeedback").toString();
+
+
+            try {
+                pairChallengeResults = jsonUSerData.getJSONObject("pairChallengeResults").toString();
+
+            } catch (JSONException ignored) {
+            }
+
+            try {
+                listChallengeResults = jsonUSerData.getJSONObject("listChallengeResults").toString();
+
+            } catch (JSONException ignored) {
+            }
+
+            try {
+                userFeedback = jsonUSerData.getJSONObject("userFeedback").toString();
+
+            } catch (JSONException ignored) {
+            }
+
+            try {
+               endTimeFirstChallenge = jsonUSerData.getLong("endTimeFirstChallenge");
+            }catch (JSONException ignored) {
+            }
 
 
             StudyUserData studyUserData = new StudyUserData(studyCombinedChallenge.get(), pairChallengeResults,

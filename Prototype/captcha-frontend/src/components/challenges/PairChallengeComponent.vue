@@ -1,12 +1,12 @@
 <template>
   <div class="PairChallengeComponent">
 <!--    <h1> Pair Challenge </h1>-->
-    <p> Solve all the following pair challenges</p>
+    <p> Solve all the following challenges:</p>
     <PairComponent v-for="(pair, index) in _pairs"
                    :key="index" :pair="pair" :pairNumber="index + 1" @userChoice="addUserChoice" />
     <div class="button-submit">
       <p v-if="!userNotSelectedAllQuery"> Submit your choices</p>
-      <p v-else style="color: red"> You have not solved all pairs</p>
+      <p v-else style="color: red"> You have not solved all challenges</p>
       <button id="submit" @click=submitUserChoice>Submit</button>
     </div>
   </div>
@@ -84,5 +84,7 @@ export default {
 
 
 <style scoped>
-
+.PairComponent {
+  margin-bottom: 50px; /* Adjust as needed */
+}
 </style>

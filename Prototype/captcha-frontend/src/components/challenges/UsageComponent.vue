@@ -38,7 +38,7 @@ export default {
 <style scoped>
 .border-style {
   border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px; /* Adjust as needed */
+  margin: 10px 0; /* Adjust as needed */
 }
 </style>

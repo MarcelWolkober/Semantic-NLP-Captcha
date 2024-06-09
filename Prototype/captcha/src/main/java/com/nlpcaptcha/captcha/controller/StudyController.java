@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 import com.nlpcaptcha.captcha.model.StudyCombinedChallenge;
 import com.nlpcaptcha.captcha.model.Views;
 import com.nlpcaptcha.captcha.repository.StudyCombinedChallengeRepository;
+import com.nlpcaptcha.captcha.services.Datawriter;
 import com.nlpcaptcha.captcha.services.StudyService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +35,7 @@ public class StudyController {
     public ResponseEntity<StudyCombinedChallenge> getNewStudyChallenge() {
 
         try {
-            StudyCombinedChallenge studyChallenge = studyService.getNextAvailableStudyChallenge(3,6);
+            StudyCombinedChallenge studyChallenge = studyService.getRandomStudyChallenge();
             return new ResponseEntity<>(studyChallenge, HttpStatus.OK);
         } catch (Exception e) {
             logger.error("An error occurred while creating new study: ", e);
@@ -55,6 +56,11 @@ public class StudyController {
 
             StudyCombinedChallenge studyUserData = studyService.saveStudyUserData(studyUserDataString);
             logger.info("Study user data added successfully");
+
+            // Write studyUserData to a file
+            Datawriter datawriter = new Datawriter();
+            datawriter.writeToFile(studyUserDataString);
+
             return new ResponseEntity<>(studyUserData, HttpStatus.OK);
         } catch (Exception e) {
             logger.error("An error occurred while adding study user data: ", e);

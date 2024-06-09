@@ -1,14 +1,16 @@
 <template>
   <div class="ListChallengeComponent">
-    <h2>List-Challenge</h2>
-    <p> Order (drag & drop) the sentences by how similar in meaning the highlighted words are in comparison to the word in the reference sentence.</p>
-    <p>The sentence with the word having the most similar meaning should be on top. </p>
-    <p>Reference Sentence:</p>
+    <p> Order (drag & drop) the sentence-blocks by how similar in meaning the highlighted words are in comparison to the
+      word
+      in the reference sentence. <br>
+      The sentence with the word having the most similar meaning should be on top. </p>
+    <p></p>
     <div class="referenceUsage">
+      <p>Reference Sentence:</p>
       <UsageComponent :i-d="referenceUsage.id" :lemma="referenceUsage.lemma" :context="referenceUsage.context"
                       :indexes="[referenceUsage.posStartIndex, referenceUsage.posEndIndex]" />
     </div>
-<!--    <p>Usage list to order:</p>-->
+    <!--    <p>Usage list to order:</p>-->
     <draggable
       v-model="usages"
       @start="drag=true"
@@ -24,8 +26,9 @@
         :context="usage.context"
         :indexes="[usage.posStartIndex, usage.posEndIndex]"
         :border="true"
-        :originalIndex="getOriginalIndex(usage)"
       />
+      <!--        :originalIndex="getOriginalIndex(usage)"-->
+
     </draggable>
     <button @click="submitOrder">Submit</button>
   </div>
@@ -35,7 +38,7 @@
 import UsageComponent from "@/components/challenges/UsageComponent.vue";
 import { VueDraggableNext } from "vue-draggable-next";
 
-export default {
+export default {//TODO: Make order random
   name: "ListChallengeComponent",
   components: {
     UsageComponent,
@@ -52,14 +55,21 @@ export default {
       id: this._id,
       lemma: this._lemma,
       referenceUsage: this._referenceUsage,
-      usages: this._usages,
+      usages: this.shuffleUsages(this._usages),
       drag: false,
       usagesWithOriginalIndex: this._usages.map((usage, index) => ({ usage, originalIndex: index + 1 })),
-      currentOrder: [],
+      currentOrder: []
     };
   },
   computed: {},
   methods: {
+    shuffleUsages(usages) {
+      for (let i = usages.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [usages[i], usages[j]] = [usages[j], usages[i]];
+      }
+      return usages;
+    },
     getOriginalIndex(usage) {
       const usageWithOriginalIndex = this.usagesWithOriginalIndex.find(u => u.usage.id === usage.id);
       return usageWithOriginalIndex ? usageWithOriginalIndex.originalIndex : null;
@@ -69,7 +79,7 @@ export default {
       console.log("current order:", this.currentOrder);
     },
     submitOrder() {
-      this.$emit('submitListChallenge', { challengeId: this.id, order: this.currentOrder });
+      this.$emit("submitListChallenge", { challengeId: this.id, order: this.currentOrder });
     }
   },
   created() {
@@ -86,5 +96,6 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 
 </style>

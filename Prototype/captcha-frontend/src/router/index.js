@@ -5,11 +5,17 @@ import NotFound from "@/components/misc/NotFound.vue";
 import PairChallengeView from "@/views/PairChallengeView.vue";
 import ListChallengeView from "@/views/ListChallengeView.vue";
 import StudyView from "@/views/StudyView.vue";
+import StudyViewSingleChallenge from "@/views/StudyViewSingleChallenge.vue";
 
 const routes = [
   {
     path: "/",
     name: "study",
+    component: StudyViewSingleChallenge
+  },
+  {
+    path: "/old-study",
+    name: "old-study",
     component: StudyView
   },
   {

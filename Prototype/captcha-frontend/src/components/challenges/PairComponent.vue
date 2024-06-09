@@ -1,20 +1,22 @@
 <template>
   <div class="PairComponent">
-    <h3>Pair Challenge {{ pairNumber }} </h3>
-    <p>Rate how similar in meaning the highlighted words are in the following sentences: </p>
+    <p>Rate how similar in meaning the highlighted words are in the following two sentences: </p>
+    <p></p>
     <div class="contexts">
       <p v-html="boldContext1"></p>
       <p v-html="boldContext2"></p>
     </div>
     <div class="button-row">
-      <button id="0" @click=saveButtonPress(0)>0 - Can't decide</button>
-      <button id="1" @click=saveButtonPress(1)>1 - Dissimilar</button>
-      <button id="2" @click=saveButtonPress(2)>2 </button>
-      <button id="3" @click=saveButtonPress(3)>3 </button>
-      <button id="4" @click=saveButtonPress(4)>4 - Identical</button>
+      <button :class="{ 'active': pressedButton === 1 }" id="1" @click=saveButtonPress(1)>1 - Dissimilar</button>
+      <button :class="{ 'active': pressedButton === 2 }" id="2" @click=saveButtonPress(2)>2</button>
+      <button :class="{ 'active': pressedButton === 3 }" id="3" @click=saveButtonPress(3)>3</button>
+      <button :class="{ 'active': pressedButton === 4 }" id="4" @click=saveButtonPress(4)>4 - Identical</button>
     </div>
-    <p v-if="pressedButton != null">You chose: {{ pressedButton }}</p>
-    <p v-else>Choose a degree of relatedness</p>
+    <!--    <div class="button-row">-->
+    <!--      <button :class="{ 'active': pressedButton === 0 }" id="0" @click=saveButtonPress(0)>0 - Can't decide</button>-->
+    <!--    </div>-->
+    <!--    <p v-if="pressedButton != null">You chose: {{ pressedButton }}</p>-->
+    <!--    <p v-else>Choose a degree of relatedness</p>-->
   </div>
 </template>
 
@@ -77,7 +79,7 @@ export default {
   computed: {
     boldContext1() {
       if (this.indexes1[0] === -1) {
-        return  this.context1;
+        return this.context1;
       }
       let startIndex = this.indexes1[0];
       let endIndex = this.indexes1[1];
@@ -87,7 +89,7 @@ export default {
     },
     boldContext2() {
       if (this.indexes2[0] === -1) {
-        return  this.context1;
+        return this.context1;
       }
       let startIndex = this.indexes2[0];
       let endIndex = this.indexes2[1];
@@ -107,9 +109,19 @@ export default {
   justify-content: center;
   gap: 10px;
 }
-.contexts {
-  gap: 5px;
 
+.contexts {
+  display: inline-block;
+}
+
+.contexts p {
+  border: 1px solid black;
+  padding: 5px; /* Adjust as needed */
+  margin: 10px 0; /* Adjust as needed */
+}
+
+.active {
+  border: 2px solid red;
 }
 
 </style>
