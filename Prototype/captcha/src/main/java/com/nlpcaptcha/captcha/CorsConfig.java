@@ -10,7 +10,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://193.196.66.76")
+                .allowedOrigins("http://193.196.66.76", "https://semantic-nlp-captcha.de")
                 .allowedMethods("*")
                 .allowedHeaders("*")
                 .allowCredentials(true);
