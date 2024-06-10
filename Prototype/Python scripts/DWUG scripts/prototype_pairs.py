@@ -1,13 +1,14 @@
-import os
 import csv
-from pathlib import Path
-import pandas as pd
-import numpy as np
-from scipy import stats
-import re
+import os
 import random
+import re
+from pathlib import Path
 
-datasets = ['dwug_en', 'dwug_de']
+import numpy as np
+import pandas as pd
+from scipy import stats
+
+datasets = ['dwug_en']
 input_path = '../../../DWUG/'
 output_path = 'data_output'
 Path(output_path).mkdir(parents=True, exist_ok=True)
@@ -70,7 +71,7 @@ def write_uses_for_dataset(dataset, output_folder):
 
 
 def generate_pairs(uses, judgments_df_filtered):
-    if (judgments_df_filtered.empty):
+    if judgments_df_filtered.empty:
         return []
 
     pairs = []
@@ -112,7 +113,8 @@ def generate_and_write_pairs_for_dataset(dataset):
     print('Generating and writing pairs for whole dataset:', dataset_path, ' ...')
 
     judgments_aggregated = aggregate_judgments_df(load_judgments_df_from_source_datasets())
-    judgments_filtered = filter_aggregated_judgments(judgments_aggregated, False)
+    judgments_filtered = filter_aggregated_judgments(judgments_aggregated, True)
+
     pairs = []
 
     for p in Path(dataset_path).glob('*/'):
@@ -125,7 +127,7 @@ def generate_and_write_pairs_for_dataset(dataset):
 
     output_path_lemma = os.path.join(output_path, 'pairs_whole_dataset')
     Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
-    write_csv(os.path.join(output_path_lemma, dataset + '_pairs_challenge.csv'), pairs,
+    write_csv(os.path.join(output_path_lemma, dataset + '_study_4+_identifier2_pairs_new.csv'), pairs,
               pairs[0].keys() if pairs else [])
 
 
@@ -230,7 +232,7 @@ def generate_and_write_list_challenge(strict=True, to_find=4.0, joined=True):
             if not joined:
                 list_challenge_header = local_challenges[0].keys() if local_challenges else []
                 output_path_lemma = os.path.join(output_path, dataset, 'data', lemma)
-                file_name = 'list_challenges_filtered.csv'
+                file_name = 'list_challenges_filtered_new.csv'
                 if not strict:
                     file_name = 'random_challenges_filtered.csv'
 
@@ -243,7 +245,7 @@ def generate_and_write_list_challenge(strict=True, to_find=4.0, joined=True):
         list_challenge_header = whole_list_challenges[0].keys() if whole_list_challenges else []
         output_path_lemma = os.path.join(output_path, 'list_challenges_whole_dataset')
         Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
-        file_name = dataset + '_list_challenges_filtered.csv'
+        file_name = dataset + '_list_challenges_filtered_new.csv'
         if not strict:
             file_name = dataset + '_random_challenges_filtered.csv'
 
@@ -317,6 +319,36 @@ def find_practical_reference_usages(usage, judgments_df, strict=True, to_find=4.
         list_challenge['order'] = [k for k, v in sorted(local_order.items(), key=lambda item: item[1], reverse=True)]
 
     return list_challenge
+
+
+def find_possible_study_pairs(dataset='dwug_en'):
+    df = filter_aggregated_judgments(aggregate_judgments_df(load_judgments_df_from_source_datasets()), True)
+    print('Filtered pairs:', df['labels'])
+
+    NUMBER_OF_PAIRS = 6
+
+    # Group by 'lemma' and filter out all groups that don't have a '1.0', '2.0', '3.0' and '4.0' in the 'labels' column
+    df1 = df.groupby('identifier1').filter(
+        lambda group: all(x in group['median_label'].values for x in [1.0, 2.0, 3.0, 4.0]) and len(
+            group) >= NUMBER_OF_PAIRS)
+    df2 = df.groupby('identifier2').filter(
+        lambda group: all(x in group['median_label'].values for x in [1.0, 2.0, 3.0, 4.0]) and len(
+            group) >= NUMBER_OF_PAIRS)
+
+    judgments_filtered = pd.concat([df1, df2])
+
+    dataset_path = os.path.join(input_path, dataset, 'data')
+
+    pairs = []
+
+    for p in Path(dataset_path).glob('*/'):
+        uses_file_path = os.path.join(str(p), 'uses.csv')
+        pairs.extend(generate_pairs(load_csv(uses_file_path, undesired_keys), judgments_filtered))
+
+    output_path_lemma = os.path.join(output_path, 'find_study_pairs')
+    Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
+    write_csv(os.path.join(output_path_lemma, dataset + '_study_' + str(NUMBER_OF_PAIRS) + '+_pairs.csv'), pairs,
+              pairs[0].keys() if pairs else [])
 
 
 def generate_and_write_random_challenge():
@@ -406,23 +438,25 @@ def aggregate_judgments_df(df_judgments):
     return df
 
 
-def filter_aggregated_judgments(df, strict=False):
+def filter_aggregated_judgments(df, strict=True):
     annotator_keys = [key for key in df.keys() if key.startswith('annotator')]
     df_new = df.copy()
 
     # Filter out '0.0' judgments
     df_new = df_new[~df_new['labels'].apply(lambda x: 0.0 in x)]
 
-    # Filter out disagreements
+    # ensure median is a concrete label
     df_new = df_new[~df_new['median_label'].apply(lambda x: x not in [1.0, 2.0, 3.0, 4.0])]
 
     df_new['non_nan_count'] = df_new[annotator_keys].count(axis=1)
 
+    # Drop where only 1 annotator
+    df_new = df_new[df_new['non_nan_count'] >= 2]
     #
 
     if strict:
-        # Drop where only 1 annotator
-        df_new = df_new[df_new['non_nan_count'] >= 2]
+        # Filter out disagreements
+        df_new = df_new[df_new['labels'].apply(lambda x: len(set([i for i in x if not np.isnan(i)])) == 1)]
 
     # remove '_nn' from lemma
     df_new['lemma'] = df_new['lemma'].apply(lambda x: x.split('_')[0])
@@ -697,10 +731,13 @@ def analyse_all():
     analyse_pairs_mapped('data_output/attacked_pairs/attacked_pairs_dwug_en.csv')
 
 
+find_possible_study_pairs()
+
 # analyse_all()
 
 # join_list_challenges()
-# generate_and_write_list_challenge(joined=True)
+
+# generate_and_write_list_challenge()
 
 # generate_and_write_random_challenge()
 
@@ -715,7 +752,7 @@ def analyse_all():
 
 # load_and_write_uses_judgments(True)
 
-write_uses_for_dataset('dwug_en', 'data_output/uses_whole_dataset/')
+# write_uses_for_dataset('dwug_en', 'data_output/uses_whole_dataset/')
 
 # analyse_judgment_cosine_correlation_spearman('data_output/attacked_pairs/attacked_pairs_abbauen.csv')
 
