@@ -4,8 +4,10 @@
     <p>This study helps to develop a new type of "Are you human?" detection
       program called "semantic NLP CAPTCHA". <br>
       Captcha in general determine if a user really is human and come in
-      different forms like CheckBox Captcha or Image Captcha. <br>
-      Please provide feedback on your experience.</p>
+      different forms like CheckBox Captcha or Image Captcha. </p>
+    <p> For further information about Captchas see here: <a href="https://en.wikipedia.org/wiki/CAPTCHA"
+                                                            target="_blank">CAPTCHA - Wikipedia</a></p>
+    <p>Please provide feedback on your experience. </p>
     <h2>General Information:</h2>
     <p>Is english your mother tongue ?</p>
     <select v-model="mother_language">
@@ -24,12 +26,13 @@
       being impossible and 10 being trivial to rate: </p>
     <input type="number" v-model="rating_determine_similarity_difficulty">
 
-    <p>How convenient and practical do you think is such type of "human-detection" challenge in daily life ? <br> Rate on a scale from 1
+    <p>How convenient and practical do you think is such type of "human-detection" challenge in daily life ? <br> Rate
+      on a scale from 1
       being not at all convenient or practical and 10 being highly convenient and practical:</p>
     <input type="number" v-model="challenge_feedback1">
 
     <p>And would you prefer that challenge over any different kind of Captcha-Challenge (like Image-Captcha)? </p>
-    <input type="text" v-model="challenge_feedback2" />
+    <textarea v-model="challenge_feedback2"></textarea>
 
     <p>What is your opinion on the count of items in one challenge? <br> How many would you be willing to solve without
       being majorly annoyed as a Captcha-Challenge in daily life? </p>
@@ -37,7 +40,7 @@
 
     <h2>General Feedback:</h2>
     <p>Any other feedback you would like to provide about the challenge or to improve this study?</p>
-    <input type="text" v-model="general_feedback">
+    <textarea v-model="general_feedback"> </textarea>
     <p>Thank you for your participation!</p>
     <button @click="submitFeedback">Submit Feedback</button>
   </div>
@@ -92,7 +95,10 @@ export default {
 </script>
 
 <style scoped>
-input[type="text"] {
-  width: 80%;
+textarea {
+  width: 50%;
+  min-height: 25px;
+  max-height: 200px;
+  resize: vertical;
 }
 </style>
