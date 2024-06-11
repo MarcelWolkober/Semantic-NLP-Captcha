@@ -1,7 +1,7 @@
 <template>
   <div class="PairChallengeComponent">
 <!--    <h1> Pair Challenge </h1>-->
-    <p> Solve all the following challenges:</p>
+    <h3> Solve all the following challenges:</h3>
     <PairComponent v-for="(pair, index) in _pairs"
                    :key="index" :pair="pair" :pairNumber="index + 1" @userChoice="addUserChoice" />
     <div class="button-submit">

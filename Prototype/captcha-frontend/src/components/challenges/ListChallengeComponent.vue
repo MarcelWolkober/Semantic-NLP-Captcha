@@ -1,10 +1,13 @@
 <template>
   <div class="ListChallengeComponent">
-    <p> Order (drag & drop) the sentence-blocks by how similar in meaning the highlighted words are in comparison to the
-      word
-      in the reference sentence. <br>
-      The sentence with the word having the most similar meaning should be on top. </p>
-    <p></p>
+    <div class="instructions">
+      <p> Order (drag & drop) the sentence-blocks by how similar in meaning the highlighted words are in comparison to
+        the
+        word
+        in the reference sentence. <br>
+        The sentence with the word having the most similar meaning should be on top. </p>
+      <p></p>
+    </div>
     <div class="referenceUsage">
       <p>Reference Sentence:</p>
       <UsageComponent :i-d="referenceUsage.id" :lemma="referenceUsage.lemma" :context="referenceUsage.context"
@@ -95,6 +98,9 @@ export default {//TODO: Make order random
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.instructions {
+  font-size: 1.5em; /* Adjust as needed */
 }
 
 

@@ -105,11 +105,10 @@ export default {
 
 <style scoped>
 .button-row {
-  width: 75px; /* Adjust as needed */
-  height: 20px; /* Adjust as needed */
-  text-align: center;
-  white-space: nowrap;
-  display: inline-block;
+  width: 100px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
