@@ -109,6 +109,10 @@ export default {
   justify-content: center;
   gap: 10px;
 }
+.button-row button {
+  flex-grow: 1;
+  text-align: center;
+}
 
 .contexts {
   display: inline-block;

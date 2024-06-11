@@ -32,7 +32,7 @@
     <input type="number" v-model="challenge_feedback1">
 
     <p>And would you prefer that challenge over any different kind of Captcha-Challenge (like Image-Captcha)? </p>
-    <textarea v-model="challenge_feedback2"></textarea>
+    <textarea v-model="challenge_feedback2" v-auto-grow ></textarea>
 
     <p>What is your opinion on the count of items in one challenge? <br> How many would you be willing to solve without
       being majorly annoyed as a Captcha-Challenge in daily life? </p>
@@ -40,7 +40,7 @@
 
     <h2>General Feedback:</h2>
     <p>Any other feedback you would like to provide about the challenge or to improve this study?</p>
-    <textarea v-model="general_feedback"> </textarea>
+    <textarea v-model="general_feedback" v-auto-grow > </textarea>
     <p>Thank you for your participation!</p>
     <button @click="submitFeedback">Submit Feedback</button>
   </div>
@@ -89,6 +89,14 @@ export default {
       };
 
       this.$emit("submitFeedback", feedback);
+    }
+  },
+  directives: {
+    autoGrow: {
+      update: function (el) {
+        el.style.height = 'auto';
+        el.style.height = (el.scrollHeight) + 'px';
+      }
     }
   }
 };
