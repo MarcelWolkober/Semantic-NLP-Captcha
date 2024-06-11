@@ -16,6 +16,11 @@
       <option value="">No answer</option>
     </select>
 
+    <p>How would you rate your english language skills in general? <br>  Rate on a scale from 1:
+       you have no understanding at all to 10: you have a C2 (mastery) level : </p>
+    <!--   TODO: maybe change this-->
+    <input type="number" v-model="language_skills">
+
     <h2>Challenge:</h2>
 
     <p>How easy was it to understand the sentences in the challenge in general? <br> Rate on a scale from 1
@@ -52,6 +57,7 @@ export default {
   data() {
     return {
       mother_language: "",
+      language_skills: null,
 
       rating_determine_sentence_understanding_difficulty: null,
       rating_determine_similarity_difficulty: null,
@@ -79,6 +85,7 @@ export default {
       // Create an object with all the feedback fields
       const feedback = {
         motherLanguage: this.mother_language,
+        languageSkills: this.language_skills,
 
         ratingSentenceUnderstanding: this.rating_determine_sentence_understanding_difficulty,
         ratingDetermineSemanticMeaning: this.rating_determine_similarity_difficulty,
