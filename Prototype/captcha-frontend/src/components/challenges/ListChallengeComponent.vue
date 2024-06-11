@@ -100,7 +100,7 @@ export default {//TODO: Make order random
   align-items: center;
 }
 .instructions {
-  font-size: 1.5em; /* Adjust as needed */
+  font-size: 1.25em; /* Adjust as needed */
 }
 
 
