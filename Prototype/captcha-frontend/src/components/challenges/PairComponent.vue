@@ -112,7 +112,7 @@ export default {
 }
 .button-row button{
   width: 100px; /* Adjust as needed */
-  height: 50px; /* Adjust as needed */
+  height: 30px; /* Adjust as needed */
 }
 
 

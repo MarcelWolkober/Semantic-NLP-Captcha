@@ -67,10 +67,10 @@ public class PairService {
                 int startIndex1 = Integer.parseInt(record.get(5).split(":")[0]);
                 int endIndex1 = Integer.parseInt(record.get(5).split(":")[1]);
                 String context1 = record.get(3);
-                if (context1.length() > 300) {
-                    logger.info("Skipped usage with too long context: " + context1.length());
-                    continue;
-                }
+//                if (context1.length() > 300) {
+//                    logger.info("Skipped usage with too long context: " + context1.length());
+//                    continue;
+//                }
                 existingUsage1 = new Usage(record.get(0), record.get(1), context1, startIndex1, endIndex1);
                 usageRepository.save(existingUsage1);
             }
@@ -78,10 +78,10 @@ public class PairService {
                 int startIndex2 = Integer.parseInt(record.get(6).split(":")[0]);
                 int endIndex2 = Integer.parseInt(record.get(6).split(":")[1]);
                 String context2 = record.get(4);
-                if (context2.length() > 300) {
-                    logger.info("Skipped usage with too long context: " + context2.length());
-                    continue;
-                }
+//                if (context2.length() > 300) {
+//                    logger.info("Skipped usage with too long context: " + context2.length());
+//                    continue;
+//                }
                 existingUsage2 = new Usage(record.get(0), record.get(2), context2, startIndex2, endIndex2);
                 usageRepository.save(existingUsage2);
             }

@@ -1,7 +1,7 @@
 <template>
   <div class="StudyFinishedComponent">
 
-    <p>Study finished successfully. Thank you for participating!</p>
+    <p>Study finished successfully. Thank you for participating! Please do not take part in this study again.</p>
     <p> You can close this page now. </p>
 
     <p> For further information about Captchas see here: <a href="https://en.wikipedia.org/wiki/CAPTCHA"
