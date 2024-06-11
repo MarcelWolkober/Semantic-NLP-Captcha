@@ -105,14 +105,14 @@ export default {
 
 <style scoped>
 .button-row {
-  display: flex;
-  justify-content: center;
+  width: 75px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
   gap: 10px;
 }
-.button-row button {
-  flex-grow: 1;
-  text-align: center;
-}
+
 
 .contexts {
   display: inline-block;
