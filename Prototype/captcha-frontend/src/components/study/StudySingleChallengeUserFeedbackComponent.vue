@@ -104,12 +104,11 @@ export default {
         generalFeedback: this.general_feedback
       };
 
-      if (this.general_feedback.length > this.max_input_length) {
-        this.isTooLong_general = true;
+      this.isTooLong_general = this.general_feedback.length > this.max_input_length;
 
-      } else if (challFeedback.length > this.max_input_length) {
-        this.isTooLong_challenge = true;
-      } else {
+      this.isTooLong_challenge = challFeedback.length > this.max_input_length;
+
+      if (challFeedback.length <= this.max_input_length && this.general_feedback.length <= this.max_input_length) {
         this.isTooLong_general = false;
         this.isTooLong_challenge = false;
         this.$emit("submitFeedback", feedback);
