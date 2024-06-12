@@ -41,7 +41,7 @@
 import UsageComponent from "@/components/challenges/UsageComponent.vue";
 import { VueDraggableNext } from "vue-draggable-next";
 
-export default {//TODO: Make order random
+export default {
   name: "ListChallengeComponent",
   components: {
     UsageComponent,

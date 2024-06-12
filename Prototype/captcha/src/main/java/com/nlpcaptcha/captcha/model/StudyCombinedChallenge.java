@@ -33,7 +33,6 @@ public class StudyCombinedChallenge implements Serializable {
     @JsonView(Views.Public.class)
     private ListRankingChallenge listRankingChallenge;
 
-    // TODO: Change One to Many
     @OneToMany(mappedBy = "studyCombinedChallenge")
     @JsonView(Views.Public.class)
     private final Set<StudyUserData> studyUserData = new HashSet<>();

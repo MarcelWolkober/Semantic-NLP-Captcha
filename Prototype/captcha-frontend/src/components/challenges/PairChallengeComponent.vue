@@ -32,7 +32,7 @@ export default {
   data() {
     return {
       id: this._id,
-      pairs: this._pairs,
+      pairs: this.shufflePairs(this._pairs),
       userChoices: [],
       userNotSelectedAllQuery: false
     };
@@ -43,7 +43,7 @@ export default {
       handler(newVal, oldVal) {
         console.log("Pairs changed");
         console.log(newVal);
-        this.pairs = newVal;
+        this.pairs = this.shufflePairs(newVal);
       }
     }
   },
@@ -77,6 +77,13 @@ export default {
           userChoices: this.userChoices
         });
       }
+    },
+    shufflePairs(pairs) {
+      for (let i = pairs.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pairs[i], pairs[j]] = [pairs[j], pairs[i]];
+      }
+      return pairs;
     }
   }
 };

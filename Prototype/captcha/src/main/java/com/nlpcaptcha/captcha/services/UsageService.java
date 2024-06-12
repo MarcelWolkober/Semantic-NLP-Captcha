@@ -29,7 +29,7 @@ public class UsageService {
 
         List<Usage> usages = new ArrayList<>();
 
-        for (List<String> record : records) {//TODO: map record to Usage
+        for (List<String> record : records) {
 
             String identifier = record.get(1);
             Usage existingUsage = usageRepository.findByIdentifier(identifier);
