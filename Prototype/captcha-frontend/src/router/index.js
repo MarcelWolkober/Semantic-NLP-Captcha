@@ -10,9 +10,14 @@ import StudyViewSingleChallenge from "@/views/StudyViewSingleChallenge.vue";
 const routes = [
   {
     path: "/",
+    redirect: "/study"
+  },
+  {
+    path: "/study",
     name: "study",
     component: StudyViewSingleChallenge
   },
+
   {
     path: "/old-study",
     name: "old-study",

@@ -116,4 +116,8 @@ textarea {
   max-height: 200px;
   resize: vertical;
 }
+
+input[type="number"] {
+  width: 2.5%;
+}
 </style>

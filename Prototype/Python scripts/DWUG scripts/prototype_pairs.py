@@ -2,6 +2,7 @@ import csv
 import os
 import random
 import re
+from itertools import combinations
 from pathlib import Path
 
 import numpy as np
@@ -325,17 +326,24 @@ def find_possible_study_pairs(dataset='dwug_en'):
     df = filter_aggregated_judgments(aggregate_judgments_df(load_judgments_df_from_source_datasets()), True)
     print('Filtered pairs:', df['labels'])
 
-    NUMBER_OF_PAIRS = 6
+    NUMBER_OF_PAIRS = 5
+
+    # Generate all combinations of three values out of [1.0, 2.0, 3.0, 4.0]
+    value_combinations = list(combinations([1.0, 2.0, 3.0, 4.0], 3))
 
     # Group by 'lemma' and filter out all groups that don't have a '1.0', '2.0', '3.0' and '4.0' in the 'labels' column
     df1 = df.groupby('identifier1').filter(
-        lambda group: all(x in group['median_label'].values for x in [1.0, 2.0, 3.0, 4.0]) and len(
+        lambda group: any(
+            all(x in group['median_label'].values for x in combination) for combination in value_combinations) and len(
             group) >= NUMBER_OF_PAIRS)
     df2 = df.groupby('identifier2').filter(
-        lambda group: all(x in group['median_label'].values for x in [1.0, 2.0, 3.0, 4.0]) and len(
+        lambda group: any(
+            all(x in group['median_label'].values for x in combination) for combination in value_combinations) and len(
             group) >= NUMBER_OF_PAIRS)
 
     judgments_filtered = pd.concat([df1, df2])
+
+    judgments_filtered = judgments_filtered.drop_duplicates(subset=['identifier1', 'identifier2'], keep='first')
 
     dataset_path = os.path.join(input_path, dataset, 'data')
 
@@ -347,7 +355,8 @@ def find_possible_study_pairs(dataset='dwug_en'):
 
     output_path_lemma = os.path.join(output_path, 'find_study_pairs')
     Path(output_path_lemma).mkdir(parents=True, exist_ok=True)
-    write_csv(os.path.join(output_path_lemma, dataset + '_study_' + str(NUMBER_OF_PAIRS) + '+_pairs.csv'), pairs,
+    write_csv(os.path.join(output_path_lemma, dataset + '_study_' + str(NUMBER_OF_PAIRS) + '+_less_strict_pairs.csv'),
+              pairs,
               pairs[0].keys() if pairs else [])
 
 

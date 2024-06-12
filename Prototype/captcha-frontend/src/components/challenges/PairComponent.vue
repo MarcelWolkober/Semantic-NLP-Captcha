@@ -7,10 +7,10 @@
       <p v-html="boldContext2"></p>
     </div>
     <div class="button-row">
-      <button :class="{ 'active': pressedButton === 1 }" id="1" @click=saveButtonPress(1)>1 - Dissimilar</button>
+      <button :class="{ 'active': pressedButton === 1 }" id="1" @click=saveButtonPress(1)>1 - very different</button>
       <button :class="{ 'active': pressedButton === 2 }" id="2" @click=saveButtonPress(2)>2</button>
       <button :class="{ 'active': pressedButton === 3 }" id="3" @click=saveButtonPress(3)>3</button>
-      <button :class="{ 'active': pressedButton === 4 }" id="4" @click=saveButtonPress(4)>4 - Identical</button>
+      <button :class="{ 'active': pressedButton === 4 }" id="4" @click=saveButtonPress(4)>4 - very similar</button>
     </div>
     <!--    <div class="button-row">-->
     <!--      <button :class="{ 'active': pressedButton === 0 }" id="0" @click=saveButtonPress(0)>0 - Can't decide</button>-->
@@ -68,7 +68,7 @@ export default {
   methods: {
     saveButtonPress(id) {
       this.pressedButton = id;
-      this.$emit("userChoice", { id: this.id, button: id });
+      this.$emit("userChoice", { id: this.id, label: id });
     }
 
   },
@@ -112,7 +112,7 @@ export default {
 }
 .button-row button{
   width: 100px; /* Adjust as needed */
-  height: 30px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
 }
 
 
