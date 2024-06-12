@@ -25,11 +25,11 @@ public class StudyUserData {
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private StudyCombinedChallenge studyCombinedChallenge;
 
-    @Column(name = "pair_challenge_results")
+    @Column(name = "pair_challenge_results", length = 4000)
     @JsonView(Views.Public.class)
     private String pairChallengeResults;
 
-    @Column(name = "list_ranking_challenge_results")
+    @Column(name = "list_ranking_challenge_results", length = 4000)
     @JsonView(Views.Public.class)
     private String listRankingChallengeResults;
 
@@ -45,7 +45,7 @@ public class StudyUserData {
     @JsonView(Views.Public.class)
     private long endTime;
 
-    @Column(name = "feedback")
+    @Column(name = "feedback", length = 4000)
     @JsonView(Views.Public.class)
     private String feedback;
 
