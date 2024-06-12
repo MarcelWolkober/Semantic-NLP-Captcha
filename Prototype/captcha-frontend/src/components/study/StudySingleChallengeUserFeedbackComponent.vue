@@ -105,9 +105,12 @@ export default {
 
       if (this.general_feedback.length > this.max_input_length || challFeedback.length > this.max_input_length) {
         this.isTooLong = true;
-        return;
+
+      } else {
+        this.isTooLong = false;
+        this.$emit("submitFeedback", feedback);
       }
-      this.$emit("submitFeedback", feedback);
+
     }
   },
   directives: {
