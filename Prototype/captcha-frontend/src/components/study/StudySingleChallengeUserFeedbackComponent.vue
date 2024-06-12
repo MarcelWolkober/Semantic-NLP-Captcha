@@ -16,8 +16,8 @@
       <option value="">No answer</option>
     </select>
 
-    <p>How would you rate your english language skills in general? <br>  Rate on a scale from 1:
-       you have no understanding at all to 10: you have a C2 (mastery) level : </p>
+    <p>How would you rate your english language skills in general? <br> Rate on a scale from 1:
+      you have no understanding at all to 10: you have a C2 (mastery) level : </p>
     <!--   TODO: maybe change this-->
     <input type="number" v-model="language_skills">
 
@@ -37,8 +37,8 @@
     <input type="number" v-model="challenge_feedback1">
 
     <p>And would you prefer that challenge over any different kind of Captcha-Challenge (like Image-Captcha)? </p>
-    <textarea v-model="challenge_feedback2" v-auto-grow ></textarea>
-    <p v-if="isTooLong" style="color: red">Your input is too long!</p>
+    <textarea v-model="challenge_feedback2" v-auto-grow></textarea>
+    <p v-if="isTooLong_challenge" style="color: red">Your input is too long!</p>
 
     <p>What is your opinion on the count of items in one challenge? <br> How many would you be willing to solve without
       being majorly annoyed as a Captcha-Challenge in daily life? </p>
@@ -46,8 +46,8 @@
 
     <h2>General Feedback:</h2>
     <p>Any other feedback you would like to provide about the challenge or to improve this study?</p>
-    <textarea v-model="general_feedback" v-auto-grow > </textarea>
-    <p v-if="isTooLong" style="color: red">Your input is too long!</p>
+    <textarea v-model="general_feedback" v-auto-grow> </textarea>
+    <p v-if="isTooLong_general" style="color: red">Your input is too long!</p>
 
 
     <p>Thank you for your participation!</p>
@@ -72,7 +72,8 @@ export default {
       general_feedback: "",
 
       max_input_length: 3500,
-      isTooLong: false
+      isTooLong_challenge: false,
+      isTooLong_general: false
     };
   },
   methods: {
@@ -103,11 +104,14 @@ export default {
         generalFeedback: this.general_feedback
       };
 
-      if (this.general_feedback.length > this.max_input_length || challFeedback.length > this.max_input_length) {
-        this.isTooLong = true;
+      if (this.general_feedback.length > this.max_input_length) {
+        this.isTooLong_general = true;
 
+      } else if (challFeedback.length > this.max_input_length) {
+        this.isTooLong_challenge = true;
       } else {
-        this.isTooLong = false;
+        this.isTooLong_general = false;
+        this.isTooLong_challenge = false;
         this.$emit("submitFeedback", feedback);
       }
 
@@ -115,9 +119,9 @@ export default {
   },
   directives: {
     autoGrow: {
-      update: function (el) {
-        el.style.height = 'auto';
-        el.style.height = (el.scrollHeight) + 'px';
+      update: function(el) {
+        el.style.height = "auto";
+        el.style.height = (el.scrollHeight) + "px";
       }
     }
   }
