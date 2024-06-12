@@ -3,7 +3,7 @@
     <h1> Study </h1>
     <p> Welcome to the study of my bachelor thesis. </p>
     <!--   <p> For further information about Captchas see here: <a href="https://en.wikipedia.org/wiki/CAPTCHA" target="_blank">CAPTCHA - Wikipedia</a></p>-->
-    <p> The study will take approximately 10 minutes to complete. Please do not take any breaks during the study.</p>
+    <p> The study will take approximately 5 to 10 minutes to complete. Please do not take any breaks during the study.</p>
     <p> There will be <strong> no </strong> personal data collected, the participant answers and metrics will be stored
       anonymously. </p>
     <p>Notice: Try not to reload the page or move backwards a page or otherwise you will have to restart the study.</p>

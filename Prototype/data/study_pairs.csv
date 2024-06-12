@@ -38,11 +38,9 @@ order	study_usage_21	study_usage_22	You need to order your life well!	This is wh
 order	study_usage_21	study_usage_23	You need to order your life well!	It returns a list of matching pages, usually ordered by relevance.	12:17	45:52	3.0
 order	study_usage_21	study_usage_24	You need to order your life well!	If you are ordering several items, please allow us enough time to compile the order.	12:17	78:83	1.0
 order	study_usage_21	study_usage_25	You need to order your life well!	"Put the weapon down, now!" is what she ordered him to do.	12:17	40:47	1.0
-order	study_usage_21	study_usage_26	You need to order your life well!	With the current technology it is easier to order events from the past.	12:17	44:49	2.0
 order	study_usage_21	study_usage_27	You need to order your life well!	No, this is not the correct order, swap these two books.	12:17	28:33	3.0
 bank	study_usage_31	study_usage_32	Banks and credit-card firms are kept out of the picture.	Let it be no bank or common stock, but every man be master of his own money.	0:5	13:17	4.0
-bank	study_usage_31	study_usage_33	Banks and credit-card firms are kept out of the picture.	I'm going to bank the money tomorrow.	0:5	13:17	2.0
+bank	study_usage_31	study_usage_33	Banks and credit-card firms are kept out of the picture.	I'm going to bank the money tomorrow.	0:5	13:17	3.0
 bank	study_usage_31	study_usage_34	Banks and credit-card firms are kept out of the picture.	Even though Mike's bank has lots of poker chips in it, it's not worth playing any further.	0:5	19:23	3.0
 bank	study_usage_31	study_usage_35	Banks and credit-card firms are kept out of the picture.	At the river bank you can find a nice place to rest.	0:5	13:17	1.0
 bank	study_usage_31	study_usage_36	Banks and credit-card firms are kept out of the picture.	Google has lots of data banks to store any kinds of data.	0:5	24:29	3.0
-bank	study_usage_31	study_usage_37	Banks and credit-card firms are kept out of the picture.	She is the type of banker that knows how to handle your money.	0:5	19:25	2.0

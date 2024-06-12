@@ -8,6 +8,7 @@
                                                             target="_blank">CAPTCHA - Wikipedia</a></p>
     <p> Credits: Marcel Wolkober, <a href="mailto:st163937@stud.uni-stuttgart.de">st163937@stud.uni-stuttgart.de</a></p>
     <p> Supervised by: Dr. Dominik Schlechtweg, <a href="mailto:dominik.schlechtweg@ims.uni-stuttgart.de">dominik.schlechtweg@ims.uni-stuttgart.de</a></p>
+    <p> PS: It would be of great help to us if you can forward this study to others, thanks again!</p>
   </div>
 </template>
 
