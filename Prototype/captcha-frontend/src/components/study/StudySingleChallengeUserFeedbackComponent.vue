@@ -38,6 +38,7 @@
 
     <p>And would you prefer that challenge over any different kind of Captcha-Challenge (like Image-Captcha)? </p>
     <textarea v-model="challenge_feedback2" v-auto-grow ></textarea>
+    <p v-if="isTooLong" style="color: red">Your input is too long!</p>
 
     <p>What is your opinion on the count of items in one challenge? <br> How many would you be willing to solve without
       being majorly annoyed as a Captcha-Challenge in daily life? </p>
@@ -46,6 +47,9 @@
     <h2>General Feedback:</h2>
     <p>Any other feedback you would like to provide about the challenge or to improve this study?</p>
     <textarea v-model="general_feedback" v-auto-grow > </textarea>
+    <p v-if="isTooLong" style="color: red">Your input is too long!</p>
+
+
     <p>Thank you for your participation!</p>
     <button @click="submitFeedback">Submit Feedback</button>
   </div>
@@ -65,7 +69,10 @@ export default {
       challenge_feedback2: "",
       challenge_count_opinion: null,
 
-      general_feedback: ""
+      general_feedback: "",
+
+      max_input_length: 3500,
+      isTooLong: false
     };
   },
   methods: {
@@ -81,6 +88,7 @@ export default {
       //   return;
       // }
 
+      const challFeedback = this.challenge_feedback1 + " | " + this.challenge_feedback2;
 
       // Create an object with all the feedback fields
       const feedback = {
@@ -89,12 +97,16 @@ export default {
 
         ratingSentenceUnderstanding: this.rating_determine_sentence_understanding_difficulty,
         ratingDetermineSemanticMeaning: this.rating_determine_similarity_difficulty,
-        ChallengeFeedback: this.challenge_feedback1 + " | " + this.challenge_feedback2,
+        ChallengeFeedback: challFeedback,
         ChallengeCountOpinion: this.challenge_count_opinion,
 
         generalFeedback: this.general_feedback
       };
 
+      if (this.general_feedback.length > this.max_input_length || challFeedback.length > this.max_input_length) {
+        this.isTooLong = true;
+        return;
+      }
       this.$emit("submitFeedback", feedback);
     }
   },
