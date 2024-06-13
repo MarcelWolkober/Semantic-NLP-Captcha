@@ -7,8 +7,21 @@
       different forms like CheckBox Captcha or Image Captcha. </p>
     <p> For further information about Captchas see here: <a href="https://en.wikipedia.org/wiki/CAPTCHA"
                                                             target="_blank">CAPTCHA - Wikipedia</a></p>
+
+
+
     <p>Please provide feedback on your experience. </p>
     <h2>General Information:</h2>
+
+
+    <p> Do you have / going to have an academic degree, e.g. bachelor, master, phd, etc. ? </p>
+    <select v-model="academic_degree">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+      <option value="">No answer</option>
+    </select>
+
+
     <p>Is english your mother tongue ?</p>
     <select v-model="mother_language">
       <option value="yes">Yes</option>
@@ -17,8 +30,7 @@
     </select>
 
     <p>How would you rate your english language skills in general? <br> Rate on a scale from 1:
-      you have no understanding at all to 10: you have a C2 (mastery) level : </p>
-    <!--   TODO: maybe change this-->
+      you have no understanding at all to 10: english is your mother tongue : </p>
     <input type="number" v-model="language_skills">
 
     <h2>Challenge:</h2>
@@ -60,6 +72,7 @@ export default {
   name: "StudyUserFeedbackComponent",
   data() {
     return {
+      academic_degree: "",
       mother_language: "",
       language_skills: null,
 
@@ -93,6 +106,7 @@ export default {
 
       // Create an object with all the feedback fields
       const feedback = {
+        academicDegree: this.academic_degree,
         motherLanguage: this.mother_language,
         languageSkills: this.language_skills,
 

@@ -45,7 +45,7 @@ public class StudyUserData {
     @JsonView(Views.Public.class)
     private long endTime;
 
-    @Column(name = "feedback", length = 4000)
+    @Column(name = "feedback", length = 8000)
     @JsonView(Views.Public.class)
     private String feedback;
 
