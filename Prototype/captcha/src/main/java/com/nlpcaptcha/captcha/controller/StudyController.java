@@ -53,14 +53,14 @@ public class StudyController {
     public ResponseEntity<StudyCombinedChallenge> addStudyUserData(@RequestBody String studyUserDataString) {
         try {
 
-            StudyCombinedChallenge studyUserData = studyService.saveStudyUserData(studyUserDataString);
+            StudyCombinedChallenge StudyWithUserData = studyService.saveStudyUserData(studyUserDataString);
             logger.info("Study user data added successfully");
 
-            // Write studyUserData to a file
+            // Write StudyWithUserData to a file
             Datawriter datawriter = new Datawriter();
-            datawriter.writeToFile(studyUserDataString);
+            datawriter.writeToFile(StudyWithUserData.toString());
 
-            return new ResponseEntity<>(studyUserData, HttpStatus.OK);
+            return new ResponseEntity<>(StudyWithUserData, HttpStatus.OK);
         } catch (Exception e) {
             logger.error("An error occurred while adding study user data: ", e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
