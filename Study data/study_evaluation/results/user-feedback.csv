@@ -1,0 +1,304 @@
+feedback_id	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_feedback	challenge_count	general_feedback
+269	yes	no	8	8	8	2	yes	2	
+418	yes	no	0	9	8	5	No	1	Nice sentences:)
+301	yes	no	8	9	9	8	I prefer no challenges.	0	
+392	yes	no	8	10	9	1	No. I don't like Captchas. They are annoying and routinely used for purposes others than their stated one, i.e. identification - e.g. machine learning training.	2	
+166	yes	yes	10	9	9	10	No	0	
+249	yes	no	8	8	7	6		5	
+221			0	5	5	1	No	2	
+384	yes	yes	10	10	8	4	No. It's easier to spot objects than to decide between literal and figurative language and is obviously much easier for non-native speakers.	2	
+391	no	no	8	8	4	4	No	3	
+309	yes	no	7	7	8	0		0	
+111			0	0	0	0		0	Test
+283	yes	no	8	8	5	4	No	3	
+73	yes	no	8	9	9	7	No, image is more convenient for me as you can easily spot patterns / objects and there is no need to read through sentences. Also images are more language-independent.	5	A short introduction on what a Captcha-challenge is would have been nice. But apart from this the study was great!
+89	yes	no	9	10	10	2	No	2	
+11	yes	no	8	8	7	8	No, as it takes significantly longer to solve and might be a problem for websites in languages I don't or barely speak (but otherwise could easily use using some translate feature)	3	The meaning of the words was very similar in some sentences making it redundant. I feel like I could easily attack a system like this with creating a small statistical model on a huge corpus of data.
+193	yes	yes	10	8	7	4	no, it takes longer	1	
+225	yes	no	7	4	6	2	Noooo	1	
+61	yes	no	8	7	7	4		2	
+286	yes	no	8	9	5	8	No (it may be more time consuming and may be difficult for many people)	2	
+58	yes	no	8	10	9	10	I think it would be difficult for people with language, reading and communication disorders. It may also be complicated for people without high education. Image-Captcha are more accessible.	3	It would be nice if people could choose what kind of Captcha they prefer, to avoid accessibility issues.
+211	yes	yes	9	10	8	4	No.	4	No.
+9			0	9	8	8	No. Clicking on little squares is more fun.	3	
+175			9	10	8	6	Yes	5	
+155	yes	no	8	10	9	5	Not quite. In this semantic challenge it can be very easy to fail it by mistake (one wrong click?)	2	Selection of focal words for the challenge might be problematic. 1. Some speakers may be unfamiliar with some words or some senses. 2. How many words have enough senses and shades of meaning to be useful?   
+353	yes	no	8	10	9	5	Being a text researcher, yes, of course. Others might not.	2	I hate captchas in general :)
+237	yes	no	5	10	9	3	No	5	The manual ordering interface is annoying. Please consider developing alternative input methods
+363	yes	yes	10	9	8	8	As a user I would be interested in a fast method. Captcha with images is sometimes slow.	2	
+207			10	9	9	8	no	1	While I don't think Image-Captcha is good either, this feels overly limiting because it relies on native-like levels of language proficiency. The type that I like the most is the slide the puzzle piece into place in an image one. This is far more intuitive and more generally applicable than the visual acuity required for Image-Captcha or language proficiency required for sentence meaning challenges like this.
+245			0	0	0	0		0	
+364	yes	no	8	10	7	1	No	2	
+377	yes	no	9	8	6	2	No	1	
+408	yes	no	7	8	9	8	Depends on the difficulty. The sentences in this survey were easy to label, however, if they are more complicated and require re-reading multiple times, then I'd rather use an image captcha	3	
+90	yes	yes	10	8	8	6	N/A	3	Have a great day!
+192	yes	no	8	8	6	4	No, because Image-Captcha is much quicker to fulfill and semantic similarity depends highly on language proficiency and is very subjective	3	What to do with sentences that I would rate on the same level?
+422	yes	yes	10	9	8	3	I think I would prefer an image Captcha, inasmuch as image Captchas are usually a little quicker to solve.	2	One part of the example provided which might underscore a fundamental weakness of the concept is the two sentences involving an arm of the sea: it's hard to see why speakers would rate one use of "arm" in the phrase "arm of the sea" as semantically closer to a literal, anatomical arm than the other, especially when there's nothing in the context which distinguishes these two arms of the sea from one another clearly (such as size, hypothetically, or a poetic attribution of animacy to the sea).  Good Luck! 
+60	yes	no	9	10	9	8	Maybe	7	
+174			9	10	8	6	Yes	5	
+250	yes	no	8	7	6	3	No, because this kind of test is more time consuming	1	
+182	yes	no	9	9	8	2	sure :)But yes, a little shorter would certainly be more agreeable.	0	I'm wondering if non-linguists would be a bit squeamish about the instructions to judge similarity in meaning. But maybe I underestimate non-linguists' eagerness to engage with semantics. I guess you'll find out!
+305		no	9	9	7	5	I wasn't overly sure how to answer sometimes, so I think this challenge is too hard for a Captcha, which should be easy to solve without much linguistic knowledge required.	2	
+72	yes	yes	10	9	7	4	Yes, because I'm a linguist :)	4	Good luck with your research!
+197			8	4	3	5	No because it's highly irrational, everybody would sort them differently so the captcha challenge would never be "truly" right	5	
+106	yes	no	8	7	8	2	no	2	
+264	yes	yes	10	10	8	0		0	
+304	yes	no	8	10	9	9		5	
+235	yes	no	9	7	6	1	No	0	
+158	no	no	7	8	5	3	No, I would prefer the Image-Captcha	3	The centered text requires much effort to read the page.
+14	yes	no	8	9	6	6	no	1	
+420	yes	no	0	10	6	6	NO	2	
+227	yes	yes	110	19	8	7	Possibly	2	
+219	yes	no	8	9	5	5	it seems like it took longer to complete than the image or math-based captcha	4	
+267	no	no	7	6	8	4	No	1	
+206	yes	yes	10	8	6	6	Not necessarily	2	
+306	yes	no	7	3	4	8	No, because I could understand image captchas and solve them much faster than the proposed Semantic NLP catches. Because we humans see faster than we read. Compared to the typical scenarios in image captchas, which are rather trivial, like spotting the traffic light, I found the topic here quite abstract, making ordering difficult. Maybe only selecting matching sentences so the given reference sentence.	3	
+380	yes	yes	10	7	8	6	This is preferable because it is at least not difficult to see the physical text.	2	
+80	yes	no	5	5	3	7		4	
+379	yes	yes	10	7	8	6	This is preferable because it is at least not difficult to see the physical text.	2	
+255	yes	no	8	7	5	6	No, language users differ.	3	
+288	yes	no	8	9	7	6		2	
+162	yes	no	9	9	7	3	I already have to solve many more captchas than I'd like -- but at least many of the image ones tend to be fairly quick to solve. Comparing words in several long-ish sentences seems like it would take even more time and energy.	1	
+246	yes	no	6	5	77	2	No	1	
+413	yes	yes	10	9	3	1	I like the idea of this type of challenge, but it would work better with related words rather than related senses of words, or at least with more easily-separable word senses. People have a notoriously high level of disagreement re: relatedness of word senses. The example I had was especially challenging, as some instances used "part" as part of a verb ("take part") and others used it as a more typical noun.	5	I'm a computational linguist. I'm definitely not the average user :)
+79			0	8	7	4	No, I would neither prefer nor dislike it	2	
+12	yes	no	7	9	4	3	No. I think this challenge is more time-consuming	1	
+406	yes	yes	10	9	5	7	Yes, if the sentences took less time to read.	3	The sentences were pretty long which made it harder to read and make choices. 
+13	yes	no	8	8	5	8		0	
+107	yes	no	8	7	7	2	No	2	
+173			0	8	8	5	no. it takes too long to read.	-1	
+297			0	10	10	3	no	1	I don't think it an improvement over ordinary Capchas. And a test of English would be off-putting and unfair for loads of people word-wide
+370	yes	no	8	7	7	1		0	
+372	yes	no	7	10	10	10	No	2	
+213	yes	no	7	9	3	3	It depends on the language. If the semantic captcha is not in my native language, I would prefer the image captcha. If the sentence is in my native language, I would have no preference (maybe the time it takes me to solve the corresponding captcha).	1	It wasn't really possible to order the sentences that didn't have a similar meaning (I'm not sure if this was intentional).
+401	yes	no	9	10	5	1	No	3	
+281	yes	no	8	6	6	10	No	3	
+16	yes	no	8	6	3	1	No	1	
+189	yes	yes	10	10	10	5	Captcha challenges that rely on images are difficult enough; it is often a problem. Substituting  sentence understanding would make it more difficult, especially for non-native speakers.	1	See above.
+452	yes	no	8	7	6	5	no, I prefer the Image-Captcha	2	
+200	yes	no	9	9	9	1	The sentences were quite difficult to understand, I am not sure they were the best examples for this task. However, I think it could be useful in the future with more suitable examples.	3	The first screen was a bit too crowded and full of typos. As a senior in the field, I'd advise you proofread everything :)
+244	yes	no	6	3	7	1	No	10	
+275	yes	no	9	0	4	2	Not really. I think we are in a phase where Captchas are only being (mis)used for cheap data labeling.	1	Asking for an absolute ordering may be too much, when there are multiple sentences that are not related at all. This will probably introduce noise in your study.
+361	yes	yes	10	9	9	8	Only if this study revealed inter-rater agreement that was EXTREMELY high.  Otherwise, this is probably too subjective for such a use and would result in frustrated users not being able to buy Taylor Swift tickets and the like.	6	Very interesting study; best of luck to you!
+18	yes	no	8	9	7	5	no	3	
+81			0	8	10	2		2	
+176	yes	no	9	9	5	5		0	I like image captcha because it's a simple matter of clicking. This one is arguably harder for the human (and perhaps not even for the machine). The other "issue" is that in the example I had ("record") there were clearly two different senses (thing to put music on; thing to keep track of other things) and ranking them doesn't really really make sense -- it's more of a "put it in the correct box" type of deal
+239			0	0	0	0		0	test
+287	yes	no	10	10	10	8	No because captcha takes less time to complete	1	
+394	yes	no	8	7	8	5	no	0	
+187	no	no	7	5	5	0		2	
+85	yes	no	7	2	3	2	no	3	
+224	no	no	7	7	6	4	No	6	Nice idea
+404	yes	no	8	8	8	9	No, it can be ableist under certain contexts and disadvantage speakers of dialects	1	N/A, very interesting
+253	yes	no	3	6	6	3	No	2	
+185	yes	yes	12	-1	1	-1	NOT REALLY	0	
+273	yes	no	8	8	8	2		5	
+262			0	0	0	1	No	2	2 questions. Native language and English language.
+272	yes	no	8	9	9	2	No	1	It excludes too many people - those who do not speak the language good enough.
+167	yes	no	5	3	2	3		4	
+84	yes	no	8	8	5	4	I might prefer this one, but drag-and-drop is not convenient for me, clicking would be easier. Then what happens if our language profeciency is not good enough?	1	Good luck with the thesis and the study!
+201	no	no	8	3	2	1	no	0	lot of reading bad ... want more pictures
+403	yes	no	7	6	7	4	Msybe	3	
+4			0	8	7	6	as a language lover, I wouldn't mind this sort of challenge, but image-captcha is likely much quicker to solve, and more accessible to users who are not English C2 speakers	3	
+70	yes	no	8	8	7	5		3	
+104	yes	no	5	8	3	4	No.	1	I found them very challenging. I would pull out my hair if I have to deal with such types of CAPTCHA! However, very interesting and nice research! I wish you good luck! 
+228	yes	no	8	9	7	5	Probably not. The similarity scale is not particularly well defined, so what is a 2 for one person might be a 3 for another even if they understand the sentences the same way. It might work if the response time and cursor movement are taken into account, though.	3	
+63	yes	no	9	7	10	5	It's better than the counting challenges with a timer, for sure, but would be challenging for non-native speakers or people with some cognitive disability.	2	I don't know if this was on purpose, but while almost all the sentences were easy to understand, the one about poetry sales records being tuned was very confusing.
+17	yes	no	9	8	8	4		3	
+414	yes	no	7	4	3	1	No, images are still easier to get the gist of it and they are faster to solve as the visual apparatus functions faster then the reading one	1	:D
+362	yes	no	9	7	3	3	Definitely not.	5	With 1-2 items, the context seemed very restricted (maybe too restricted to even judge the exact meaning of that instance). I would have liked to get more information on what exactly you were looking for in terms of similarity, assuming there's one ideal solution. Is 'record' inside a compound like 'record label' the same as a specific record, or less similar to playing a record than a specific record (if so, on what grounds)?
+279	yes	no	9	6	7	2	While it would be more fun and I personally might prefer it because of that, I think anyone who has less than near-native proficiency in English would not be able to complete the challenge and thus others might not prefer it.	2	I think the idea is fun, but the idea of testing if one's a human by testing one's semantic understanding in English is something I find quite problematic. It assumes that every user would be proficient enough to answer the test seeing as it requires near-native proficiency to understand the examples, which is not the case for a lot of people, and particularly disparaging towards non-native speakers coming from a minority background. It is also implied that there is (only) one correct answer to this test, which is never really the case when it comes to  semantics, as people might have different conceptualisations of meaning based on their previous knowledge and how knowledge is mapped and linked in the brain. It might be good to read up on cognitive linguistics/semantics for this study.
+383	yes	no	7	5	3	7	I would prefer Image-Captcha because images in general are more straightforward than texts.	2	
+153	yes	no	8	3	4	2	No. Image Captcha is likely faster.	1	
+376	yes	yes	10	7	8	10	I like this challenge but it is very subjective whereas Image-Captcha feels more objective.	3	The sentence that contains "on records" is challenging to read as a native speaker because it is so close to the standard phrase "on record" but isn't. This particular sentence seems like a hard base sentence to rank against because it is so easily open to misinterpretation and feels annoying to read.
+215	yes	no	9	8	9	5	rather not, because in comparison to Image-Captcha it takes more effort and time.	4	
+274	yes	no	9	7	6	3	No	1	
+390	yes	yes	10	9	8	3	No	5	
+400	yes	no	8	8	4	6	I am not sure if I would prefer the textual captcha, because it has too much ambiguity and requires more thinking.	4	
+308	yes	no	8	5	3	1		0	
+218	yes	no	7	8	8	7	No	3	
+87	yes	yes	10	8	6	3	It's a nice change of pace, but I feel like it would be very easy to solve with an LLM – and if it's not currently, if it catches on, then someone will research until they can break it.	3	
+291	yes	no	7	7	7	8		0	
+210	yes	no	9	5	2	3		1	
+169	yes	no	9	8	6	6		8	
+268	yes	yes	10	7	6	4	I prefer the Image-Captcha	2	
+195	yes	no	8	9	8	3	No	1	The challenge is very time consuming compared to an image-captcha. Some users could be annoyed by that
+202	yes	no	7	8	7	6	Yes	3	
+57	yes	no	8	6	3	3		4	
+258	yes	no	8	6	5	7		-1	
+358	yes	yes	10	8	7	1		1	
+387	yes	no	9	8	5	5		5	
+356	yes	yes	10	6	3	2	Not really, too exhausting	3	This takes a LOT of brainpower. If it proves effective, might be good for something you REALLY want to keep bots out of, but it'd be exhausting to do this on a regular basis. It might be better with fewer options, but if you take it down to three then there's a 17% chance to get through by luck, so you're limited there too. Also it's extremely subjective, so the idea of having only one right answer seems absurd to me, and would probably lock out a lot of less-literate humans as well.
+55	yes	no	7	6	5	6	No	5	
+412	yes	yes	10	5	9	5	image captcha is less work i think	1	
+375	yes	no	9	8	4	4	image captcha would be easier	2	
+6	yes	no	8	8	6	4	No because it's subjective	3	
+163	yes	no	8	8	4	5	no	3	
+234	yes	no	7	8	5	1	no	2	
+180	yes	no	8	8	5	4	Not sure, I would be unsure if it's the correct solution with so many items. For me it's fun but you have to think more than with a regular captcha. I would have put the convenience for myself higher but because it's not as accessible for non-English speakers etc. I lowered the score.	4	Maybe give a correct ordering as an example to illustrate the idea of semantic similarity
+421	yes	no	-19	10	5	8	No	3	
+105	yes	no	9	8	7	5	I think an Image Captcha challenge is way faster for users.	2	
+179	yes	no	9	7	5	4	Image Captcha requires much less mental effort	3	
+290	yes	no	8	4	4	1	No	0	I'm sorry but this very impractical. 1) it takes a lot of time fot a captcha 2) it is quite hard to establish a ground truth for this task, we are talking about fine-grained semantics! 3) it is clearly aimed at native speakers only
+257	yes	no	9	6	8	3	Click "I am not a robot"	1	
+365	yes	no	8	9	7	2	No.	2	
+157	yes	yes	10	8	8	8	No, Image Captcha is much quicker and easier to process than sentence ranking. Especially ranking such long sentences and so many of them.	3	I believe the example sentence had a few grammatical errors. It was difficult to process the meaning of the sentence, which made the task more difficult.
+284	yes	yes	10	8	7	5	Probably better than Image Captcha but I can imagine that it might prove tiresome if one had to do it too often (like Image-Captcha also is)	3	
+78	yes	no	8	7	3	2	No	1	
+110			0	0	0	0		0	Test
+10	yes	no	9	9	7	3	No	5	
+243	yes	no	5	5	5	5	not really	3	
+69	yes	no	8	5	3	4	Probably not. I found the captcha challenged quite difficult. You need quite a fundamental understanding of the English language to know all semantic nuances of a word regarding it's context	5	Quite an interesting approach. However, it might not feasible to use as not every user is so fluid in the English language
+229	yes	no	9	9	4	2		3	
+407	yes	no	9	9	8	4	No! As a user, I want to get through the Captcha as quickly as possible. A semantic Captcha would demand some effort from me to read and analyze the sentences. If it is too much, I would definitely give up on the website requesting that kind of captcha.	2	Working with meanings could be challenging, even in your native language. That type of "semantic NLP Captcha" demands high linguistic skills and it might end up excluding some people.
+54	yes	no	7	5	7	3		1	
+389	yes	no	9	7	8	10	No	0	
+369	yes	no	7	4	4	4	Maybe	3	
+88	yes	no	8	3	5	3	Ideally if I was able to discern the meaning of the sentences I would prefer it over image CAPTCHAs, however I struggled with the sentences given in the test because I did not know the meaning of most usages and had to guess.	2	
+216	yes	no	8	5	7	8	yes	10	
+240	yes	no	6	7	6	3	For me it's okay, but in general not because you need good knowledge in the language to complete the captcha.	2	
+204	yes	no	9	7	3	4	No	1	I think sentence meaning order is not good for people that have dyslexia or any other type of  reading disorder, instead images are universal.
+396	yes	no	8	4	3	4	No	1	
+302			0	8	8	5	?	0	
+8			0	8	8	5		1	
+248	yes	no	5	6	3	2		10	
+415	yes	no	3	6	5	2		1	
+181	yes	yes	10	9	7	2	I strongly prefer image-based challenges because it requires less work	2	You may need a better sentence tokenizer -- one of the sentences was cut short likely because of the periods in the "L.B.J." acronym. 
+303		yes	10	8	7	6	Image-Captcha	1	
+71	yes	no	9	8	6	6	Depends on the difficulty, but text captcha might be better, especially for visually impaired people	3	Good idea but I think the example is weird/difficult
+109	yes	no	9	4	8	4	Not really, for example "puzzle captchas" are more tolerable than this, but this is still way better than Google's "Click on an image and wait for ages until the next one appears"	1	
+502	yes	no	9	3	4	6	Not sure.	4	I didn’t understand the first two sentences, so my rating was basically a random guess. If implemented, it should make sure that a proficient speaker understands the sentences. Also, I found it annoying that the same 2nd sentence was repeated every time. 
+194	yes	no	8	4	6	4	Depends massively on the amount of answers needed to complete the captcha, but if it's only one answer then yes.	2	
+52			0	0	0	0		0	test
+386	yes	no	9	5	8	8	No	2	
+82	yes	no	7	7	9	3		5	
+263	no	no	1	1	1	1		0	
+19	yes	no	9	6	5	8	no	3	
+93			0	0	0	0		0	
+300	yes	no	7	2	2	1	Definitely not	1	
+374	yes	no	8	2	2	1	No	3	It does not feel fair for people without any English knowledge of speakers of minority languages
+276			9	8	8	0	This question is missing context	1	There should be an option to indicate that one does not know the meaning of a word in a concrete context. If I would chose to select the lowest score for such cases, you won't be able to distinguish between real "lowest score" answers and such where I simply did not understand the meaning in one of the sentences. 
+177	yes	no	8	8	7	3	No	1	
+233	yes	yes	10	4	4	1	No	0	
+226	yes	yes	10	7	7	5	It took me longer than any other Captcha I have performed, so I would prefer different kinds.	0	This took me a long time because the sentences were long and some of the grammar was antiquated and hard to understand (as a native English speaker from America). I don't know if all of the examples were like that but I would not like to do this kind of thing as a Captcha.
+278	yes	no	9	7	7	3	Maybe with less archaic language.	1	
+168	yes	yes	10	9	9	9	No opinion	1	
+159	no	no	7	6	9	5	No, I would prefer the Image-Captcha	3	The centered requires much effort to read the text.
+360	yes	no	7	6	7	1	No.	0	
+256	yes	no	8	8	8	5	Not sure	3	
+188	yes	no	7	6	4	3	no	3	
+266	yes	no	8	7	6	3	Yes, but with a possible choice of language.	2	
+397	yes	no	8	4	3	4	No	1	
+236	yes	yes	294	9	9	2	I would prefer no captchas, but as it stands in regards to this challenge, Image-Captchas are preferred (which still have their own accessibility constraints).	3	Initially, it seems to give pereference to native speakers or high level speakers of English. This seems to ask someone more about their ability to understand vocabulary in context. Perhaps young speakers or English learners who encounter this type of captcha might be denied some kind of access. Otherwise, it was an interesting ordering game.
+15	yes	no	9	9	8	6	No really, as it takes more time than an image-captcha would.	3	
+252	yes	no	7	7	7	6	No	1	
+295	yes	no	9	7	8	3	no	2	
+410	yes	no	7	9	9	10	Yes	2	No
+67	yes	no	8	8	8	7	Yes	2	
+214	yes	no	9	9	7	3	no, ordinary captcha are easier and less ambiguous	2	
+378			10	10	8	5	yes	0	
+184	yes	no	9	9	6	5	This task definitely requires more thinking than image-captcha.	3	
+83	yes	no	8	10	9	7	No	3	
+152			0	0	0	0		0	Tedt
+198	yes	no	7	9	7	6		0	
+205	yes	yes	10	10	9	4	No - the law 'bar' test example is fairly dependent on one's knowledge of the English language and/or law school technicalities. Meanwhile, the Image-Captcha - while tedious - is more accessible to users who speak different languages, as they can look up the prompt of an Image-Captcha in their mother language and identify the images accordingly (in retrospect, I realized that this is also technically true for a written Captcha challenge).	2	Honestly, I would include more questions in the challenge, perhaps even doubling the count to 10 (I think there were 5 prompts). As it is, the randomly generated pairwise examples gave me 4 comparisons where both 'bar' terms referred to a bar where you get drinks and only one comparison was comparing drastically different examples. With a larger pool of questions, this would allow for some more diverse comparisons for each participant.
+270	yes	yes	10	10	10	9	It would depend on the number of questions. I'd prefer e.g. 3 pictures with bicycles to 3 sentences, but I'd prefer 3 sentences over 6 pictures with bicycles.	3	
+53	yes	no	8	9	9	5	This very much depends on the presentation and number of sentences required to solve this task: Parallel image processing is quite easy for humans. With text however, one needs to at least skim all of the sentences in order to make a (I imagine) quite noisy decision.	2	
+92	yes	no	8	9	8	5	Yes, maybe. Sometimes the pictures used in Image-Captcha-challenges are very difficult to 'read'.	4	
+156	no	no	3	3	3	7	I don't know	5	No
+232	yes	no	6	5	4	6	no	2	
+292	yes	yes	10	9	9	5		3	
+296	yes	no	9	10	8	10	no	1	It's not really clear how "similar" the words "bar" in "sitting at the bar" and in "bar mirror" are. For a human.
+260	yes	no	7	8	9	5	depending on how many sentences one has to evaluate, this approach could be preferable to image captchas, that can somnetimes be a bit unclear.	5	both examples should be full sentences, otherwise it can get confusing to parse the sentence-snippets.
+395	yes	yes	9	9	9	9	No, it's more likely that a LLM would better understand this than an image caption.	5	
+64	yes	no	9	8	7	1		0	
+367	yes	no	10	9	8	8	Image	3	
+77	yes	no	9	9	9	9	No	3	
+217	yes	yes	10	10	10	5	no	5	
+409	yes	no	7	9	9	10	Yes	2	No
+423	yes	yes	10	7	6	3		2	
+247			0	0	8	7	1	2	
+294	yes	yes	10	9	7	5	It would need to be *very* well-designed since this is a pretty subjective matter. I suppose you could set a task like 'find all the sentences where the meaning of word X is the same as in the example sentence'. That could work. I don't think a ranking exercise would work though.	6	I think this is a really nice idea - more interesting than finding all the photos with a car in them (well, more interesting for me as a linguist, at least). On the other hand, there are some obvious problems with creating a captcha challenge of this sort in that not everyone always agrees about distinctions between senses of words (lumpers vs. splitters) and this would discriminate against non-speakers of English (or would one be able to select one's own L1 for this? Maybe not all languages are as easy to create a challenge of this sort as English is). Good luck with the study
+280	yes	no	8	7	7	9	yes	1	
+399	yes	no	9	10	10	9	No	5	
+186	yes	no	9	9	9	8	yes	10	
+178	yes		8	8	7	2		4	The similar items were easy to rank, but among the ones with completely different sense, how one should rank those were much less trivial and obvious.
+165	yes	no	-110	10	8	5	Yes - it was more fun! But, then, I am a linguist.	3	
+1	yes		0	0	0	0		0	test
+293	yes	yes	10	10	10	10		5	
+385	yes	no	8	9	9	1	No	3	Many people would not be able to understand what to do.
+307	yes	no	7	10	6	6	no	10	no
+251	yes	no	3	3	6	8	Why,it's just a challenge.	0	
+75	yes	no	8	10	5	4	Yes, but it would be less universal than current captcha challenges.	3	
+56	yes	yes	10	10	8	8	No - takes longer	3	
+230	yes	yes	10	9	7	6	Yes and no. Some people might understand the sentences differently and might get marked incorrectly.	3	
+373	yes	no	9	0	0	0		0	
+2	yes	no	8	6	5	6	personally no, but it makes sense to have non-image captchas!	2	
+402	yes	no	7	8	8	3	No	3	
+59	yes	yes	9	10	8	8	no, because image captcha is still more clear imo	15	none, its a great idea, i just think people will give very different scores
+357	yes	no	9	10	8	3	This is probably more demanding than captcha, probably also fuzzier as much as I can imagine how it works.	3	The survey would be much more trustworthy if there was some more specific information as to who and why conducts it."How convenient and practical do you think is such type of "human-detection" challenge in daily life?" contains two questions, as convenient and practical have different (even if related) meanings
+231	no	yes	10	10	7	10	yes	3	The question "How convenient and practical ..." could use a bit more--I dunno--clarity or specificity. Maybe the problem is the word "is", since I haven't ever seen such a challenge used to human-detect.
+416	yes	no	8	8	5	2	No, this felt like a lot more effort than an image captcha, which feels a lot more intuitive.	3	I feel like it could work with if: 1. the instructions were refined to be more intuitive. E.g. "Click on all traffic lights" is much quicker to grasp than "re-rank the sentences based on semantic similarity of the highlighted word" (paraphrasing here, but I think you get what I mean :) )2. Maybe multiple pair-wise comparisons would be more intuitive (e.g. in which one of these two sentences the highlighted word is closer to the reference). Not sure if that would have the same robustness though.3. Bit of a side-note, but have you tried giving this task to an LLM? Would be curios to know how it compares 
+91	yes	no	7	10	6	4	I don't know	3	
+393	yes	yes	10	10	7	4	Semantic ordering and categorization requires a little too high of cognitive load for the general public to make proper use of without being considered too requiring of effort or time consuming	3	This is a good place of untapped potential until computers improve at semantic analysis, but everyday people probably don't think about semantics enough for a test like this to become widespread. It would be cool if this made everyone think about it more though. What can people do linguistically without a second thought that thousands upon thousands of vector spaces cannot do?
+76	yes	no	8	10	5	4	Yes, but it would be less universal than current captcha challenges.	3	
+199	yes	no	8	9	5	5	sounds interesting	0	
+183			0	9	7	8		5	
+299	yes	no	7	7	5	3		0	
+209	yes	yes	10	8	8	5		2	
+242	yes	no	8	7	5	4	No	3	
+172	yes	yes	10	10	10	2	No, it seems problematic.	3	
+371	yes	no	8	7	5	1	No	3	
+355	yes	no	8	9	7	5	no.	2	to intellectual task for captcha
+271	yes	no	9	10	8	9	Yes!	15	Good luck!
+381	yes	yes	10	8	6	2	No, this challenge takes much more time than an image based one.	0	
+68	yes	no	8	9	7	7	No.	5	
+161	no	no	8	10	8	1	Ja	0	
+259	yes	yes	10	10	8	7	No, it takes too long	0	
+220	yes	yes	10	10	7	3	It is interesting but I don't think I would prefer it, not that I am a fan of Captchas.	2	Would these not be easy for a robot to solve?
+108			0	6	4	3	No	1	
+289	yes	no	8	9	8	10	yes, it's more fun!	3	
+190	yes	no	8	10	7	7	Yes	10	
+208	yes	no	9	9	9	2	I don‘t mind	3	
+154	yes	no	9	9	8	9	No	6	
+5	yes	no	7	10	9	6		2	
+277	yes	no	7	8	8	5		10	
+405	yes	no	0	10	6	2	no	0	
+359	yes	no	8	10	8	7	It seems a bit slower to perform than a typical captcha (text or puzzle), but quicker than an image-captcha.	5	
+171	yes	no	7	9	6	8	Probably	3	May be it is more convenient to classify if two sentences have the same meaning or not 
+74	yes	no	8	8	9	8	No	4	
+285	yes	no	9	9	10	5	Νο	3	
+223	yes	no	8	5	7	5	No	0	No
+241	yes	yes	10	8	8	2	I would prefer the image-based one to this as this takes more time and requires more thought.	3	Some rankings seem subjective to me so I'm not sure there is just one possible answer; one sentence was rather unclear to me the way it was worded. 
+398	yes	yes	10	10	10	7	yes	7	
+411	no	yes	10	9	10	10		0	I could easily defeat this type of captcha with a script
+66	yes	no	8	8	9	6	No, because it require more knowledge in the language of interest. But it might be a good alternative for visually-disabled people (using screen readers).	3	Maybe I have overread it, but maybe emphasize in the instructions more that you are interested in the meaning of the words in bold-face and not the sentences in general. My ratings refer to a meaning comparison of the wohle sentence. I just understood to rate the bold-face words when I saw the question on the general information page.
+388	yes	no	9	8	8	7	Yes, OK.	3	
+261	yes	yes	10	9	9	5		1	
+254	yes	no	8	8	6	4	No	2	
+282	yes	no	8	9	10	3	no	1	
+7	yes	yes	10	9	8	5	Yes	1	
+86	yes	no	8	9	7	8		0	
+170	yes	no	7	9	6	8	Probably	3	May be it is more convenient to classify if two sentences have the same meaning or not 
+366	yes	no	8	6	5	4	More or less on the same level	1	
+102	yes	no	9	9	8	10	No	6	Easy and convenient
+164	yes	no	9	10	10	3	I think this challenge is a bit harder than a captcha-challenge from a cognitive load point of view	4	
+382	yes	yes	10	9	8	5	Possibly	3	
+352			0	0	0	0		0	test
+62	yes	no	8	9	7	5	I'd like it because it's something else for a change. But I'm rather steeped in linguistics, might be hard to understand for people who are not.	8	
+203	yes	no	9	10	2	5	No	3	
+196	yes	no	8	7	8	3	no. It takes more cognitive effort than image-captchas.	3	
+265	yes	no	8	8	7	0		0	
+417	yes	yes	10	9	7	8	maybe	4	
+212	yes	no	8	9	7	3	No	1	
+419	yes	yes	10	8	7	8	YES!	3	
+65	yes	no	8	9	5	3	No	1	
+222	yes	no	6	5	5	5	No	5	
+298	yes	no	7	7	7	3	No	1	
+191	yes	no	9	10	10	5	image-captcha	0	How useful is your captcha, given a person with very low linguistic knowledge or bad english trying to access data, what if he gets some part of the order wrong, given that deciding the order is highly subjective.Very close meanings can be misinterpreted and will take multiple attempts for the user to just get to the single gold result unlike the image-captchas which will only require common-sense.
+238	no	no	5	7	4	3	No, because I think it's rather difficult because there is always room for interpretation with sentences	5	
+354			0	0	0	0		0	test
+103	yes	no	9	9	8	10	No	6	Easy and convenient
+160	yes	no	9	9	5	5		1	
+3	yes	no	9	10	9	7	no	5	
+368	yes	yes	10	5	4	3	No. I don't want to do that everytime I have to solve a captcha	1	Yeah, I don't know if this matters, but the number boxes can go above ten

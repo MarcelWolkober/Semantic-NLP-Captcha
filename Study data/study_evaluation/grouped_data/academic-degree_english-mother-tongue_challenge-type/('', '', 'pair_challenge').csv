@@ -1,0 +1,22 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	105.89		0.84			1.0	6.0	4.0	3.0	1.0	No		True	order			
+	pair_challenge	70.79		0.52			1.0	8.0	8.0	5.0	-1.0	no. it takes too long to read.		False	part			
+	pair_challenge	68.68		0.85			9.0	10.0	8.0	6.0	5.0	Yes		True	arm			
+	pair_challenge	43.43		0.75			10.0	9.0	9.0	8.0	1.0	no	While I don't think Image-Captcha is good either, this feels overly limiting because it relies on native-like levels of language proficiency. The type that I like the most is the slide the puzzle piece into place in an image one. This is far more intuitive and more generally applicable than the visual acuity required for Image-Captcha or language proficiency required for sentence meaning challenges like this.	False	arm			
+	pair_challenge	77.49		0.91			1.0	5.0	5.0	1.0	2.0	No		True	arm			
+	pair_challenge	399.75		0.0			1.0	1.0	1.0	1.0	0.0			False	arm			
+	pair_challenge	187.3		0.22			1.0	1.0	8.0	7.0	2.0	1		False	bar			
+	pair_challenge	128.85		0.8			9.0	8.0	8.0	1.0	1.0	This question is missing context	"There should be an option to indicate that one does not know the meaning of a word in a concrete context. If I would chose to select the lowest score for such cases, you won't be able to distinguish between real ""lowest score"" answers and such where I simply did not understand the meaning in one of the sentences. "	True	tip			
+	pair_challenge	74.4		0.23			1.0	10.0	10.0	3.0	1.0	no	I don't think it an improvement over ordinary Capchas. And a test of English would be off-putting and unfair for loads of people word-wide	False	part			
+	pair_challenge	154.04		0.8			1.0	8.0	8.0	5.0	0.0	?		True	tip			
+	pair_challenge	52.46		-0.57			1.0	8.0	7.0	6.0	3.0	as a language lover, I wouldn't mind this sort of challenge, but image-captcha is likely much quicker to solve, and more accessible to users who are not English C2 speakers		False	record			
+	pair_challenge	114.0		0.87			1.0	8.0	7.0	4.0	2.0	No, I would neither prefer nor dislike it		True	part			
+	pair_challenge	52.91		0.94			1.0	8.0	8.0	5.0	1.0			True	tip			
+	pair_challenge	73.39		0.86			1.0	8.0	10.0	2.0	2.0			True	record			
+	pair_challenge	64.49		1.0			1.0	9.0	8.0	8.0	3.0	No. Clicking on little squares is more fun.		True	arm			
+	pair_challenge	167.73		0.66			1.0	1.0	1.0	1.0	0.0			False	tip			
+mean		114.73		0.61			2.56	6.75	6.88	4.12	1.44							
+median		75.95		0.8			1.0	8.0	8.0	4.5	1.0							
+standard_deviation		87.64		0.43			3.37	3.11	2.75	2.5	1.46							
+min		43.43		-0.57			1.0	1.0	1.0	1.0	-1.0							
+max		399.75		1.0			10.0	10.0	10.0	8.0	5.0					16.0	9.0	0.56

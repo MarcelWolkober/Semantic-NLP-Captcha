@@ -1,0 +1,22 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	106.94		0.87	yes	no	8.0	9.0	6.0	6.0	1.0	no		True	part			
+	pair_challenge	69.99		0.17	yes	no	9.0	8.0	6.0	6.0	8.0			False	twist			
+	pair_challenge	68.68		0.85			9.0	10.0	8.0	6.0	5.0	Yes		True	arm			
+	pair_challenge	185.9		0.74	yes	no	7.0	9.0	7.0	6.0	0.0			False	bar			
+	pair_challenge	49.07		0.17	yes	no	8.0	6.0	5.0	6.0	2.0	personally no, but it makes sense to have non-image captchas!		False	order			
+	pair_challenge	92.78		0.64	yes	yes	10.0	8.0	6.0	6.0	2.0	Not necessarily		False	part			
+	pair_challenge	130.94		0.86	yes	no	6.0	5.0	4.0	6.0	2.0	no		True	bar			
+	pair_challenge	104.54		0.83	yes	no	8.0	8.0	7.0	6.0	5.0			True	arm			
+	pair_challenge	120.7		0.94	yes	no	7.0	7.0	7.0	6.0	1.0	No		True	bar			
+	pair_challenge	110.57		0.76	yes	no	8.0	7.0	5.0	6.0	3.0	No, language users differ.		False	part			
+	pair_challenge	112.16		0.89	yes	no	8.0	9.0	7.0	6.0	2.0			True	part			
+	pair_challenge	50.26		0.9	yes	no	7.0	10.0	6.0	6.0	10.0	no	no	True	order			
+	pair_challenge	233.78		0.33	yes	yes	10.0	7.0	8.0	6.0	2.0	This is preferable because it is at least not difficult to see the physical text.		False	part			
+	pair_challenge	52.46		-0.57			1.0	8.0	7.0	6.0	3.0	as a language lover, I wouldn't mind this sort of challenge, but image-captcha is likely much quicker to solve, and more accessible to users who are not English C2 speakers		False	record			
+	pair_challenge	179.85		0.7	yes	no	9.0	3.0	4.0	6.0	4.0	Not sure.	I didn’t understand the first two sentences, so my rating was basically a random guess. If implemented, it should make sure that a proficient speaker understands the sentences. Also, I found it annoying that the same 2nd sentence was repeated every time. 	False	tip			
+	pair_challenge	88.13		-0.16	yes	no	8.0	8.0	9.0	6.0	3.0	No, because it require more knowledge in the language of interest. But it might be a good alternative for visually-disabled people (using screen readers).	Maybe I have overread it, but maybe emphasize in the instructions more that you are interested in the meaning of the words in bold-face and not the sentences in general. My ratings refer to a meaning comparison of the wohle sentence. I just understood to rate the bold-face words when I saw the question on the general information page.	False	bank			
+mean		109.8		0.56			7.69	7.62	6.38	6.0	3.31							
+median		105.74		0.75			8.0	8.0	6.5	6.0	2.5							
+standard_deviation		52.43		0.45			2.09	1.82	1.41	0.0	2.63							
+min		49.07		-0.57			1.0	3.0	4.0	6.0	0.0							
+max		233.78		0.94			10.0	10.0	9.0	6.0	10.0					16.0	7.0	0.44

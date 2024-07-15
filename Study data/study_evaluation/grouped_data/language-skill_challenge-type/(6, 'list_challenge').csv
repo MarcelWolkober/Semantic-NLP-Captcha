@@ -1,0 +1,7 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	99.85	1.0		yes	no	6.0	5.0	5.0	5.0	5.0	No		True	bank			
+mean		99.85	1.0				6.0	5.0	5.0	5.0	5.0							
+median		99.85	1.0				6.0	5.0	5.0	5.0	5.0							
+standard_deviation																		
+min		99.85	1.0				6.0	5.0	5.0	5.0	5.0							
+max		99.85	1.0				6.0	5.0	5.0	5.0	5.0					1.0	1.0	1.0

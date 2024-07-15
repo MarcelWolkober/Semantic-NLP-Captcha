@@ -1,0 +1,29 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	120.33		0.97	yes	no	9.0	9.0	6.0	5.0	3.0	This task definitely requires more thinking than image-captcha.		True	bar			
+	pair_challenge	73.92		0.71	yes	no	9.0	9.0	9.0	8.0	10.0	yes		False	bar			
+	pair_challenge	185.9		0.74	yes	no	7.0	9.0	7.0	6.0	0.0			False	bar			
+	pair_challenge	24.85		1.0	yes	yes	10.0	10.0	9.0	4.0	2.0	No - the law 'bar' test example is fairly dependent on one's knowledge of the English language and/or law school technicalities. Meanwhile, the Image-Captcha - while tedious - is more accessible to users who speak different languages, as they can look up the prompt of an Image-Captcha in their mother language and identify the images accordingly (in retrospect, I realized that this is also technically true for a written Captcha challenge).	Honestly, I would include more questions in the challenge, perhaps even doubling the count to 10 (I think there were 5 prompts). As it is, the randomly generated pairwise examples gave me 4 comparisons where both 'bar' terms referred to a bar where you get drinks and only one comparison was comparing drastically different examples. With a larger pool of questions, this would allow for some more diverse comparisons for each participant.	True	bar			
+	pair_challenge	70.74		0.69	yes	no	9.0	9.0	7.0	3.0	2.0	no, ordinary captcha are easier and less ambiguous		False	bar			
+	pair_challenge	139.51		0.9	yes	yes	10.0	10.0	10.0	5.0	5.0	no		True	bar			
+	pair_challenge	130.94		0.86	yes	no	6.0	5.0	4.0	6.0	2.0	no		True	bar			
+	pair_challenge	187.3		0.22			1.0	1.0	8.0	7.0	2.0	1		False	bar			
+	pair_challenge	120.7		0.94	yes	no	7.0	7.0	7.0	6.0	1.0	No		True	bar			
+	pair_challenge	109.47		1.0	yes	no	7.0	8.0	9.0	5.0	5.0	depending on how many sentences one has to evaluate, this approach could be preferable to image captchas, that can somnetimes be a bit unclear.	both examples should be full sentences, otherwise it can get confusing to parse the sentence-snippets.	True	bar			
+	pair_challenge	58.42		1.0	yes	yes	10.0	10.0	10.0	9.0	3.0	It would depend on the number of questions. I'd prefer e.g. 3 pictures with bicycles to 3 sentences, but I'd prefer 3 sentences over 6 pictures with bicycles.		True	bar			
+	pair_challenge	85.8		0.45	yes	no	8.0	7.0	7.0	9.0	1.0	yes		False	bar			
+	pair_challenge	97.83		0.88	yes	yes	10.0	10.0	10.0	10.0	5.0			True	bar			
+	pair_challenge	116.11		0.51	yes	no	9.0	7.0	8.0	3.0	2.0	no		False	bar			
+	pair_challenge	172.1		0.76	yes	no	9.0	10.0	8.0	10.0	1.0	no	"It's not really clear how ""similar"" the words ""bar"" in ""sitting at the bar"" and in ""bar mirror"" are. For a human."	False	bar			
+	pair_challenge	113.54		0.63	yes	no	10.0	9.0	8.0	8.0	3.0	Image		False	bar			
+	pair_challenge	83.74		0.25	yes	yes	9.0	9.0	9.0	9.0	5.0	No, it's more likely that a LLM would better understand this than an image caption.		False	bar			
+	pair_challenge	89.11		0.19	yes	no	9.0	10.0	10.0	9.0	5.0	No		False	bar			
+	pair_challenge	74.79		0.99	yes	yes	10.0	7.0	6.0	3.0	2.0			True	bar			
+	pair_challenge	53.63		1.0	yes	no	8.0	9.0	9.0	5.0	2.0	This very much depends on the presentation and number of sentences required to solve this task: Parallel image processing is quite easy for humans. With text however, one needs to at least skim all of the sentences in order to make a (I imagine) quite noisy decision.		True	bar			
+	pair_challenge	106.76		0.9	yes	no	8.0	8.0	8.0	7.0	2.0	Yes		True	bar			
+	pair_challenge	108.26		0.74	yes	no	8.0	10.0	9.0	7.0	3.0	No		False	bar			
+	pair_challenge	84.7		0.82	yes	no	8.0	9.0	8.0	5.0	4.0	Yes, maybe. Sometimes the pictures used in Image-Captcha-challenges are very difficult to 'read'.		True	bar			
+mean		104.72		0.75			8.3	8.35	8.09	6.48	3.04							
+median		106.76		0.82			9.0	9.0	8.0	6.0	2.0							
+standard_deviation		40.57		0.26			1.96	2.08	1.5	2.23	2.12							
+min		24.85		0.19			1.0	1.0	4.0	3.0	0.0							
+max		187.3		1.0			10.0	10.0	10.0	10.0	10.0					23.0	12.0	0.52

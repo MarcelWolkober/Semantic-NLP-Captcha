@@ -1,0 +1,23 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	171.72		0.45	yes	no	9.0	4.0	8.0	4.0	1.0	"Not really, for example ""puzzle captchas"" are more tolerable than this, but this is still way better than Google's ""Click on an image and wait for ages until the next one appears"""		False	tip			
+	pair_challenge	81.22		0.17	yes	no	9.0	8.0	8.0	4.0	3.0			False	record			
+	pair_challenge	76.23		0.33	yes	no	8.0	4.0	6.0	4.0	2.0	Depends massively on the amount of answers needed to complete the captcha, but if it's only one answer then yes.		False	tip			
+	pair_challenge	24.85		1.0	yes	yes	10.0	10.0	9.0	4.0	2.0	No - the law 'bar' test example is fairly dependent on one's knowledge of the English language and/or law school technicalities. Meanwhile, the Image-Captcha - while tedious - is more accessible to users who speak different languages, as they can look up the prompt of an Image-Captcha in their mother language and identify the images accordingly (in retrospect, I realized that this is also technically true for a written Captcha challenge).	Honestly, I would include more questions in the challenge, perhaps even doubling the count to 10 (I think there were 5 prompts). As it is, the randomly generated pairwise examples gave me 4 comparisons where both 'bar' terms referred to a bar where you get drinks and only one comparison was comparing drastically different examples. With a larger pool of questions, this would allow for some more diverse comparisons for each participant.	True	bar			
+	pair_challenge	70.23		0.79	yes	no	8.0	8.0	6.0	4.0	2.0	No		False	bank			
+	pair_challenge	599.89		0.23	no	no	7.0	6.0	8.0	4.0	1.0	No		False	part			
+	pair_challenge	84.7		0.29	yes	yes	10.0	7.0	6.0	4.0	2.0	I prefer the Image-Captcha		False	twist			
+	pair_challenge	189.53		0.85	yes	no	8.0	8.0	5.0	4.0	3.0	No		True	arm			
+	pair_challenge	112.15		0.87	yes	no	7.0	4.0	4.0	4.0	3.0	Maybe		True	tip			
+	pair_challenge	103.27		0.52	yes	no	9.0	8.0	4.0	4.0	2.0	image captcha would be easier		False	twist			
+	pair_challenge	77.64		0.38	yes	yes	10.0	10.0	8.0	4.0	2.0	No. It's easier to spot objects than to decide between literal and figurative language and is obviously much easier for non-native speakers.		False	arm			
+	pair_challenge	177.93		0.41	yes	no	8.0	4.0	3.0	4.0	1.0	No		False	tip			
+	pair_challenge	116.17		-0.12	yes	no	7.0	6.0	7.0	4.0	3.0	Msybe		False	record			
+	pair_challenge	299.79		0.6	yes	no	8.0	8.0	6.0	4.0	3.0	No because it's subjective		False	twist			
+	pair_challenge	94.66		0.23	yes	no	8.0	7.0	7.0	4.0	2.0			False	arm			
+	pair_challenge	41.31		0.95	yes	no	8.0	10.0	5.0	4.0	3.0	Yes, but it would be less universal than current captcha challenges.		True	order			
+	pair_challenge	114.0		0.87			1.0	8.0	7.0	4.0	2.0	No, I would neither prefer nor dislike it		True	part			
+mean		143.25		0.52			7.94	7.06	6.29	4.0	2.18							
+median		103.27		0.45			8.0	8.0	6.0	4.0	2.0							
+standard_deviation		134.52		0.32			2.05	2.11	1.69	0.0	0.73							
+min		24.85		-0.12			1.0	4.0	3.0	4.0	1.0							
+max		599.89		1.0			10.0	10.0	9.0	4.0	3.0					17.0	5.0	0.29

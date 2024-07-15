@@ -1,0 +1,23 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	115.55		0.85	yes	no	8.0	10.0	9.0	5.0	2.0	Not quite. In this semantic challenge it can be very easy to fail it by mistake (one wrong click?)	Selection of focal words for the challenge might be problematic. 1. Some speakers may be unfamiliar with some words or some senses. 2. How many words have enough senses and shades of meaning to be useful?   	True	arm			
+	pair_challenge	65.96		0.95	yes	yes	10.0	9.0	9.0	10.0	0.0	No		True	arm			
+	pair_challenge	68.68		0.85			9.0	10.0	8.0	6.0	5.0	Yes		True	arm			
+	pair_challenge	43.43		0.75			10.0	9.0	9.0	8.0	1.0	no	While I don't think Image-Captcha is good either, this feels overly limiting because it relies on native-like levels of language proficiency. The type that I like the most is the slide the puzzle piece into place in an image one. This is far more intuitive and more generally applicable than the visual acuity required for Image-Captcha or language proficiency required for sentence meaning challenges like this.	False	arm			
+	pair_challenge	77.49		0.91			1.0	5.0	5.0	1.0	2.0	No		True	arm			
+	pair_challenge	153.49		0.79	yes	no	7.0	4.0	6.0	2.0	1.0	Noooo		False	arm			
+	pair_challenge	399.75		0.0			1.0	1.0	1.0	1.0	0.0			False	arm			
+	pair_challenge	104.54		0.83	yes	no	8.0	8.0	7.0	6.0	5.0			True	arm			
+	pair_challenge	104.19		0.75	yes	no	8.0	8.0	8.0	2.0	2.0	yes		False	arm			
+	pair_challenge	189.53		0.85	yes	no	8.0	8.0	5.0	4.0	3.0	No		True	arm			
+	pair_challenge	214.55		0.57	yes	no	8.0	9.0	5.0	8.0	2.0	No (it may be more time consuming and may be difficult for many people)		False	arm			
+	pair_challenge	104.33		1.0	yes	no	7.0	7.0	8.0	1.0	0.0			True	arm			
+	pair_challenge	77.64		0.38	yes	yes	10.0	10.0	8.0	4.0	2.0	No. It's easier to spot objects than to decide between literal and figurative language and is obviously much easier for non-native speakers.		False	arm			
+	pair_challenge	75.68		0.74	yes	no	7.0	8.0	9.0	8.0	3.0	Depends on the difficulty. The sentences in this survey were easy to label, however, if they are more complicated and require re-reading multiple times, then I'd rather use an image captcha		False	arm			
+	pair_challenge	94.66		0.23	yes	no	8.0	7.0	7.0	4.0	2.0			False	arm			
+	pair_challenge	36.54		0.79	yes	no	9.0	10.0	10.0	2.0	2.0	No		False	arm			
+	pair_challenge	64.49		1.0			1.0	9.0	8.0	8.0	3.0	No. Clicking on little squares is more fun.		True	arm			
+mean		117.09		0.72			7.06	7.76	7.18	4.71	2.06							
+median		94.66		0.79			8.0	8.0	8.0	4.0	2.0							
+standard_deviation		87.12		0.28			3.05	2.44	2.21	2.95	1.48							
+min		36.54		0.0			1.0	1.0	1.0	1.0	0.0							
+max		399.75		1.0			10.0	10.0	10.0	10.0	5.0					17.0	8.0	0.47

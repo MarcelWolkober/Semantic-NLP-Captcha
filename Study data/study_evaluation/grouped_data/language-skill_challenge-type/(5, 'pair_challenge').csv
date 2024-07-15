@@ -1,0 +1,9 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	197.22		-0.04	yes	no	5.0	5.0	5.0	5.0	3.0	not really		False	twist			
+	pair_challenge	394.98		0.04	yes	no	5.0	6.0	3.0	2.0	10.0			False	tip			
+	pair_challenge	247.97		0.53	yes	no	5.0	5.0	3.0	7.0	4.0			False	part			
+mean		280.06		0.18			5.0	5.33	3.67	4.67	5.67							
+median		247.97		0.04			5.0	5.0	3.0	5.0	4.0							
+standard_deviation		102.71		0.31			0.0	0.58	1.15	2.52	3.79							
+min		197.22		-0.04			5.0	5.0	3.0	2.0	3.0							
+max		394.98		0.53			5.0	6.0	5.0	7.0	10.0					3.0	0.0	0.0

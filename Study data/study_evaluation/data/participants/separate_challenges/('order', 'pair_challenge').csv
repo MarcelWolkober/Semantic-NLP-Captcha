@@ -1,0 +1,26 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	105.89		0.84			1.0	6.0	4.0	3.0	1.0	No		True	order			
+	pair_challenge	74.76		0.41	no	no	8.0	10.0	8.0	1.0	0.0	Ja		False	order			
+	pair_challenge	60.81		0.69	yes	no	8.0	10.0	7.0	7.0	10.0	Yes		False	order			
+	pair_challenge	161.04		0.95	yes	no	8.0	9.0	5.0	5.0	0.0	sounds interesting		True	order			
+	pair_challenge	49.07		0.17	yes	no	8.0	6.0	5.0	6.0	2.0	personally no, but it makes sense to have non-image captchas!		False	order			
+	pair_challenge	90.22		1.0	yes	no	9.0	9.0	9.0	2.0	3.0	I don‘t mind		True	order			
+	pair_challenge	59.92		0.64	yes	yes	10.0	8.0	8.0	5.0	2.0			False	order			
+	pair_challenge	40.89		0.75	yes	yes	10.0	10.0	7.0	3.0	2.0	It is interesting but I don't think I would prefer it, not that I am a fan of Captchas.	Would these not be easy for a robot to solve?	False	order			
+	pair_challenge	86.18		1.0	no	yes	10.0	10.0	7.0	10.0	3.0	yes	"The question ""How convenient and practical ..."" could use a bit more--I dunno--clarity or specificity. Maybe the problem is the word ""is"", since I haven't ever seen such a challenge used to human-detect."	True	order			
+	pair_challenge	131.73		0.68	yes	no	9.0	10.0	8.0	9.0	15.0	Yes!	Good luck!	False	order			
+	pair_challenge	76.97		-0.02	yes	no	7.0	8.0	8.0	5.0	10.0			False	order			
+	pair_challenge	63.27		0.78	yes	no	8.0	9.0	8.0	10.0	3.0	yes, it's more fun!		False	order			
+	pair_challenge	50.26		0.9	yes	no	7.0	10.0	6.0	6.0	10.0	no	no	True	order			
+	pair_challenge	44.27		0.18	yes	no	8.0	9.0	7.0	5.0	2.0	no.	to intellectual task for captcha	False	order			
+	pair_challenge	83.09		0.83	yes	no	9.0	10.0	8.0	3.0	3.0	This is probably more demanding than captcha, probably also fuzzier as much as I can imagine how it works.	"The survey would be much more trustworthy if there was some more specific information as to who and why conducts it.""How convenient and practical do you think is such type of ""human-detection"" challenge in daily life?"" contains two questions, as convenient and practical have different (even if related) meanings"	True	order			
+	pair_challenge	157.89		0.95	yes	no	7.0	8.0	8.0	3.0	3.0	No		True	order			
+	pair_challenge	167.68		0.91	yes	yes	10.0	10.0	8.0	8.0	3.0	No - takes longer		True	order			
+	pair_challenge	48.99		0.59	yes	yes	9.0	10.0	8.0	8.0	15.0	no, because image captcha is still more clear imo	none, its a great idea, i just think people will give very different scores	False	order			
+	pair_challenge	75.17		0.78	yes	no	8.0	9.0	7.0	7.0	5.0	No.		False	order			
+	pair_challenge	41.31		0.95	yes	no	8.0	10.0	5.0	4.0	3.0	Yes, but it would be less universal than current captcha challenges.		True	order			
+mean		83.47		0.7			8.1	9.05	7.05	5.5	4.75							
+median		74.97		0.78			8.0	9.5	7.5	5.0	3.0							
+standard_deviation		40.91		0.3			1.94	1.28	1.36	2.63	4.61							
+min		40.89		-0.02			1.0	6.0	4.0	1.0	0.0							
+max		167.68		1.0			10.0	10.0	9.0	10.0	15.0					20.0	9.0	0.45

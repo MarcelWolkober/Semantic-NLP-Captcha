@@ -1,0 +1,20 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	84.05	-0.36		yes	no	9.0	9.0	8.0	9.0	6.0	No		False	order			
+	list_challenge	46.16	0.75		yes	yes	10.0	10.0	10.0	2.0	3.0	No, it seems problematic.		False	order			
+	list_challenge	33.68	1.0		yes	yes	10.0	9.0	7.0	6.0	3.0	Yes and no. Some people might understand the sentences differently and might get marked incorrectly.		True	order			
+	list_challenge	53.17	-0.03		yes	no	8.0	7.0	5.0	4.0	3.0	No		False	order			
+	list_challenge	75.53	-0.81		yes	no	3.0	3.0	6.0	8.0	0.0	Why,it's just a challenge.		False	order			
+	list_challenge	53.12	1.0		yes	yes	10.0	10.0	8.0	7.0	0.0	No, it takes too long		True	order			
+	list_challenge	61.69	-0.03		yes	no	7.0	7.0	5.0	3.0	0.0			False	order			
+	list_challenge	15.73	-0.81		yes	no	9.0	1.0	1.0	1.0	0.0			False	order			
+	list_challenge	60.26	0.56		yes	yes	10.0	8.0	6.0	2.0	0.0	No, this challenge takes much more time than an image based one.		False	order			
+	list_challenge	55.43	1.0		yes	yes	10.0	10.0	7.0	4.0	3.0	Semantic ordering and categorization requires a little too high of cognitive load for the general public to make proper use of without being considered too requiring of effort or time consuming	This is a good place of untapped potential until computers improve at semantic analysis, but everyday people probably don't think about semantics enough for a test like this to become widespread. It would be cool if this made everyone think about it more though. What can people do linguistically without a second thought that thousands upon thousands of vector spaces cannot do?	True	order			
+	list_challenge	169.3	1.0		yes	no	1.0	10.0	6.0	2.0	0.0	no		True	order			
+	list_challenge	73.87	1.0		yes	no	8.0	8.0	5.0	2.0	3.0	No, this felt like a lot more effort than an image captcha, which feels a lot more intuitive.	"I feel like it could work with if: 1. the instructions were refined to be more intuitive. E.g. ""Click on all traffic lights"" is much quicker to grasp than ""re-rank the sentences based on semantic similarity of the highlighted word"" (paraphrasing here, but I think you get what I mean :) )2. Maybe multiple pair-wise comparisons would be more intuitive (e.g. in which one of these two sentences the highlighted word is closer to the reference). Not sure if that would have the same robustness though.3. Bit of a side-note, but have you tried giving this task to an LLM? Would be curios to know how it compares "	True	order			
+	list_challenge	77.67	0.56		yes	no	7.0	10.0	9.0	6.0	2.0			False	order			
+	list_challenge	51.82	1.0		yes	no	7.0	10.0	6.0	4.0	3.0	I don't know		True	order			
+mean		65.11	0.42				7.79	8.0	6.36	4.29	1.86							
+median		57.85	0.65				8.5	9.0	6.0	4.0	2.5							
+standard_deviation		35.01	0.69				2.75	2.8	2.17	2.52	1.88							
+min		15.73	-0.81				1.0	1.0	1.0	1.0	0.0							
+max		169.3	1.0				10.0	10.0	10.0	9.0	6.0					14.0	6.0	0.43

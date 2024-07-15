@@ -1,0 +1,12 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	58.42		1.0	yes	yes	10.0	10.0	10.0	9.0	3.0	It would depend on the number of questions. I'd prefer e.g. 3 pictures with bicycles to 3 sentences, but I'd prefer 3 sentences over 6 pictures with bicycles.		True	bar			
+	pair_challenge	131.73		0.68	yes	no	9.0	10.0	8.0	9.0	15.0	Yes!	Good luck!	False	order			
+	pair_challenge	85.8		0.45	yes	no	8.0	7.0	7.0	9.0	1.0	yes		False	bar			
+	pair_challenge	83.74		0.25	yes	yes	9.0	9.0	9.0	9.0	5.0	No, it's more likely that a LLM would better understand this than an image caption.		False	bar			
+	pair_challenge	89.11		0.19	yes	no	9.0	10.0	10.0	9.0	5.0	No		False	bar			
+	pair_challenge	73.25		0.4	yes	no	8.0	8.0	8.0	9.0	1.0	No, it can be ableist under certain contexts and disadvantage speakers of dialects	N/A, very interesting	False	record			
+mean		87.01		0.5			8.83	9.0	8.67	9.0	5.0							
+median		84.77		0.42			9.0	9.5	8.5	9.0	4.0							
+standard_deviation		24.59		0.3			0.75	1.26	1.21	0.0	5.22							
+min		58.42		0.19			8.0	7.0	7.0	9.0	1.0							
+max		131.73		1.0			10.0	10.0	10.0	9.0	15.0					6.0	1.0	0.17

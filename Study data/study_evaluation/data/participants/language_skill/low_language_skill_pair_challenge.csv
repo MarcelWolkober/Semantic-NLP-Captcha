@@ -1,0 +1,45 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	105.89		0.84			1.0	6.0	4.0	3.0	1.0	No		True	order			
+	pair_challenge	351.19		1.0	no	no	7.0	8.0	5.0	3.0	3.0	No, I would prefer the Image-Captcha	The centered text requires much effort to read the page.	True	part			
+	pair_challenge	97.44		0.94	no	no	7.0	6.0	9.0	5.0	3.0	No, I would prefer the Image-Captcha	The centered requires much effort to read the text.	True	tip			
+	pair_challenge	59.73		0.48	yes	no	7.0	9.0	6.0	8.0	3.0	Probably	May be it is more convenient to classify if two sentences have the same meaning or not 	False	bank			
+	pair_challenge	70.79		0.52			1.0	8.0	8.0	5.0	-1.0	no. it takes too long to read.		False	part			
+	pair_challenge	422.24		0.08	no	no	7.0	5.0	5.0	1.0	2.0			False	record			
+	pair_challenge	185.9		0.74	yes	no	7.0	9.0	7.0	6.0	0.0			False	bar			
+	pair_challenge	77.49		0.91			1.0	5.0	5.0	1.0	2.0	No		True	arm			
+	pair_challenge	153.49		0.79	yes	no	7.0	4.0	6.0	2.0	1.0	Noooo		False	arm			
+	pair_challenge	130.94		0.86	yes	no	6.0	5.0	4.0	6.0	2.0	no		True	bar			
+	pair_challenge	429.11		0.8	yes	no	6.0	7.0	6.0	3.0	2.0	For me it's okay, but in general not because you need good knowledge in the language to complete the captcha.		True	tip			
+	pair_challenge	197.22		-0.04	yes	no	5.0	5.0	5.0	5.0	3.0	not really		False	twist			
+	pair_challenge	428.06		-0.26	yes	no	6.0	3.0	7.0	1.0	10.0	No		False	record			
+	pair_challenge	399.75		0.0			1.0	1.0	1.0	1.0	0.0			False	arm			
+	pair_challenge	212.32		0.53	yes	no	6.0	5.0	10.0	2.0	1.0	No		False	part			
+	pair_challenge	187.3		0.22			1.0	1.0	8.0	7.0	2.0	1		False	bar			
+	pair_challenge	394.98		0.04	yes	no	5.0	6.0	3.0	2.0	10.0			False	tip			
+	pair_challenge	120.7		0.94	yes	no	7.0	7.0	7.0	6.0	1.0	No		True	bar			
+	pair_challenge	333.86		0.53	yes	no	3.0	6.0	6.0	3.0	2.0	No		False	record			
+	pair_challenge	109.47		1.0	yes	no	7.0	8.0	9.0	5.0	5.0	depending on how many sentences one has to evaluate, this approach could be preferable to image captchas, that can somnetimes be a bit unclear.	both examples should be full sentences, otherwise it can get confusing to parse the sentence-snippets.	True	bar			
+	pair_challenge	599.89		0.23	no	no	7.0	6.0	8.0	4.0	1.0	No		False	part			
+	pair_challenge	76.97		-0.02	yes	no	7.0	8.0	8.0	5.0	10.0			False	order			
+	pair_challenge	74.4		0.23			1.0	10.0	10.0	3.0	1.0	no	I don't think it an improvement over ordinary Capchas. And a test of English would be off-putting and unfair for loads of people word-wide	False	part			
+	pair_challenge	154.04		0.8			1.0	8.0	8.0	5.0	0.0	?		True	tip			
+	pair_challenge	50.26		0.9	yes	no	7.0	10.0	6.0	6.0	10.0	no	no	True	order			
+	pair_challenge	104.33		1.0	yes	no	7.0	7.0	8.0	1.0	0.0			True	arm			
+	pair_challenge	112.15		0.87	yes	no	7.0	4.0	4.0	4.0	3.0	Maybe		True	tip			
+	pair_challenge	225.8		-0.83	yes	no	7.0	5.0	3.0	7.0	2.0	I would prefer Image-Captcha because images in general are more straightforward than texts.		False	record			
+	pair_challenge	52.46		-0.57			1.0	8.0	7.0	6.0	3.0	as a language lover, I wouldn't mind this sort of challenge, but image-captcha is likely much quicker to solve, and more accessible to users who are not English C2 speakers		False	record			
+	pair_challenge	157.89		0.95	yes	no	7.0	8.0	8.0	3.0	3.0	No		True	order			
+	pair_challenge	116.17		-0.12	yes	no	7.0	6.0	7.0	4.0	3.0	Msybe		False	record			
+	pair_challenge	75.68		0.74	yes	no	7.0	8.0	9.0	8.0	3.0	Depends on the difficulty. The sentences in this survey were easy to label, however, if they are more complicated and require re-reading multiple times, then I'd rather use an image captcha		False	arm			
+	pair_challenge	343.14		0.71	yes	no	7.0	5.0	7.0	3.0	1.0			False	tip			
+	pair_challenge	114.0		0.87			1.0	8.0	7.0	4.0	2.0	No, I would neither prefer nor dislike it		True	part			
+	pair_challenge	52.91		0.94			1.0	8.0	8.0	5.0	1.0			True	tip			
+	pair_challenge	247.97		0.53	yes	no	5.0	5.0	3.0	7.0	4.0			False	part			
+	pair_challenge	73.39		0.86			1.0	8.0	10.0	2.0	2.0			True	record			
+	pair_challenge	64.49		1.0			1.0	9.0	8.0	8.0	3.0	No. Clicking on little squares is more fun.		True	arm			
+	pair_challenge	167.73		0.66			1.0	1.0	1.0	1.0	0.0			False	tip			
+mean		187.99		0.53			4.64	6.31	6.44	4.13	2.67							
+median		130.94		0.74			6.0	6.0	7.0	4.0	2.0							
+standard_deviation		138.2		0.47			2.73	2.31	2.31	2.17	2.8							
+min		50.26		-0.83			1.0	1.0	1.0	1.0	-1.0							
+max		599.89		1.0			7.0	10.0	10.0	8.0	10.0					39.0	17.0	0.44

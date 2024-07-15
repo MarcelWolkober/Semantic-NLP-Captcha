@@ -1,0 +1,21 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	108.33	0.23		yes	no	9.0	7.0	5.0	4.0	3.0	Image Captcha requires much less mental effort		False	twist			
+	list_challenge	310.83	0.23		yes	no	8.0	8.0	5.0	4.0	4.0	Not sure, I would be unsure if it's the correct solution with so many items. For me it's fun but you have to think more than with a regular captcha. I would have put the convenience for myself higher but because it's not as accessible for non-English speakers etc. I lowered the score.	Maybe give a correct ordering as an example to illustrate the idea of semantic similarity	False	twist			
+	list_challenge	86.44	1.0		yes	no	8.0	8.0	6.0	4.0	3.0	No, because Image-Captcha is much quicker to fulfill and semantic similarity depends highly on language proficiency and is very subjective	What to do with sentences that I would rate on the same level?	True	arm			
+	list_challenge	88.07	1.0		yes	yes	10.0	8.0	7.0	4.0	1.0	no, it takes longer		True	arm			
+	list_challenge	100.27	-0.48		yes	no	9.0	7.0	3.0	4.0	1.0	No	I think sentence meaning order is not good for people that have dyslexia or any other type of  reading disorder, instead images are universal.	False	tip			
+	list_challenge	122.98	1.0		yes	yes	9.0	10.0	8.0	4.0	4.0	No.	No.	True	arm			
+	list_challenge	118.68	0.42		no	no	7.0	7.0	6.0	4.0	6.0	No	Nice idea	False	record			
+	list_challenge	53.17	-0.03		yes	no	8.0	7.0	5.0	4.0	3.0	No		False	order			
+	list_challenge	90.87	0.0		yes	no	8.0	6.0	5.0	4.0	1.0	More or less on the same level		False	bank			
+	list_challenge	87.86	1.0		no	no	8.0	8.0	4.0	4.0	3.0	No		True	arm			
+	list_challenge	55.43	1.0		yes	yes	10.0	10.0	7.0	4.0	3.0	Semantic ordering and categorization requires a little too high of cognitive load for the general public to make proper use of without being considered too requiring of effort or time consuming	This is a good place of untapped potential until computers improve at semantic analysis, but everyday people probably don't think about semantics enough for a test like this to become widespread. It would be cool if this made everyone think about it more though. What can people do linguistically without a second thought that thousands upon thousands of vector spaces cannot do?	True	order			
+	list_challenge	105.1	-0.61		yes	no	8.0	5.0	3.0	4.0	5.0	Probably not. I found the captcha challenged quite difficult. You need quite a fundamental understanding of the English language to know all semantic nuances of a word regarding it's context	Quite an interesting approach. However, it might not feasible to use as not every user is so fluid in the English language	False	twist			
+	list_challenge	45.14	0.74		yes	yes	10.0	9.0	7.0	4.0	4.0	Yes, because I'm a linguist :)	Good luck with your research!	False	part			
+	list_challenge	72.54	0.81		yes	no	8.0	8.0	5.0	4.0	1.0	I might prefer this one, but drag-and-drop is not convenient for me, clicking would be easier. Then what happens if our language profeciency is not good enough?	Good luck with the thesis and the study!	True	record			
+	list_challenge	51.82	1.0		yes	no	7.0	10.0	6.0	4.0	3.0	I don't know		True	order			
+mean		99.84	0.49				8.47	7.87	5.47	4.0	3.0							
+median		88.07	0.74				8.0	8.0	5.0	4.0	3.0							
+standard_deviation		63.38	0.57				0.99	1.46	1.46	0.0	1.51							
+min		45.14	-0.61				7.0	5.0	3.0	4.0	1.0							
+max		310.83	1.0				10.0	10.0	8.0	4.0	6.0					15.0	7.0	0.47

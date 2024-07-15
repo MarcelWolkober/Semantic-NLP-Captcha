@@ -1,0 +1,18 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	71.32	0.38		yes	no	9.0	9.0	8.0	6.0	3.0	No really, as it takes more time than an image-captcha would.		False	bar			
+	list_challenge	204.91	0.18		no	no	3.0	3.0	3.0	7.0	5.0	I don't know	No	False	bar			
+	list_challenge	53.12	1.0		yes	no	1.0	10.0	8.0	5.0	3.0	Yes - it was more fun! But, then, I am a linguist.		True	bar			
+	list_challenge	72.01	0.38		yes		8.0	8.0	7.0	2.0	4.0		The similar items were easy to rank, but among the ones with completely different sense, how one should rank those were much less trivial and obvious.	False	bar			
+	list_challenge	158.94	1.0		yes	yes	10.0	9.0	9.0	2.0	3.0	I would prefer no captchas, but as it stands in regards to this challenge, Image-Captchas are preferred (which still have their own accessibility constraints).	Initially, it seems to give pereference to native speakers or high level speakers of English. This seems to ask someone more about their ability to understand vocabulary in context. Perhaps young speakers or English learners who encounter this type of captcha might be denied some kind of access. Otherwise, it was an interesting ordering game.	True	bar			
+	list_challenge	38.09	0.85		yes	yes	10.0	9.0	9.0	5.0	3.0			True	bar			
+	list_challenge	91.53	1.0		yes	yes	10.0	9.0	7.0	5.0	6.0	It would need to be *very* well-designed since this is a pretty subjective matter. I suppose you could set a task like 'find all the sentences where the meaning of word X is the same as in the example sentence'. That could work. I don't think a ranking exercise would work though.	I think this is a really nice idea - more interesting than finding all the photos with a car in them (well, more interesting for me as a linguist, at least). On the other hand, there are some obvious problems with creating a captcha challenge of this sort in that not everyone always agrees about distinctions between senses of words (lumpers vs. splitters) and this would discriminate against non-speakers of English (or would one be able to select one's own L1 for this? Maybe not all languages are as easy to create a challenge of this sort as English is). Good luck with the study	True	bar			
+	list_challenge	69.28	0.73				10.0	10.0	8.0	5.0	0.0	yes		False	bar			
+	list_challenge	132.37	0.85		yes	no	8.0	9.0	9.0	1.0	3.0	No	Many people would not be able to understand what to do.	True	bar			
+	list_challenge	81.19	0.18		yes	no	7.0	9.0	9.0	10.0	2.0	Yes	No	False	bar			
+	list_challenge	38.01	0.73		yes	no	9.0	8.0	7.0	1.0	0.0			False	bar			
+	list_challenge	53.69	1.0		yes	no	9.0	9.0	9.0	9.0	3.0	No		True	bar			
+mean		88.7	0.69				7.83	8.5	7.75	4.83	2.92							
+median		71.66	0.79				9.0	9.0	8.0	5.0	3.0							
+standard_deviation		51.34	0.32				2.92	1.83	1.71	2.95	1.73							
+min		38.01	0.18				1.0	3.0	3.0	1.0	0.0							
+max		204.91	1.0				10.0	10.0	9.0	10.0	6.0					12.0	6.0	0.5

@@ -1,0 +1,20 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	59.73		0.48	yes	no	7.0	9.0	6.0	8.0	3.0	Probably	May be it is more convenient to classify if two sentences have the same meaning or not 	False	bank			
+	pair_challenge	73.92		0.71	yes	no	9.0	9.0	9.0	8.0	10.0	yes		False	bar			
+	pair_challenge	43.43		0.75			10.0	9.0	9.0	8.0	1.0	no	While I don't think Image-Captcha is good either, this feels overly limiting because it relies on native-like levels of language proficiency. The type that I like the most is the slide the puzzle piece into place in an image one. This is far more intuitive and more generally applicable than the visual acuity required for Image-Captcha or language proficiency required for sentence meaning challenges like this.	False	arm			
+	pair_challenge	151.79		0.86	yes	no	8.0	5.0	7.0	8.0	10.0	yes		True	tip			
+	pair_challenge	214.55		0.57	yes	no	8.0	9.0	5.0	8.0	2.0	No (it may be more time consuming and may be difficult for many people)		False	arm			
+	pair_challenge	53.73		-0.11	yes	yes	10.0	9.0	9.0	8.0	6.0	Only if this study revealed inter-rater agreement that was EXTREMELY high.  Otherwise, this is probably too subjective for such a use and would result in frustrated users not being able to buy Taylor Swift tickets and the like.	Very interesting study; best of luck to you!	False	record			
+	pair_challenge	113.54		0.63	yes	no	10.0	9.0	8.0	8.0	3.0	Image		False	bar			
+	pair_challenge	235.02		0.47	yes	no	9.0	5.0	8.0	8.0	2.0	No		False	tip			
+	pair_challenge	75.68		0.74	yes	no	7.0	8.0	9.0	8.0	3.0	Depends on the difficulty. The sentences in this survey were easy to label, however, if they are more complicated and require re-reading multiple times, then I'd rather use an image captcha		False	arm			
+	pair_challenge	53.77		0.58	yes	yes	10.0	9.0	7.0	8.0	4.0	maybe		False	bank			
+	pair_challenge	167.68		0.91	yes	yes	10.0	10.0	8.0	8.0	3.0	No - takes longer		True	order			
+	pair_challenge	48.99		0.59	yes	yes	9.0	10.0	8.0	8.0	15.0	no, because image captcha is still more clear imo	none, its a great idea, i just think people will give very different scores	False	order			
+	pair_challenge	117.39		0.69	yes	no	8.0	9.0	7.0	8.0	0.0			False	bank			
+	pair_challenge	64.49		1.0			1.0	9.0	8.0	8.0	3.0	No. Clicking on little squares is more fun.		True	arm			
+mean		105.27		0.63			8.29	8.5	7.71	8.0	4.64							
+median		74.8		0.66			9.0	9.0	8.0	8.0	3.0							
+standard_deviation		63.82		0.26			2.37	1.56	1.2	0.0	4.2							
+min		43.43		-0.11			1.0	5.0	5.0	8.0	0.0							
+max		235.02		1.0			10.0	10.0	9.0	8.0	15.0					14.0	3.0	0.21

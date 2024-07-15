@@ -1,0 +1,19 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	105.89		0.84			1.0	6.0	4.0	3.0	1.0	No		True	order			
+	pair_challenge	70.79		0.52			1.0	8.0	8.0	5.0	-1.0	no. it takes too long to read.		False	part			
+	pair_challenge	77.49		0.91			1.0	5.0	5.0	1.0	2.0	No		True	arm			
+	pair_challenge	399.75		0.0			1.0	1.0	1.0	1.0	0.0			False	arm			
+	pair_challenge	187.3		0.22			1.0	1.0	8.0	7.0	2.0	1		False	bar			
+	pair_challenge	74.4		0.23			1.0	10.0	10.0	3.0	1.0	no	I don't think it an improvement over ordinary Capchas. And a test of English would be off-putting and unfair for loads of people word-wide	False	part			
+	pair_challenge	154.04		0.8			1.0	8.0	8.0	5.0	0.0	?		True	tip			
+	pair_challenge	52.46		-0.57			1.0	8.0	7.0	6.0	3.0	as a language lover, I wouldn't mind this sort of challenge, but image-captcha is likely much quicker to solve, and more accessible to users who are not English C2 speakers		False	record			
+	pair_challenge	114.0		0.87			1.0	8.0	7.0	4.0	2.0	No, I would neither prefer nor dislike it		True	part			
+	pair_challenge	52.91		0.94			1.0	8.0	8.0	5.0	1.0			True	tip			
+	pair_challenge	73.39		0.86			1.0	8.0	10.0	2.0	2.0			True	record			
+	pair_challenge	64.49		1.0			1.0	9.0	8.0	8.0	3.0	No. Clicking on little squares is more fun.		True	arm			
+	pair_challenge	167.73		0.66			1.0	1.0	1.0	1.0	0.0			False	tip			
+mean		122.67		0.56			1.0	6.23	6.54	3.92	1.23							
+median		77.49		0.8			1.0	8.0	8.0	4.0	1.0							
+standard_deviation		94.43		0.47			0.0	3.22	2.96	2.33	1.24							
+min		52.46		-0.57			1.0	1.0	1.0	1.0	-1.0							
+max		399.75		1.0			1.0	10.0	10.0	8.0	3.0					13.0	7.0	0.54

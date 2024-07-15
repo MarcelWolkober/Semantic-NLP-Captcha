@@ -1,0 +1,26 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	136.04		0.6	yes	no	8.0	7.0	7.0	2.0	2.0	No		False	part			
+	pair_challenge	106.94		0.87	yes	no	8.0	9.0	6.0	6.0	1.0	no		True	part			
+	pair_challenge	351.19		1.0	no	no	7.0	8.0	5.0	3.0	3.0	No, I would prefer the Image-Captcha	The centered text requires much effort to read the page.	True	part			
+	pair_challenge	119.23		0.55	yes	no	8.0	6.0	3.0	1.0	1.0	No		False	part			
+	pair_challenge	62.13		0.22	yes	no	9.0	9.0	7.0	3.0	1.0	I already have to solve many more captchas than I'd like -- but at least many of the image ones tend to be fairly quick to solve. Comparing words in several long-ish sentences seems like it would take even more time and energy.		False	part			
+	pair_challenge	70.79		0.52			1.0	8.0	8.0	5.0	-1.0	no. it takes too long to read.		False	part			
+	pair_challenge	137.47		0.55	yes	no	9.0	9.0	8.0	2.0	0.0	sure :)But yes, a little shorter would certainly be more agreeable.	I'm wondering if non-linguists would be a bit squeamish about the instructions to judge similarity in meaning. But maybe I underestimate non-linguists' eagerness to engage with semantics. I guess you'll find out!	False	part			
+	pair_challenge	85.92		0.23	yes	yes	10.0	10.0	10.0	5.0	1.0	Captcha challenges that rely on images are difficult enough; it is often a problem. Substituting  sentence understanding would make it more difficult, especially for non-native speakers.	See above.	False	part			
+	pair_challenge	92.78		0.64	yes	yes	10.0	8.0	6.0	6.0	2.0	Not necessarily		False	part			
+	pair_challenge	69.18		0.87	yes	yes	10.0	10.0	8.0	7.0	2.0	Possibly		True	part			
+	pair_challenge	212.32		0.53	yes	no	6.0	5.0	10.0	2.0	1.0	No		False	part			
+	pair_challenge	110.57		0.76	yes	no	8.0	7.0	5.0	6.0	3.0	No, language users differ.		False	part			
+	pair_challenge	599.89		0.23	no	no	7.0	6.0	8.0	4.0	1.0	No		False	part			
+	pair_challenge	112.16		0.89	yes	no	8.0	9.0	7.0	6.0	2.0			True	part			
+	pair_challenge	74.4		0.23			1.0	10.0	10.0	3.0	1.0	no	I don't think it an improvement over ordinary Capchas. And a test of English would be off-putting and unfair for loads of people word-wide	False	part			
+	pair_challenge	180.94		0.33		no	9.0	9.0	7.0	5.0	2.0	I wasn't overly sure how to answer sometimes, so I think this challenge is too hard for a Captcha, which should be easy to solve without much linguistic knowledge required.		False	part			
+	pair_challenge	233.78		0.33	yes	yes	10.0	7.0	8.0	6.0	2.0	This is preferable because it is at least not difficult to see the physical text.		False	part			
+	pair_challenge	88.59		0.45	yes	yes	10.0	9.0	5.0	7.0	3.0	Yes, if the sentences took less time to read.	The sentences were pretty long which made it harder to read and make choices. 	False	part			
+	pair_challenge	114.0		0.87			1.0	8.0	7.0	4.0	2.0	No, I would neither prefer nor dislike it		True	part			
+	pair_challenge	247.97		0.53	yes	no	5.0	5.0	3.0	7.0	4.0			False	part			
+mean		160.31		0.56			7.25	7.95	6.9	4.5	1.65							
+median		113.08		0.54			8.0	8.0	7.0	5.0	2.0							
+standard_deviation		127.12		0.25			3.02	1.57	2.02	1.91	1.14							
+min		62.13		0.22			1.0	5.0	3.0	1.0	-1.0							
+max		599.89		1.0			10.0	10.0	10.0	7.0	4.0					20.0	5.0	0.25

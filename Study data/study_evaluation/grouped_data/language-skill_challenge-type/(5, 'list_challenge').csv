@@ -1,0 +1,9 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	341.7	-0.1		yes	no	5.0	3.0	2.0	3.0	4.0			False	record			
+	list_challenge	93.27	1.0		yes	no	5.0	10.0	9.0	3.0	5.0	No	The manual ordering interface is annoying. Please consider developing alternative input methods	True	arm			
+	list_challenge	181.22	1.0		no	no	5.0	7.0	4.0	3.0	5.0	No, because I think it's rather difficult because there is always room for interpretation with sentences		True	bank			
+mean		205.4	0.63				5.0	6.67	5.0	3.0	4.67							
+median		181.22	1.0				5.0	7.0	4.0	3.0	5.0							
+standard_deviation		125.96	0.63				0.0	3.51	3.61	0.0	0.58							
+min		93.27	-0.1				5.0	3.0	2.0	3.0	4.0							
+max		341.7	1.0				5.0	10.0	9.0	3.0	5.0					3.0	2.0	0.67

@@ -1,0 +1,20 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	93.96		0.45	yes	no	9.0	9.0	8.0	10.0	6.0	No	Easy and convenient	False	bank			
+	pair_challenge	90.62		0.56	yes	no	9.0	9.0	5.0	5.0	1.0			False	bank			
+	pair_challenge	59.73		0.48	yes	no	7.0	9.0	6.0	8.0	3.0	Probably	May be it is more convenient to classify if two sentences have the same meaning or not 	False	bank			
+	pair_challenge	86.27		0.89	yes	no	8.0	7.0	8.0	3.0	3.0	no. It takes more cognitive effort than image-captchas.		True	bank			
+	pair_challenge	74.74		0.58	yes	no	8.0	9.0	7.0	3.0	1.0	No		False	bank			
+	pair_challenge	114.24		0.17	yes	no	8.0	5.0	7.0	5.0	0.0	No	No	False	bank			
+	pair_challenge	70.23		0.79	yes	no	8.0	8.0	6.0	4.0	2.0	No		False	bank			
+	pair_challenge	22.81		0.89	yes	yes	10.0	9.0	9.0	5.0	1.0			True	bank			
+	pair_challenge	65.92		0.58	yes	no	8.0	8.0	7.0	1.0	0.0			False	bank			
+	pair_challenge	61.12		0.47	yes	no	8.0	9.0	10.0	3.0	1.0	no		False	bank			
+	pair_challenge	53.77		0.58	yes	yes	10.0	9.0	7.0	8.0	4.0	maybe		False	bank			
+	pair_challenge	76.4		0.07	yes	no	8.0	9.0	5.0	3.0	1.0	No		False	bank			
+	pair_challenge	88.13		-0.16	yes	no	8.0	8.0	9.0	6.0	3.0	No, because it require more knowledge in the language of interest. But it might be a good alternative for visually-disabled people (using screen readers).	Maybe I have overread it, but maybe emphasize in the instructions more that you are interested in the meaning of the words in bold-face and not the sentences in general. My ratings refer to a meaning comparison of the wohle sentence. I just understood to rate the bold-face words when I saw the question on the general information page.	False	bank			
+	pair_challenge	117.39		0.69	yes	no	8.0	9.0	7.0	8.0	0.0			False	bank			
+mean		76.81		0.5			8.36	8.36	7.21	5.14	1.86							
+median		75.57		0.57			8.0	9.0	7.0	5.0	1.0							
+standard_deviation		24.65		0.3			0.84	1.15	1.48	2.57	1.75							
+min		22.81		-0.16			7.0	5.0	5.0	1.0	0.0							
+max		117.39		0.89			10.0	9.0	10.0	10.0	6.0					14.0	2.0	0.14

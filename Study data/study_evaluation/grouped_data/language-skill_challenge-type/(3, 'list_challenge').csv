@@ -1,0 +1,9 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	204.91	0.18		no	no	3.0	3.0	3.0	7.0	5.0	I don't know	No	False	bar			
+	list_challenge	75.53	-0.81		yes	no	3.0	3.0	6.0	8.0	0.0	Why,it's just a challenge.		False	order			
+	list_challenge	86.65	0.81		yes	no	3.0	6.0	5.0	2.0	1.0			True	tip			
+mean		122.37	0.06				3.0	4.0	4.67	5.67	2.0							
+median		86.65	0.18				3.0	3.0	5.0	7.0	1.0							
+standard_deviation		71.7	0.81				0.0	1.73	1.53	3.21	2.65							
+min		75.53	-0.81				3.0	3.0	3.0	2.0	0.0							
+max		204.91	0.81				3.0	6.0	6.0	8.0	5.0					3.0	1.0	0.33

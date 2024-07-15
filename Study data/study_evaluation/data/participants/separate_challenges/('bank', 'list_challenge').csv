@@ -1,0 +1,24 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	26.1	0.5		yes	no	9.0	10.0	10.0	5.0	0.0	image-captcha	How useful is your captcha, given a person with very low linguistic knowledge or bad english trying to access data, what if he gets some part of the order wrong, given that deciding the order is highly subjective.Very close meanings can be misinterpreted and will take multiple attempts for the user to just get to the single gold result unlike the image-captchas which will only require common-sense.	False	bank			
+	list_challenge	48.62	1.0		yes	no	9.0	10.0	2.0	5.0	3.0	No		True	bank			
+	list_challenge	99.85	1.0		yes	no	6.0	5.0	5.0	5.0	5.0	No		True	bank			
+	list_challenge	181.22	1.0		no	no	5.0	7.0	4.0	3.0	5.0	No, because I think it's rather difficult because there is always room for interpretation with sentences		True	bank			
+	list_challenge	48.75	0.5		yes	yes	10.0	8.0	8.0	2.0	3.0	I would prefer the image-based one to this as this takes more time and requires more thought.	Some rankings seem subjective to me so I'm not sure there is just one possible answer; one sentence was rather unclear to me the way it was worded. 	False	bank			
+	list_challenge	78.04	0.5		yes	no	9.0	9.0	10.0	5.0	3.0	Νο		False	bank			
+	list_challenge	53.64	1.0		yes	no	7.0	7.0	7.0	3.0	1.0	No		True	bank			
+	list_challenge	44.81	1.0		yes	no	9.0	10.0	9.0	7.0	5.0	no		True	bank			
+	list_challenge	66.81	1.0		yes	no	8.0	10.0	8.0	7.0	5.0	It seems a bit slower to perform than a typical captcha (text or puzzle), but quicker than an image-captcha.		True	bank			
+	list_challenge	90.87	0.0		yes	no	8.0	6.0	5.0	4.0	1.0	More or less on the same level		False	bank			
+	list_challenge	62.27	1.0		yes	yes	10.0	5.0	4.0	3.0	1.0	No. I don't want to do that everytime I have to solve a captcha	Yeah, I don't know if this matters, but the number boxes can go above ten	True	bank			
+	list_challenge	52.06	0.5		yes	yes	10.0	9.0	8.0	5.0	3.0	Possibly		False	bank			
+	list_challenge	75.76	0.5		yes	no	9.0	8.0	8.0	7.0	3.0	Yes, OK.		False	bank			
+	list_challenge	105.12	1.0		yes	yes	10.0	10.0	10.0	7.0	7.0	yes		True	bank			
+	list_challenge	37.13	1.0		yes	yes	10.0	8.0	7.0	8.0	3.0	YES!		True	bank			
+	list_challenge	30.95	1.0		yes	no	8.0	9.0	7.0	5.0	8.0	I'd like it because it's something else for a change. But I'm rather steeped in linguistics, might be hard to understand for people who are not.		True	bank			
+	list_challenge	51.6	0.5		yes	yes	10.0	9.0	8.0	5.0	1.0	Yes		False	bank			
+	list_challenge	50.41	1.0		yes	no	8.0	8.0	9.0	8.0	4.0	No		True	bank			
+mean		66.89	0.78				8.61	8.22	7.17	5.22	3.39							
+median		52.85	1.0				9.0	8.5	8.0	5.0	3.0							
+standard_deviation		36.23	0.31				1.46	1.66	2.31	1.8	2.17							
+min		26.1	0.0				5.0	5.0	2.0	2.0	0.0							
+max		181.22	1.0				10.0	10.0	10.0	8.0	8.0					18.0	11.0	0.61

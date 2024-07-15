@@ -1,0 +1,28 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	87.35		0.64	yes	no	9.0	9.0	7.0	3.0	5.0	No		False	twist			
+	pair_challenge	105.89		0.84			1.0	6.0	4.0	3.0	1.0	No		True	order			
+	pair_challenge	351.19		1.0	no	no	7.0	8.0	5.0	3.0	3.0	No, I would prefer the Image-Captcha	The centered text requires much effort to read the page.	True	part			
+	pair_challenge	62.13		0.22	yes	no	9.0	9.0	7.0	3.0	1.0	I already have to solve many more captchas than I'd like -- but at least many of the image ones tend to be fairly quick to solve. Comparing words in several long-ish sentences seems like it would take even more time and energy.		False	part			
+	pair_challenge	81.28		-0.35	yes	no	8.0	8.0	7.0	3.0	1.0	No		False	tip			
+	pair_challenge	86.27		0.89	yes	no	8.0	7.0	8.0	3.0	3.0	no. It takes more cognitive effort than image-captchas.		True	bank			
+	pair_challenge	74.74		0.58	yes	no	8.0	9.0	7.0	3.0	1.0	No		False	bank			
+	pair_challenge	70.74		0.69	yes	no	9.0	9.0	7.0	3.0	2.0	no, ordinary captcha are easier and less ambiguous		False	bar			
+	pair_challenge	40.89		0.75	yes	yes	10.0	10.0	7.0	3.0	2.0	It is interesting but I don't think I would prefer it, not that I am a fan of Captchas.	Would these not be easy for a robot to solve?	False	order			
+	pair_challenge	429.11		0.8	yes	no	6.0	7.0	6.0	3.0	2.0	For me it's okay, but in general not because you need good knowledge in the language to complete the captcha.		True	tip			
+	pair_challenge	333.86		0.53	yes	no	3.0	6.0	6.0	3.0	2.0	No		False	record			
+	pair_challenge	145.62		0.64	yes	no	9.0	6.0	8.0	3.0	1.0	"Click ""I am not a robot"""		False	twist			
+	pair_challenge	159.63		0.67	yes	no	8.0	7.0	6.0	3.0	2.0	Yes, but with a possible choice of language.		False	tip			
+	pair_challenge	61.12		0.47	yes	no	8.0	9.0	10.0	3.0	1.0	no		False	bank			
+	pair_challenge	116.11		0.51	yes	no	9.0	7.0	8.0	3.0	2.0	no		False	bar			
+	pair_challenge	74.4		0.23			1.0	10.0	10.0	3.0	1.0	no	I don't think it an improvement over ordinary Capchas. And a test of English would be off-putting and unfair for loads of people word-wide	False	part			
+	pair_challenge	83.09		0.83	yes	no	9.0	10.0	8.0	3.0	3.0	This is probably more demanding than captcha, probably also fuzzier as much as I can imagine how it works.	"The survey would be much more trustworthy if there was some more specific information as to who and why conducts it.""How convenient and practical do you think is such type of ""human-detection"" challenge in daily life?"" contains two questions, as convenient and practical have different (even if related) meanings"	True	order			
+	pair_challenge	157.89		0.95	yes	no	7.0	8.0	8.0	3.0	3.0	No		True	order			
+	pair_challenge	74.79		0.99	yes	yes	10.0	7.0	6.0	3.0	2.0			True	bar			
+	pair_challenge	343.14		0.71	yes	no	7.0	5.0	7.0	3.0	1.0			False	tip			
+	pair_challenge	76.4		0.07	yes	no	8.0	9.0	5.0	3.0	1.0	No		False	bank			
+	pair_challenge	193.68		0.64	yes	no	8.0	3.0	5.0	3.0	2.0	Ideally if I was able to discern the meaning of the sentences I would prefer it over image CAPTCHAs, however I struggled with the sentences given in the test because I did not know the meaning of most usages and had to guess.		False	tip			
+mean		145.88		0.61			7.36	7.68	6.91	3.0	1.91							
+median		86.81		0.66			8.0	8.0	7.0	3.0	2.0							
+standard_deviation		112.91		0.33			2.54	1.78	1.51	0.0	1.02							
+min		40.89		-0.35			1.0	3.0	4.0	3.0	1.0							
+max		429.11		1.0			10.0	10.0	10.0	3.0	5.0					22.0	7.0	0.32

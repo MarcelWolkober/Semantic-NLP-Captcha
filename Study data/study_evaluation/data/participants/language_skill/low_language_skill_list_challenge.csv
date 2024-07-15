@@ -1,0 +1,38 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	290.16	1.0		yes	no	7.0	9.0	4.0	3.0	1.0	No. I think this challenge is more time-consuming		True	part			
+	list_challenge	204.91	0.18		no	no	3.0	3.0	3.0	7.0	5.0	I don't know	No	False	bar			
+	list_challenge	53.12	1.0		yes	no	1.0	10.0	8.0	5.0	3.0	Yes - it was more fun! But, then, I am a linguist.		True	bar			
+	list_challenge	341.7	-0.1		yes	no	5.0	3.0	2.0	3.0	4.0			False	record			
+	list_challenge	118.26	0.23		yes	no	7.0	6.0	4.0	3.0	3.0	no		False	tip			
+	list_challenge	96.19	0.23		yes	no	7.0	8.0	7.0	6.0	3.0	Yes		False	twist			
+	list_challenge	204.54	0.74		yes	no	7.0	9.0	3.0	3.0	1.0	It depends on the language. If the semantic captcha is not in my native language, I would prefer the image captcha. If the sentence is in my native language, I would have no preference (maybe the time it takes me to solve the corresponding captcha).	It wasn't really possible to order the sentences that didn't have a similar meaning (I'm not sure if this was intentional).	False	part			
+	list_challenge	104.95	-0.35		yes	no	7.0	8.0	8.0	7.0	3.0	No		False	twist			
+	list_challenge	99.85	1.0		yes	no	6.0	5.0	5.0	5.0	5.0	No		True	bank			
+	list_challenge	118.68	0.42		no	no	7.0	7.0	6.0	4.0	6.0	No	Nice idea	False	record			
+	list_challenge	503.03	1.0		yes	no	7.0	8.0	5.0	1.0	2.0	no		True	twist			
+	list_challenge	93.27	1.0		yes	no	5.0	10.0	9.0	3.0	5.0	No	The manual ordering interface is annoying. Please consider developing alternative input methods	True	arm			
+	list_challenge	181.22	1.0		no	no	5.0	7.0	4.0	3.0	5.0	No, because I think it's rather difficult because there is always room for interpretation with sentences		True	bank			
+	list_challenge	75.53	-0.81		yes	no	3.0	3.0	6.0	8.0	0.0	Why,it's just a challenge.		False	order			
+	list_challenge	67.68	0.23		yes	no	7.0	7.0	7.0	8.0	0.0			False	twist			
+	list_challenge	53.64	1.0		yes	no	7.0	7.0	7.0	3.0	1.0	No		True	bank			
+	list_challenge	61.69	-0.03		yes	no	7.0	7.0	5.0	3.0	0.0			False	order			
+	list_challenge	121.75	0.55		yes	no	7.0	2.0	2.0	1.0	1.0	Definitely not		False	tip			
+	list_challenge	150.85	0.03		yes	no	7.0	3.0	4.0	8.0	3.0	No, because I could understand image captchas and solve them much faster than the proposed Semantic NLP catches. Because we humans see faster than we read. Compared to the typical scenarios in image captchas, which are rather trivial, like spotting the traffic light, I found the topic here quite abstract, making ordering difficult. Maybe only selecting matching sentences so the given reference sentence.		False	part			
+	list_challenge	103.7	0.55		yes	no	7.0	6.0	7.0	1.0	0.0	No.		False	tip			
+	list_challenge	122.31	0.74		yes	no	7.0	10.0	10.0	10.0	2.0	No		False	part			
+	list_challenge	169.3	1.0		yes	no	1.0	10.0	6.0	2.0	0.0	no		True	order			
+	list_challenge	81.19	0.18		yes	no	7.0	9.0	9.0	10.0	2.0	Yes	No	False	bar			
+	list_challenge	97.99	-0.87		yes	no	7.0	4.0	3.0	1.0	1.0	No, images are still easier to get the gist of it and they are faster to solve as the visual apparatus functions faster then the reading one	:D	False	record			
+	list_challenge	86.65	0.81		yes	no	3.0	6.0	5.0	2.0	1.0			True	tip			
+	list_challenge	89.08	0.89		yes	no	1.0	9.0	8.0	5.0	1.0	No	Nice sentences:)	True	arm			
+	list_challenge	105.61	0.74		yes	no	1.0	10.0	6.0	6.0	2.0	NO		False	part			
+	list_challenge	138.82	0.23		yes	no	1.0	10.0	5.0	8.0	3.0	No		False	twist			
+	list_challenge	77.67	0.56		yes	no	7.0	10.0	9.0	6.0	2.0			False	order			
+	list_challenge	137.39	-0.1		yes	no	7.0	6.0	5.0	6.0	5.0	No		False	twist			
+	list_challenge	142.4	0.55		yes	no	7.0	7.0	9.0	3.0	5.0			False	tip			
+	list_challenge	51.82	1.0		yes	no	7.0	10.0	6.0	4.0	3.0	I don't know		True	order			
+mean		135.78	0.46				5.47	7.16	5.84	4.62	2.44							
+median		105.28	0.55				7.0	7.0	6.0	4.0	2.0							
+standard_deviation		93.22	0.53				2.31	2.52	2.19	2.62	1.81							
+min		51.82	-0.87				1.0	2.0	2.0	1.0	0.0							
+max		503.03	1.0				7.0	10.0	10.0	10.0	6.0					32.0	11.0	0.34

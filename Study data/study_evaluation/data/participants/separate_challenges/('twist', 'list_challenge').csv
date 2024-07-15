@@ -1,0 +1,29 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	104.56	0.23		yes	yes	10.0	8.0	8.0	8.0	3.0	No, Image Captcha is much quicker and easier to process than sentence ranking. Especially ranking such long sentences and so many of them.	I believe the example sentence had a few grammatical errors. It was difficult to process the meaning of the sentence, which made the task more difficult.	False	twist			
+	list_challenge	195.79	0.23		yes	no	8.0	8.0	4.0	5.0	3.0	no		False	twist			
+	list_challenge	108.33	0.23		yes	no	9.0	7.0	5.0	4.0	3.0	Image Captcha requires much less mental effort		False	twist			
+	list_challenge	310.83	0.23		yes	no	8.0	8.0	5.0	4.0	4.0	Not sure, I would be unsure if it's the correct solution with so many items. For me it's fun but you have to think more than with a regular captcha. I would have put the convenience for myself higher but because it's not as accessible for non-English speakers etc. I lowered the score.	Maybe give a correct ordering as an example to illustrate the idea of semantic similarity	False	twist			
+	list_challenge	183.22	-0.48		yes	no	8.0	9.0	8.0	3.0	1.0	No	The challenge is very time consuming compared to an image-captcha. Some users could be annoyed by that	False	twist			
+	list_challenge	96.19	0.23		yes	no	7.0	8.0	7.0	6.0	3.0	Yes		False	twist			
+	list_challenge	136.54	0.23		yes	no	9.0	5.0	2.0	3.0	1.0			False	twist			
+	list_challenge	104.95	-0.35		yes	no	7.0	8.0	8.0	7.0	3.0	No		False	twist			
+	list_challenge	101.78	-0.03		yes	no	9.0	9.0	4.0	2.0	3.0			False	twist			
+	list_challenge	503.03	1.0		yes	no	7.0	8.0	5.0	1.0	2.0	no		True	twist			
+	list_challenge	70.34	0.23		yes	no	8.0	6.0	5.0	7.0	-1.0			False	twist			
+	list_challenge	67.68	0.23		yes	no	7.0	7.0	7.0	8.0	0.0			False	twist			
+	list_challenge	76.43	0.48		yes	no	8.0	5.0	3.0	1.0	0.0			False	twist			
+	list_challenge	67.9	0.23		yes	yes	10.0	6.0	3.0	2.0	3.0	Not really, too exhausting	This takes a LOT of brainpower. If it proves effective, might be good for something you REALLY want to keep bots out of, but it'd be exhausting to do this on a regular basis. It might be better with fewer options, but if you take it down to three then there's a 17% chance to get through by luck, so you're limited there too. Also it's extremely subjective, so the idea of having only one right answer seems absurd to me, and would probably lock out a lot of less-literate humans as well.	False	twist			
+	list_challenge	157.84	0.74		yes	no	9.0	8.0	5.0	5.0	5.0			False	twist			
+	list_challenge	90.35	0.23		yes	yes	10.0	9.0	8.0	3.0	5.0	No		False	twist			
+	list_challenge	122.69	0.23		yes	no	8.0	8.0	4.0	6.0	4.0	I am not sure if I would prefer the textual captcha, because it has too much ambiguity and requires more thinking.		False	twist			
+	list_challenge	138.82	0.23		yes	no	1.0	10.0	5.0	8.0	3.0	No		False	twist			
+	list_challenge	137.39	-0.1		yes	no	7.0	6.0	5.0	6.0	5.0	No		False	twist			
+	list_challenge	91.34	1.0		yes	no	8.0	6.0	3.0	3.0	4.0			True	twist			
+	list_challenge	105.1	-0.61		yes	no	8.0	5.0	3.0	4.0	5.0	Probably not. I found the captcha challenged quite difficult. You need quite a fundamental understanding of the English language to know all semantic nuances of a word regarding it's context	Quite an interesting approach. However, it might not feasible to use as not every user is so fluid in the English language	False	twist			
+	list_challenge	75.39	0.03		yes	no	8.0	7.0	3.0	2.0	1.0	No		False	twist			
+	list_challenge	71.06	0.23		yes	yes	10.0	8.0	6.0	3.0	3.0	It's a nice change of pace, but I feel like it would be very easy to solve with an LLM – and if it's not currently, if it catches on, then someone will research until they can break it.		False	twist			
+mean		135.55	0.2				8.0	7.35	5.04	4.39	2.74							
+median		104.95	0.23				8.0	8.0	5.0	4.0	3.0							
+standard_deviation		97.07	0.39				1.83	1.4	1.87	2.25	1.71							
+min		67.68	-0.61				1.0	5.0	2.0	1.0	-1.0							
+max		503.03	1.0				10.0	10.0	8.0	8.0	5.0					23.0	2.0	0.09

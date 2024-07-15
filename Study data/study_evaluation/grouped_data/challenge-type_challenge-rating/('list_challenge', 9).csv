@@ -1,0 +1,10 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	84.05	-0.36		yes	no	9.0	9.0	8.0	9.0	6.0	No		False	order			
+	list_challenge	136.52	0.74		yes	yes	10.0	9.0	9.0	9.0	1.0	No opinion		False	tip			
+	list_challenge	123.46	0.48		yes	no	8.0	10.0	9.0	9.0	5.0			False	part			
+	list_challenge	53.69	1.0		yes	no	9.0	9.0	9.0	9.0	3.0	No		True	bar			
+mean		99.43	0.47				9.0	9.25	8.75	9.0	3.75							
+median		103.75	0.61				9.0	9.0	9.0	9.0	4.0							
+standard_deviation		37.78	0.59				0.82	0.5	0.5	0.0	2.22							
+min		53.69	-0.36				8.0	9.0	8.0	9.0	1.0							
+max		136.52	1.0				10.0	10.0	9.0	9.0	6.0					4.0	1.0	0.25

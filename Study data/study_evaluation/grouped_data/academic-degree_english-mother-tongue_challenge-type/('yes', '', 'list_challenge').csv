@@ -1,0 +1,7 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	72.01	0.38		yes		8.0	8.0	7.0	2.0	4.0		The similar items were easy to rank, but among the ones with completely different sense, how one should rank those were much less trivial and obvious.	False	bar			
+mean		72.01	0.38				8.0	8.0	7.0	2.0	4.0							
+median		72.01	0.38				8.0	8.0	7.0	2.0	4.0							
+standard_deviation																		
+min		72.01	0.38				8.0	8.0	7.0	2.0	4.0							
+max		72.01	0.38				8.0	8.0	7.0	2.0	4.0					1.0	0.0	0.0

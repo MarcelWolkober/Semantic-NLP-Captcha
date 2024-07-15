@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  back-end:
+    build: ./captcha
+    container_name: captcha-back-end
+    depends_on:
+      - postgres
+    ports:
+      - 8081:8081
+      - 5005:5005
+    volumes:
+      - ./data:/data
+    networks:
+      - captcha-network
+    restart: unless-stopped
+
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=captcha'
+      - 'POSTGRES_PASSWORD=0'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - 5432:5432
+    networks:
+      - captcha-network
+    restart: unless-stopped
+
+  front-end:
+    build: ./captcha-frontend
+    container_name: captcha-front-end
+    ports:
+      - "8080:8080"
+    networks:
+      - captcha-network
+    restart: unless-stopped
+
+networks:
+  captcha-network:

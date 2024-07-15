@@ -1,0 +1,9 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	72.01	0.38		yes		8.0	8.0	7.0	2.0	4.0		The similar items were easy to rank, but among the ones with completely different sense, how one should rank those were much less trivial and obvious.	False	bar			
+	list_challenge	294.74	0.74				8.0	4.0	3.0	5.0	5.0	"No because it's highly irrational, everybody would sort them differently so the captcha challenge would never be ""truly"" right"		False	part			
+	list_challenge	69.28	0.73				10.0	10.0	8.0	5.0	0.0	yes		False	bar			
+mean		145.34	0.62				8.67	7.33	6.0	4.0	3.0							
+median		72.01	0.73				8.0	8.0	7.0	5.0	4.0							
+standard_deviation		129.39	0.2				1.15	3.06	2.65	1.73	2.65							
+min		69.28	0.38				8.0	4.0	3.0	2.0	0.0							
+max		294.74	0.74				10.0	10.0	8.0	5.0	5.0					3.0	0.0	0.0

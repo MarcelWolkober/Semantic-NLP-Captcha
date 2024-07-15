@@ -1,0 +1,10 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	130.94		0.86	yes	no	6.0	5.0	4.0	6.0	2.0	no		True	bar			
+	pair_challenge	429.11		0.8	yes	no	6.0	7.0	6.0	3.0	2.0	For me it's okay, but in general not because you need good knowledge in the language to complete the captcha.		True	tip			
+	pair_challenge	428.06		-0.26	yes	no	6.0	3.0	7.0	1.0	10.0	No		False	record			
+	pair_challenge	212.32		0.53	yes	no	6.0	5.0	10.0	2.0	1.0	No		False	part			
+mean		300.1		0.48			6.0	5.0	6.75	3.0	3.75							
+median		320.19		0.66			6.0	5.0	6.5	2.5	2.0							
+standard_deviation		152.03		0.51			0.0	1.63	2.5	2.16	4.19							
+min		130.94		-0.26			6.0	3.0	4.0	1.0	1.0							
+max		429.11		0.86			6.0	7.0	10.0	6.0	10.0					4.0	2.0	0.5

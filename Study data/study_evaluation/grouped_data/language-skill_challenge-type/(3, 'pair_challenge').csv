@@ -1,0 +1,7 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	333.86		0.53	yes	no	3.0	6.0	6.0	3.0	2.0	No		False	record			
+mean		333.86		0.53			3.0	6.0	6.0	3.0	2.0							
+median		333.86		0.53			3.0	6.0	6.0	3.0	2.0							
+standard_deviation																		
+min		333.86		0.53			3.0	6.0	6.0	3.0	2.0							
+max		333.86		0.53			3.0	6.0	6.0	3.0	2.0					1.0	0.0	0.0

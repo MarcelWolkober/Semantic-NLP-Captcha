@@ -1,0 +1,26 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	195.79	0.23		yes	no	8.0	8.0	4.0	5.0	3.0	no		False	twist			
+	list_challenge	53.12	1.0		yes	no	1.0	10.0	8.0	5.0	3.0	Yes - it was more fun! But, then, I am a linguist.		True	bar			
+	list_challenge	55.99	0.94		yes	no	9.0	9.0	5.0	5.0	0.0		"I like image captcha because it's a simple matter of clicking. This one is arguably harder for the human (and perhaps not even for the machine). The other ""issue"" is that in the example I had (""record"") there were clearly two different senses (thing to put music on; thing to keep track of other things) and ranking them doesn't really really make sense -- it's more of a ""put it in the correct box"" type of deal"	True	record			
+	list_challenge	82.1	0.94		yes	no	8.0	9.0	7.0	5.0	3.0	no		True	record			
+	list_challenge	26.1	0.5		yes	no	9.0	10.0	10.0	5.0	0.0	image-captcha	How useful is your captcha, given a person with very low linguistic knowledge or bad english trying to access data, what if he gets some part of the order wrong, given that deciding the order is highly subjective.Very close meanings can be misinterpreted and will take multiple attempts for the user to just get to the single gold result unlike the image-captchas which will only require common-sense.	False	bank			
+	list_challenge	294.74	0.74				8.0	4.0	3.0	5.0	5.0	"No because it's highly irrational, everybody would sort them differently so the captcha challenge would never be ""truly"" right"		False	part			
+	list_challenge	48.62	1.0		yes	no	9.0	10.0	2.0	5.0	3.0	No		True	bank			
+	list_challenge	120.18	1.0		yes	no	8.0	9.0	5.0	5.0	4.0	it seems like it took longer to complete than the image or math-based captcha		True	part			
+	list_challenge	99.85	1.0		yes	no	6.0	5.0	5.0	5.0	5.0	No		True	bank			
+	list_challenge	53.05	0.94		yes	yes	10.0	7.0	7.0	5.0	0.0	It took me longer than any other Captcha I have performed, so I would prefer different kinds.	This took me a long time because the sentences were long and some of the grammar was antiquated and hard to understand (as a native English speaker from America). I don't know if all of the examples were like that but I would not like to do this kind of thing as a Captcha.	True	tip			
+	list_challenge	78.04	0.5		yes	no	9.0	9.0	10.0	5.0	3.0	Νο		False	bank			
+	list_challenge	38.09	0.85		yes	yes	10.0	9.0	9.0	5.0	3.0			True	bar			
+	list_challenge	91.53	1.0		yes	yes	10.0	9.0	7.0	5.0	6.0	It would need to be *very* well-designed since this is a pretty subjective matter. I suppose you could set a task like 'find all the sentences where the meaning of word X is the same as in the example sentence'. That could work. I don't think a ranking exercise would work though.	I think this is a really nice idea - more interesting than finding all the photos with a car in them (well, more interesting for me as a linguist, at least). On the other hand, there are some obvious problems with creating a captcha challenge of this sort in that not everyone always agrees about distinctions between senses of words (lumpers vs. splitters) and this would discriminate against non-speakers of English (or would one be able to select one's own L1 for this? Maybe not all languages are as easy to create a challenge of this sort as English is). Good luck with the study	True	bar			
+	list_challenge	46.86	1.0		yes	no	8.0	10.0	9.0	5.0	2.0	Being a text researcher, yes, of course. Others might not.	I hate captchas in general :)	True	arm			
+	list_challenge	69.28	0.73				10.0	10.0	8.0	5.0	0.0	yes		False	bar			
+	list_challenge	52.06	0.5		yes	yes	10.0	9.0	8.0	5.0	3.0	Possibly		False	bank			
+	list_challenge	157.84	0.74		yes	no	9.0	8.0	5.0	5.0	5.0			False	twist			
+	list_challenge	89.08	0.89		yes	no	1.0	9.0	8.0	5.0	1.0	No	Nice sentences:)	True	arm			
+	list_challenge	30.95	1.0		yes	no	8.0	9.0	7.0	5.0	8.0	I'd like it because it's something else for a change. But I'm rather steeped in linguistics, might be hard to understand for people who are not.		True	bank			
+	list_challenge	51.6	0.5		yes	yes	10.0	9.0	8.0	5.0	1.0	Yes		False	bank			
+mean		86.74	0.8				8.05	8.6	6.75	5.0	2.9							
+median		62.63	0.92				9.0	9.0	7.0	5.0	3.0							
+standard_deviation		64.8	0.23				2.63	1.6	2.24	0.0	2.2							
+min		26.1	0.23				1.0	4.0	2.0	5.0	0.0							
+max		294.74	1.0				10.0	10.0	10.0	5.0	8.0					20.0	12.0	0.6

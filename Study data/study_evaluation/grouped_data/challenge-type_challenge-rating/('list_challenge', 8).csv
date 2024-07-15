@@ -1,0 +1,19 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	72.34	0.76		yes	no	8.0	8.0	7.0	8.0	3.0	No, as it takes significantly longer to solve and might be a problem for websites in languages I don't or barely speak (but otherwise could easily use using some translate feature)	The meaning of the words was very similar in some sentences making it redundant. I feel like I could easily attack a system like this with creating a small statistical model on a huge corpus of data.	False	arm			
+	list_challenge	73.27	0.48		yes	no	8.0	8.0	5.0	8.0	0.0			False	part			
+	list_challenge	104.56	0.23		yes	yes	10.0	8.0	8.0	8.0	3.0	No, Image Captcha is much quicker and easier to process than sentence ranking. Especially ranking such long sentences and so many of them.	I believe the example sentence had a few grammatical errors. It was difficult to process the meaning of the sentence, which made the task more difficult.	False	twist			
+	list_challenge	77.36	0.94		yes	no	9.0	6.0	5.0	8.0	3.0	no		True	tip			
+	list_challenge	75.53	-0.81		yes	no	3.0	3.0	6.0	8.0	0.0	Why,it's just a challenge.		False	order			
+	list_challenge	67.68	0.23		yes	no	7.0	7.0	7.0	8.0	0.0			False	twist			
+	list_challenge	46.27	0.29		yes	no	8.0	9.0	9.0	8.0	0.0	I prefer no challenges.		False	arm			
+	list_challenge	150.85	0.03		yes	no	7.0	3.0	4.0	8.0	3.0	No, because I could understand image captchas and solve them much faster than the proposed Semantic NLP catches. Because we humans see faster than we read. Compared to the typical scenarios in image captchas, which are rather trivial, like spotting the traffic light, I found the topic here quite abstract, making ordering difficult. Maybe only selecting matching sentences so the given reference sentence.		False	part			
+	list_challenge	68.34	1.0		yes	yes	10.0	9.0	8.0	8.0	2.0	As a user I would be interested in a fast method. Captcha with images is sometimes slow.		True	arm			
+	list_challenge	37.13	1.0		yes	yes	10.0	8.0	7.0	8.0	3.0	YES!		True	bank			
+	list_challenge	138.82	0.23		yes	no	1.0	10.0	5.0	8.0	3.0	No		False	twist			
+	list_challenge	94.97	0.89		yes	no	9.0	10.0	9.0	8.0	7.0	Maybe		True	arm			
+	list_challenge	50.41	1.0		yes	no	8.0	8.0	9.0	8.0	4.0	No		True	bank			
+mean		81.35	0.48				7.54	7.46	6.85	8.0	2.38							
+median		73.27	0.48				8.0	8.0	7.0	8.0	3.0							
+standard_deviation		33.61	0.53				2.7	2.26	1.72	0.0	2.02							
+min		37.13	-0.81				1.0	3.0	4.0	8.0	0.0							
+max		150.85	1.0				10.0	10.0	9.0	8.0	7.0					13.0	5.0	0.38

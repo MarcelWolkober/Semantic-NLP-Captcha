@@ -1,0 +1,24 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	72.34	0.76		yes	no	8.0	8.0	7.0	8.0	3.0	No, as it takes significantly longer to solve and might be a problem for websites in languages I don't or barely speak (but otherwise could easily use using some translate feature)	The meaning of the words was very similar in some sentences making it redundant. I feel like I could easily attack a system like this with creating a small statistical model on a huge corpus of data.	False	arm			
+	list_challenge	86.44	1.0		yes	no	8.0	8.0	6.0	4.0	3.0	No, because Image-Captcha is much quicker to fulfill and semantic similarity depends highly on language proficiency and is very subjective	What to do with sentences that I would rate on the same level?	True	arm			
+	list_challenge	88.07	1.0		yes	yes	10.0	8.0	7.0	4.0	1.0	no, it takes longer		True	arm			
+	list_challenge	122.98	1.0		yes	yes	9.0	10.0	8.0	4.0	4.0	No.	No.	True	arm			
+	list_challenge	93.27	1.0		yes	no	5.0	10.0	9.0	3.0	5.0	No	The manual ordering interface is annoying. Please consider developing alternative input methods	True	arm			
+	list_challenge	76.41	1.0		yes	no	8.0	7.0	6.0	3.0	1.0	No, because this kind of test is more time consuming		True	arm			
+	list_challenge	46.27	0.29		yes	no	8.0	9.0	9.0	8.0	0.0	I prefer no challenges.		False	arm			
+	list_challenge	46.86	1.0		yes	no	8.0	10.0	9.0	5.0	2.0	Being a text researcher, yes, of course. Others might not.	I hate captchas in general :)	True	arm			
+	list_challenge	68.34	1.0		yes	yes	10.0	9.0	8.0	8.0	2.0	As a user I would be interested in a fast method. Captcha with images is sometimes slow.		True	arm			
+	list_challenge	388.37	1.0		yes	no	8.0	10.0	7.0	1.0	2.0	No		True	arm			
+	list_challenge	42.7	1.0		yes	no	9.0	8.0	6.0	2.0	1.0	No		True	arm			
+	list_challenge	87.86	1.0		no	no	8.0	8.0	4.0	4.0	3.0	No		True	arm			
+	list_challenge	58.64	1.0		yes	no	8.0	10.0	9.0	1.0	2.0	No. I don't like Captchas. They are annoying and routinely used for purposes others than their stated one, i.e. identification - e.g. machine learning training.		True	arm			
+	list_challenge	89.08	0.89		yes	no	1.0	9.0	8.0	5.0	1.0	No	Nice sentences:)	True	arm			
+	list_challenge	48.83	1.0		yes	yes	10.0	9.0	8.0	3.0	2.0	I think I would prefer an image Captcha, inasmuch as image Captchas are usually a little quicker to solve.	"One part of the example provided which might underscore a fundamental weakness of the concept is the two sentences involving an arm of the sea: it's hard to see why speakers would rate one use of ""arm"" in the phrase ""arm of the sea"" as semantically closer to a literal, anatomical arm than the other, especially when there's nothing in the context which distinguishes these two arms of the sea from one another clearly (such as size, hypothetically, or a poetic attribution of animacy to the sea).  Good Luck! "	True	arm			
+	list_challenge	66.74	1.0		yes	no	8.0	10.0	9.0	10.0	3.0	I think it would be difficult for people with language, reading and communication disorders. It may also be complicated for people without high education. Image-Captcha are more accessible.	It would be nice if people could choose what kind of Captcha they prefer, to avoid accessibility issues.	True	arm			
+	list_challenge	94.97	0.89		yes	no	9.0	10.0	9.0	8.0	7.0	Maybe		True	arm			
+	list_challenge	52.38	1.0		yes	no	8.0	9.0	9.0	7.0	5.0	No, image is more convenient for me as you can easily spot patterns / objects and there is no need to read through sentences. Also images are more language-independent.	A short introduction on what a Captcha-challenge is would have been nice. But apart from this the study was great!	True	arm			
+mean		90.59	0.94				7.94	9.0	7.67	4.89	2.61							
+median		74.38	1.0				8.0	9.0	8.0	4.0	2.0							
+standard_deviation		77.37	0.17				2.07	0.97	1.46	2.68	1.75							
+min		42.7	0.29				1.0	7.0	4.0	1.0	0.0							
+max		388.37	1.0				10.0	10.0	9.0	10.0	7.0					18.0	16.0	0.89

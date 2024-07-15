@@ -1,0 +1,26 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	171.72		0.45	yes	no	9.0	4.0	8.0	4.0	1.0	"Not really, for example ""puzzle captchas"" are more tolerable than this, but this is still way better than Google's ""Click on an image and wait for ages until the next one appears"""		False	tip			
+	pair_challenge	97.44		0.94	no	no	7.0	6.0	9.0	5.0	3.0	No, I would prefer the Image-Captcha	The centered requires much effort to read the text.	True	tip			
+	pair_challenge	81.28		-0.35	yes	no	8.0	8.0	7.0	3.0	1.0	No		False	tip			
+	pair_challenge	105.45		0.33	yes	yes	10.0	9.0	7.0	2.0	2.0	I strongly prefer image-based challenges because it requires less work	"You may need a better sentence tokenizer -- one of the sentences was cut short likely because of the periods in the ""L.B.J."" acronym. "	False	tip			
+	pair_challenge	76.23		0.33	yes	no	8.0	4.0	6.0	4.0	2.0	Depends massively on the amount of answers needed to complete the captcha, but if it's only one answer then yes.		False	tip			
+	pair_challenge	151.79		0.86	yes	no	8.0	5.0	7.0	8.0	10.0	yes		True	tip			
+	pair_challenge	429.11		0.8	yes	no	6.0	7.0	6.0	3.0	2.0	For me it's okay, but in general not because you need good knowledge in the language to complete the captcha.		True	tip			
+	pair_challenge	394.98		0.04	yes	no	5.0	6.0	3.0	2.0	10.0			False	tip			
+	pair_challenge	57.18		0.94	yes	no	8.0	8.0	8.0	5.0	3.0	Not sure		True	tip			
+	pair_challenge	159.63		0.67	yes	no	8.0	7.0	6.0	3.0	2.0	Yes, but with a possible choice of language.		False	tip			
+	pair_challenge	128.85		0.8			9.0	8.0	8.0	1.0	1.0	This question is missing context	"There should be an option to indicate that one does not know the meaning of a word in a concrete context. If I would chose to select the lowest score for such cases, you won't be able to distinguish between real ""lowest score"" answers and such where I simply did not understand the meaning in one of the sentences. "	True	tip			
+	pair_challenge	154.04		0.8			1.0	8.0	8.0	5.0	0.0	?		True	tip			
+	pair_challenge	112.15		0.87	yes	no	7.0	4.0	4.0	4.0	3.0	Maybe		True	tip			
+	pair_challenge	235.02		0.47	yes	no	9.0	5.0	8.0	8.0	2.0	No		False	tip			
+	pair_challenge	177.93		0.41	yes	no	8.0	4.0	3.0	4.0	1.0	No		False	tip			
+	pair_challenge	179.85		0.7	yes	no	9.0	3.0	4.0	6.0	4.0	Not sure.	I didn’t understand the first two sentences, so my rating was basically a random guess. If implemented, it should make sure that a proficient speaker understands the sentences. Also, I found it annoying that the same 2nd sentence was repeated every time. 	False	tip			
+	pair_challenge	343.14		0.71	yes	no	7.0	5.0	7.0	3.0	1.0			False	tip			
+	pair_challenge	52.91		0.94			1.0	8.0	8.0	5.0	1.0			True	tip			
+	pair_challenge	193.68		0.64	yes	no	8.0	3.0	5.0	3.0	2.0	Ideally if I was able to discern the meaning of the sentences I would prefer it over image CAPTCHAs, however I struggled with the sentences given in the test because I did not know the meaning of most usages and had to guess.		False	tip			
+	pair_challenge	167.73		0.66			1.0	1.0	1.0	1.0	0.0			False	tip			
+mean		173.51		0.6			6.85	5.65	6.15	3.95	2.55							
+median		156.83		0.68			8.0	5.5	7.0	4.0	2.0							
+standard_deviation		105.31		0.33			2.76	2.18	2.16	1.93	2.74							
+min		52.91		-0.35			1.0	1.0	1.0	1.0	0.0							
+max		429.11		0.94			10.0	9.0	9.0	8.0	10.0					20.0	8.0	0.4

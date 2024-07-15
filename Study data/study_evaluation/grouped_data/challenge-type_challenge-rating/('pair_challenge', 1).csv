@@ -1,0 +1,21 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	119.23		0.55	yes	no	8.0	6.0	3.0	1.0	1.0	No		False	part			
+	pair_challenge	74.76		0.41	no	no	8.0	10.0	8.0	1.0	0.0	Ja		False	order			
+	pair_challenge	157.21		-0.72	yes	yes	10.0	1.0	1.0	1.0	0.0	NOT REALLY		False	record			
+	pair_challenge	422.24		0.08	no	no	7.0	5.0	5.0	1.0	2.0			False	record			
+	pair_challenge	75.11		-0.35	yes	no	9.0	9.0	9.0	1.0	3.0	The sentences were quite difficult to understand, I am not sure they were the best examples for this task. However, I think it could be useful in the future with more suitable examples.	The first screen was a bit too crowded and full of typos. As a senior in the field, I'd advise you proofread everything :)	False	record			
+	pair_challenge	183.85		-0.73	no	no	8.0	3.0	2.0	1.0	0.0	no	lot of reading bad ... want more pictures	False	record			
+	pair_challenge	77.49		0.91			1.0	5.0	5.0	1.0	2.0	No		True	arm			
+	pair_challenge	428.06		-0.26	yes	no	6.0	3.0	7.0	1.0	10.0	No		False	record			
+	pair_challenge	399.75		0.0			1.0	1.0	1.0	1.0	0.0			False	arm			
+	pair_challenge	65.92		0.58	yes	no	8.0	8.0	7.0	1.0	0.0			False	bank			
+	pair_challenge	128.85		0.8			9.0	8.0	8.0	1.0	1.0	This question is missing context	"There should be an option to indicate that one does not know the meaning of a word in a concrete context. If I would chose to select the lowest score for such cases, you won't be able to distinguish between real ""lowest score"" answers and such where I simply did not understand the meaning in one of the sentences. "	True	tip			
+	pair_challenge	107.3		-0.34	yes	no	8.0	4.0	4.0	1.0	0.0	No	I'm sorry but this very impractical. 1) it takes a lot of time fot a captcha 2) it is quite hard to establish a ground truth for this task, we are talking about fine-grained semantics! 3) it is clearly aimed at native speakers only	False	twist			
+	pair_challenge	104.33		1.0	yes	no	7.0	7.0	8.0	1.0	0.0			True	arm			
+	pair_challenge	175.96		0.17	yes	yes	10.0	8.0	7.0	1.0	1.0			False	twist			
+	pair_challenge	167.73		0.66			1.0	1.0	1.0	1.0	0.0			False	tip			
+mean		179.19		0.18			6.73	5.27	5.07	1.0	1.33							
+median		128.85		0.17			8.0	5.0	5.0	1.0	0.0							
+standard_deviation		128.76		0.57			3.15	3.03	2.89	0.0	2.58							
+min		65.92		-0.73			1.0	1.0	1.0	1.0	0.0							
+max		428.06		1.0			10.0	10.0	9.0	1.0	10.0					15.0	3.0	0.2

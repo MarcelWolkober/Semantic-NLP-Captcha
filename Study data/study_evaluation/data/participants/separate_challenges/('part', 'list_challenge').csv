@@ -1,0 +1,23 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	205.12	0.74		yes	no	8.0	7.0	8.0	2.0	2.0	no		False	part			
+	list_challenge	290.16	1.0		yes	no	7.0	9.0	4.0	3.0	1.0	No. I think this challenge is more time-consuming		True	part			
+	list_challenge	73.27	0.48		yes	no	8.0	8.0	5.0	8.0	0.0			False	part			
+	list_challenge	294.74	0.74				8.0	4.0	3.0	5.0	5.0	"No because it's highly irrational, everybody would sort them differently so the captcha challenge would never be ""truly"" right"		False	part			
+	list_challenge	204.54	0.74		yes	no	7.0	9.0	3.0	3.0	1.0	It depends on the language. If the semantic captcha is not in my native language, I would prefer the image captcha. If the sentence is in my native language, I would have no preference (maybe the time it takes me to solve the corresponding captcha).	It wasn't really possible to order the sentences that didn't have a similar meaning (I'm not sure if this was intentional).	False	part			
+	list_challenge	120.18	1.0		yes	no	8.0	9.0	5.0	5.0	4.0	it seems like it took longer to complete than the image or math-based captcha		True	part			
+	list_challenge	70.44	0.23		yes	no	9.0	7.0	6.0	1.0	0.0	No		False	part			
+	list_challenge	54.69	0.48		yes	yes	10.0	10.0	8.0	1.0	0.0			False	part			
+	list_challenge	316.55	0.48		yes	no	8.0	6.0	6.0	10.0	3.0	No		False	part			
+	list_challenge	123.46	0.48		yes	no	8.0	10.0	9.0	9.0	5.0			False	part			
+	list_challenge	150.85	0.03		yes	no	7.0	3.0	4.0	8.0	3.0	No, because I could understand image captchas and solve them much faster than the proposed Semantic NLP catches. Because we humans see faster than we read. Compared to the typical scenarios in image captchas, which are rather trivial, like spotting the traffic light, I found the topic here quite abstract, making ordering difficult. Maybe only selecting matching sentences so the given reference sentence.		False	part			
+	list_challenge	150.85	0.48		yes	no	8.0	7.0	7.0	1.0	0.0			False	part			
+	list_challenge	122.31	0.74		yes	no	7.0	10.0	10.0	10.0	2.0	No		False	part			
+	list_challenge	61.23	0.74		yes	no	9.0	10.0	5.0	1.0	3.0	No		False	part			
+	list_challenge	128.4	0.23		yes	yes	10.0	9.0	3.0	1.0	5.0	"I like the idea of this type of challenge, but it would work better with related words rather than related senses of words, or at least with more easily-separable word senses. People have a notoriously high level of disagreement re: relatedness of word senses. The example I had was especially challenging, as some instances used ""part"" as part of a verb (""take part"") and others used it as a more typical noun."	I'm a computational linguist. I'm definitely not the average user :)	False	part			
+	list_challenge	105.61	0.74		yes	no	1.0	10.0	6.0	6.0	2.0	NO		False	part			
+	list_challenge	45.14	0.74		yes	yes	10.0	9.0	7.0	4.0	4.0	Yes, because I'm a linguist :)	Good luck with your research!	False	part			
+mean		148.09	0.59				7.82	8.06	5.82	4.59	2.35							
+median		123.46	0.74				8.0	9.0	6.0	4.0	2.0							
+standard_deviation		86.34	0.27				2.04	2.14	2.13	3.36	1.84							
+min		45.14	0.03				1.0	3.0	3.0	1.0	0.0							
+max		316.55	1.0				10.0	10.0	10.0	10.0	5.0					17.0	2.0	0.12

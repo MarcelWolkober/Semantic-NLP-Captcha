@@ -1,0 +1,34 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	71.32	0.38		yes	no	9.0	9.0	8.0	6.0	3.0	No really, as it takes more time than an image-captcha would.		False	bar			
+	list_challenge	84.05	-0.36		yes	no	9.0	9.0	8.0	9.0	6.0	No		False	order			
+	list_challenge	55.99	0.94		yes	no	9.0	9.0	5.0	5.0	0.0		"I like image captcha because it's a simple matter of clicking. This one is arguably harder for the human (and perhaps not even for the machine). The other ""issue"" is that in the example I had (""record"") there were clearly two different senses (thing to put music on; thing to keep track of other things) and ranking them doesn't really really make sense -- it's more of a ""put it in the correct box"" type of deal"	True	record			
+	list_challenge	108.33	0.23		yes	no	9.0	7.0	5.0	4.0	3.0	Image Captcha requires much less mental effort		False	twist			
+	list_challenge	77.36	0.94		yes	no	9.0	6.0	5.0	8.0	3.0	no		True	tip			
+	list_challenge	26.1	0.5		yes	no	9.0	10.0	10.0	5.0	0.0	image-captcha	How useful is your captcha, given a person with very low linguistic knowledge or bad english trying to access data, what if he gets some part of the order wrong, given that deciding the order is highly subjective.Very close meanings can be misinterpreted and will take multiple attempts for the user to just get to the single gold result unlike the image-captchas which will only require common-sense.	False	bank			
+	list_challenge	48.62	1.0		yes	no	9.0	10.0	2.0	5.0	3.0	No		True	bank			
+	list_challenge	100.27	-0.48		yes	no	9.0	7.0	3.0	4.0	1.0	No	I think sentence meaning order is not good for people that have dyslexia or any other type of  reading disorder, instead images are universal.	False	tip			
+	list_challenge	136.54	0.23		yes	no	9.0	5.0	2.0	3.0	1.0			False	twist			
+	list_challenge	122.98	1.0		yes	yes	9.0	10.0	8.0	4.0	4.0	No.	No.	True	arm			
+	list_challenge	101.78	-0.03		yes	no	9.0	9.0	4.0	2.0	3.0			False	twist			
+	list_challenge	70.44	0.23		yes	no	9.0	7.0	6.0	1.0	0.0	No		False	part			
+	list_challenge	168.91	0.74		yes	no	9.0	7.0	6.0	3.0	1.0	No		False	record			
+	list_challenge	74.56	0.81		yes	no	9.0	1.0	4.0	2.0	1.0	Not really. I think we are in a phase where Captchas are only being (mis)used for cheap data labeling.	Asking for an absolute ordering may be too much, when there are multiple sentences that are not related at all. This will probably introduce noise in your study.	True	record			
+	list_challenge	78.85	0.94		yes	no	9.0	7.0	7.0	3.0	1.0	Maybe with less archaic language.		True	tip			
+	list_challenge	98.55	1.0		yes	no	9.0	6.0	7.0	2.0	2.0	While it would be more fun and I personally might prefer it because of that, I think anyone who has less than near-native proficiency in English would not be able to complete the challenge and thus others might not prefer it.	I think the idea is fun, but the idea of testing if one's a human by testing one's semantic understanding in English is something I find quite problematic. It assumes that every user would be proficient enough to answer the test seeing as it requires near-native proficiency to understand the examples, which is not the case for a lot of people, and particularly disparaging towards non-native speakers coming from a minority background. It is also implied that there is (only) one correct answer to this test, which is never really the case when it comes to  semantics, as people might have different conceptualisations of meaning based on their previous knowledge and how knowledge is mapped and linked in the brain. It might be good to read up on cognitive linguistics/semantics for this study.	True	record			
+	list_challenge	78.04	0.5		yes	no	9.0	9.0	10.0	5.0	3.0	Νο		False	bank			
+	list_challenge	44.81	1.0		yes	no	9.0	10.0	9.0	7.0	5.0	no		True	bank			
+	list_challenge	101.05	0.29		yes	no	9.0	7.0	3.0	3.0	5.0	Definitely not.	With 1-2 items, the context seemed very restricted (maybe too restricted to even judge the exact meaning of that instance). I would have liked to get more information on what exactly you were looking for in terms of similarity, assuming there's one ideal solution. Is 'record' inside a compound like 'record label' the same as a specific record, or less similar to playing a record than a specific record (if so, on what grounds)?	False	record			
+	list_challenge	15.73	-0.81		yes	no	9.0	1.0	1.0	1.0	0.0			False	order			
+	list_challenge	42.7	1.0		yes	no	9.0	8.0	6.0	2.0	1.0	No		True	arm			
+	list_challenge	157.84	0.74		yes	no	9.0	8.0	5.0	5.0	5.0			False	twist			
+	list_challenge	75.76	0.5		yes	no	9.0	8.0	8.0	7.0	3.0	Yes, OK.		False	bank			
+	list_challenge	61.23	0.74		yes	no	9.0	10.0	5.0	1.0	3.0	No		False	part			
+	list_challenge	94.97	0.89		yes	no	9.0	10.0	9.0	8.0	7.0	Maybe		True	arm			
+	list_challenge	38.01	0.73		yes	no	9.0	8.0	7.0	1.0	0.0			False	bar			
+	list_challenge	123.05	-0.29		yes	no	9.0	8.0	6.0	6.0	3.0	Depends on the difficulty, but text captcha might be better, especially for visually impaired people	Good idea but I think the example is weird/difficult	False	tip			
+	list_challenge	53.69	1.0		yes	no	9.0	9.0	9.0	9.0	3.0	No		True	bar			
+mean		82.55	0.51				9.0	7.68	6.0	4.32	2.5							
+median		77.7	0.74				9.0	8.0	6.0	4.0	3.0							
+standard_deviation		37.35	0.51				0.0	2.34	2.48	2.48	1.93							
+min		15.73	-0.81				9.0	1.0	1.0	1.0	0.0							
+max		168.91	1.0				9.0	10.0	10.0	9.0	7.0					28.0	11.0	0.39

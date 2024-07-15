@@ -1,0 +1,132 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	205.12	0.74		yes	no	8.0	7.0	8.0	2.0	2.0	no		False	part			
+	list_challenge	72.34	0.76		yes	no	8.0	8.0	7.0	8.0	3.0	No, as it takes significantly longer to solve and might be a problem for websites in languages I don't or barely speak (but otherwise could easily use using some translate feature)	The meaning of the words was very similar in some sentences making it redundant. I feel like I could easily attack a system like this with creating a small statistical model on a huge corpus of data.	False	arm			
+	list_challenge	290.16	1.0		yes	no	7.0	9.0	4.0	3.0	1.0	No. I think this challenge is more time-consuming		True	part			
+	list_challenge	73.27	0.48		yes	no	8.0	8.0	5.0	8.0	0.0			False	part			
+	list_challenge	71.32	0.38		yes	no	9.0	9.0	8.0	6.0	3.0	No really, as it takes more time than an image-captcha would.		False	bar			
+	list_challenge	312.95	0.74		yes	no	8.0	3.0	4.0	2.0	1.0	No. Image Captcha is likely faster.		False	record			
+	list_challenge	84.05	-0.36		yes	no	9.0	9.0	8.0	9.0	6.0	No		False	order			
+	list_challenge	204.91	0.18		no	no	3.0	3.0	3.0	7.0	5.0	I don't know	No	False	bar			
+	list_challenge	104.56	0.23		yes	yes	10.0	8.0	8.0	8.0	3.0	No, Image Captcha is much quicker and easier to process than sentence ranking. Especially ranking such long sentences and so many of them.	I believe the example sentence had a few grammatical errors. It was difficult to process the meaning of the sentence, which made the task more difficult.	False	twist			
+	list_challenge	195.79	0.23		yes	no	8.0	8.0	4.0	5.0	3.0	no		False	twist			
+	list_challenge	53.12	1.0		yes	no	1.0	10.0	8.0	5.0	3.0	Yes - it was more fun! But, then, I am a linguist.		True	bar			
+	list_challenge	341.7	-0.1		yes	no	5.0	3.0	2.0	3.0	4.0			False	record			
+	list_challenge	136.52	0.74		yes	yes	10.0	9.0	9.0	9.0	1.0	No opinion		False	tip			
+	list_challenge	46.16	0.75		yes	yes	10.0	10.0	10.0	2.0	3.0	No, it seems problematic.		False	order			
+	list_challenge	55.99	0.94		yes	no	9.0	9.0	5.0	5.0	0.0		"I like image captcha because it's a simple matter of clicking. This one is arguably harder for the human (and perhaps not even for the machine). The other ""issue"" is that in the example I had (""record"") there were clearly two different senses (thing to put music on; thing to keep track of other things) and ranking them doesn't really really make sense -- it's more of a ""put it in the correct box"" type of deal"	True	record			
+	list_challenge	72.01	0.38		yes		8.0	8.0	7.0	2.0	4.0		The similar items were easy to rank, but among the ones with completely different sense, how one should rank those were much less trivial and obvious.	False	bar			
+	list_challenge	108.33	0.23		yes	no	9.0	7.0	5.0	4.0	3.0	Image Captcha requires much less mental effort		False	twist			
+	list_challenge	82.1	0.94		yes	no	8.0	9.0	7.0	5.0	3.0	no		True	record			
+	list_challenge	310.83	0.23		yes	no	8.0	8.0	5.0	4.0	4.0	Not sure, I would be unsure if it's the correct solution with so many items. For me it's fun but you have to think more than with a regular captcha. I would have put the convenience for myself higher but because it's not as accessible for non-English speakers etc. I lowered the score.	Maybe give a correct ordering as an example to illustrate the idea of semantic similarity	False	twist			
+	list_challenge	118.26	0.23		yes	no	7.0	6.0	4.0	3.0	3.0	no		False	tip			
+	list_challenge	77.36	0.94		yes	no	9.0	6.0	5.0	8.0	3.0	no		True	tip			
+	list_challenge	26.1	0.5		yes	no	9.0	10.0	10.0	5.0	0.0	image-captcha	How useful is your captcha, given a person with very low linguistic knowledge or bad english trying to access data, what if he gets some part of the order wrong, given that deciding the order is highly subjective.Very close meanings can be misinterpreted and will take multiple attempts for the user to just get to the single gold result unlike the image-captchas which will only require common-sense.	False	bank			
+	list_challenge	86.44	1.0		yes	no	8.0	8.0	6.0	4.0	3.0	No, because Image-Captcha is much quicker to fulfill and semantic similarity depends highly on language proficiency and is very subjective	What to do with sentences that I would rate on the same level?	True	arm			
+	list_challenge	88.07	1.0		yes	yes	10.0	8.0	7.0	4.0	1.0	no, it takes longer		True	arm			
+	list_challenge	183.22	-0.48		yes	no	8.0	9.0	8.0	3.0	1.0	No	The challenge is very time consuming compared to an image-captcha. Some users could be annoyed by that	False	twist			
+	list_challenge	294.74	0.74				8.0	4.0	3.0	5.0	5.0	"No because it's highly irrational, everybody would sort them differently so the captcha challenge would never be ""truly"" right"		False	part			
+	list_challenge	96.19	0.23		yes	no	7.0	8.0	7.0	6.0	3.0	Yes		False	twist			
+	list_challenge	48.62	1.0		yes	no	9.0	10.0	2.0	5.0	3.0	No		True	bank			
+	list_challenge	100.27	-0.48		yes	no	9.0	7.0	3.0	4.0	1.0	No	I think sentence meaning order is not good for people that have dyslexia or any other type of  reading disorder, instead images are universal.	False	tip			
+	list_challenge	136.54	0.23		yes	no	9.0	5.0	2.0	3.0	1.0			False	twist			
+	list_challenge	122.98	1.0		yes	yes	9.0	10.0	8.0	4.0	4.0	No.	No.	True	arm			
+	list_challenge	204.54	0.74		yes	no	7.0	9.0	3.0	3.0	1.0	It depends on the language. If the semantic captcha is not in my native language, I would prefer the image captcha. If the sentence is in my native language, I would have no preference (maybe the time it takes me to solve the corresponding captcha).	It wasn't really possible to order the sentences that didn't have a similar meaning (I'm not sure if this was intentional).	False	part			
+	list_challenge	104.95	-0.35		yes	no	7.0	8.0	8.0	7.0	3.0	No		False	twist			
+	list_challenge	120.18	1.0		yes	no	8.0	9.0	5.0	5.0	4.0	it seems like it took longer to complete than the image or math-based captcha		True	part			
+	list_challenge	99.85	1.0		yes	no	6.0	5.0	5.0	5.0	5.0	No		True	bank			
+	list_challenge	118.68	0.42		no	no	7.0	7.0	6.0	4.0	6.0	No	Nice idea	False	record			
+	list_challenge	53.05	0.94		yes	yes	10.0	7.0	7.0	5.0	0.0	It took me longer than any other Captcha I have performed, so I would prefer different kinds.	This took me a long time because the sentences were long and some of the grammar was antiquated and hard to understand (as a native English speaker from America). I don't know if all of the examples were like that but I would not like to do this kind of thing as a Captcha.	True	tip			
+	list_challenge	101.78	-0.03		yes	no	9.0	9.0	4.0	2.0	3.0			False	twist			
+	list_challenge	33.68	1.0		yes	yes	10.0	9.0	7.0	6.0	3.0	Yes and no. Some people might understand the sentences differently and might get marked incorrectly.		True	order			
+	list_challenge	121.82	0.94		yes	yes	10.0	4.0	4.0	1.0	0.0	No		True	tip			
+	list_challenge	503.03	1.0		yes	no	7.0	8.0	5.0	1.0	2.0	no		True	twist			
+	list_challenge	70.44	0.23		yes	no	9.0	7.0	6.0	1.0	0.0	No		False	part			
+	list_challenge	158.94	1.0		yes	yes	10.0	9.0	9.0	2.0	3.0	I would prefer no captchas, but as it stands in regards to this challenge, Image-Captchas are preferred (which still have their own accessibility constraints).	Initially, it seems to give pereference to native speakers or high level speakers of English. This seems to ask someone more about their ability to understand vocabulary in context. Perhaps young speakers or English learners who encounter this type of captcha might be denied some kind of access. Otherwise, it was an interesting ordering game.	True	bar			
+	list_challenge	93.27	1.0		yes	no	5.0	10.0	9.0	3.0	5.0	No	The manual ordering interface is annoying. Please consider developing alternative input methods	True	arm			
+	list_challenge	181.22	1.0		no	no	5.0	7.0	4.0	3.0	5.0	No, because I think it's rather difficult because there is always room for interpretation with sentences		True	bank			
+	list_challenge	48.75	0.5		yes	yes	10.0	8.0	8.0	2.0	3.0	I would prefer the image-based one to this as this takes more time and requires more thought.	Some rankings seem subjective to me so I'm not sure there is just one possible answer; one sentence was rather unclear to me the way it was worded. 	False	bank			
+	list_challenge	53.17	-0.03		yes	no	8.0	7.0	5.0	4.0	3.0	No		False	order			
+	list_challenge	76.41	1.0		yes	no	8.0	7.0	6.0	3.0	1.0	No, because this kind of test is more time consuming		True	arm			
+	list_challenge	75.53	-0.81		yes	no	3.0	3.0	6.0	8.0	0.0	Why,it's just a challenge.		False	order			
+	list_challenge	70.34	0.23		yes	no	8.0	6.0	5.0	7.0	-1.0			False	twist			
+	list_challenge	53.12	1.0		yes	yes	10.0	10.0	8.0	7.0	0.0	No, it takes too long		True	order			
+	list_challenge	54.69	0.48		yes	yes	10.0	10.0	8.0	1.0	0.0			False	part			
+	list_challenge	168.91	0.74		yes	no	9.0	7.0	6.0	3.0	1.0	No		False	record			
+	list_challenge	74.56	0.81		yes	no	9.0	1.0	4.0	2.0	1.0	Not really. I think we are in a phase where Captchas are only being (mis)used for cheap data labeling.	Asking for an absolute ordering may be too much, when there are multiple sentences that are not related at all. This will probably introduce noise in your study.	True	record			
+	list_challenge	78.85	0.94		yes	no	9.0	7.0	7.0	3.0	1.0	Maybe with less archaic language.		True	tip			
+	list_challenge	98.55	1.0		yes	no	9.0	6.0	7.0	2.0	2.0	While it would be more fun and I personally might prefer it because of that, I think anyone who has less than near-native proficiency in English would not be able to complete the challenge and thus others might not prefer it.	I think the idea is fun, but the idea of testing if one's a human by testing one's semantic understanding in English is something I find quite problematic. It assumes that every user would be proficient enough to answer the test seeing as it requires near-native proficiency to understand the examples, which is not the case for a lot of people, and particularly disparaging towards non-native speakers coming from a minority background. It is also implied that there is (only) one correct answer to this test, which is never really the case when it comes to  semantics, as people might have different conceptualisations of meaning based on their previous knowledge and how knowledge is mapped and linked in the brain. It might be good to read up on cognitive linguistics/semantics for this study.	True	record			
+	list_challenge	316.55	0.48		yes	no	8.0	6.0	6.0	10.0	3.0	No		False	part			
+	list_challenge	78.04	0.5		yes	no	9.0	9.0	10.0	5.0	3.0	Νο		False	bank			
+	list_challenge	67.68	0.23		yes	no	7.0	7.0	7.0	8.0	0.0			False	twist			
+	list_challenge	38.09	0.85		yes	yes	10.0	9.0	9.0	5.0	3.0			True	bar			
+	list_challenge	91.53	1.0		yes	yes	10.0	9.0	7.0	5.0	6.0	It would need to be *very* well-designed since this is a pretty subjective matter. I suppose you could set a task like 'find all the sentences where the meaning of word X is the same as in the example sentence'. That could work. I don't think a ranking exercise would work though.	I think this is a really nice idea - more interesting than finding all the photos with a car in them (well, more interesting for me as a linguist, at least). On the other hand, there are some obvious problems with creating a captcha challenge of this sort in that not everyone always agrees about distinctions between senses of words (lumpers vs. splitters) and this would discriminate against non-speakers of English (or would one be able to select one's own L1 for this? Maybe not all languages are as easy to create a challenge of this sort as English is). Good luck with the study	True	bar			
+	list_challenge	53.64	1.0		yes	no	7.0	7.0	7.0	3.0	1.0	No		True	bank			
+	list_challenge	61.69	-0.03		yes	no	7.0	7.0	5.0	3.0	0.0			False	order			
+	list_challenge	44.81	1.0		yes	no	9.0	10.0	9.0	7.0	5.0	no		True	bank			
+	list_challenge	121.75	0.55		yes	no	7.0	2.0	2.0	1.0	1.0	Definitely not		False	tip			
+	list_challenge	46.27	0.29		yes	no	8.0	9.0	9.0	8.0	0.0	I prefer no challenges.		False	arm			
+	list_challenge	123.46	0.48		yes	no	8.0	10.0	9.0	9.0	5.0			False	part			
+	list_challenge	150.85	0.03		yes	no	7.0	3.0	4.0	8.0	3.0	No, because I could understand image captchas and solve them much faster than the proposed Semantic NLP catches. Because we humans see faster than we read. Compared to the typical scenarios in image captchas, which are rather trivial, like spotting the traffic light, I found the topic here quite abstract, making ordering difficult. Maybe only selecting matching sentences so the given reference sentence.		False	part			
+	list_challenge	76.43	0.48		yes	no	8.0	5.0	3.0	1.0	0.0			False	twist			
+	list_challenge	46.86	1.0		yes	no	8.0	10.0	9.0	5.0	2.0	Being a text researcher, yes, of course. Others might not.	I hate captchas in general :)	True	arm			
+	list_challenge	67.9	0.23		yes	yes	10.0	6.0	3.0	2.0	3.0	Not really, too exhausting	This takes a LOT of brainpower. If it proves effective, might be good for something you REALLY want to keep bots out of, but it'd be exhausting to do this on a regular basis. It might be better with fewer options, but if you take it down to three then there's a 17% chance to get through by luck, so you're limited there too. Also it's extremely subjective, so the idea of having only one right answer seems absurd to me, and would probably lock out a lot of less-literate humans as well.	False	twist			
+	list_challenge	66.81	1.0		yes	no	8.0	10.0	8.0	7.0	5.0	It seems a bit slower to perform than a typical captcha (text or puzzle), but quicker than an image-captcha.		True	bank			
+	list_challenge	103.7	0.55		yes	no	7.0	6.0	7.0	1.0	0.0	No.		False	tip			
+	list_challenge	101.05	0.29		yes	no	9.0	7.0	3.0	3.0	5.0	Definitely not.	With 1-2 items, the context seemed very restricted (maybe too restricted to even judge the exact meaning of that instance). I would have liked to get more information on what exactly you were looking for in terms of similarity, assuming there's one ideal solution. Is 'record' inside a compound like 'record label' the same as a specific record, or less similar to playing a record than a specific record (if so, on what grounds)?	False	record			
+	list_challenge	68.34	1.0		yes	yes	10.0	9.0	8.0	8.0	2.0	As a user I would be interested in a fast method. Captcha with images is sometimes slow.		True	arm			
+	list_challenge	388.37	1.0		yes	no	8.0	10.0	7.0	1.0	2.0	No		True	arm			
+	list_challenge	90.87	0.0		yes	no	8.0	6.0	5.0	4.0	1.0	More or less on the same level		False	bank			
+	list_challenge	62.27	1.0		yes	yes	10.0	5.0	4.0	3.0	1.0	No. I don't want to do that everytime I have to solve a captcha	Yeah, I don't know if this matters, but the number boxes can go above ten	True	bank			
+	list_challenge	150.85	0.48		yes	no	8.0	7.0	7.0	1.0	0.0			False	part			
+	list_challenge	122.31	0.74		yes	no	7.0	10.0	10.0	10.0	2.0	No		False	part			
+	list_challenge	15.73	-0.81		yes	no	9.0	1.0	1.0	1.0	0.0			False	order			
+	list_challenge	111.33	0.94		yes	no	8.0	2.0	2.0	1.0	3.0	No	It does not feel fair for people without any English knowledge of speakers of minority languages	True	tip			
+	list_challenge	42.7	1.0		yes	no	9.0	8.0	6.0	2.0	1.0	No		True	arm			
+	list_challenge	69.28	0.73				10.0	10.0	8.0	5.0	0.0	yes		False	bar			
+	list_challenge	60.26	0.56		yes	yes	10.0	8.0	6.0	2.0	0.0	No, this challenge takes much more time than an image based one.		False	order			
+	list_challenge	52.06	0.5		yes	yes	10.0	9.0	8.0	5.0	3.0	Possibly		False	bank			
+	list_challenge	132.37	0.85		yes	no	8.0	9.0	9.0	1.0	3.0	No	Many people would not be able to understand what to do.	True	bar			
+	list_challenge	157.84	0.74		yes	no	9.0	8.0	5.0	5.0	5.0			False	twist			
+	list_challenge	75.76	0.5		yes	no	9.0	8.0	8.0	7.0	3.0	Yes, OK.		False	bank			
+	list_challenge	90.35	0.23		yes	yes	10.0	9.0	8.0	3.0	5.0	No		False	twist			
+	list_challenge	87.86	1.0		no	no	8.0	8.0	4.0	4.0	3.0	No		True	arm			
+	list_challenge	58.64	1.0		yes	no	8.0	10.0	9.0	1.0	2.0	No. I don't like Captchas. They are annoying and routinely used for purposes others than their stated one, i.e. identification - e.g. machine learning training.		True	arm			
+	list_challenge	55.43	1.0		yes	yes	10.0	10.0	7.0	4.0	3.0	Semantic ordering and categorization requires a little too high of cognitive load for the general public to make proper use of without being considered too requiring of effort or time consuming	This is a good place of untapped potential until computers improve at semantic analysis, but everyday people probably don't think about semantics enough for a test like this to become widespread. It would be cool if this made everyone think about it more though. What can people do linguistically without a second thought that thousands upon thousands of vector spaces cannot do?	True	order			
+	list_challenge	105.12	1.0		yes	yes	10.0	10.0	10.0	7.0	7.0	yes		True	bank			
+	list_challenge	122.69	0.23		yes	no	8.0	8.0	4.0	6.0	4.0	I am not sure if I would prefer the textual captcha, because it has too much ambiguity and requires more thinking.		False	twist			
+	list_challenge	61.23	0.74		yes	no	9.0	10.0	5.0	1.0	3.0	No		False	part			
+	list_challenge	169.3	1.0		yes	no	1.0	10.0	6.0	2.0	0.0	no		True	order			
+	list_challenge	81.19	0.18		yes	no	7.0	9.0	9.0	10.0	2.0	Yes	No	False	bar			
+	list_challenge	128.4	0.23		yes	yes	10.0	9.0	3.0	1.0	5.0	"I like the idea of this type of challenge, but it would work better with related words rather than related senses of words, or at least with more easily-separable word senses. People have a notoriously high level of disagreement re: relatedness of word senses. The example I had was especially challenging, as some instances used ""part"" as part of a verb (""take part"") and others used it as a more typical noun."	I'm a computational linguist. I'm definitely not the average user :)	False	part			
+	list_challenge	97.99	-0.87		yes	no	7.0	4.0	3.0	1.0	1.0	No, images are still easier to get the gist of it and they are faster to solve as the visual apparatus functions faster then the reading one	:D	False	record			
+	list_challenge	86.65	0.81		yes	no	3.0	6.0	5.0	2.0	1.0			True	tip			
+	list_challenge	73.87	1.0		yes	no	8.0	8.0	5.0	2.0	3.0	No, this felt like a lot more effort than an image captcha, which feels a lot more intuitive.	"I feel like it could work with if: 1. the instructions were refined to be more intuitive. E.g. ""Click on all traffic lights"" is much quicker to grasp than ""re-rank the sentences based on semantic similarity of the highlighted word"" (paraphrasing here, but I think you get what I mean :) )2. Maybe multiple pair-wise comparisons would be more intuitive (e.g. in which one of these two sentences the highlighted word is closer to the reference). Not sure if that would have the same robustness though.3. Bit of a side-note, but have you tried giving this task to an LLM? Would be curios to know how it compares "	True	order			
+	list_challenge	89.08	0.89		yes	no	1.0	9.0	8.0	5.0	1.0	No	Nice sentences:)	True	arm			
+	list_challenge	37.13	1.0		yes	yes	10.0	8.0	7.0	8.0	3.0	YES!		True	bank			
+	list_challenge	105.61	0.74		yes	no	1.0	10.0	6.0	6.0	2.0	NO		False	part			
+	list_challenge	138.82	0.23		yes	no	1.0	10.0	5.0	8.0	3.0	No		False	twist			
+	list_challenge	48.83	1.0		yes	yes	10.0	9.0	8.0	3.0	2.0	I think I would prefer an image Captcha, inasmuch as image Captchas are usually a little quicker to solve.	"One part of the example provided which might underscore a fundamental weakness of the concept is the two sentences involving an arm of the sea: it's hard to see why speakers would rate one use of ""arm"" in the phrase ""arm of the sea"" as semantically closer to a literal, anatomical arm than the other, especially when there's nothing in the context which distinguishes these two arms of the sea from one another clearly (such as size, hypothetically, or a poetic attribution of animacy to the sea).  Good Luck! "	True	arm			
+	list_challenge	77.67	0.56		yes	no	7.0	10.0	9.0	6.0	2.0			False	order			
+	list_challenge	137.39	-0.1		yes	no	7.0	6.0	5.0	6.0	5.0	No		False	twist			
+	list_challenge	91.34	1.0		yes	no	8.0	6.0	3.0	3.0	4.0			True	twist			
+	list_challenge	66.74	1.0		yes	no	8.0	10.0	9.0	10.0	3.0	I think it would be difficult for people with language, reading and communication disorders. It may also be complicated for people without high education. Image-Captcha are more accessible.	It would be nice if people could choose what kind of Captcha they prefer, to avoid accessibility issues.	True	arm			
+	list_challenge	94.97	0.89		yes	no	9.0	10.0	9.0	8.0	7.0	Maybe		True	arm			
+	list_challenge	30.95	1.0		yes	no	8.0	9.0	7.0	5.0	8.0	I'd like it because it's something else for a change. But I'm rather steeped in linguistics, might be hard to understand for people who are not.		True	bank			
+	list_challenge	38.01	0.73		yes	no	9.0	8.0	7.0	1.0	0.0			False	bar			
+	list_challenge	105.1	-0.61		yes	no	8.0	5.0	3.0	4.0	5.0	Probably not. I found the captcha challenged quite difficult. You need quite a fundamental understanding of the English language to know all semantic nuances of a word regarding it's context	Quite an interesting approach. However, it might not feasible to use as not every user is so fluid in the English language	False	twist			
+	list_challenge	51.6	0.5		yes	yes	10.0	9.0	8.0	5.0	1.0	Yes		False	bank			
+	list_challenge	123.05	-0.29		yes	no	9.0	8.0	6.0	6.0	3.0	Depends on the difficulty, but text captcha might be better, especially for visually impaired people	Good idea but I think the example is weird/difficult	False	tip			
+	list_challenge	45.14	0.74		yes	yes	10.0	9.0	7.0	4.0	4.0	Yes, because I'm a linguist :)	Good luck with your research!	False	part			
+	list_challenge	52.38	1.0		yes	no	8.0	9.0	9.0	7.0	5.0	No, image is more convenient for me as you can easily spot patterns / objects and there is no need to read through sentences. Also images are more language-independent.	A short introduction on what a Captcha-challenge is would have been nice. But apart from this the study was great!	True	arm			
+	list_challenge	50.41	1.0		yes	no	8.0	8.0	9.0	8.0	4.0	No		True	bank			
+	list_challenge	53.69	1.0		yes	no	9.0	9.0	9.0	9.0	3.0	No		True	bar			
+	list_challenge	75.39	0.03		yes	no	8.0	7.0	3.0	2.0	1.0	No		False	twist			
+	list_challenge	142.4	0.55		yes	no	7.0	7.0	9.0	3.0	5.0			False	tip			
+	list_challenge	72.54	0.81		yes	no	8.0	8.0	5.0	4.0	1.0	I might prefer this one, but drag-and-drop is not convenient for me, clicking would be easier. Then what happens if our language profeciency is not good enough?	Good luck with the thesis and the study!	True	record			
+	list_challenge	71.06	0.23		yes	yes	10.0	8.0	6.0	3.0	3.0	It's a nice change of pace, but I feel like it would be very easy to solve with an LLM – and if it's not currently, if it catches on, then someone will research until they can break it.		False	twist			
+	list_challenge	51.82	1.0		yes	no	7.0	10.0	6.0	4.0	3.0	I don't know		True	order			
+mean		105.92	0.58				8.02	7.71	6.24	4.44	2.53							
+median		85.24	0.74				8.0	8.0	6.5	4.0	3.0							
+standard_deviation		75.92	0.46				2.02	2.14	2.22	2.53	1.85							
+min		15.73	-0.87				1.0	1.0	1.0	1.0	-1.0							
+max		503.03	1.0				10.0	10.0	10.0	10.0	8.0					126.0	54.0	0.43

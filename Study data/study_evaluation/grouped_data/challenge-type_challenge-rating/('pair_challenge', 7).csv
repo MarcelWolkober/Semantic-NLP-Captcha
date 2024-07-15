@@ -1,0 +1,15 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	60.81		0.69	yes	no	8.0	10.0	7.0	7.0	10.0	Yes		False	order			
+	pair_challenge	69.18		0.87	yes	yes	10.0	10.0	8.0	7.0	2.0	Possibly		True	part			
+	pair_challenge	187.3		0.22			1.0	1.0	8.0	7.0	2.0	1		False	bar			
+	pair_challenge	225.8		-0.83	yes	no	7.0	5.0	3.0	7.0	2.0	I would prefer Image-Captcha because images in general are more straightforward than texts.		False	record			
+	pair_challenge	88.59		0.45	yes	yes	10.0	9.0	5.0	7.0	3.0	Yes, if the sentences took less time to read.	The sentences were pretty long which made it harder to read and make choices. 	False	part			
+	pair_challenge	106.76		0.9	yes	no	8.0	8.0	8.0	7.0	2.0	Yes		True	bar			
+	pair_challenge	75.17		0.78	yes	no	8.0	9.0	7.0	7.0	5.0	No.		False	order			
+	pair_challenge	247.97		0.53	yes	no	5.0	5.0	3.0	7.0	4.0			False	part			
+	pair_challenge	108.26		0.74	yes	no	8.0	10.0	9.0	7.0	3.0	No		False	bar			
+mean		129.98		0.48			7.22	7.44	6.44	7.0	3.67							
+median		106.76		0.69			8.0	9.0	7.0	7.0	3.0							
+standard_deviation		71.24		0.54			2.77	3.13	2.24	0.0	2.6							
+min		60.81		-0.83			1.0	1.0	3.0	7.0	2.0							
+max		247.97		0.9			10.0	10.0	9.0	7.0	10.0					9.0	2.0	0.22

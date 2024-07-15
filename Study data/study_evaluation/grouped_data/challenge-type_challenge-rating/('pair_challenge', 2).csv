@@ -1,0 +1,19 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	136.04		0.6	yes	no	8.0	7.0	7.0	2.0	2.0	No		False	part			
+	pair_challenge	105.45		0.33	yes	yes	10.0	9.0	7.0	2.0	2.0	I strongly prefer image-based challenges because it requires less work	"You may need a better sentence tokenizer -- one of the sentences was cut short likely because of the periods in the ""L.B.J."" acronym. "	False	tip			
+	pair_challenge	137.47		0.55	yes	no	9.0	9.0	8.0	2.0	0.0	sure :)But yes, a little shorter would certainly be more agreeable.	I'm wondering if non-linguists would be a bit squeamish about the instructions to judge similarity in meaning. But maybe I underestimate non-linguists' eagerness to engage with semantics. I guess you'll find out!	False	part			
+	pair_challenge	90.22		1.0	yes	no	9.0	9.0	9.0	2.0	3.0	I don‘t mind		True	order			
+	pair_challenge	153.49		0.79	yes	no	7.0	4.0	6.0	2.0	1.0	Noooo		False	arm			
+	pair_challenge	212.32		0.53	yes	no	6.0	5.0	10.0	2.0	1.0	No		False	part			
+	pair_challenge	394.98		0.04	yes	no	5.0	6.0	3.0	2.0	10.0			False	tip			
+	pair_challenge	104.19		0.75	yes	no	8.0	8.0	8.0	2.0	2.0	yes		False	arm			
+	pair_challenge	76.65		0.18	yes	no	8.0	9.0	9.0	2.0	1.0	No	It excludes too many people - those who do not speak the language good enough.	False	record			
+	pair_challenge	110.58		-0.16	yes	no	8.0	8.0	8.0	2.0	5.0			False	record			
+	pair_challenge	108.13		0.26	yes	no	8.0	9.0	7.0	2.0	2.0	No.		False	twist			
+	pair_challenge	73.39		0.86			1.0	8.0	10.0	2.0	2.0			True	record			
+	pair_challenge	36.54		0.79	yes	no	9.0	10.0	10.0	2.0	2.0	No		False	arm			
+mean		133.8		0.5			7.38	7.77	7.85	2.0	2.54							
+median		108.13		0.55			8.0	8.0	8.0	2.0	2.0							
+standard_deviation		89.41		0.35			2.33	1.79	1.95	0.0	2.54							
+min		36.54		-0.16			1.0	4.0	3.0	2.0	0.0							
+max		394.98		1.0			10.0	10.0	10.0	2.0	10.0					13.0	2.0	0.15

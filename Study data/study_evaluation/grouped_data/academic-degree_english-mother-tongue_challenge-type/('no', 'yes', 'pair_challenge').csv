@@ -1,0 +1,7 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	86.18		1.0	no	yes	10.0	10.0	7.0	10.0	3.0	yes	"The question ""How convenient and practical ..."" could use a bit more--I dunno--clarity or specificity. Maybe the problem is the word ""is"", since I haven't ever seen such a challenge used to human-detect."	True	order			
+mean		86.18		1.0			10.0	10.0	7.0	10.0	3.0							
+median		86.18		1.0			10.0	10.0	7.0	10.0	3.0							
+standard_deviation																		
+min		86.18		1.0			10.0	10.0	7.0	10.0	3.0							
+max		86.18		1.0			10.0	10.0	7.0	10.0	3.0					1.0	1.0	1.0

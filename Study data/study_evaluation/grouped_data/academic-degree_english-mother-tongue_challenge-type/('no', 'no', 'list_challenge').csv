@@ -1,0 +1,10 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	204.91	0.18		no	no	3.0	3.0	3.0	7.0	5.0	I don't know	No	False	bar			
+	list_challenge	118.68	0.42		no	no	7.0	7.0	6.0	4.0	6.0	No	Nice idea	False	record			
+	list_challenge	181.22	1.0		no	no	5.0	7.0	4.0	3.0	5.0	No, because I think it's rather difficult because there is always room for interpretation with sentences		True	bank			
+	list_challenge	87.86	1.0		no	no	8.0	8.0	4.0	4.0	3.0	No		True	arm			
+mean		148.17	0.65				5.75	6.25	4.25	4.5	4.75							
+median		149.95	0.71				6.0	7.0	4.0	4.0	5.0							
+standard_deviation		54.22	0.41				2.22	2.22	1.26	1.73	1.26							
+min		87.86	0.18				3.0	3.0	3.0	3.0	3.0							
+max		204.91	1.0				8.0	8.0	6.0	7.0	6.0					4.0	2.0	0.5

@@ -1,0 +1,116 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	pair_challenge	87.35		0.64	yes	no	9.0	9.0	7.0	3.0	5.0	No		False	twist			
+	pair_challenge	93.96		0.45	yes	no	9.0	9.0	8.0	10.0	6.0	No	Easy and convenient	False	bank			
+	pair_challenge	164.13		0.38	yes	no	9.0	8.0	7.0	5.0	2.0	I think an Image Captcha challenge is way faster for users.		False	twist			
+	pair_challenge	136.04		0.6	yes	no	8.0	7.0	7.0	2.0	2.0	No		False	part			
+	pair_challenge	171.72		0.45	yes	no	9.0	4.0	8.0	4.0	1.0	"Not really, for example ""puzzle captchas"" are more tolerable than this, but this is still way better than Google's ""Click on an image and wait for ages until the next one appears"""		False	tip			
+	pair_challenge	106.94		0.87	yes	no	8.0	9.0	6.0	6.0	1.0	no		True	part			
+	pair_challenge	115.55		0.85	yes	no	8.0	10.0	9.0	5.0	2.0	Not quite. In this semantic challenge it can be very easy to fail it by mistake (one wrong click?)	Selection of focal words for the challenge might be problematic. 1. Some speakers may be unfamiliar with some words or some senses. 2. How many words have enough senses and shades of meaning to be useful?   	True	arm			
+	pair_challenge	119.23		0.55	yes	no	8.0	6.0	3.0	1.0	1.0	No		False	part			
+	pair_challenge	90.62		0.56	yes	no	9.0	9.0	5.0	5.0	1.0			False	bank			
+	pair_challenge	74.76		0.41	no	no	8.0	10.0	8.0	1.0	0.0	Ja		False	order			
+	pair_challenge	62.13		0.22	yes	no	9.0	9.0	7.0	3.0	1.0	I already have to solve many more captchas than I'd like -- but at least many of the image ones tend to be fairly quick to solve. Comparing words in several long-ish sentences seems like it would take even more time and energy.		False	part			
+	pair_challenge	65.96		0.95	yes	yes	10.0	9.0	9.0	10.0	0.0	No		True	arm			
+	pair_challenge	69.99		0.17	yes	no	9.0	8.0	6.0	6.0	8.0			False	twist			
+	pair_challenge	81.22		0.17	yes	no	9.0	8.0	8.0	4.0	3.0			False	record			
+	pair_challenge	68.68		0.85			9.0	10.0	8.0	6.0	5.0	Yes		True	arm			
+	pair_challenge	81.28		-0.35	yes	no	8.0	8.0	7.0	3.0	1.0	No		False	tip			
+	pair_challenge	105.45		0.33	yes	yes	10.0	9.0	7.0	2.0	2.0	I strongly prefer image-based challenges because it requires less work	"You may need a better sentence tokenizer -- one of the sentences was cut short likely because of the periods in the ""L.B.J."" acronym. "	False	tip			
+	pair_challenge	137.47		0.55	yes	no	9.0	9.0	8.0	2.0	0.0	sure :)But yes, a little shorter would certainly be more agreeable.	I'm wondering if non-linguists would be a bit squeamish about the instructions to judge similarity in meaning. But maybe I underestimate non-linguists' eagerness to engage with semantics. I guess you'll find out!	False	part			
+	pair_challenge	120.33		0.97	yes	no	9.0	9.0	6.0	5.0	3.0	This task definitely requires more thinking than image-captcha.		True	bar			
+	pair_challenge	157.21		-0.72	yes	yes	10.0	1.0	1.0	1.0	0.0	NOT REALLY		False	record			
+	pair_challenge	73.92		0.71	yes	no	9.0	9.0	9.0	8.0	10.0	yes		False	bar			
+	pair_challenge	85.92		0.23	yes	yes	10.0	10.0	10.0	5.0	1.0	Captcha challenges that rely on images are difficult enough; it is often a problem. Substituting  sentence understanding would make it more difficult, especially for non-native speakers.	See above.	False	part			
+	pair_challenge	60.81		0.69	yes	no	8.0	10.0	7.0	7.0	10.0	Yes		False	order			
+	pair_challenge	76.23		0.33	yes	no	8.0	4.0	6.0	4.0	2.0	Depends massively on the amount of answers needed to complete the captcha, but if it's only one answer then yes.		False	tip			
+	pair_challenge	86.27		0.89	yes	no	8.0	7.0	8.0	3.0	3.0	no. It takes more cognitive effort than image-captchas.		True	bank			
+	pair_challenge	161.04		0.95	yes	no	8.0	9.0	5.0	5.0	0.0	sounds interesting		True	order			
+	pair_challenge	49.07		0.17	yes	no	8.0	6.0	5.0	6.0	2.0	personally no, but it makes sense to have non-image captchas!		False	order			
+	pair_challenge	75.11		-0.35	yes	no	9.0	9.0	9.0	1.0	3.0	The sentences were quite difficult to understand, I am not sure they were the best examples for this task. However, I think it could be useful in the future with more suitable examples.	The first screen was a bit too crowded and full of typos. As a senior in the field, I'd advise you proofread everything :)	False	record			
+	pair_challenge	183.85		-0.73	no	no	8.0	3.0	2.0	1.0	0.0	no	lot of reading bad ... want more pictures	False	record			
+	pair_challenge	24.85		1.0	yes	yes	10.0	10.0	9.0	4.0	2.0	No - the law 'bar' test example is fairly dependent on one's knowledge of the English language and/or law school technicalities. Meanwhile, the Image-Captcha - while tedious - is more accessible to users who speak different languages, as they can look up the prompt of an Image-Captcha in their mother language and identify the images accordingly (in retrospect, I realized that this is also technically true for a written Captcha challenge).	Honestly, I would include more questions in the challenge, perhaps even doubling the count to 10 (I think there were 5 prompts). As it is, the randomly generated pairwise examples gave me 4 comparisons where both 'bar' terms referred to a bar where you get drinks and only one comparison was comparing drastically different examples. With a larger pool of questions, this would allow for some more diverse comparisons for each participant.	True	bar			
+	pair_challenge	92.78		0.64	yes	yes	10.0	8.0	6.0	6.0	2.0	Not necessarily		False	part			
+	pair_challenge	43.43		0.75			10.0	9.0	9.0	8.0	1.0	no	While I don't think Image-Captcha is good either, this feels overly limiting because it relies on native-like levels of language proficiency. The type that I like the most is the slide the puzzle piece into place in an image one. This is far more intuitive and more generally applicable than the visual acuity required for Image-Captcha or language proficiency required for sentence meaning challenges like this.	False	arm			
+	pair_challenge	90.22		1.0	yes	no	9.0	9.0	9.0	2.0	3.0	I don‘t mind		True	order			
+	pair_challenge	59.92		0.64	yes	yes	10.0	8.0	8.0	5.0	2.0			False	order			
+	pair_challenge	74.74		0.58	yes	no	8.0	9.0	7.0	3.0	1.0	No		False	bank			
+	pair_challenge	70.74		0.69	yes	no	9.0	9.0	7.0	3.0	2.0	no, ordinary captcha are easier and less ambiguous		False	bar			
+	pair_challenge	104.77		0.66	yes	no	9.0	8.0	9.0	5.0	4.0	rather not, because in comparison to Image-Captcha it takes more effort and time.		False	record			
+	pair_challenge	151.79		0.86	yes	no	8.0	5.0	7.0	8.0	10.0	yes		True	tip			
+	pair_challenge	139.51		0.9	yes	yes	10.0	10.0	10.0	5.0	5.0	no		True	bar			
+	pair_challenge	40.89		0.75	yes	yes	10.0	10.0	7.0	3.0	2.0	It is interesting but I don't think I would prefer it, not that I am a fan of Captchas.	Would these not be easy for a robot to solve?	False	order			
+	pair_challenge	114.24		0.17	yes	no	8.0	5.0	7.0	5.0	0.0	No	No	False	bank			
+	pair_challenge	69.18		0.87	yes	yes	10.0	10.0	8.0	7.0	2.0	Possibly		True	part			
+	pair_challenge	74.2		0.4	yes	no	8.0	9.0	7.0	5.0	3.0	Probably not. The similarity scale is not particularly well defined, so what is a 2 for one person might be a 3 for another even if they understand the sentences the same way. It might work if the response time and cursor movement are taken into account, though.		False	record			
+	pair_challenge	86.18		1.0	no	yes	10.0	10.0	7.0	10.0	3.0	yes	"The question ""How convenient and practical ..."" could use a bit more--I dunno--clarity or specificity. Maybe the problem is the word ""is"", since I haven't ever seen such a challenge used to human-detect."	True	order			
+	pair_challenge	104.54		0.83	yes	no	8.0	8.0	7.0	6.0	5.0			True	arm			
+	pair_challenge	70.23		0.79	yes	no	8.0	8.0	6.0	4.0	2.0	No		False	bank			
+	pair_challenge	110.57		0.76	yes	no	8.0	7.0	5.0	6.0	3.0	No, language users differ.		False	part			
+	pair_challenge	57.18		0.94	yes	no	8.0	8.0	8.0	5.0	3.0	Not sure		True	tip			
+	pair_challenge	145.62		0.64	yes	no	9.0	6.0	8.0	3.0	1.0	"Click ""I am not a robot"""		False	twist			
+	pair_challenge	22.81		0.89	yes	yes	10.0	9.0	9.0	5.0	1.0			True	bank			
+	pair_challenge	65.92		0.58	yes	no	8.0	8.0	7.0	1.0	0.0			False	bank			
+	pair_challenge	159.63		0.67	yes	no	8.0	7.0	6.0	3.0	2.0	Yes, but with a possible choice of language.		False	tip			
+	pair_challenge	84.7		0.29	yes	yes	10.0	7.0	6.0	4.0	2.0	I prefer the Image-Captcha		False	twist			
+	pair_challenge	104.19		0.75	yes	no	8.0	8.0	8.0	2.0	2.0	yes		False	arm			
+	pair_challenge	58.42		1.0	yes	yes	10.0	10.0	10.0	9.0	3.0	It would depend on the number of questions. I'd prefer e.g. 3 pictures with bicycles to 3 sentences, but I'd prefer 3 sentences over 6 pictures with bicycles.		True	bar			
+	pair_challenge	131.73		0.68	yes	no	9.0	10.0	8.0	9.0	15.0	Yes!	Good luck!	False	order			
+	pair_challenge	76.65		0.18	yes	no	8.0	9.0	9.0	2.0	1.0	No	It excludes too many people - those who do not speak the language good enough.	False	record			
+	pair_challenge	110.58		-0.16	yes	no	8.0	8.0	8.0	2.0	5.0			False	record			
+	pair_challenge	128.85		0.8			9.0	8.0	8.0	1.0	1.0	This question is missing context	"There should be an option to indicate that one does not know the meaning of a word in a concrete context. If I would chose to select the lowest score for such cases, you won't be able to distinguish between real ""lowest score"" answers and such where I simply did not understand the meaning in one of the sentences. "	True	tip			
+	pair_challenge	85.8		0.45	yes	no	8.0	7.0	7.0	9.0	1.0	yes		False	bar			
+	pair_challenge	61.12		0.47	yes	no	8.0	9.0	10.0	3.0	1.0	no		False	bank			
+	pair_challenge	189.53		0.85	yes	no	8.0	8.0	5.0	4.0	3.0	No		True	arm			
+	pair_challenge	95.58		0.29	yes	yes	10.0	8.0	7.0	5.0	3.0	Probably better than Image Captcha but I can imagine that it might prove tiresome if one had to do it too often (like Image-Captcha also is)		False	twist			
+	pair_challenge	214.55		0.57	yes	no	8.0	9.0	5.0	8.0	2.0	No (it may be more time consuming and may be difficult for many people)		False	arm			
+	pair_challenge	112.16		0.89	yes	no	8.0	9.0	7.0	6.0	2.0			True	part			
+	pair_challenge	63.27		0.78	yes	no	8.0	9.0	8.0	10.0	3.0	yes, it's more fun!		False	order			
+	pair_challenge	107.3		-0.34	yes	no	8.0	4.0	4.0	1.0	0.0	No	I'm sorry but this very impractical. 1) it takes a lot of time fot a captcha 2) it is quite hard to establish a ground truth for this task, we are talking about fine-grained semantics! 3) it is clearly aimed at native speakers only	False	twist			
+	pair_challenge	97.83		0.88	yes	yes	10.0	10.0	10.0	10.0	5.0			True	bar			
+	pair_challenge	116.11		0.51	yes	no	9.0	7.0	8.0	3.0	2.0	no		False	bar			
+	pair_challenge	172.1		0.76	yes	no	9.0	10.0	8.0	10.0	1.0	no	"It's not really clear how ""similar"" the words ""bar"" in ""sitting at the bar"" and in ""bar mirror"" are. For a human."	False	bar			
+	pair_challenge	180.94		0.33		no	9.0	9.0	7.0	5.0	2.0	I wasn't overly sure how to answer sometimes, so I think this challenge is too hard for a Captcha, which should be easy to solve without much linguistic knowledge required.		False	part			
+	pair_challenge	44.27		0.18	yes	no	8.0	9.0	7.0	5.0	2.0	no.	to intellectual task for captcha	False	order			
+	pair_challenge	83.09		0.83	yes	no	9.0	10.0	8.0	3.0	3.0	This is probably more demanding than captcha, probably also fuzzier as much as I can imagine how it works.	"The survey would be much more trustworthy if there was some more specific information as to who and why conducts it.""How convenient and practical do you think is such type of ""human-detection"" challenge in daily life?"" contains two questions, as convenient and practical have different (even if related) meanings"	True	order			
+	pair_challenge	175.96		0.17	yes	yes	10.0	8.0	7.0	1.0	1.0			False	twist			
+	pair_challenge	53.73		-0.11	yes	yes	10.0	9.0	9.0	8.0	6.0	Only if this study revealed inter-rater agreement that was EXTREMELY high.  Otherwise, this is probably too subjective for such a use and would result in frustrated users not being able to buy Taylor Swift tickets and the like.	Very interesting study; best of luck to you!	False	record			
+	pair_challenge	108.13		0.26	yes	no	8.0	9.0	7.0	2.0	2.0	No.		False	twist			
+	pair_challenge	113.54		0.63	yes	no	10.0	9.0	8.0	8.0	3.0	Image		False	bar			
+	pair_challenge	103.27		0.52	yes	no	9.0	8.0	4.0	4.0	2.0	image captcha would be easier		False	twist			
+	pair_challenge	109.62		0.63	yes	yes	10.0	7.0	8.0	10.0	3.0	I like this challenge but it is very subjective whereas Image-Captcha feels more objective.	"The sentence that contains ""on records"" is challenging to read as a native speaker because it is so close to the standard phrase ""on record"" but isn't. This particular sentence seems like a hard base sentence to rank against because it is so easily open to misinterpretation and feels annoying to read."	False	record			
+	pair_challenge	233.78		0.33	yes	yes	10.0	7.0	8.0	6.0	2.0	This is preferable because it is at least not difficult to see the physical text.		False	part			
+	pair_challenge	77.64		0.38	yes	yes	10.0	10.0	8.0	4.0	2.0	No. It's easier to spot objects than to decide between literal and figurative language and is obviously much easier for non-native speakers.		False	arm			
+	pair_challenge	235.02		0.47	yes	no	9.0	5.0	8.0	8.0	2.0	No		False	tip			
+	pair_challenge	147.07		0.19	yes	no	8.0	7.0	8.0	5.0	0.0	no		False	record			
+	pair_challenge	83.74		0.25	yes	yes	9.0	9.0	9.0	9.0	5.0	No, it's more likely that a LLM would better understand this than an image caption.		False	bar			
+	pair_challenge	177.93		0.41	yes	no	8.0	4.0	3.0	4.0	1.0	No		False	tip			
+	pair_challenge	89.11		0.19	yes	no	9.0	10.0	10.0	9.0	5.0	No		False	bar			
+	pair_challenge	73.25		0.4	yes	no	8.0	8.0	8.0	9.0	1.0	No, it can be ableist under certain contexts and disadvantage speakers of dialects	N/A, very interesting	False	record			
+	pair_challenge	88.59		0.45	yes	yes	10.0	9.0	5.0	7.0	3.0	Yes, if the sentences took less time to read.	The sentences were pretty long which made it harder to read and make choices. 	False	part			
+	pair_challenge	108.81		0.46	yes	yes	10.0	5.0	9.0	5.0	1.0	image captcha is less work i think		False	twist			
+	pair_challenge	53.77		0.58	yes	yes	10.0	9.0	7.0	8.0	4.0	maybe		False	bank			
+	pair_challenge	74.79		0.99	yes	yes	10.0	7.0	6.0	3.0	2.0			True	bar			
+	pair_challenge	174.59		0.75	yes	no	8.0	7.0	6.0	5.0	2.0	no, I prefer the Image-Captcha		False	record			
+	pair_challenge	179.85		0.7	yes	no	9.0	3.0	4.0	6.0	4.0	Not sure.	I didn’t understand the first two sentences, so my rating was basically a random guess. If implemented, it should make sure that a proficient speaker understands the sentences. Also, I found it annoying that the same 2nd sentence was repeated every time. 	False	tip			
+	pair_challenge	53.63		1.0	yes	no	8.0	9.0	9.0	5.0	2.0	This very much depends on the presentation and number of sentences required to solve this task: Parallel image processing is quite easy for humans. With text however, one needs to at least skim all of the sentences in order to make a (I imagine) quite noisy decision.		True	bar			
+	pair_challenge	167.68		0.91	yes	yes	10.0	10.0	8.0	8.0	3.0	No - takes longer		True	order			
+	pair_challenge	48.99		0.59	yes	yes	9.0	10.0	8.0	8.0	15.0	no, because image captcha is still more clear imo	none, its a great idea, i just think people will give very different scores	False	order			
+	pair_challenge	299.79		0.6	yes	no	8.0	8.0	6.0	4.0	3.0	No because it's subjective		False	twist			
+	pair_challenge	94.66		0.23	yes	no	8.0	7.0	7.0	4.0	2.0			False	arm			
+	pair_challenge	70.83		-0.35	yes	no	9.0	7.0	10.0	5.0	2.0	It's better than the counting challenges with a timer, for sure, but would be challenging for non-native speakers or people with some cognitive disability.	I don't know if this was on purpose, but while almost all the sentences were easy to understand, the one about poetry sales records being tuned was very confusing.	False	record			
+	pair_challenge	76.4		0.07	yes	no	8.0	9.0	5.0	3.0	1.0	No		False	bank			
+	pair_challenge	88.13		-0.16	yes	no	8.0	8.0	9.0	6.0	3.0	No, because it require more knowledge in the language of interest. But it might be a good alternative for visually-disabled people (using screen readers).	Maybe I have overread it, but maybe emphasize in the instructions more that you are interested in the meaning of the words in bold-face and not the sentences in general. My ratings refer to a meaning comparison of the wohle sentence. I just understood to rate the bold-face words when I saw the question on the general information page.	False	bank			
+	pair_challenge	106.76		0.9	yes	no	8.0	8.0	8.0	7.0	2.0	Yes		True	bar			
+	pair_challenge	75.17		0.78	yes	no	8.0	9.0	7.0	7.0	5.0	No.		False	order			
+	pair_challenge	92.94		0.27	yes	no	8.0	8.0	7.0	5.0	3.0			False	record			
+	pair_challenge	41.31		0.95	yes	no	8.0	10.0	5.0	4.0	3.0	Yes, but it would be less universal than current captcha challenges.		True	order			
+	pair_challenge	108.26		0.74	yes	no	8.0	10.0	9.0	7.0	3.0	No		False	bar			
+	pair_challenge	117.39		0.69	yes	no	8.0	9.0	7.0	8.0	0.0			False	bank			
+	pair_challenge	193.68		0.64	yes	no	8.0	3.0	5.0	3.0	2.0	Ideally if I was able to discern the meaning of the sentences I would prefer it over image CAPTCHAs, however I struggled with the sentences given in the test because I did not know the meaning of most usages and had to guess.		False	tip			
+	pair_challenge	36.54		0.79	yes	no	9.0	10.0	10.0	2.0	2.0	No		False	arm			
+	pair_challenge	84.7		0.82	yes	no	8.0	9.0	8.0	5.0	4.0	Yes, maybe. Sometimes the pictures used in Image-Captcha-challenges are very difficult to 'read'.		True	bar			
+mean		104.31		0.53			8.79	8.09	7.25	5.08	2.72							
+median		91.7		0.6			9.0	9.0	7.0	5.0	2.0							
+standard_deviation		48.55		0.37			0.83	1.85	1.74	2.54	2.58							
+min		22.81		-0.73			8.0	1.0	1.0	1.0	0.0							
+max		299.79		1.0			10.0	10.0	10.0	10.0	15.0					110.0	28.0	0.25

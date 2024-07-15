@@ -1,0 +1,19 @@
+row_type	challenge_type	time_to_complete	spearman_correlation	krippendorff_coefficient	academic_degree	english_mother_tongue	language_skill	sentence_difficulty	similarity_difficulty	challenge_rating	challenge_count	challenge_feedback	general_feedback	challenge_solved	lemma	count_all	count_solved	challenge_success_probability
+	list_challenge	136.52	0.74		yes	yes	10.0	9.0	9.0	9.0	1.0	No opinion		False	tip			
+	list_challenge	118.26	0.23		yes	no	7.0	6.0	4.0	3.0	3.0	no		False	tip			
+	list_challenge	77.36	0.94		yes	no	9.0	6.0	5.0	8.0	3.0	no		True	tip			
+	list_challenge	100.27	-0.48		yes	no	9.0	7.0	3.0	4.0	1.0	No	I think sentence meaning order is not good for people that have dyslexia or any other type of  reading disorder, instead images are universal.	False	tip			
+	list_challenge	53.05	0.94		yes	yes	10.0	7.0	7.0	5.0	0.0	It took me longer than any other Captcha I have performed, so I would prefer different kinds.	This took me a long time because the sentences were long and some of the grammar was antiquated and hard to understand (as a native English speaker from America). I don't know if all of the examples were like that but I would not like to do this kind of thing as a Captcha.	True	tip			
+	list_challenge	121.82	0.94		yes	yes	10.0	4.0	4.0	1.0	0.0	No		True	tip			
+	list_challenge	78.85	0.94		yes	no	9.0	7.0	7.0	3.0	1.0	Maybe with less archaic language.		True	tip			
+	list_challenge	121.75	0.55		yes	no	7.0	2.0	2.0	1.0	1.0	Definitely not		False	tip			
+	list_challenge	103.7	0.55		yes	no	7.0	6.0	7.0	1.0	0.0	No.		False	tip			
+	list_challenge	111.33	0.94		yes	no	8.0	2.0	2.0	1.0	3.0	No	It does not feel fair for people without any English knowledge of speakers of minority languages	True	tip			
+	list_challenge	86.65	0.81		yes	no	3.0	6.0	5.0	2.0	1.0			True	tip			
+	list_challenge	123.05	-0.29		yes	no	9.0	8.0	6.0	6.0	3.0	Depends on the difficulty, but text captcha might be better, especially for visually impaired people	Good idea but I think the example is weird/difficult	False	tip			
+	list_challenge	142.4	0.55		yes	no	7.0	7.0	9.0	3.0	5.0			False	tip			
+mean		105.77	0.56				8.08	5.92	5.38	3.62	1.69							
+median		111.33	0.74				9.0	6.0	5.0	3.0	1.0							
+standard_deviation		25.82	0.48				1.93	2.1	2.36	2.69	1.55							
+min		53.05	-0.48				3.0	2.0	2.0	1.0	0.0							
+max		142.4	0.94				10.0	9.0	9.0	9.0	5.0					13.0	6.0	0.46
