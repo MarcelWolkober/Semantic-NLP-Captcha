@@ -8,7 +8,7 @@ Current features are only to conduct a study.
 
 It consists of two components that run in Docker Containers.
 
-The data folder in the Captcha component is the standard location to read data (currently, the study challenges).
+The data folder is the standard location for reading data (currently, the study challenges).
 
 
 
