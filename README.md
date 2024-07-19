@@ -10,7 +10,7 @@ It consists of two components that run in Docker Containers.
 
 The data folder is the standard location for reading data (currently, the study challenges).
 
-
+The description of the study data is in its [README](https://github.com/MarcelWolkober/Semantic-NLP-Captcha/blob/dev/Study%20data/README.md).
 
 ## Getting Started
 
