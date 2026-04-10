@@ -2,6 +2,9 @@
   "name": "captcha-frontend",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "serialize-javascript": "^7.0.5"
+  },
   "scripts": {
     "serve": "vite",
     "build": "vite build",
